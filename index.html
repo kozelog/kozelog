@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="assets/site.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>こぜログ | パチスロ完全攻略情報 ― 設定差・設定判別・機械割</title>
+  <meta name="description" content="パチスロ完全攻略情報サイト「こぜログ」。ジャグラーシリーズ・スマスロの設定差・小役確率・設定判別ツール・機械割を徹底解説。北電子・アクロス・エレコ全機種対応。">
+  <meta name="keywords" content="パチスロ,ジャグラー,スマスロ,設定差,設定判別,機械割,ボーナス確率,小役確率">
+  <link rel="canonical" href="https://kozelog.com/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="こぜログ | パチスロ完全攻略情報">
+  <meta property="og:description" content="パチスロ設定差・設定判別・機械割を徹底解説。ジャグラーシリーズ・スマスロ全機種対応。">
+  <meta property="og:url" content="https://kozelog.com/">
+  <meta property="og:site_name" content="こぜログ">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+
+  <!-- 構造化マークアップ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "こぜログ",
+    "url": "https://kozelog.com/",
+    "description": "パチスロ完全攻略情報サイト。設定差・小役確率・設定判別ツール・機械割を徹底解説。",
+    "inLanguage": "ja",
+    "publisher": {
+      "@type": "Organization",
+      "name": "こぜログ",
+      "url": "https://kozelog.com"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/common.css">
+  <style>
+    /* ===== HERO ===== */
+    .hero {
+      background: #0c0c12;
+      border-bottom: 1px solid var(--border);
+      padding: 60px 20px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* サイバーライン */
+    .hero-cyberline {
+      position: absolute;
+      width: 200%; height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(0,200,224,.1) 30%, rgba(0,200,224,.4) 50%, rgba(0,200,224,.1) 70%, transparent 100%);
+      animation: cyber-sweep 4s linear infinite;
+    }
+    .hero-cyberline:nth-child(1) { top: 18%; animation-delay: 0s; }
+    .hero-cyberline:nth-child(2) { top: 50%; animation-delay: 1.5s; }
+    .hero-cyberline:nth-child(3) { top: 80%; animation-delay: 3s; }
+    @keyframes cyber-sweep {
+      0%   { transform: translateX(-50%) skewX(-20deg); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { transform: translateX(0%) skewX(-20deg); opacity: 0; }
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(0,200,224,.1);
+      border: 1px solid rgba(0,200,224,.28);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    /* スロットリールタイトル */
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 56px);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 8px;
+      letter-spacing: .06em;
+      display: block;
+      position: relative;
+      overflow: visible;
+    }
+    .slot-reel {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: top;
+      height: 1.15em;
+    }
+    .slot-char {
+      display: block;
+      text-align: center;
+      color: var(--text);
+      line-height: 1.15em;
+    }
+    /* リールスライドイン */
+    @keyframes reel-slide {
+      from { transform: translateY(-100%); opacity: .25; }
+      to   { transform: translateY(0);     opacity: 1; }
+    }
+    /* ランディングフラッシュ */
+    @keyframes char-land {
+      0%   { color: #fff;        filter: brightness(5) drop-shadow(0 0 12px #fff); }
+      35%  { color: var(--gold); filter: brightness(2) drop-shadow(0 0 6px var(--gold)); }
+      100% { color: var(--text); filter: none; }
+    }
+    /* 6のスパークル */
+    @keyframes char-sparkle {
+      0%   { filter: none; }
+      20%  { filter: brightness(6) drop-shadow(0 0 18px #f5b030); }
+      55%  { filter: brightness(3) drop-shadow(0 0 10px #f0c040); }
+      100% { filter: none; }
+    }
+    /* 6専用ランディング（バウンス＋スパークル合成） */
+    @keyframes land-six {
+      0%   { transform: translateY(0);     color: #fff;        filter: brightness(5) drop-shadow(0 0 12px #fff); }
+      13%  { transform: translateY(-10px); }
+      28%  { transform: translateY(3px);   color: var(--gold); filter: brightness(2) drop-shadow(0 0 6px var(--gold)); }
+      44%  { transform: translateY(-3px); }
+      57%  { transform: translateY(0);     color: #f5b030;     filter: brightness(6) drop-shadow(0 0 18px #f5b030); }
+      78%  {                               color: #f0c040;     filter: brightness(3) drop-shadow(0 0 10px #f0c040); }
+      100% { transform: translateY(0);     color: var(--text); filter: none; }
+    }
+    /* グ専用ランディング（ミニバウンス＋強めフラッシュ） */
+    @keyframes char-land-strong {
+      0%   { transform: translateY(0);    color: #fff;        filter: brightness(6) drop-shadow(0 0 16px #fff); }
+      18%  { transform: translateY(-7px); }
+      36%  { transform: translateY(2px);  color: var(--gold); filter: brightness(3) drop-shadow(0 0 10px var(--gold)); }
+      58%  { transform: translateY(0);    color: #f5b030;     filter: brightness(1.5) drop-shadow(0 0 4px #f5b030); }
+      100% { transform: translateY(0);    color: var(--text); filter: none; }
+    }
+    /* リップル波紋 */
+    @keyframes ripple-wave {
+      0%   { transform: translate(-50%, -50%) scale(0); opacity: .9; }
+      100% { transform: translate(-50%, -50%) scale(5); opacity: 0; }
+    }
+    .hero-ripple {
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,200,224,.75);
+      box-shadow: 0 0 14px rgba(0,200,224,.45), inset 0 0 10px rgba(0,200,224,.15);
+      transform: translate(-50%, -50%) scale(0);
+      pointer-events: none;
+      animation: ripple-wave .9s cubic-bezier(.2,.6,.4,1) forwards;
+      z-index: 4;
+    }
+    /* タイトル連動グロー */
+    @keyframes ripple-glow {
+      0%   { color: var(--text); filter: none; }
+      12%  { color: #fff;        filter: brightness(3) drop-shadow(0 0 10px #fff); }
+      45%  { color: var(--gold); filter: brightness(1.6) drop-shadow(0 0 5px var(--gold)); }
+      100% { color: var(--text); filter: none; }
+    }
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 20px);
+      color: var(--text2);
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: .02em;
+    }
+    .hero-sub em { color: var(--gold); font-style: normal; }
+    .hero-desc {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+    /* 設定ドット */
+    .hero-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hdot-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .hdot {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 2px solid #303038;
+      background: #1e1e24;
+      position: relative;
+    }
+    .hdot::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: .18;
+    }
+    .hdot-connector {
+      width: 18px; height: 2px;
+      background: #303038;
+      flex-shrink: 0;
+      margin-bottom: 22px;
+    }
+    .hdot-lbl {
+      font-size: 10px;
+      color: var(--text2);
+      font-weight: 700;
+    }
+    /* 設定1〜5: 色のみ */
+    .hdot.s1 { color: #888; }
+    .hdot.s2 { color: #5ba0b5; }
+    .hdot.s3 { color: #4fa880; }
+    .hdot.s4 { color: #7abb50; }
+    .hdot.s5 { color: #f5b030; }
+    /* 設定6: 点灯 ＋ ハネ上がり */
+    .hdot.s6 {
+      color: #f05050;
+      border-color: #f05050;
+      box-shadow: 0 0 16px #f05050, 0 0 4px #f05050;
+      animation: hdot-bounce 0.7s cubic-bezier(.36,.07,.19,.97) infinite,
+                 hdot-glow   1.4s ease-in-out infinite;
+    }
+    .hdot.s6::after { opacity: .9; }
+    .hdot-lbl.s6 {
+      color: #f05050;
+      font-weight: 900;
+    }
+    @keyframes hdot-bounce {
+      0%,100% { transform: translateY(0); }
+      30%     { transform: translateY(-11px); }
+      55%     { transform: translateY(-4px); }
+      75%     { transform: translateY(-8px); }
+    }
+    @keyframes hdot-glow {
+      0%,100% { box-shadow: 0 0 12px #f05050, 0 0 4px #f05050; }
+      50%     { box-shadow: 0 0 28px #f05050, 0 0 10px #f05050, 0 0 55px rgba(240,80,80,.45); }
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 16px 64px;
+    }
+
+    /* ===== MAKER SECTION ===== */
+    .maker-section { margin-top: 48px; }
+    .maker-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .maker-heading-left {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .maker-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .maker-sub { font-size: 12px; color: var(--text2); }
+    .maker-link {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      transition: opacity .15s;
+    }
+    .maker-link:hover { opacity: .75; }
+
+    /* ===== MACHINE CARDS ===== */
+    .machine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .machine-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .2s, box-shadow .2s, transform .15s;
+      color: var(--text);
+    }
+    .machine-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold), 0 6px 24px rgba(0,200,224,.1);
+      transform: translateY(-2px);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .card-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .card-name small {
+      display: block;
+      font-size: 11px;
+      color: var(--text2);
+      font-weight: 400;
+      margin-top: 3px;
+    }
+    .card-badge {
+      flex-shrink: 0;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 10px;
+      color: var(--text2);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .card-badge.smart {
+      background: rgba(0,200,224,.1);
+      border-color: rgba(0,200,224,.3);
+      color: var(--gold);
+    }
+    .card-rates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+    }
+    .rate-lbl {
+      font-size: 10px;
+      color: var(--text2);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .rate-val {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-top: 2px;
+      color: var(--text);
+    }
+    .rate-val.hi { color: var(--gold); }
+    .card-go {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-top: auto;
+    }
+
+    /* ===== FEATURES ===== */
+    .features-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 52px 20px;
+      margin-top: 8px;
+    }
+    .features-inner { max-width: 1020px; margin: 0 auto; }
+    .features-heading {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .feature-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+    }
+    .feature-icon { font-size: 22px; margin-bottom: 10px; }
+    .feature-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .feature-desc {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.75;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero { padding: 44px 16px 38px; }
+      .hero-stats { gap: 24px; }
+      .machine-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .features-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="site-header-ph"></div>
+
+<main>
+
+  <!-- ============================
+       HERO
+       ============================ -->
+  <section class="hero">
+    <div class="hero-cyberline"></div>
+    <div class="hero-cyberline"></div>
+    <div class="hero-cyberline"></div>
+    <div class="hero-inner">
+      <div class="hero-tag">Pachislot Analysis</div>
+      <h1 id="slot-title">こぜログ</h1>
+      <p class="hero-sub"><em>気まま</em>なパチスロ解析サイト</p>
+      <p class="hero-desc">
+        気ままにパチスロ機種の解析情報を記載。<br>
+        設定ごとの期待収支や簡易データ入力からの推定設定を算出する機能を搭載してます。
+      </p>
+      <div class="hero-dots">
+        <div class="hdot-wrap">
+          <div class="hdot s1"></div>
+          <div class="hdot-lbl">設定1</div>
+        </div>
+        <div class="hdot-connector"></div>
+        <div class="hdot-wrap">
+          <div class="hdot s2"></div>
+          <div class="hdot-lbl">設定2</div>
+        </div>
+        <div class="hdot-connector"></div>
+        <div class="hdot-wrap">
+          <div class="hdot s3"></div>
+          <div class="hdot-lbl">設定3</div>
+        </div>
+        <div class="hdot-connector"></div>
+        <div class="hdot-wrap">
+          <div class="hdot s4"></div>
+          <div class="hdot-lbl">設定4</div>
+        </div>
+        <div class="hdot-connector"></div>
+        <div class="hdot-wrap">
+          <div class="hdot s5"></div>
+          <div class="hdot-lbl">設定5</div>
+        </div>
+        <div class="hdot-connector"></div>
+        <div class="hdot-wrap">
+          <div class="hdot s6"></div>
+          <div class="hdot-lbl s6">設定6</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       MACHINE LIST
+       ============================ -->
+  <div class="container">
+
+    <!-- ===== 北電子 ===== -->
+    <section class="maker-section">
+      <div class="maker-heading">
+        <div class="maker-heading-left">
+          <span class="maker-name">北電子</span>
+          <span class="maker-sub">KITADENSHI</span>
+        </div>
+        <a href="/kitadenshi/" class="maker-link">機種一覧 →</a>
+      </div>
+      <div class="machine-grid">
+
+        <a href="/kitadenshi/myjuggler5/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              マイジャグラーⅤ
+              <small>SマイジャグラーV ｜ 2021年12月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">109.4%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/imjugglerex2020/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              アイムジャグラーEX
+              <small>SアイムジャグラーEX ｜ 2019年10月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">105.5%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/funkyjuggler2/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              ファンキージャグラー2
+              <small>SファンキージャグラーII ｜ 2020年12月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">109.0%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/gogojuggler3/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              ゴーゴージャグラー3
+              <small>SゴーゴージャグラーIII ｜ 2022年5月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">106.5%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.2%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/happyjugglerv3/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              ハッピージャグラーVIII
+              <small>SハッピージャグラーVIII ｜ 2022年9月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">108.4%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/jgss/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              ジャグラーガールズSS
+              <small>SジャグラーガールズSS ｜ 2021年5月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">107.5%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/kitadenshi/mrjuggler/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              ミスタージャグラー
+              <small>Sミスタージャグラー ｜ 2023年6月</small>
+            </div>
+            <span class="card-badge">6号機</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割</div>
+              <div class="rate-val hi">107.3%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割</div>
+              <div class="rate-val">97.0%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+      </div>
+    </section><!-- /北電子 -->
+
+    <!-- ===== アクロス ===== -->
+    <section class="maker-section">
+      <div class="maker-heading">
+        <div class="maker-heading-left">
+          <span class="maker-name">アクロス</span>
+          <span class="maker-sub">ACROSS</span>
+        </div>
+        <a href="/across/" class="maker-link">機種一覧 →</a>
+      </div>
+      <div class="machine-grid">
+
+        <a href="/across/hanabi-2026/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              スマスロ ハナビ
+              <small>SMART SLOT HANABI ｜ 2026年2月2日</small>
+            </div>
+            <span class="card-badge smart">スマスロ</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割（pt換算）</div>
+              <div class="rate-val hi">108.0%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割（pt換算）</div>
+              <div class="rate-val">100.2%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+      </div>
+    </section><!-- /アクロス -->
+
+    <!-- ===== エレコ ===== -->
+    <section class="maker-section">
+      <div class="maker-heading">
+        <div class="maker-heading-left">
+          <span class="maker-name">エレコ</span>
+          <span class="maker-sub">ELECO</span>
+        </div>
+        <a href="/eleco/" class="maker-link">機種一覧 →</a>
+      </div>
+      <div class="machine-grid">
+
+        <a href="/eleco/thunder-v-2026/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              スマスロ サンダーV
+              <small>SMART SLOT THUNDER V ｜ 2026年3月</small>
+            </div>
+            <span class="card-badge smart">スマスロ</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割（pt換算）</div>
+              <div class="rate-val hi">108.1%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割（pt換算）</div>
+              <div class="rate-val">100.5%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+      </div>
+    </section><!-- /エレコ -->
+
+    <!-- ===== サミー ===== -->
+    <section class="maker-section">
+      <div class="maker-heading">
+        <div class="maker-heading-left">
+          <span class="maker-name">サミー</span>
+          <span class="maker-sub">SAMMY</span>
+        </div>
+        <a href="/sammy/" class="maker-link">機種一覧 →</a>
+      </div>
+      <div class="machine-grid">
+
+        <a href="/sammy/a-kon-su/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              A-SLOT+ この素晴らしい世界に祝福を！
+              <small>A-SLOT+ このすば ｜ 2024年9月2日</small>
+            </div>
+            <span class="card-badge smart">スマスロ</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割（完全攻略）</div>
+              <div class="rate-val hi">110.4%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割（通常）</div>
+              <div class="rate-val">98.5%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+        <a href="/sammy/sp-ise-ka/" class="machine-card">
+          <div class="card-top">
+            <div class="card-name">
+              異世界かるてっと BT
+              <small>A-SLOT+ 異世界かるてっと BT ｜ 2026年4月</small>
+            </div>
+            <span class="card-badge smart">スマスロ</span>
+          </div>
+          <div class="card-rates">
+            <div class="rate-item">
+              <div class="rate-lbl">設定6 機械割（完全攻略）</div>
+              <div class="rate-val hi">110.6%</div>
+            </div>
+            <div class="rate-item">
+              <div class="rate-lbl">設定1 機械割（通常）</div>
+              <div class="rate-val">97.9%</div>
+            </div>
+          </div>
+          <div class="card-go">解析・スペックを見る <span>→</span></div>
+        </a>
+
+      </div>
+    </section><!-- /サミー -->
+
+  </div><!-- /container -->
+
+  <!-- ============================
+       FEATURES
+       ============================ -->
+  <section class="features-section">
+    <div class="features-inner">
+      <div class="features-heading">こぜログでできること</div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">設定別スペック一覧</div>
+          <div class="feature-desc">全設定のボーナス確率・小役確率・機械割を一覧表示。設定差が一目でわかる。</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-title">設定推定ツール</div>
+          <div class="feature-desc">ゲーム数・ボーナス回数を入力するだけで、設定ごとの出現確率をリアルタイム計算。</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-title">設定判別ポイント解説</div>
+          <div class="feature-desc">小役確率・ボーナス比率など、実戦で使える設定判別の根拠を詳しく解説。</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <div class="feature-title">スマスロ pt換算対応</div>
+          <div class="feature-desc">6号機・スマスロどちらも対応。スマスロはpt換算機械割を並べて確認できる。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer-ph"></div>
+
+<script src="assets/common.js"></script>
+<script>
+var ASSETS_BASE = 'assets/';
+loadComponents(ASSETS_BASE);
+</script>
+<script src="assets/top-hero.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.claude/
+admin/
+CLAUDE.md
+RULEBOOK.md
+serve.ps1
+*-preview.html
+sns-blocker/
