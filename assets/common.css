@@ -33,6 +33,11 @@ a:hover { text-decoration: underline; }
 .header-nav a { color: var(--text2); }
 .header-nav a:hover { color: var(--gold); text-decoration: none; }
 
+/* ===== HAMBURGER ===== */
+.hamburger-btn { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; }
+.hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 1px; }
+@media (max-width: 520px) { .hamburger-btn { display: flex; } }
+
 /* ===== NAV DRAWER ===== */
 .nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 200; opacity: 0; pointer-events: none; transition: opacity .3s; }
 .nav-overlay.open { opacity: 1; pointer-events: auto; }

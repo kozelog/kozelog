@@ -110,8 +110,11 @@
     @keyframes hdot-bounce { 0%,100% { transform: translateY(0); } 30% { transform: translateY(-11px); } 55% { transform: translateY(-4px); } 75% { transform: translateY(-8px); } }
     @keyframes hdot-glow { 0%,100% { box-shadow: 0 0 12px #f05050, 0 0 4px #f05050; } 50% { box-shadow: 0 0 28px #f05050, 0 0 10px #f05050, 0 0 55px rgba(240,80,80,.45); } }
 
-    /* ===== CONTAINER ===== */
-    .container { max-width: 1020px; margin: 0 auto; padding: 0 16px 64px; }
+    /* ===== TOP CONTAINER (common.css の .container 2カラムを上書き) ===== */
+    .top-container {
+      max-width: 1020px; margin: 0 auto; padding: 0 16px 64px;
+      display: block;
+    }
 
     /* ===== SECTION HEADING ===== */
     .section-heading {
@@ -196,6 +199,21 @@
       padding: 10px 12px; font-size: 12px; font-weight: 700; color: var(--gold);
     }
 
+    /* ===== SEARCH LINKS ===== */
+    .search-links {
+      display: flex; justify-content: center; gap: 24px;
+      margin-top: 32px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .search-links a {
+      font-size: 14px; font-weight: 700; color: var(--gold);
+      transition: opacity .15s;
+    }
+    .search-links a:hover { opacity: .7; text-decoration: none; }
+    @media (max-width: 480px) {
+      .search-links { flex-direction: column; align-items: center; gap: 14px; }
+    }
+
     /* ===== FEATURES ===== */
     .features-section {
       background: var(--bg2);
@@ -264,7 +282,7 @@
   <!-- ============================
        MACHINE LIST — 導入日順（新しい順）
        ============================ -->
-  <div class="container">
+  <div class="top-container">
 
     <div class="section-heading">
       <h2>新台・導入順 <small>最新20機種</small></h2>
@@ -635,7 +653,13 @@
 
     </div><!-- /machine-grid -->
 
-  </div><!-- /container -->
+    <nav class="search-links">
+      <a href="/search/by-date/">導入順で探す</a>
+      <a href="/search/by-maker/">メーカー名で探す</a>
+      <a href="/search/by-kana/">50音順で探す</a>
+    </nav>
+
+  </div><!-- /top-container -->
 
   <!-- ============================
        FEATURES

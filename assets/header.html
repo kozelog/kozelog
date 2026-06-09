@@ -9,5 +9,30 @@
       <a href="/search/by-maker/">メーカー名で探す</a>
       <a href="/search/by-kana/">50音順で探す</a>
     </nav>
+    <button class="hamburger-btn" aria-label="メニューを開く" onclick="document.querySelector('.nav-overlay').classList.add('open');document.querySelector('.nav-drawer').classList.add('open');">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- ドロワーメニュー -->
+<div class="nav-overlay" onclick="this.classList.remove('open');document.querySelector('.nav-drawer').classList.remove('open');"></div>
+<nav class="nav-drawer">
+  <div class="nav-drawer-header">
+    <span class="logo">こぜログ</span>
+    <button class="nav-close-btn" aria-label="メニューを閉じる" onclick="document.querySelector('.nav-overlay').classList.remove('open');document.querySelector('.nav-drawer').classList.remove('open');">✕</button>
+  </div>
+  <div class="nav-section-label">メニュー</div>
+  <ul class="nav-links">
+    <li><a href="/"><span class="nav-icon">🏠</span>トップ</a></li>
+    <li><a href="/search/by-date/"><span class="nav-icon">📅</span>導入順で探す</a></li>
+    <li><a href="/search/by-maker/"><span class="nav-icon">🏭</span>メーカー名で探す</a></li>
+    <li><a href="/search/by-kana/"><span class="nav-icon">🔤</span>50音順で探す</a></li>
+  </ul>
+  <div class="nav-divider"></div>
+  <ul class="nav-links">
+    <li><a href="/privacy/"><span class="nav-icon">🔒</span>プライバシーポリシー</a></li>
+    <li><a href="/disclaimer/"><span class="nav-icon">📄</span>免責事項</a></li>
+    <li><a href="/about/"><span class="nav-icon">ℹ️</span>運営元情報</a></li>
+  </ul>
+</nav>
