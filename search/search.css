@@ -1,0 +1,42 @@
+.search-container { max-width: 780px; margin: 0 auto; padding: 32px 16px 64px; }
+.search-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+.search-sub { font-size: 13px; color: var(--text2); margin-bottom: 20px; line-height: 1.7; }
+
+/* タブナビ */
+.search-nav { display: flex; gap: 0; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
+.search-nav a { flex: 1; text-align: center; padding: 10px 0; font-size: 14px; font-weight: 600; color: var(--text2); text-decoration: none; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color .2s, border-color .2s; }
+.search-nav a:hover { color: var(--text); }
+.search-nav a.current { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* 件数 */
+.m-count { font-size: 13px; color: var(--text2); margin-bottom: 16px; }
+
+/* ジャンプナビ */
+.jump-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.jump-link { font-size: 12px; padding: 5px 10px; background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; color: var(--text2); text-decoration: none; transition: background .2s, color .2s; }
+.jump-link:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+.jump-link.disabled { opacity: .35; pointer-events: none; }
+
+/* グループ */
+.group { margin-bottom: 28px; }
+.group-label { font-size: 17px; font-weight: 700; color: var(--text); padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 6px; display: flex; align-items: baseline; gap: 10px; }
+.group-count { font-size: 12px; color: var(--text2); font-weight: 400; }
+.sub-label { font-size: 13px; font-weight: 600; color: var(--gold); padding: 8px 0 4px; }
+
+/* 機種行 */
+.m-list { display: flex; flex-direction: column; }
+.m-row { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 6px; text-decoration: none; color: var(--text); transition: background .15s; flex-wrap: wrap; }
+.m-row:hover { background: var(--bg2); }
+.m-date { font-size: 12px; color: var(--text2); min-width: 42px; flex-shrink: 0; }
+.m-badge { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; flex-shrink: 0; line-height: 1.4; }
+.m-badge-smart { background: rgba(0,200,224,.15); color: var(--gold); }
+.m-badge-medal { background: rgba(255,255,255,.06); color: var(--text2); }
+.m-name { font-size: 14px; font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.m-maker { font-size: 12px; color: var(--text2); flex-shrink: 0; }
+.m-rate { font-size: 11px; color: var(--gold); flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .m-name { font-size: 13px; }
+  .m-row { padding: 8px 6px; gap: 6px; }
+  .group-label { font-size: 15px; }
+}

@@ -23,6 +23,21 @@
     .info-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
     .info-table th { text-align: left; font-size: 13px; color: var(--text2); font-weight: 600; padding: 10px 14px; border-bottom: 1px solid var(--border); width: 140px; white-space: nowrap; vertical-align: top; }
     .info-table td { font-size: 14px; color: var(--text); padding: 10px 14px; border-bottom: 1px solid var(--border); }
+
+    /* フォーム */
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; color: var(--text2); font-weight: 600; margin-bottom: 6px; }
+    .form-group input,
+    .form-group textarea { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; color: var(--text); font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s; }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { min-height: 120px; resize: vertical; line-height: 1.7; }
+    .form-submit { background: var(--gold); color: #000; border: none; border-radius: 8px; padding: 12px 32px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background .2s; }
+    .form-submit:hover { background: var(--gold2); }
+    .form-submit:disabled { opacity: .5; cursor: not-allowed; }
+    .form-msg { margin-top: 14px; padding: 12px 16px; border-radius: 6px; font-size: 14px; display: none; }
+    .form-msg.success { display: block; background: rgba(64,200,128,.1); border: 1px solid rgba(64,200,128,.3); color: var(--green); }
+    .form-msg.error { display: block; background: rgba(240,64,96,.1); border: 1px solid rgba(240,64,96,.3); color: var(--red); }
   </style>
 </head>
 <body>
@@ -54,9 +69,38 @@
   </div>
 
   <div class="policy-section">
-    <h2>お問い合わせ</h2>
-    <p>掲載内容に関するご指摘・ご要望は、下記のメールアドレスまでお送りください。</p>
-    <p>info@kozelog.net</p>
+    <details id="contact-accordion">
+      <summary style="font-size:14px;color:var(--text2);cursor:pointer;padding:10px 0;list-style:none;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:12px;transition:transform .2s;display:inline-block;" id="cf-arrow">▶</span>
+        お問い合わせはこちら
+      </summary>
+      <div style="padding-top:12px;">
+        <p style="font-size:13px;color:var(--text2);margin-bottom:16px;line-height:1.7;">掲載内容に関するご指摘・ご要望は、下記フォームよりお送りください。</p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="cf-name">お名前（任意）</label>
+            <input type="text" id="cf-name" name="name" placeholder="匿名でもOKです" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">件名 <span style="color:var(--red)">*</span></label>
+            <input type="text" id="cf-subject" name="_subject" placeholder="例：カバネリ2のスペック数値について" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">お問い合わせ内容 <span style="color:var(--red)">*</span></label>
+            <textarea id="cf-message" name="message" placeholder="お気軽にどうぞ" required></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom:12px;">
+            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+              <input type="checkbox" id="cf-agree" required style="width:auto;margin-top:3px;accent-color:var(--gold);">
+              <span style="font-size:13px;color:var(--text);line-height:1.7;"><a href="/privacy/" target="_blank">プライバシーポリシー</a>に同意の上、送信してください。</span>
+            </label>
+          </div>
+          <p style="font-size:12px;color:var(--text2);margin-bottom:14px;line-height:1.7;">※ お問い合わせ内容によっては返信いたしかねる場合がございます。あらかじめご了承ください。</p>
+          <button type="submit" class="form-submit" id="cf-btn">送信する</button>
+          <div id="cf-msg" class="form-msg"></div>
+        </form>
+      </div>
+    </details>
   </div>
 
 </div>
@@ -64,5 +108,56 @@
 <div id="site-footer-ph"></div>
 <script src="../assets/common.js"></script>
 <script>var ASSETS_BASE='../assets/';loadComponents(ASSETS_BASE);</script>
+<script>
+document.getElementById('contact-accordion').addEventListener('toggle', function() {
+  document.getElementById('cf-arrow').style.transform = this.open ? 'rotate(90deg)' : '';
+});
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('cf-btn');
+  var msg = document.getElementById('cf-msg');
+  var subject = document.getElementById('cf-subject').value.trim();
+  var message = document.getElementById('cf-message').value.trim();
+  var name = document.getElementById('cf-name').value.trim() || '匿名';
+
+  if (!subject || !message) return;
+
+  btn.disabled = true;
+  btn.textContent = '送信中...';
+  msg.className = 'form-msg';
+  msg.style.display = 'none';
+
+  fetch('https://formsubmit.co/ajax/st.wade3@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: '【こぜ6問い合わせフォーム】' + subject,
+      name: name,
+      message: message,
+      _template: 'table'
+    })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.success === 'true' || data.success === true) {
+      msg.className = 'form-msg success';
+      msg.textContent = '送信完了しました。お問い合わせありがとうございます。';
+      msg.style.display = 'block';
+      document.getElementById('contact-form').reset();
+    } else {
+      throw new Error('送信に失敗しました');
+    }
+  })
+  .catch(function() {
+    msg.className = 'form-msg error';
+    msg.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+    msg.style.display = 'block';
+  })
+  .finally(function() {
+    btn.disabled = false;
+    btn.textContent = '送信する';
+  });
+});
+</script>
 </body>
 </html>

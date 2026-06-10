@@ -1,255 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<script src="/assets/site.js"></script>
+<script src="../../assets/site.js"></script>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>導入順で探す | こぜログ</title>
-  <meta name="description" content="パチスロ機種を導入日の新しい順に一覧表示。最新機種から順にスペック・設定差・設定判別情報を確認できます。">
-  <link rel="stylesheet" href="/assets/common.css">
-  <style>
-    .search-wrap {
-      max-width: 1020px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-    }
-    .page-heading { margin-bottom: 28px; }
-    .page-heading h1 {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .page-heading p { font-size: 13px; color: var(--text2); }
-    .page-count {
-      display: inline-block;
-      font-size: 12px;
-      color: var(--gold);
-      background: rgba(0,200,224,.1);
-      border: 1px solid rgba(0,200,224,.25);
-      border-radius: 20px;
-      padding: 2px 12px;
-      font-weight: 700;
-      margin-top: 8px;
-    }
-
-    /* グループ見出し */
-    .group-heading {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 32px 0 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .group-heading:first-child { margin-top: 0; }
-    .group-label {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .group-count {
-      font-size: 12px;
-      color: var(--text2);
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 1px 10px;
-    }
-
-    /* 機種グリッド */
-    .machine-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 12px;
-    }
-    .machine-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: border-color .2s, box-shadow .2s, transform .15s;
-      color: var(--text);
-    }
-    .machine-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px var(--gold), 0 6px 24px rgba(0,200,224,.1);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 8px;
-    }
-    .card-name {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--text);
-      line-height: 1.3;
-    }
-    .card-name small {
-      display: block;
-      font-size: 11px;
-      color: var(--text2);
-      font-weight: 400;
-      margin-top: 3px;
-    }
-    .card-badge {
-      flex-shrink: 0;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 10px;
-      color: var(--text2);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .card-badge.smart {
-      background: rgba(0,200,224,.1);
-      border-color: rgba(0,200,224,.3);
-      color: var(--gold);
-    }
-    .card-rates {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 12px;
-    }
-    .rate-lbl {
-      font-size: 10px;
-      color: var(--text2);
-      font-weight: 600;
-      letter-spacing: .04em;
-    }
-    .rate-val {
-      font-size: 20px;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-top: 2px;
-      color: var(--text);
-    }
-    .rate-val.hi { color: var(--gold); }
-    .card-go {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gold);
-      margin-top: auto;
-    }
-
-    @media (max-width: 600px) {
-      .machine-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <title>導入順で探す｜パチスロ・スマスロ機種一覧 | こぜログ</title>
+  <meta name="description" content="パチスロ・スマスロ機種を導入日の新しい順にまとめています。気になる時期の機種をサクッと探せます。">
+  <link rel="canonical" href="https://kozelog.net/search/by-date/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="導入順で探す｜パチスロ・スマスロ機種一覧 | こぜログ">
+  <meta property="og:url" content="https://kozelog.net/search/by-date/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="../../assets/common.css">
+  <link rel="stylesheet" href="../search.css">
 </head>
 <body>
-
 <div id="site-header-ph"></div>
 
-<main>
-  <div class="search-wrap">
+<div class="search-container">
+  <h1 class="search-title">導入順で探す</h1>
+  <p class="search-sub">パチスロ・スマスロ機種を導入日の新しい順に一覧表示しています。</p>
 
-    <div class="breadcrumb">
-      <a href="/">トップ</a> › 導入順で探す
-    </div>
+  <nav class="search-nav">
+    <a href="/search/by-date/" class="current">導入順</a>
+    <a href="/search/by-maker/">メーカー名</a>
+    <a href="/search/by-kana/">50音順</a>
+  </nav>
 
-    <div class="page-heading">
-      <h1>導入順で探す</h1>
-      <p>新しい順に機種を表示しています</p>
-      <div class="page-count" id="total-count"></div>
-    </div>
-
-    <div id="machine-list"></div>
-
-  </div>
-</main>
+  <div class="m-count" id="count"></div>
+  <div id="list"></div>
+</div>
 
 <div id="site-footer-ph"></div>
-
-<script src="/assets/machines/index.js"></script>
-<script src="/assets/common.js"></script>
+<script src="../../assets/machines/index.js"></script>
+<script src="../../assets/common.js"></script>
 <script>
-var ASSETS_BASE = '../../assets/';
-loadComponents(ASSETS_BASE);
+var ASSETS_BASE='../../assets/';loadComponents(ASSETS_BASE);
 
 (function() {
-  // releaseDate の精度を判定
-  // 'YYYY'       → 年のみ
-  // 'YYYY-MM'    → 年月
-  // 'YYYY-MM-DD' → 年月日
-  function getGroupKey(d) {
-    if (d.length >= 7) return d.slice(0, 7); // YYYY-MM でグループ化
-    return d;                                 // YYYY
-  }
-
-  function getGroupLabel(key) {
-    if (key.length === 7) {
-      var m = parseInt(key.slice(5, 7), 10);
-      return key.slice(0, 4) + '年' + m + '月';
-    }
-    return key + '年';
-  }
-
-  // 新しい順にソート（文字列比較で YYYY-MM-DD > YYYY-MM > YYYY が正しく降順になる）
   var sorted = MACHINES_LIST.slice().sort(function(a, b) {
     return b.releaseDate.localeCompare(a.releaseDate);
   });
 
-  // 年月ごとにグループ化
-  var groups = [];
-  var groupMap = {};
+  document.getElementById('count').textContent = '全 ' + sorted.length + ' 機種';
+
+  var groups = {};
   sorted.forEach(function(m) {
-    var key = getGroupKey(m.releaseDate);
-    if (!groupMap[key]) {
-      groupMap[key] = [];
-      groups.push({ label: getGroupLabel(key), items: groupMap[key] });
-    }
-    groupMap[key].push(m);
+    var y = m.releaseDate.substring(0, 4);
+    if (!groups[y]) groups[y] = {};
+    var mo = parseInt(m.releaseDate.substring(5, 7));
+    if (!groups[y][mo]) groups[y][mo] = [];
+    groups[y][mo].push(m);
   });
 
-  // 機種カードHTML生成
-  function cardHTML(m) {
-    return '<a href="' + m.url + '" class="machine-card">'
-      + '<div class="card-top">'
-      +   '<div class="card-name">' + m.name
-      +     '<small>' + m.fullName + ' ｜ ' + m.releaseLabel + '</small>'
-      +   '</div>'
-      +   '<span class="card-badge' + (m.smart ? ' smart' : '') + '">' + m.badge + '</span>'
-      + '</div>'
-      + '<div class="card-rates">'
-      +   '<div class="rate-item"><div class="rate-lbl">' + m.rateLabelS6 + '</div><div class="rate-val hi">' + m.rateS6 + '</div></div>'
-      +   '<div class="rate-item"><div class="rate-lbl">' + m.rateLabelS1 + '</div><div class="rate-val">' + m.rateS1 + '</div></div>'
-      + '</div>'
-      + '<div class="card-go">解析・スペックを見る <span>→</span></div>'
-      + '</a>';
-  }
-
-  // 描画
   var html = '';
-  groups.forEach(function(g) {
-    html += '<div class="group-heading">'
-      + '<span class="group-label">' + g.label + '</span>'
-      + '<span class="group-count">' + g.items.length + '機種</span>'
-      + '</div>'
-      + '<div class="machine-grid">';
-    g.items.forEach(function(m) { html += cardHTML(m); });
+  Object.keys(groups).sort().reverse().forEach(function(y) {
+    html += '<div class="group"><div class="group-label">' + y + '年</div>';
+    var months = Object.keys(groups[y]).map(Number).sort(function(a,b){return b-a;});
+    months.forEach(function(mo) {
+      html += '<div class="sub-label">' + mo + '月</div><div class="m-list">';
+      groups[y][mo].forEach(function(m) {
+        var date = parseInt(m.releaseDate.substring(5,7)) + '/' + parseInt(m.releaseDate.substring(8,10));
+        var badge = m.smart
+          ? '<span class="m-badge m-badge-smart">スマスロ</span>'
+          : '<span class="m-badge m-badge-medal">メダル</span>';
+        var rate = m.rateS6 && m.rateS6 !== '-' ? '<span class="m-rate">設6: ' + m.rateS6 + '</span>' : '';
+        html += '<a class="m-row" href="' + m.url + '">'
+          + '<span class="m-date">' + date + '</span>'
+          + badge
+          + '<span class="m-name">' + m.name + '</span>'
+          + '<span class="m-maker">' + m.maker + '</span>'
+          + rate
+          + '</a>';
+      });
+      html += '</div>';
+    });
     html += '</div>';
   });
 
-  document.getElementById('machine-list').innerHTML = html;
-  document.getElementById('total-count').textContent = '全' + sorted.length + '機種';
+  document.getElementById('list').innerHTML = html;
 })();
 </script>
 </body>

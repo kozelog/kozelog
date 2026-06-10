@@ -1,301 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<script src="/assets/site.js"></script>
+<script src="../../assets/site.js"></script>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>あいうえお順で探す | こぜログ</title>
-  <meta name="description" content="パチスロ機種をあいうえお順に一覧表示。機種名の読み仮名順にスペック・設定差・設定判別情報を確認できます。">
-  <link rel="stylesheet" href="/assets/common.css">
-  <style>
-    .search-wrap {
-      max-width: 1020px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
-    }
-    .page-heading { margin-bottom: 28px; }
-    .page-heading h1 {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .page-heading p { font-size: 13px; color: var(--text2); }
-    .page-count {
-      display: inline-block;
-      font-size: 12px;
-      color: var(--gold);
-      background: rgba(0,200,224,.1);
-      border: 1px solid rgba(0,200,224,.25);
-      border-radius: 20px;
-      padding: 2px 12px;
-      font-weight: 700;
-      margin-top: 8px;
-    }
-
-    /* 行インデックス */
-    .kana-index {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 28px;
-    }
-    .kana-idx-btn {
-      padding: 4px 12px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--bg3);
-      color: var(--text2);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .15s;
-      text-decoration: none;
-    }
-    .kana-idx-btn:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      text-decoration: none;
-    }
-    .kana-idx-btn.has-items {
-      color: var(--text);
-      border-color: #404050;
-    }
-
-    /* グループ見出し */
-    .group-heading {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 32px 0 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .group-heading:first-child { margin-top: 0; }
-    .group-label {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .group-count {
-      font-size: 12px;
-      color: var(--text2);
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 1px 10px;
-    }
-
-    /* 機種グリッド */
-    .machine-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 12px;
-    }
-    .machine-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: border-color .2s, box-shadow .2s, transform .15s;
-      color: var(--text);
-    }
-    .machine-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px var(--gold), 0 6px 24px rgba(0,200,224,.1);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 8px;
-    }
-    .card-name {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--text);
-      line-height: 1.3;
-    }
-    .card-name small {
-      display: block;
-      font-size: 11px;
-      color: var(--text2);
-      font-weight: 400;
-      margin-top: 3px;
-    }
-    .card-badge {
-      flex-shrink: 0;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 10px;
-      color: var(--text2);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .card-badge.smart {
-      background: rgba(0,200,224,.1);
-      border-color: rgba(0,200,224,.3);
-      color: var(--gold);
-    }
-    .card-rates {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 12px;
-    }
-    .rate-lbl {
-      font-size: 10px;
-      color: var(--text2);
-      font-weight: 600;
-      letter-spacing: .04em;
-    }
-    .rate-val {
-      font-size: 20px;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-top: 2px;
-      color: var(--text);
-    }
-    .rate-val.hi { color: var(--gold); }
-    .card-go {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 8px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--gold);
-      margin-top: auto;
-    }
-
-    @media (max-width: 600px) {
-      .machine-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <title>50音順で探す｜パチスロ・スマスロ機種一覧 | こぜログ</title>
+  <meta name="description" content="パチスロ・スマスロ機種を50音順（あいうえお順）でまとめています。機種名の読みがなでサクッと探せます。">
+  <link rel="canonical" href="https://kozelog.net/search/by-kana/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="50音順で探す｜パチスロ機種一覧 | こぜログ">
+  <meta property="og:url" content="https://kozelog.net/search/by-kana/">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="../../assets/common.css">
+  <link rel="stylesheet" href="../search.css">
 </head>
 <body>
-
 <div id="site-header-ph"></div>
 
-<main>
-  <div class="search-wrap">
+<div class="search-container">
+  <h1 class="search-title">50音順で探す</h1>
+  <p class="search-sub">パチスロ・スマスロ機種を50音順（あいうえお順）で一覧表示しています。</p>
 
-    <div class="breadcrumb">
-      <a href="/">トップ</a> › あいうえお順で探す
-    </div>
+  <nav class="search-nav">
+    <a href="/search/by-date/">導入順</a>
+    <a href="/search/by-maker/">メーカー名</a>
+    <a href="/search/by-kana/" class="current">50音順</a>
+  </nav>
 
-    <div class="page-heading">
-      <h1>あいうえお順で探す</h1>
-      <p>機種名の読み仮名順に表示しています</p>
-      <div class="page-count" id="total-count"></div>
-    </div>
-
-    <div class="kana-index" id="kana-index"></div>
-
-    <div id="machine-list"></div>
-
-  </div>
-</main>
+  <div class="m-count" id="count"></div>
+  <nav class="jump-nav" id="jump-nav"></nav>
+  <div id="list"></div>
+</div>
 
 <div id="site-footer-ph"></div>
-
-<script src="/assets/machines/index.js"></script>
-<script src="/assets/common.js"></script>
+<script src="../../assets/machines/index.js"></script>
+<script src="../../assets/common.js"></script>
 <script>
-var ASSETS_BASE = '../../assets/';
-loadComponents(ASSETS_BASE);
+var ASSETS_BASE='../../assets/';loadComponents(ASSETS_BASE);
 
 (function() {
-  // 行定義
-  var KANA_ROWS = [
-    { label: 'あ行', re: /^[あいうえお]/ },
-    { label: 'か行', re: /^[かきくけこがぎぐげご]/ },
-    { label: 'さ行', re: /^[さしすせそざじずぜぞ]/ },
-    { label: 'た行', re: /^[たちつてとだぢづでど]/ },
-    { label: 'な行', re: /^[なにぬねの]/ },
-    { label: 'は行', re: /^[はひふへほばびぶべぼぱぴぷぺぽ]/ },
-    { label: 'ま行', re: /^[まみむめも]/ },
-    { label: 'や行', re: /^[やゆよ]/ },
-    { label: 'ら行', re: /^[らりるれろ]/ },
-    { label: 'わ行', re: /^[わをん]/ },
+  var KANA_GROUPS = [
+    { label: 'あ行', chars: 'あいうえお' },
+    { label: 'か行', chars: 'かきくけこがぎぐげご' },
+    { label: 'さ行', chars: 'さしすせそざじずぜぞ' },
+    { label: 'た行', chars: 'たちつてとだぢづでど' },
+    { label: 'な行', chars: 'なにぬねの' },
+    { label: 'は行', chars: 'はひふへほばびぶべぼぱぴぷぺぽ' },
+    { label: 'ま行', chars: 'まみむめも' },
+    { label: 'や行', chars: 'やゆよ' },
+    { label: 'ら行', chars: 'らりるれろ' },
+    { label: 'わ行', chars: 'わをん' },
+    { label: '英数・他', chars: '' }
   ];
 
-  function getRow(kana) {
-    for (var i = 0; i < KANA_ROWS.length; i++) {
-      if (KANA_ROWS[i].re.test(kana)) return KANA_ROWS[i].label;
+  function getGroup(kana) {
+    if (!kana) return '英数・他';
+    var first = kana.charAt(0);
+    for (var i = 0; i < KANA_GROUPS.length - 1; i++) {
+      if (KANA_GROUPS[i].chars.indexOf(first) !== -1) return KANA_GROUPS[i].label;
     }
-    return 'その他';
+    return '英数・他';
   }
 
-  // かな順にソート
   var sorted = MACHINES_LIST.slice().sort(function(a, b) {
-    return a.kana.localeCompare(b.kana, 'ja');
+    return (a.kana || '').localeCompare(b.kana || '', 'ja');
   });
 
-  // 行ごとにグループ化
-  var groups = [];
-  var groupMap = {};
-  KANA_ROWS.forEach(function(r) { groupMap[r.label] = null; });
+  document.getElementById('count').textContent = '全 ' + sorted.length + ' 機種';
+
+  var groups = {};
+  KANA_GROUPS.forEach(function(g) { groups[g.label] = []; });
   sorted.forEach(function(m) {
-    var row = getRow(m.kana);
-    if (!groupMap[row]) {
-      groupMap[row] = [];
-      groups.push({ label: row, items: groupMap[row] });
-    }
-    groupMap[row].push(m);
+    var g = getGroup(m.kana);
+    groups[g].push(m);
   });
 
-  // 機種カードHTML生成
-  function cardHTML(m) {
-    return '<a href="' + m.url + '" class="machine-card">'
-      + '<div class="card-top">'
-      +   '<div class="card-name">' + m.name
-      +     '<small>' + m.fullName + ' ｜ ' + m.maker + ' ｜ ' + m.releaseLabel + '</small>'
-      +   '</div>'
-      +   '<span class="card-badge' + (m.smart ? ' smart' : '') + '">' + m.badge + '</span>'
-      + '</div>'
-      + '<div class="card-rates">'
-      +   '<div class="rate-item"><div class="rate-lbl">' + m.rateLabelS6 + '</div><div class="rate-val hi">' + m.rateS6 + '</div></div>'
-      +   '<div class="rate-item"><div class="rate-lbl">' + m.rateLabelS1 + '</div><div class="rate-val">' + m.rateS1 + '</div></div>'
-      + '</div>'
-      + '<div class="card-go">解析・スペックを見る <span>→</span></div>'
-      + '</a>';
-  }
+  // ジャンプナビ
+  var jumpHtml = KANA_GROUPS.map(function(g) {
+    var count = groups[g.label].length;
+    if (count === 0) return '<span class="jump-link disabled">' + g.label + '</span>';
+    return '<a href="#kana-' + encodeURIComponent(g.label) + '" class="jump-link">' + g.label + '</a>';
+  }).join('');
+  document.getElementById('jump-nav').innerHTML = jumpHtml;
 
-  // 行インデックス
-  var idxHTML = '';
-  KANA_ROWS.forEach(function(r) {
-    var has = groupMap[r.label] && groupMap[r.label].length > 0;
-    if (!has) return;
-    idxHTML += '<a href="#row-' + r.label + '" class="kana-idx-btn has-items">' + r.label + '</a>';
-  });
-  document.getElementById('kana-index').innerHTML = idxHTML;
-
-  // 本文描画
+  // リスト
   var html = '';
-  groups.forEach(function(g) {
-    var id = 'row-' + g.label;
-    html += '<div class="group-heading" id="' + id + '">'
-      + '<span class="group-label">' + g.label + '</span>'
-      + '<span class="group-count">' + g.items.length + '機種</span>'
-      + '</div>'
-      + '<div class="machine-grid">';
-    g.items.forEach(function(m) { html += cardHTML(m); });
-    html += '</div>';
+  KANA_GROUPS.forEach(function(g) {
+    var machines = groups[g.label];
+    if (machines.length === 0) return;
+    html += '<div class="group" id="kana-' + encodeURIComponent(g.label) + '">'
+      + '<div class="group-label">' + g.label + '<span class="group-count">' + machines.length + '機種</span></div>';
+    html += '<div class="m-list">';
+    machines.forEach(function(m) {
+      var badge = m.smart
+        ? '<span class="m-badge m-badge-smart">スマスロ</span>'
+        : '<span class="m-badge m-badge-medal">メダル</span>';
+      var rate = m.rateS6 && m.rateS6 !== '-' ? '<span class="m-rate">設6: ' + m.rateS6 + '</span>' : '';
+      html += '<a class="m-row" href="' + m.url + '">'
+        + badge
+        + '<span class="m-name">' + m.name + '</span>'
+        + '<span class="m-maker">' + m.maker + '</span>'
+        + rate
+        + '</a>';
+    });
+    html += '</div></div>';
   });
 
-  document.getElementById('machine-list').innerHTML = html;
-  document.getElementById('total-count').textContent = '全' + sorted.length + '機種';
+  document.getElementById('list').innerHTML = html;
 })();
 </script>
 </body>

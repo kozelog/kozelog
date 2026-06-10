@@ -390,11 +390,12 @@ function updateLowDenom() {
 
 // ===== 設定推定ツール =====
 function calcSetting() {
-  var games   = parseFloat(document.getElementById('t-games').value)   || 0;
-  var bbCnt   = parseFloat(document.getElementById('t-bb').value)      || 0;
-  var rbCnt   = parseFloat(document.getElementById('t-rb').value)      || 0;
-  var koyaku1 = parseFloat(document.getElementById('t-koyaku1').value) || 0;
-  var koyaku2 = parseFloat(document.getElementById('t-koyaku2').value) || 0;
+  var el = function(id) { var e = document.getElementById(id); return e ? parseFloat(e.value) || 0 : 0; };
+  var games   = el('t-games');
+  var bbCnt   = el('t-bb');
+  var rbCnt   = el('t-rb');
+  var koyaku1 = el('t-koyaku1');
+  var koyaku2 = el('t-koyaku2');
 
   if (games < 100 || (bbCnt === 0 && rbCnt === 0)) {
     alert('消化ゲーム数とBB/RB回数を入力してください。');
@@ -424,6 +425,10 @@ function calcSetting() {
   var total = raw.reduce(function(a, b) { return a + b.s; }, 0);
   var pcts  = raw.map(function(x) { return Math.round((x.s / total) * 1000) / 10; });
 
+  // 広告枠を表示 → 結果を表示
+  var adSlot = document.getElementById('ad-slot-tool');
+  if (adSlot) adSlot.style.display = 'block';
+
   document.getElementById('result-area').style.display = 'block';
   pcts.forEach(function(pct, i) {
     var r   = REF[i];
@@ -435,7 +440,9 @@ function calcSetting() {
       '<div class="bar-bg"><div class="bar-fill" style="width:' + pct + '%;background:' + r.color + '">' + txt + '</div></div>';
   });
 
-  document.getElementById('result-area').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+  // 広告枠までスクロール（広告→結果の順に見える）
+  var scrollTarget = adSlot && adSlot.style.display !== 'none' ? adSlot : document.getElementById('result-area');
+  scrollTarget.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
 
 // ===== ナビゲーション =====
@@ -475,6 +482,31 @@ function loadComponents(base) {
       .catch(function() {});
   });
 }
+
+// ===== 広告枠 自動挿入 =====
+function injectAdSlots() {
+  // ① スペック下の広告枠
+  var spec = document.getElementById('spec');
+  if (spec) {
+    var adSpec = document.createElement('div');
+    adSpec.className = 'ad-slot';
+    adSpec.id = 'ad-slot-spec';
+    adSpec.innerHTML = '<span class="ad-slot-label">AD</span>';
+    spec.parentNode.insertBefore(adSpec, spec.nextSibling);
+  }
+
+  // ② 推定ツール結果前の広告枠（ボタン押下まで非表示）
+  var resultArea = document.getElementById('result-area');
+  if (resultArea) {
+    var adTool = document.createElement('div');
+    adTool.className = 'ad-slot ad-slot-tool';
+    adTool.id = 'ad-slot-tool';
+    adTool.style.display = 'none';
+    adTool.innerHTML = '<span class="ad-slot-label">AD</span>';
+    resultArea.parentNode.insertBefore(adTool, resultArea);
+  }
+}
+document.addEventListener('DOMContentLoaded', injectAdSlots);
 
 // ===== アコーディオン =====
 function toggleAccordion(id) {
