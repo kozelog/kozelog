@@ -97,12 +97,15 @@ var ASSETS_BASE='../../assets/';loadComponents(ASSETS_BASE);
         ? '<span class="m-badge m-badge-smart">スマスロ</span>'
         : '<span class="m-badge m-badge-medal">メダル</span>';
       var rate = m.rateS6 && m.rateS6 !== '-' ? '<span class="m-rate">設6: ' + m.rateS6 + '</span>' : '';
-      html += '<a class="m-row" href="' + m.url + '">'
+      var soon = m.kozelog ? '' : '<span class="m-badge m-badge-soon">準備中</span>';
+      var tag = m.kozelog ? 'a' : 'div';
+      var href = m.kozelog ? ' href="' + m.url + '"' : '';
+      html += '<' + tag + ' class="m-row' + (m.kozelog ? '' : ' m-row-soon') + '"' + href + '>'
         + badge
         + '<span class="m-name">' + m.name + '</span>'
         + '<span class="m-maker">' + m.maker + '</span>'
-        + rate
-        + '</a>';
+        + rate + soon
+        + '</' + tag + '>';
     });
     html += '</div></div>';
   });

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="/assets/site.js"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません | こぜログ</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/assets/common.css">
+  <style>
+    .err-wrap { max-width: 600px; margin: 80px auto; padding: 0 16px; text-align: center; }
+    .err-code { font-size: 72px; font-weight: 900; color: var(--gold); letter-spacing: 8px; margin-bottom: 8px; }
+    .err-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+    .err-desc { font-size: 14px; color: var(--text2); line-height: 1.8; margin-bottom: 32px; }
+    .err-btn { display: inline-block; background: var(--gold); color: #000; font-weight: 700; font-size: 14px; padding: 12px 32px; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .err-btn:hover { opacity: .85; }
+    .err-links { margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .err-links a { font-size: 13px; color: var(--text2); text-decoration: none; }
+    .err-links a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+<div id="site-header-ph"></div>
+<div class="err-wrap">
+  <div class="err-code">404</div>
+  <h1 class="err-title">ページが見つかりません</h1>
+  <p class="err-desc">
+    お探しのページは存在しないか、移動した可能性があります。<br>
+    機種の解析ページは順次公開中です。
+  </p>
+  <a href="/" class="err-btn">トップページへ戻る</a>
+  <div class="err-links">
+    <a href="/search/by-date/">導入順で探す</a>
+    <a href="/search/by-maker/">メーカー名で探す</a>
+    <a href="/search/by-kana/">50音順で探す</a>
+  </div>
+</div>
+<div id="site-footer-ph"></div>
+<script src="/assets/common.js"></script>
+<script>var ASSETS_BASE='/assets/';loadComponents(ASSETS_BASE);</script>
+</body>
+</html>
