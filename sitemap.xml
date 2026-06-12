@@ -438,6 +438,36 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- クロスアルファ -->
+  <url>
+    <loc>https://kozelog.net/crossalpha/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/crossalpha/tokyo-ghoul/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 山佐 追加機種 -->
+  <url>
+    <loc>https://kozelog.net/yamasa/monkey-turn-v/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SANKYO 追加機種 -->
+  <url>
+    <loc>https://kozelog.net/sankyo/valvrave2/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- パオン・ディーピー -->
   <url>
     <loc>https://kozelog.net/paon-dp/</loc>

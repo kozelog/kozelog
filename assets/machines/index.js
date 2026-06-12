@@ -816,7 +816,7 @@ var MACHINES_LIST = [
 
   /* ----- 2023年12月 ----- */
   { id:'ring-ni-kakero', name:'L リングにかけろ1 V', kana:'りんぐにかけろ', fullName:'L リングにかけろ1 V', maker:'F', makerSlug:'f-shokai', makerEn:'F', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/f-shokai/ring-ni-kakero/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'monkey-turn-v', name:'スマスロモンキーターンV', kana:'もんきーたーんふぁいぶ', fullName:'スマスロモンキーターンⅤ', maker:'山佐', makerSlug:'yamasa', makerEn:'YAMASA', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/yamasa/monkey-turn-v/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'monkey-turn-v', name:'スマスロモンキーターンV', kana:'もんきーたーんふぁいぶ', fullName:'スマスロモンキーターンⅤ', maker:'山佐', makerSlug:'yamasa', makerEn:'YAMASA', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/yamasa/monkey-turn-v/', kozelog:true, rateS6:'114.9%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'cranky-crest', name:'クランキークレスト', kana:'くらんきーくれすと', fullName:'クランキークレスト', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/mizuho/cranky-crest/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'magical-halloween8', name:'マジカルハロウィン8', kana:'まじかるはろうぃんえいと', fullName:'マジカルハロウィン８', maker:'コナミアミューズメント', makerSlug:'konami', makerEn:'KONAMI', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/konami/magical-halloween8/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'love-jo3', name:'Lラブ嬢3', kana:'らぶじょうすりー', fullName:'Lラブ嬢3～Wご指名はいかがですか?～', maker:'アムテックス', makerSlug:'amtex', makerEn:'AMTEX', badge:'スマスロ', smart:true, releaseDate:'2023-12-04', releaseLabel:'2023年12月4日', url:'/amtex/love-jo3/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
@@ -914,7 +914,7 @@ var MACHINES_LIST = [
   /* ----- 2025年2月 ----- */
   { id:'super-blackjack', name:'スマスロスーパーブラックジャック', kana:'すーぱーぶらっくじゃっく', fullName:'スマスロスーパーブラックジャック', maker:'セブンリーグ', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'スマスロ', smart:true, releaseDate:'2025-02-03', releaseLabel:'2025年2月3日', url:'/seven-league/super-blackjack/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'shaman-king', name:'スマスロ シャーマンキング', kana:'しゃーまんきんぐ', fullName:'スマスロ シャーマンキング', maker:'エレコ', makerSlug:'eleco', makerEn:'ELECO', badge:'スマスロ', smart:true, releaseDate:'2025-02-03', releaseLabel:'2025年2月3日', url:'/eleco/shaman-king/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'tokyo-ghoul', name:'L 東京喰種', kana:'とうきょうぐーる', fullName:'Ｌ 東京喰種', maker:'クロスアルファ', makerSlug:'crossalpha', makerEn:'CROSSALPHA', badge:'スマスロ', smart:true, releaseDate:'2025-02-03', releaseLabel:'2025年2月3日', url:'/crossalpha/tokyo-ghoul/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'tokyo-ghoul', name:'L 東京喰種', kana:'とうきょうぐーる', fullName:'Ｌ 東京喰種', maker:'クロスアルファ', makerSlug:'crossalpha', makerEn:'CROSSALPHA', badge:'スマスロ', smart:true, releaseDate:'2025-02-03', releaseLabel:'2025年2月3日', url:'/crossalpha/tokyo-ghoul/', kozelog:true, rateS6:'114.9%', rateS1:'97.5%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'arifureta', name:'Lパチスロ ありふれた職業で世界最強', kana:'ありふれたしょくぎょうでせかいさいきょう', fullName:'Lパチスロ ありふれた職業で世界最強', maker:'SANKYO', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2025-02-03', releaseLabel:'2025年2月3日', url:'/sankyo/arifureta/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2025年3月 ----- */
@@ -975,7 +975,7 @@ var MACHINES_LIST = [
 
   /* ----- 2025年11月 ----- */
   { id:'railgun2', name:'スマスロ とある科学の超電磁砲2', kana:'とあるかがくのれーるがんつー', fullName:'スマスロ とある科学の超電磁砲２', maker:'藤商事', makerSlug:'fuji', makerEn:'FUJI', badge:'スマスロ', smart:true, releaseDate:'2025-11-04', releaseLabel:'2025年11月4日', url:'/fuji/railgun2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'valvrave2', name:'Lパチスロ 革命機ヴァルヴレイヴ2', kana:'う゛ぁるう゛れいう゛つー', fullName:'Ｌパチスロ 革命機ヴァルヴレイヴ2', maker:'SANKYO', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2025-11-04', releaseLabel:'2025年11月4日', url:'/sankyo/valvrave2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'valvrave2', name:'Lパチスロ 革命機ヴァルヴレイヴ2', kana:'う゛ぁるう゛れいう゛つー', fullName:'Ｌパチスロ 革命機ヴァルヴレイヴ2', maker:'SANKYO', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2025-11-04', releaseLabel:'2025年11月4日', url:'/sankyo/valvrave2/', kozelog:true, rateS6:'114.9%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'neo-planet', name:'スマスロネオプラネット', kana:'ねおぷらねっと', fullName:'スマスロネオプラネット', maker:'セブンリーグ', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'スマスロ', smart:true, releaseDate:'2025-11-17', releaseLabel:'2025年11月17日', url:'/seven-league/neo-planet/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2025年12月 ----- */
