@@ -55,14 +55,12 @@ a:hover { text-decoration: underline; }
 .nav-divider { height: 1px; background: var(--border); margin: 8px 20px; }
 
 /* ===== AD SLOTS ===== */
-.ad-slot { background: var(--bg3); border: 1px dashed #3a4050; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--text2); font-size: 11px; letter-spacing: 0.5px; }
-.ad-top { min-height: 70px; max-width: 1200px; margin: 12px auto; padding: 0 16px; }
-.ad-top .ad-slot { min-height: 60px; }
-.ad-inline { min-height: 90px; margin: 24px 0; }
-.ad-sidebar { min-height: 250px; }
-.ad-sidebar-tall { min-height: 600px; }
-.ad-footer { min-height: 90px; max-width: 1200px; margin: 0 auto 0; padding: 0 16px 16px; }
-.ad-footer .ad-slot { min-height: 90px; }
+.ad-slot { border-radius: var(--radius); display: flex; align-items: center; justify-content: center; }
+.ad-slot:empty { display: none; }
+.ad-top { max-width: 1200px; margin: 12px auto; padding: 0 16px; }
+.ad-inline { margin: 24px 0; }
+.ad-sidebar, .ad-sidebar-tall { }
+.ad-footer { max-width: 1200px; margin: 0 auto 0; padding: 0 16px 16px; }
 
 /* ===== LAYOUT ===== */
 .container { max-width: 1200px; margin: 0 auto; padding: 20px 16px; display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: start; }

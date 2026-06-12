@@ -491,7 +491,7 @@ function injectAdSlots() {
     var adSpec = document.createElement('div');
     adSpec.className = 'ad-slot';
     adSpec.id = 'ad-slot-spec';
-    adSpec.innerHTML = '<span class="ad-slot-label">AD</span>';
+    adSpec.innerHTML = '';
     spec.parentNode.insertBefore(adSpec, spec.nextSibling);
   }
 
@@ -502,7 +502,7 @@ function injectAdSlots() {
     adTool.className = 'ad-slot ad-slot-tool';
     adTool.id = 'ad-slot-tool';
     adTool.style.display = 'none';
-    adTool.innerHTML = '<span class="ad-slot-label">AD</span>';
+    adTool.innerHTML = '';
     resultArea.parentNode.insertBefore(adTool, resultArea);
   }
 }
