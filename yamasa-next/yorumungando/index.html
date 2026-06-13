@@ -287,18 +287,9 @@
 var ASSETS_BASE='../../assets/';
 var currentMachineId='yorumungando';
 loadComponents(ASSETS_BASE);
-var DIFF_RATES=[0.978,0.988,1.009,1.047,1.096,1.139];
+var DIFF_HOURS=[1,3,5,8];
+var DIFF_RATES=[{s:1,rate:0.978},{s:2,rate:0.988},{s:3,rate:1.009},{s:4,rate:1.047},{s:5,rate:1.096},{s:6,rate:1.139}];
 var AT_PROBS=[1/333.8,1/323.3,1/305.4,1/291.6,1/291.1,1/290.1];
-function setRpm(v){document.getElementById('rpm-input').value=v;updateDiffTable();}
-function updateDiffTable(){
-  var rpm=parseInt(document.getElementById('rpm-input').value)||500;
-  var hours=[1,3,5,8];
-  for(var s=1;s<=6;s++){
-    var d1=(DIFF_RATES[s-1]-1)*rpm*3;
-    document.getElementById('dr-'+s).textContent=(d1>=0?'+':'')+Math.round(d1)+'枚';
-    hours.forEach(function(h){var el=document.getElementById('d-'+s+'-'+h);if(el){var v=d1*h;el.textContent=(v>=0?'+':'')+Math.round(v)+'枚';el.className=v>=0?'td-pos':'td-neg';}});
-  }
-}
 updateDiffTable();
 function poissonLL(k,lam){if(lam<=0)return k===0?0:-Infinity;var ll=0;for(var i=1;i<=k;i++)ll+=Math.log(i);return k*Math.log(lam)-lam-ll;}
 function calcSetting(){

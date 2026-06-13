@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <script src="../../assets/site.js"></script>
+<script src="../../assets/common.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564257400721530" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="../../assets/favicon.png">
@@ -483,60 +484,8 @@
 var ASSETS_BASE='../../assets/';loadComponents(ASSETS_BASE);
 
 var SETTINGS=[1,2,4,5,6];
-var RATES_MAP={1:97.9,2:98.9,4:104.5,5:110.2,6:114.9};
+var DIFF_RATES=[{s:1,rate:0.979},{s:2,rate:0.989},{s:4,rate:1.045},{s:5,rate:1.102},{s:6,rate:1.149}];
 var AT_MAP={1:1/299.8,2:1/295.5,4:1/258.8,5:1/235.7,6:1/222.9};
-var coinsPerBet=3;
-var currentCoinsPerUnit=50;
-
-function setRpm(v){document.getElementById('rpm-input').value=v;updateDiffTable();}
-function updateDiffTable(){
-  var rpm=parseInt(document.getElementById('rpm-input').value)||750;
-  [3,6,12].forEach(function(h){
-    var g=rpm*h;
-    document.getElementById('diff-h'+h+'-label').textContent=h+'時間（約'+g.toLocaleString()+'G）';
-    document.getElementById('pt-h'+h+'-label').textContent=h+'時間';
-    SETTINGS.forEach(function(s){
-      var r=RATES_MAP[s];
-      var diff=Math.round(g*coinsPerBet*(r/100-1));
-      var el=document.getElementById('d-'+s+'-'+h);
-      if(el){
-        el.textContent=(diff>=0?'+':'')+diff.toLocaleString()+'枚';
-        el.className=diff>=0?'td-pos':'td-neg';
-      }
-      var dr=document.getElementById('dr-'+s);
-      if(dr) dr.textContent=r+'%';
-      var pt=Math.round(diff/currentCoinsPerUnit*1000);
-      var pel=document.getElementById('pt-'+s+'-'+h);
-      if(pel){
-        pel.textContent=(pt>=0?'+':'')+pt.toLocaleString()+'pt';
-        pel.className=pt>=0?'td-pos':'td-neg';
-      }
-      var ptr=document.getElementById('ptr-'+s);
-      if(ptr) ptr.textContent=r+'%';
-    });
-  });
-}
-function selectRate(c){
-  currentCoinsPerUnit=c;
-  document.querySelectorAll('.rate-btn').forEach(function(b){b.classList.remove('active');});
-  var btn=document.querySelector('[data-coins="'+c+'"]');
-  if(btn)btn.classList.add('active');
-  document.getElementById('custom-rate-wrap').style.display='none';
-  document.getElementById('pt-rate-label').textContent='交換レート：'+(c===50?'等価':c/10+'枚')+'（'+c+'枚 / 1,000pt）';
-  updateDiffTable();
-}
-function selectCustomRate(){
-  document.querySelectorAll('.rate-btn').forEach(function(b){b.classList.remove('active');});
-  document.getElementById('rate-btn-custom').classList.add('active');
-  document.getElementById('custom-rate-wrap').style.display='flex';
-  applyCustomRate();
-}
-function applyCustomRate(){
-  var v=parseFloat(document.getElementById('custom-rate-input').value)||5.0;
-  currentCoinsPerUnit=Math.round(v*10);
-  document.getElementById('pt-rate-label').textContent='交換レート：'+v+'枚交換（'+currentCoinsPerUnit+'枚 / 1,000pt）';
-  updateDiffTable();
-}
 
 function calcSetting(){
   var g=parseInt(document.getElementById('in-games').value)||0;

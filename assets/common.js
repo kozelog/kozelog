@@ -100,14 +100,32 @@ var SVG_SYMBOLS_HTML = '<svg style="display:none" xmlns="http://www.w3.org/2000/
 })();
 
 // ===== 定数 =====
-var DIFF_HOURS = [3, 6, 12];
+// DIFF_HOURS はページ側で先に定義可能（例: var DIFF_HOURS = [1,3,5,8];）
+if (typeof DIFF_HOURS === 'undefined') { var DIFF_HOURS = [3, 6, 12]; }
 var RENTAL_COINS = 50; // 50枚/1,000pt 固定
 var SETTING_COLORS = {1:'#999', 2:'#5ba0b5', 3:'#4fa880', 4:'#7abb50', 5:'#f5b030', 6:'#f05050'};
 
 // ===== 状態変数 =====
 var currentMachineId = null;
-var DIFF_RATES = [];
+if (typeof DIFF_RATES === 'undefined') { var DIFF_RATES = []; }
 var REF = [];
+
+// DIFF_RATES 自動正規化
+// flat配列 [0.975, 0.99, ...] → [{s:1,rate:0.975}, {s:2,rate:0.99}, ...]
+// percentage配列 [97.5, 99.0, ...] → [{s:1,rate:0.975}, ...]
+// SETTING_LIST でマッピングカスタマイズ可（例: var SETTING_LIST=[1,2,5,6]）
+function normalizeDiffRates() {
+  if (!DIFF_RATES || !DIFF_RATES.length) return;
+  if (typeof DIFF_RATES[0] === 'object' && DIFF_RATES[0].s !== undefined) return;
+  var sl = typeof SETTING_LIST !== 'undefined' ? SETTING_LIST :
+    DIFF_RATES.length === 6 ? [1,2,3,4,5,6] :
+    DIFF_RATES.length === 5 ? [1,2,4,5,6] :
+    DIFF_RATES.length === 4 ? [1,2,5,6] :
+    Array.from({length: DIFF_RATES.length}, function(_, i) { return i + 1; });
+  DIFF_RATES = DIFF_RATES.map(function(r, i) {
+    return { s: sl[i], rate: r > 2 ? r / 100 : r };
+  });
+}
 var selectedExchangeCoins = 50;
 
 // ===== リールシンボルマッピング =====
@@ -269,6 +287,8 @@ function renderReels() {
 
 // ===== 差枚数テーブル =====
 function updateDiffTable() {
+  normalizeDiffRates();
+  if (!DIFF_RATES || !DIFF_RATES.length) return;
   var rpm = parseFloat(document.getElementById('rpm-input').value) || 750;
   rpm = Math.max(100, Math.min(1200, rpm));
   updatePtTable();
@@ -277,13 +297,17 @@ function updateDiffTable() {
     updateLowDenom();
   }
 
-  ['diff-h3-label', 'diff-h6-label', 'diff-h12-label'].forEach(function(id, i) {
-    var h = [3, 6, 12][i];
-    var el = document.getElementById(id);
+  DIFF_HOURS.forEach(function(h) {
+    var el = document.getElementById('diff-h' + h + '-label');
     if (el) el.textContent = h + '時間（約' + Math.round(rpm * h).toLocaleString() + 'G）';
   });
 
   DIFF_RATES.forEach(function(row) {
+    var rateStr = (row.rate * 100).toFixed(1) + '%';
+    var rateCls = row.rate >= 1 ? 'td-pos' : 'td-neg';
+    var drEl = document.getElementById('dr-' + row.s);
+    if (drEl) { drEl.textContent = rateStr; drEl.className = rateCls; }
+
     DIFF_HOURS.forEach(function(h) {
       var diff = Math.round(rpm * h * 3 * (row.rate - 1));
       var el = document.getElementById('d-' + row.s + '-' + h);
@@ -341,17 +365,22 @@ function applyCustomRate() {
 
 // ===== pt換算テーブル（20スロ）=====
 function updatePtTable() {
+  if (!DIFF_RATES || !DIFF_RATES.length) return;
   var rpm = parseFloat(document.getElementById('rpm-input').value) || 750;
   var exchPtPerCoin = 1000 / selectedExchangeCoins;
   var rentalPtPerCoin = 1000 / RENTAL_COINS; // 20pt固定
 
-  ['pt-h3-label', 'pt-h6-label', 'pt-h12-label'].forEach(function(id, i) {
-    var h = [3, 6, 12][i];
-    var el = document.getElementById(id);
+  DIFF_HOURS.forEach(function(h) {
+    var el = document.getElementById('pt-h' + h + '-label');
     if (el) el.textContent = h + '時間（約' + Math.round(rpm * h).toLocaleString() + 'G）';
   });
 
   DIFF_RATES.forEach(function(row) {
+    var rateStr = (row.rate * 100).toFixed(1) + '%';
+    var rateCls = row.rate >= 1 ? 'td-pos' : 'td-neg';
+    var ptrEl = document.getElementById('ptr-' + row.s);
+    if (ptrEl) { ptrEl.textContent = rateStr; ptrEl.className = rateCls; }
+
     DIFF_HOURS.forEach(function(h) {
       var coinsIn = rpm * h * 3;
       var pt = Math.round(coinsIn * (row.rate * exchPtPerCoin - rentalPtPerCoin) / 10) * 10;
@@ -370,9 +399,8 @@ function updateLowDenom() {
   var exchPtPerCoin = 1000 / selectedExchangeCoins / 4;
   var rentalPtPerCoin = 5; // 5pt/coin固定
 
-  ['lv-h3-label', 'lv-h6-label', 'lv-h12-label'].forEach(function(id, i) {
-    var h = [3, 6, 12][i];
-    var el = document.getElementById(id);
+  DIFF_HOURS.forEach(function(h) {
+    var el = document.getElementById('lv-h' + h + '-label');
     if (el) el.textContent = h + '時間（約' + Math.round(rpm * h).toLocaleString() + 'G）';
   });
 
