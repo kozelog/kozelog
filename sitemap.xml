@@ -83,9 +83,17 @@
 
   <!-- アクロス（→サミーに統合） -->
 
+  <!-- アクロス メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/across/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- アクロス 機種ページ -->
   <url>
-    <loc>https://kozelog.net/machine/sammy/hanabi-2026/</loc>
+    <loc>https://kozelog.net/machine/across/hanabi-2026/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -294,7 +302,7 @@
 
   <!-- 大都技研 メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/machine/daitokabu/</loc>
+    <loc>https://kozelog.net/machine/daitogiken/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -302,7 +310,7 @@
 
   <!-- 大都技研 機種ページ -->
   <url>
-    <loc>https://kozelog.net/machine/daitokabu/yoshimune/</loc>
+    <loc>https://kozelog.net/machine/daitogiken/yoshimune/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -149,14 +149,14 @@ var MACHINES_LIST = [
     name:         'スマスロ ハナビ',
     kana:         'すますろはなび',
     fullName:     'SMART SLOT HANABI',
-    maker:        'サミー（SAMMY）',
-    makerSlug:    'sammy',
+    maker:        'アクロス（ACROSS）',
+    makerSlug:    'across',
     makerEn:      'ACROSS',
     badge:        'スマスロ',
     smart:        true,
     releaseDate:  '2026-02-02',
     releaseLabel: '2026年2月2日',
-    url: '/machine/sammy/hanabi-2026/',
+    url: '/machine/across/hanabi-2026/',
     kozelog:      true,
     rateS6:       '108.0%',
     rateS1:       '100.2%',
@@ -497,13 +497,13 @@ var MACHINES_LIST = [
     kana:         'しんうちよしむね',
     fullName:     '真打 吉宗',
     maker:        '大都技研',
-    makerSlug:    'daitokabu',
+    makerSlug:    'daitogiken',
     makerEn:      'DAITO GIKEN',
     badge:        'スマスロ',
     smart:        true,
     releaseDate:  '2026-04-06',
     releaseLabel: '2026年4月6日',
-    url: '/machine/daitokabu/yoshimune/',
+    url: '/machine/daitogiken/yoshimune/',
     kozelog:      true,
     rateS6:       '114.0%',
     rateS1:       '97.8%',
@@ -770,7 +770,7 @@ var MACHINES_LIST = [
 
   /* ----- 2023年5月 ----- */
   { id:'my-flower2-30', name:'マイフラワー2-30', kana:'まいふらわーつー', fullName:'マイフラワー２-30', maker:'北電子（KITADENSHI）', makerSlug:'kitadenshi', makerEn:'KITADENSHI', badge:'6号機', smart:false, releaseDate:'2023-05-08', releaseLabel:'2023年5月8日', url: '/machine/kitadenshi/my-flower2-30/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'sao-slot', name:'スロット ソードアート・オンライン', kana:'そーどあーとおんらいん', fullName:'スロット ソードアート・オンライン', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2023-05-15', releaseLabel:'2023年5月15日', url: '/machine/daitokabu/sao-slot/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'sao-slot', name:'スロット ソードアート・オンライン', kana:'そーどあーとおんらいん', fullName:'スロット ソードアート・オンライン', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2023-05-15', releaseLabel:'2023年5月15日', url: '/machine/daitogiken/sao-slot/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'kacho-kumada', name:'課長 熊田工作', kana:'かちょうくまだこうさく', fullName:'課長 熊田工作', maker:'NET', makerSlug:'net', makerEn:'NET', badge:'6号機', smart:false, releaseDate:'2023-05-22', releaseLabel:'2023年5月22日', url:'/net/kacho-kumada/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2023年6月 ----- */
@@ -848,13 +848,13 @@ var MACHINES_LIST = [
   { id:'chibariyo2', name:'チバリヨ2', kana:'ちばりよつー', fullName:'チバリヨ2', maker:'NET', makerSlug:'net', makerEn:'NET', badge:'スマスロ', smart:true, releaseDate:'2024-03-04', releaseLabel:'2024年3月4日', url:'/net/chibariyo2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'smart-king-pulsar', name:'スマートキングパルサー', kana:'すまーときんぐぱるさー', fullName:'スマートキングパルサー', maker:'セブンリーグ', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'スマスロ', smart:true, releaseDate:'2024-03-04', releaseLabel:'2024年3月4日', url:'/seven-league/smart-king-pulsar/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'ninja-jajamaru', name:'スロット忍者じゃじゃ丸くん', kana:'にんじゃじゃじゃまるくん', fullName:'スロット忍者じゃじゃ丸くん', maker:'エレコ（ELECO）', makerSlug:'eleco', makerEn:'ELECO', badge:'6号機', smart:false, releaseDate:'2024-03-18', releaseLabel:'2024年3月18日', url: '/machine/eleco/ninja-jajamaru/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'shinobi-soul3', name:'しのびソウル3', kana:'しのびそうるすりー', fullName:'しのびソウル3', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-03-18', releaseLabel:'2024年3月18日', url: '/machine/daitokabu/shinobi-soul3/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'shinobi-soul3', name:'しのびソウル3', kana:'しのびそうるすりー', fullName:'しのびソウル3', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-03-18', releaseLabel:'2024年3月18日', url: '/machine/daitogiken/shinobi-soul3/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年4月 ----- */
   { id:'golden-kamuy', name:'スマスロ ゴールデンカムイ', kana:'ごーるでんかむい', fullName:'スマスロ ゴールデンカムイ', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'GINZA', badge:'スマスロ', smart:true, releaseDate:'2024-04-08', releaseLabel:'2024年4月8日', url: '/machine/sammy/golden-kamuy/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'strike-the-blood', name:'スマスロ ストライク・ザ・ブラッド', kana:'すとらいくざぶらっど', fullName:'スマスロ ストライク・ザ・ブラッド', maker:'エンターライズ', makerSlug:'enterrise', makerEn:'ENTERRISE', badge:'スマスロ', smart:true, releaseDate:'2024-04-08', releaseLabel:'2024年4月8日', url: '/machine/enterrise/strike-the-blood/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'urusei-yatsura', name:'Lうる星やつら', kana:'うるせいやつら', fullName:'Lうる星やつら', maker:'EXCITE', makerSlug:'excite', makerEn:'EXCITE', badge:'スマスロ', smart:true, releaseDate:'2024-04-08', releaseLabel:'2024年4月8日', url:'/excite/urusei-yatsura/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'bancho4', name:'押忍！番長4', kana:'おすばんちょうふぉー', fullName:'押忍！番長４', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-04-22', releaseLabel:'2024年4月22日', url: '/machine/daitokabu/bancho4/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'bancho4', name:'押忍！番長4', kana:'おすばんちょうふぉー', fullName:'押忍！番長４', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-04-22', releaseLabel:'2024年4月22日', url: '/machine/daitogiken/bancho4/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'danmachi2', name:'パチスロ ダンまち2', kana:'だんまちつー', fullName:'パチスロ ダンジョンに出会いを求めるのは間違っているだろうか２', maker:'北電子（KITADENSHI）', makerSlug:'kitadenshi', makerEn:'KITADENSHI', badge:'6号機', smart:false, releaseDate:'2024-04-22', releaseLabel:'2024年4月22日', url: '/machine/kitadenshi/danmachi2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年5月 ----- */
@@ -870,7 +870,7 @@ var MACHINES_LIST = [
   { id:'okidoki-black', name:'沖ドキ！BLACK', kana:'おきどきぶらっく', fullName:'沖ドキ！BLACK', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2024-07-01', releaseLabel:'2024年7月1日', url: '/machine/mizuho/okidoki-black/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'shin-hokuto-musou', name:'スマスロ真・北斗無双', kana:'しんほくとむそう', fullName:'スマスロ真・北斗無双', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sammy/shin-hokuto-musou/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'symphogear-seigi', name:'Lパチスロ シンフォギア 正義の歌', kana:'しんふぉぎあせいぎのうた', fullName:'Lパチスロ戦姫絶唱シンフォギア 正義の歌', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sankyo/symphogear-seigi/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'zombie-land-saga', name:'スロット ゾンビランドサガ', kana:'ぞんびらんどさが', fullName:'スロット ゾンビランドサガ', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url: '/machine/daitokabu/zombie-land-saga/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'zombie-land-saga', name:'スロット ゾンビランドサガ', kana:'ぞんびらんどさが', fullName:'スロット ゾンビランドサガ', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url: '/machine/daitogiken/zombie-land-saga/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'god-eater-resurrection', name:'スマスロ ゴッドイーター リザレクション', kana:'ごっどいーたーりざれくしょん', fullName:'スマスロ ゴッドイーター リザレクション', maker:'セブンリーグ', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url:'/seven-league/god-eater-resurrection/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年8月 ----- */
@@ -941,7 +941,7 @@ var MACHINES_LIST = [
   /* ----- 2025年6月 ----- */
   { id:'iza-bancho', name:'いざ！番長', kana:'いざばんちょう', fullName:'いざ！番長', maker:'サボハニ', makerSlug:'sabohani', makerEn:'SABOHANI', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url:'/sabohani/iza-bancho/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'dmc5', name:'スマスロ デビル メイ クライ5', kana:'でびるめいくらいふぁいぶ', fullName:'スマスロ デビル メイ クライ5 スタイリッシュトライブ', maker:'Adelion', makerSlug:'adelion', makerEn:'ADELION', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url:'/adelion/dmc5/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'guilty-crown2', name:'スマスロ ギルティクラウン2', kana:'ぎるてぃくらうんつー', fullName:'スマスロ ギルティクラウン2', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'ACROSS', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url: '/machine/sammy/guilty-crown2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'guilty-crown2', name:'スマスロ ギルティクラウン2', kana:'ぎるてぃくらうんつー', fullName:'スマスロ ギルティクラウン2', maker:'アクロス（ACROSS）', makerSlug:'across', makerEn:'ACROSS', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url: '/machine/across/guilty-crown2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'new-pulsar-bt', name:'スマスロニューパルサーBT', kana:'にゅーぱるさーびーてぃー', fullName:'スマスロニューパルサーBT', maker:'山佐（YAMASA）', makerSlug:'yamasa', makerEn:'YAMASA', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url: '/machine/yamasa/new-pulsar-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'l-ultraman', name:'L ULTRAMAN', kana:'うるとらまん', fullName:'L ULTRAMAN', maker:'OK!!', makerSlug:'ok', makerEn:'OK', badge:'スマスロ', smart:true, releaseDate:'2025-06-02', releaseLabel:'2025年6月2日', url:'/ok/l-ultraman/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
@@ -961,7 +961,7 @@ var MACHINES_LIST = [
   /* ----- 2025年9月 ----- */
   { id:'neo-aim-juggler-ex', name:'ネオアイムジャグラーEX', kana:'ねおあいむじゃぐらー', fullName:'ネオアイムジャグラーEX', maker:'北電子（KITADENSHI）', makerSlug:'kitadenshi', makerEn:'KITADENSHI', badge:'スマスロ', smart:true, releaseDate:'2025-09-01', releaseLabel:'2025年9月1日', url: '/machine/kitadenshi/neo-aim-juggler-ex/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'tokyo-revengers', name:'スマスロ 東京リベンジャーズ', kana:'とうきょうりべんじゃーず', fullName:'スマスロ 東京リベンジャーズ', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2025-09-08', releaseLabel:'2025年9月8日', url: '/machine/sammy/tokyo-revengers/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'crea-hihou-bt', name:'クレアの秘宝伝 BT ver.', kana:'くれあのひほうでん', fullName:'クレアの秘宝伝 ～はじまりの扉と太陽の石～ BT ver.', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2025-09-08', releaseLabel:'2025年9月8日', url: '/machine/daitokabu/crea-hihou-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'crea-hihou-bt', name:'クレアの秘宝伝 BT ver.', kana:'くれあのひほうでん', fullName:'クレアの秘宝伝 ～はじまりの扉と太陽の石～ BT ver.', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2025-09-08', releaseLabel:'2025年9月8日', url: '/machine/daitogiken/crea-hihou-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'druaga-slot', name:'SLOTドルアーガの塔', kana:'どるあーがのとう', fullName:'SLOTドルアーガの塔', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'6号機', smart:false, releaseDate:'2025-09-08', releaseLabel:'2025年9月8日', url: '/machine/mizuho/druaga-slot/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'druaga-smart', name:'スマスロ ドルアーガの塔', kana:'すますろどるあーがのとう', fullName:'スマスロ ドルアーガの塔', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2025-09-08', releaseLabel:'2025年9月8日', url: '/machine/mizuho/druaga-smart/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'magical-halloween-bt', name:'マジカルハロウィン BT', kana:'まじかるはろうぃんびーてぃー', fullName:'マジカルハロウィン ボーナストリガー', maker:'コナミアミューズメント', makerSlug:'konami', makerEn:'KONAMI', badge:'スマスロ', smart:true, releaseDate:'2025-09-22', releaseLabel:'2025年9月22日', url:'/konami/magical-halloween-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
@@ -970,7 +970,7 @@ var MACHINES_LIST = [
   { id:'zenigata5', name:'L主役は銭形5', kana:'しゅやくはぜにがたふぁいぶ', fullName:'L主役は銭形5', maker:'オリンピア（OLYMPIA）', makerSlug:'orinpia', makerEn:'OLYMPIA', badge:'スマスロ', smart:true, releaseDate:'2025-10-06', releaseLabel:'2025年10月6日', url: '/machine/orinpia/zenigata5/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'babel', name:'スマスロ バベル', kana:'ばべる', fullName:'スマスロ バベル', maker:'ユニバーサルブロス', makerSlug:'universal-bros', makerEn:'UNIVERSAL BROS', badge:'スマスロ', smart:true, releaseDate:'2025-10-06', releaseLabel:'2025年10月6日', url:'/universal-bros/babel/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'shin-onimusha3', name:'スマスロ 新鬼武者3', kana:'しんおにむしゃすりー', fullName:'スマスロ 新鬼武者3', maker:'レオスター', makerSlug:'leostar', makerEn:'LEOSTAR', badge:'スマスロ', smart:true, releaseDate:'2025-10-06', releaseLabel:'2025年10月6日', url:'/leostar/shin-onimusha3/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'shake-bt', name:'SHAKE BONUS TRIGGER', kana:'しぇいくぼーなすとりがー', fullName:'SHAKE BONUS TRIGGER', maker:'大都技研', makerSlug:'daitokabu', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2025-10-20', releaseLabel:'2025年10月20日', url: '/machine/daitokabu/shake-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'shake-bt', name:'SHAKE BONUS TRIGGER', kana:'しぇいくぼーなすとりがー', fullName:'SHAKE BONUS TRIGGER', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2025-10-20', releaseLabel:'2025年10月20日', url: '/machine/daitogiken/shake-bt/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'kotobuki-hikoutai', name:'L 荒野のコトブキ飛行隊', kana:'こうやのことぶきひこうたい', fullName:'L 荒野のコトブキ飛行隊', maker:'Spiky', makerSlug:'spiky', makerEn:'SPIKY', badge:'スマスロ', smart:true, releaseDate:'2025-10-20', releaseLabel:'2025年10月20日', url:'/spiky/kotobuki-hikoutai/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2025年11月 ----- */
