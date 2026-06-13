@@ -482,4 +482,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- スマスロ北斗の拳 -->
+  <url>
+    <loc>https://kozelog.net/sammy/hokuto-no-ken/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ 化物語 -->
+  <url>
+    <loc>https://kozelog.net/ginza/bakemonogatari-smart/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
