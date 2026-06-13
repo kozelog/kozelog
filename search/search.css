@@ -39,7 +39,12 @@
 .m-row-soon:hover { background: transparent; }
 
 @media (max-width: 600px) {
-  .m-name { font-size: 13px; }
-  .m-row { padding: 8px 6px; gap: 6px; }
+  .m-row { padding: 8px 6px; gap: 4px 6px; display: grid; grid-template-columns: auto auto 1fr; grid-template-rows: auto auto; align-items: center; }
+  .m-date { grid-column: 1; grid-row: 1; }
+  .m-badge { grid-column: 2; grid-row: 1; }
+  .m-name { grid-column: 3; grid-row: 1; font-size: 13px; white-space: normal; overflow: visible; text-overflow: unset; }
+  .m-maker { grid-column: 3; grid-row: 2; font-size: 11px; }
+  .m-rate { grid-column: 3; grid-row: 2; justify-self: end; }
+  .m-badge-soon { grid-column: 3; grid-row: 2; justify-self: end; }
   .group-label { font-size: 15px; }
 }
