@@ -155,22 +155,20 @@
       transform: translateY(-2px);
     }
     .card-img {
-      width: 100%; aspect-ratio: 4/3;
+      width: 100%; aspect-ratio: 3/4;
       background: linear-gradient(135deg, #1a1a24 0%, #12121a 100%);
       display: flex; align-items: center; justify-content: center;
       overflow: hidden; position: relative;
     }
     .card-img img {
-      width: 100%; height: 100%; object-fit: cover;
+      width: 100%; height: 100%; object-fit: cover; object-position: center 25%;
     }
     .card-img-placeholder {
       font-size: 36px; color: var(--border); opacity: .5;
     }
     .card-date-badge {
-      position: absolute; top: 8px; left: 8px;
-      background: rgba(0,0,0,.7); border: 1px solid var(--border);
-      border-radius: 4px; padding: 2px 8px;
-      font-size: 10px; color: var(--text2); font-weight: 600;
+      font-size: 11px; color: var(--text2); font-weight: 600;
+      margin-bottom: 2px;
     }
     .card-type-badge {
       position: absolute; top: 8px; right: 8px;
@@ -235,6 +233,8 @@
     @media (max-width: 600px) {
       .hero { padding: 44px 16px 38px; }
       .machine-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+      .card-body { padding: 8px 14px 14px; gap: 5px; }
+      .card-date-badge { margin-bottom: -2px; }
       .card-name { font-size: 13px; }
       .card-spec-val { font-size: 14px; }
       .features-grid { grid-template-columns: 1fr 1fr; }
@@ -294,13 +294,13 @@
     <div class="machine-grid">
 
       <!-- 1. L戦国乙女5 — 2026/06/08 -->
-      <a href="/orinpia/l-sengoku-otome5/" class="machine-card">
+      <a href="/machine/orinpia/l-sengoku-otome5/" class="machine-card">
         <div class="card-img">
-          <img src="/orinpia/l-sengoku-otome5/img/cabinet.png" alt="L戦国乙女5 筐体画像" width="360" height="640" loading="lazy">
-          <span class="card-date-badge">2026.06.08</span>
+          <img src="/machine/orinpia/l-sengoku-otome5/img/cabinet.png" alt="L戦国乙女5 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.06.08</span>
           <div class="card-name">L戦国乙女5<br>業火を穿つ宿焔の双刃</div>
           <div class="card-maker">オリンピア</div>
           <div class="card-specs">
@@ -312,13 +312,13 @@
       </a>
 
       <!-- 2. SAO2 — 2026/06/08 -->
-      <a href="/paon-dp/sao2/" class="machine-card">
+      <a href="/machine/paon-dp/sao2/" class="machine-card">
         <div class="card-img">
-          <img src="/paon-dp/sao2/img/cabinet.png" alt="ソードアート・オンラインⅡ 筐体画像" width="360" height="640" loading="lazy">
-          <span class="card-date-badge">2026.06.08</span>
+          <img src="/machine/paon-dp/sao2/img/cabinet.png" alt="ソードアート・オンラインⅡ 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.06.08</span>
           <div class="card-name">ソードアート・オンラインⅡ</div>
           <div class="card-maker">パオン・ディーピー</div>
           <div class="card-specs">
@@ -330,13 +330,13 @@
       </a>
 
       <!-- 3. GALFY — 2026/05/25 -->
-      <a href="/oizumi/galfy/" class="machine-card">
+      <a href="/machine/oizumi/galfy/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.05.25</span>
+          <img src="/machine/oizumi/galfy/img/cabinet.png" alt="LB スロット GALFY 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.05.25</span>
           <div class="card-name">LB スロット GALFY</div>
           <div class="card-maker">オーイズミ</div>
           <div class="card-specs">
@@ -348,13 +348,13 @@
       </a>
 
       <!-- 3. ビッグドリーム — 2026/05/11 -->
-      <a href="/ginza/big-dream/" class="machine-card">
+      <a href="/machine/sammy/big-dream/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.05.11</span>
+          <img src="/machine/sammy/big-dream/img/cabinet.png" alt="スマスロ ビッグドリーム 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.05.11</span>
           <div class="card-name">スマスロ ビッグドリーム<br>THE GOLDEN PUSHER</div>
           <div class="card-maker">銀座</div>
           <div class="card-specs">
@@ -366,13 +366,13 @@
       </a>
 
       <!-- 4. タクトオーパス — 2026/05/11 -->
-      <a href="/amtex/takt-op-destiny/" class="machine-card">
+      <a href="/machine/amtex/takt-op-destiny/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.05.11</span>
+          <img src="/machine/amtex/takt-op-destiny/img/cabinet.png" alt="Lタクトオーパス デスティニー 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.05.11</span>
           <div class="card-name">Lタクトオーパス<br>デスティニー</div>
           <div class="card-maker">アムテックス</div>
           <div class="card-specs">
@@ -384,13 +384,13 @@
       </a>
 
       <!-- 5. バイオハザードRE:3 — 2026/05/11 -->
-      <a href="/enterrise/biohazard-re3/" class="machine-card">
+      <a href="/machine/enterrise/biohazard-re3/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.05.11</span>
+          <img src="/machine/enterrise/biohazard-re3/img/cabinet.png" alt="スマスロ バイオハザードRE:3 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.05.11</span>
           <div class="card-name">スマスロ<br>バイオハザードRE:3</div>
           <div class="card-maker">エンターライズ</div>
           <div class="card-specs">
@@ -402,13 +402,13 @@
       </a>
 
       <!-- 6. リオエース2 — 2026/05/11 -->
-      <a href="/yamasa-next/super-rio-ace2/" class="machine-card">
+      <a href="/machine/yamasa/super-rio-ace2/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.05.11</span>
+          <img src="/machine/yamasa/super-rio-ace2/img/cabinet.png" alt="スマスロ スーパーリオエース2 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.05.11</span>
           <div class="card-name">スマスロ<br>スーパーリオエース2</div>
           <div class="card-maker">山佐ネクスト</div>
           <div class="card-specs">
@@ -420,13 +420,13 @@
       </a>
 
       <!-- 7. ミリオンゴッド — 2026/04/20 -->
-      <a href="/mizuho/million-god-kiseki/" class="machine-card">
+      <a href="/machine/mizuho/million-god-kiseki/" class="machine-card">
         <div class="card-img">
-          <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.20</span>
+          <img src="/machine/mizuho/million-god-kiseki/img/cabinet.png" alt="スマスロ ミリオンゴッド 筐体画像" width="360" height="640" loading="lazy">
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.20</span>
           <div class="card-name">スマスロ ミリオンゴッド<br>-神々の軌跡-</div>
           <div class="card-maker">ミズホ</div>
           <div class="card-specs">
@@ -438,13 +438,13 @@
       </a>
 
       <!-- 8. ガンダムUC2 — 2026/04/20 -->
-      <a href="/bisty/gundam-uc2/" class="machine-card">
+      <a href="/machine/sankyo/gundam-uc2/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.20</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.20</span>
           <div class="card-name">Lパチスロ ガンダム<br>ユニコーン 覚醒DRIVE</div>
           <div class="card-maker">ビスティ</div>
           <div class="card-specs">
@@ -456,13 +456,13 @@
       </a>
 
       <!-- 9. アニマルドッチ — 2026/04/20 -->
-      <a href="/kitadenshi/animal-dotchi/" class="machine-card">
+      <a href="/machine/kitadenshi/animal-dotchi/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.20</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.20</span>
           <div class="card-name">アニマルスロット<br>ドッチ</div>
           <div class="card-maker">北電子</div>
           <div class="card-specs">
@@ -474,13 +474,13 @@
       </a>
 
       <!-- 10. 異世界かるてっと — 2026/04 -->
-      <a href="/sammy/sp-ise-ka/" class="machine-card">
+      <a href="/machine/sammy/sp-ise-ka/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04</span>
           <div class="card-name">異世界かるてっと BT</div>
           <div class="card-maker">サミー</div>
           <div class="card-specs">
@@ -492,13 +492,13 @@
       </a>
 
       <!-- 11. ヨルムンガンド — 2026/04/06 -->
-      <a href="/yamasa-next/yorumungando/" class="machine-card">
+      <a href="/machine/yamasa/yorumungando/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.06</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.06</span>
           <div class="card-name">スマスロ<br>ヨルムンガンド</div>
           <div class="card-maker">山佐ネクスト</div>
           <div class="card-specs">
@@ -510,13 +510,13 @@
       </a>
 
       <!-- 12. 虚構推理 — 2026/04/06 -->
-      <a href="/d-light/kyokosuiri/" class="machine-card">
+      <a href="/machine/d-light/kyokosuiri/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.06</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.06</span>
           <div class="card-name">L虚構推理</div>
           <div class="card-maker">D-light</div>
           <div class="card-specs">
@@ -528,13 +528,13 @@
       </a>
 
       <!-- 13. 吉宗 — 2026/04/06 -->
-      <a href="/daitokabu/yoshimune/" class="machine-card">
+      <a href="/machine/daitokabu/yoshimune/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.06</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.06</span>
           <div class="card-name">真打 吉宗</div>
           <div class="card-maker">大都技研</div>
           <div class="card-specs">
@@ -546,13 +546,13 @@
       </a>
 
       <!-- 14. アクダマドライブ — 2026/04/06 -->
-      <a href="/sun3/akudama-drive/" class="machine-card">
+      <a href="/machine/sun3/akudama-drive/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.06</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.06</span>
           <div class="card-name">Lアクダマドライブ</div>
           <div class="card-maker">サンスリー</div>
           <div class="card-specs">
@@ -564,13 +564,13 @@
       </a>
 
       <!-- 15. トリプルクラウンセブン — 2026/04/06 -->
-      <a href="/okazaki/triple-crown-seven/" class="machine-card">
+      <a href="/machine/okazaki/triple-crown-seven/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.04.06</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.04.06</span>
           <div class="card-name">LBトリプル<br>クラウンセブン</div>
           <div class="card-maker">岡崎産業</div>
           <div class="card-specs">
@@ -582,13 +582,13 @@
       </a>
 
       <!-- 16. カバネリ2 — 2026/03/02 -->
-      <a href="/sammy/kabaneri2/" class="machine-card">
+      <a href="/machine/sammy/kabaneri2/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.03.02</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.03.02</span>
           <div class="card-name">スマスロ カバネリ<br>海門決戦</div>
           <div class="card-maker">サミー</div>
           <div class="card-specs">
@@ -600,13 +600,13 @@
       </a>
 
       <!-- 17. サンダーV — 2026/03 -->
-      <a href="/eleco/thunder-v-2026/" class="machine-card">
+      <a href="/machine/eleco/thunder-v-2026/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.03</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.03</span>
           <div class="card-name">スマスロ サンダーV</div>
           <div class="card-maker">エレコ</div>
           <div class="card-specs">
@@ -618,13 +618,13 @@
       </a>
 
       <!-- 18. ハナビ — 2026/02/02 -->
-      <a href="/across/hanabi-2026/" class="machine-card">
+      <a href="/machine/sammy/hanabi-2026/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.02.02</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.02.02</span>
           <div class="card-name">スマスロ ハナビ</div>
           <div class="card-maker">アクロス</div>
           <div class="card-specs">
@@ -636,13 +636,13 @@
       </a>
 
       <!-- 19. 範馬刃牙 — 2026/02/02 -->
-      <a href="/orinpia/hanma-baki/" class="machine-card">
+      <a href="/machine/orinpia/hanma-baki/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.02.02</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.02.02</span>
           <div class="card-name">L範馬刃牙</div>
           <div class="card-maker">オリンピア</div>
           <div class="card-specs">
@@ -654,13 +654,13 @@
       </a>
 
       <!-- 20. 炎炎ノ消防隊2 — 2026/02/02 -->
-      <a href="/sankyo/enen2/" class="machine-card">
+      <a href="/machine/sankyo/enen2/" class="machine-card">
         <div class="card-img">
           <span class="card-img-placeholder">🎰</span>
-          <span class="card-date-badge">2026.02.02</span>
           <span class="card-type-badge smart">スマスロ</span>
         </div>
         <div class="card-body">
+          <span class="card-date-badge">2026.02.02</span>
           <div class="card-name">Lパチスロ<br>炎炎ノ消防隊2</div>
           <div class="card-maker">SANKYO</div>
           <div class="card-specs">

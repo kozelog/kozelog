@@ -31,7 +31,7 @@
 
   <!-- 北電子 メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/kitadenshi/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -39,59 +39,53 @@
 
   <!-- 北電子 機種ページ -->
   <url>
-    <loc>https://kozelog.net/kitadenshi/imjugglerex2020/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/imjugglerex2020/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/funkyjuggler2/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/funkyjuggler2/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/jgss/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/jgss/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/myjuggler5/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/myjuggler5/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/gogojuggler3/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/gogojuggler3/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/happyjugglerv3/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/happyjugglerv3/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/kitadenshi/mrjuggler/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/mrjuggler/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- アクロス メーカー一覧 -->
-  <url>
-    <loc>https://kozelog.net/across/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- アクロス（→サミーに統合） -->
 
   <!-- アクロス 機種ページ -->
   <url>
-    <loc>https://kozelog.net/across/hanabi-2026/</loc>
+    <loc>https://kozelog.net/machine/sammy/hanabi-2026/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -99,7 +93,7 @@
 
   <!-- エレコ メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/eleco/</loc>
+    <loc>https://kozelog.net/machine/eleco/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -107,7 +101,7 @@
 
   <!-- エレコ 機種ページ -->
   <url>
-    <loc>https://kozelog.net/eleco/thunder-v-2026/</loc>
+    <loc>https://kozelog.net/machine/eleco/thunder-v-2026/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -115,7 +109,7 @@
 
   <!-- 山佐 メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/yamasa/</loc>
+    <loc>https://kozelog.net/machine/yamasa/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -123,7 +117,7 @@
 
   <!-- 山佐 機種ページ -->
   <url>
-    <loc>https://kozelog.net/yamasa/tekken6/</loc>
+    <loc>https://kozelog.net/machine/yamasa/tekken6/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -131,7 +125,7 @@
 
   <!-- パイオニア メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/pioneer/</loc>
+    <loc>https://kozelog.net/machine/pioneer/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -139,13 +133,13 @@
 
   <!-- パイオニア 機種ページ -->
   <url>
-    <loc>https://kozelog.net/pioneer/nk-hanahana-v30/</loc>
+    <loc>https://kozelog.net/machine/pioneer/nk-hanahana-v30/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/pioneer/smart-hanahana-v/</loc>
+    <loc>https://kozelog.net/machine/pioneer/smart-hanahana-v/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -153,7 +147,7 @@
 
   <!-- オリンピア メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/orinpia/</loc>
+    <loc>https://kozelog.net/machine/orinpia/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -161,13 +155,13 @@
 
   <!-- オリンピア 機種ページ -->
   <url>
-    <loc>https://kozelog.net/orinpia/l-sengoku-otome5/</loc>
+    <loc>https://kozelog.net/machine/orinpia/l-sengoku-otome5/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/orinpia/hanma-baki/</loc>
+    <loc>https://kozelog.net/machine/orinpia/hanma-baki/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -175,7 +169,7 @@
 
   <!-- SANKYO メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/sankyo/</loc>
+    <loc>https://kozelog.net/machine/sankyo/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -183,7 +177,7 @@
 
   <!-- SANKYO 機種ページ -->
   <url>
-    <loc>https://kozelog.net/sankyo/enen2/</loc>
+    <loc>https://kozelog.net/machine/sankyo/enen2/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -191,7 +185,7 @@
 
   <!-- オーイズミ メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/oizumi/</loc>
+    <loc>https://kozelog.net/machine/oizumi/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -199,7 +193,7 @@
 
   <!-- オーイズミ 機種ページ -->
   <url>
-    <loc>https://kozelog.net/oizumi/umineko2/</loc>
+    <loc>https://kozelog.net/machine/oizumi/umineko2/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -207,7 +201,7 @@
 
   <!-- サミー 北斗転生2 機種ページ -->
   <url>
-    <loc>https://kozelog.net/sammy/hokuto-tensei2/</loc>
+    <loc>https://kozelog.net/machine/sammy/hokuto-tensei2/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -215,7 +209,7 @@
 
   <!-- サミー メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/sammy/</loc>
+    <loc>https://kozelog.net/machine/sammy/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -223,25 +217,25 @@
 
   <!-- サミー 機種ページ -->
   <url>
-    <loc>https://kozelog.net/sammy/koukaku-kidotai/</loc>
+    <loc>https://kozelog.net/machine/sammy/koukaku-kidotai/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/sammy/kabaneri2/</loc>
+    <loc>https://kozelog.net/machine/sammy/kabaneri2/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/sammy/a-kon-su/</loc>
+    <loc>https://kozelog.net/machine/sammy/a-kon-su/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/sammy/sp-ise-ka/</loc>
+    <loc>https://kozelog.net/machine/sammy/sp-ise-ka/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -250,51 +244,33 @@
 
   <!-- ミズホ メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/mizuho/</loc>
+    <loc>https://kozelog.net/machine/mizuho/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/mizuho/million-god-kiseki/</loc>
+    <loc>https://kozelog.net/machine/mizuho/million-god-kiseki/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- ビスティ メーカー一覧 -->
-  <url>
-    <loc>https://kozelog.net/bisty/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kozelog.net/bisty/gundam-uc2/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- ビスティ（→SANKYOに統合。gundam-uc2はSANKYOセクションに移動済み） -->
 
   <!-- 北電子 ドッチ 機種ページ -->
   <url>
-    <loc>https://kozelog.net/kitadenshi/animal-dotchi/</loc>
+    <loc>https://kozelog.net/machine/kitadenshi/animal-dotchi/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- 山佐ネクスト メーカー一覧 -->
-  <url>
-    <loc>https://kozelog.net/yamasa-next/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 山佐ネクスト（→山佐に統合） -->
 
   <!-- 山佐ネクスト 機種ページ -->
   <url>
-    <loc>https://kozelog.net/yamasa-next/yorumungando/</loc>
+    <loc>https://kozelog.net/machine/yamasa/yorumungando/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -302,7 +278,7 @@
 
   <!-- D-light メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/d-light/</loc>
+    <loc>https://kozelog.net/machine/d-light/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -310,7 +286,7 @@
 
   <!-- D-light 機種ページ -->
   <url>
-    <loc>https://kozelog.net/d-light/kyokosuiri/</loc>
+    <loc>https://kozelog.net/machine/d-light/kyokosuiri/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -318,7 +294,7 @@
 
   <!-- 大都技研 メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/daitokabu/</loc>
+    <loc>https://kozelog.net/machine/daitokabu/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -326,7 +302,7 @@
 
   <!-- 大都技研 機種ページ -->
   <url>
-    <loc>https://kozelog.net/daitokabu/yoshimune/</loc>
+    <loc>https://kozelog.net/machine/daitokabu/yoshimune/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -334,7 +310,7 @@
 
   <!-- サンスリー メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/sun3/</loc>
+    <loc>https://kozelog.net/machine/sun3/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -342,7 +318,7 @@
 
   <!-- サンスリー 機種ページ -->
   <url>
-    <loc>https://kozelog.net/sun3/akudama-drive/</loc>
+    <loc>https://kozelog.net/machine/sun3/akudama-drive/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -350,7 +326,7 @@
 
   <!-- JFJ メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/jfj/</loc>
+    <loc>https://kozelog.net/machine/jfj/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -358,7 +334,7 @@
 
   <!-- JFJ 機種ページ -->
   <url>
-    <loc>https://kozelog.net/jfj/goblin-slayer-2/</loc>
+    <loc>https://kozelog.net/machine/jfj/goblin-slayer-2/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -366,7 +342,7 @@
 
   <!-- 岡崎産業 メーカー一覧 -->
   <url>
-    <loc>https://kozelog.net/okazaki/</loc>
+    <loc>https://kozelog.net/machine/okazaki/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -374,21 +350,15 @@
 
   <!-- 岡崎産業 機種ページ -->
   <url>
-    <loc>https://kozelog.net/okazaki/triple-crown-seven/</loc>
+    <loc>https://kozelog.net/machine/okazaki/triple-crown-seven/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- 銀座 -->
+  <!-- 銀座（→サミーに統合） -->
   <url>
-    <loc>https://kozelog.net/ginza/</loc>
-    <lastmod>2026-06-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kozelog.net/ginza/big-dream/</loc>
+    <loc>https://kozelog.net/machine/sammy/big-dream/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -396,13 +366,13 @@
 
   <!-- アムテックス -->
   <url>
-    <loc>https://kozelog.net/amtex/</loc>
+    <loc>https://kozelog.net/machine/amtex/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/amtex/takt-op-destiny/</loc>
+    <loc>https://kozelog.net/machine/amtex/takt-op-destiny/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -410,13 +380,13 @@
 
   <!-- エンターライズ -->
   <url>
-    <loc>https://kozelog.net/enterrise/</loc>
+    <loc>https://kozelog.net/machine/enterrise/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/enterrise/biohazard-re3/</loc>
+    <loc>https://kozelog.net/machine/enterrise/biohazard-re3/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -424,7 +394,7 @@
 
   <!-- 山佐ネクスト 追加機種 -->
   <url>
-    <loc>https://kozelog.net/yamasa-next/super-rio-ace2/</loc>
+    <loc>https://kozelog.net/machine/yamasa/super-rio-ace2/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -432,21 +402,15 @@
 
   <!-- オーイズミ 追加機種 -->
   <url>
-    <loc>https://kozelog.net/oizumi/galfy/</loc>
+    <loc>https://kozelog.net/machine/oizumi/galfy/</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- クロスアルファ -->
+  <!-- クロスアルファ（→SANKYOに統合） -->
   <url>
-    <loc>https://kozelog.net/crossalpha/</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kozelog.net/crossalpha/tokyo-ghoul/</loc>
+    <loc>https://kozelog.net/machine/sankyo/tokyo-ghoul/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -454,7 +418,7 @@
 
   <!-- 山佐 追加機種 -->
   <url>
-    <loc>https://kozelog.net/yamasa/monkey-turn-v/</loc>
+    <loc>https://kozelog.net/machine/yamasa/monkey-turn-v/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -462,7 +426,7 @@
 
   <!-- SANKYO 追加機種 -->
   <url>
-    <loc>https://kozelog.net/sankyo/valvrave2/</loc>
+    <loc>https://kozelog.net/machine/sankyo/valvrave2/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -470,13 +434,13 @@
 
   <!-- パオン・ディーピー -->
   <url>
-    <loc>https://kozelog.net/paon-dp/</loc>
+    <loc>https://kozelog.net/machine/paon-dp/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/paon-dp/sao2/</loc>
+    <loc>https://kozelog.net/machine/paon-dp/sao2/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -484,7 +448,7 @@
 
   <!-- スマスロ北斗の拳 -->
   <url>
-    <loc>https://kozelog.net/sammy/hokuto-no-ken/</loc>
+    <loc>https://kozelog.net/machine/sammy/hokuto-no-ken/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -492,7 +456,7 @@
 
   <!-- スマスロ 化物語 -->
   <url>
-    <loc>https://kozelog.net/ginza/bakemonogatari-smart/</loc>
+    <loc>https://kozelog.net/machine/sammy/bakemonogatari-smart/</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
