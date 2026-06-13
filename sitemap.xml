@@ -310,7 +310,7 @@
 
   <!-- 大都技研 機種ページ -->
   <url>
-    <loc>https://kozelog.net/machine/daitogiken/yoshimune/</loc>
+    <loc>https://kozelog.net/machine/daitogiken/su-yoshimune/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -448,7 +448,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kozelog.net/machine/paon-dp/sao2/</loc>
+    <loc>https://kozelog.net/machine/daitogiken/sao2/</loc>
     <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

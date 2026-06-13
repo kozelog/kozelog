@@ -1,6 +1,6 @@
 /* こぜログ 大都技研機種データ */
 var MACHINES = {
-  'yoshimune': {
+  'su-yoshimune': {
     name: '真打 吉宗',
     nameEn: 'SHINUCHI YOSHIMUNE',
     shortName: '真打吉宗',
