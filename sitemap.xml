@@ -454,6 +454,106 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- アムテックス 追加機種 -->
+  <url>
+    <loc>https://kozelog.net/machine/amtex/nangoku-special/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ネット -->
+  <url>
+    <loc>https://kozelog.net/machine/net/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/net/yabachiba/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 山佐 追加機種（ケロット5BT） -->
+  <url>
+    <loc>https://kozelog.net/machine/yamasa/kerot5bt/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ユニバーサルブロス -->
+  <url>
+    <loc>https://kozelog.net/machine/universal/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/universal/birdie-wing/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- パイオニア 追加機種 -->
+  <url>
+    <loc>https://kozelog.net/machine/pioneer/dark-haibi/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ ローティス（北電子） -->
+  <url>
+    <loc>https://kozelog.net/machine/kitadenshi/rotis/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Lからくりサーカス2（SANKYO） -->
+  <url>
+    <loc>https://kozelog.net/machine/sankyo/karakuri-circus2/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- コナミアミューズメント 一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L戦国コレクション6（コナミ） -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/sengoku-collection6/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- オッケー 一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/okke/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L ULTRAMAN 最終決戦（オッケー） -->
+  <url>
+    <loc>https://kozelog.net/machine/okke/ultraman-final/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- スマスロ北斗の拳 -->
   <url>
     <loc>https://kozelog.net/machine/sammy/hokuto-no-ken/</loc>

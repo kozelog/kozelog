@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="../../../assets/site.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564257400721530" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スマスロ ローティス 解析・スペック【天井・設定判別・ボーナス確率】| こぜログ</title>
+  <meta name="description" content="スマスロ ローティスの設定別ボーナス確率・機械割・天井・モード・設定判別・設定推定ツールを完全網羅。北電子2026年7月導入スマスロAT機の攻略情報。">
+  <link rel="canonical" href="https://kozelog.net/machine/kitadenshi/rotis/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="スマスロ ローティス 解析・スペック【天井・設定判別・ボーナス確率】">
+  <meta property="og:description" content="スマスロ ローティスの設定別ボーナス確率・機械割・天井・設定判別方法を徹底解説。設定推定ツール付き。">
+  <meta property="og:url" content="https://kozelog.net/machine/kitadenshi/rotis/">
+  <meta property="og:site_name" content="こぜログ">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://kozelog.net/assets/logo.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebPage","@id":"https://kozelog.net/machine/kitadenshi/rotis/","url":"https://kozelog.net/machine/kitadenshi/rotis/","name":"スマスロ ローティス 解析・スペック","inLanguage":"ja","datePublished":"2026-06-18","dateModified":"2026-06-18","publisher":{"@type":"Organization","name":"こぜログ","url":"https://kozelog.net"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"トップ","item":"https://kozelog.net/"},
+      {"@type":"ListItem","position":2,"name":"北電子（KITADENSHI）","item":"https://kozelog.net/machine/kitadenshi/"},
+      {"@type":"ListItem","position":3,"name":"スマスロ ローティス","item":"https://kozelog.net/machine/kitadenshi/rotis/"}
+    ]},
+    {"@type":"Article","headline":"スマスロ ローティス 解析・スペック","datePublished":"2026-06-18","dateModified":"2026-06-18","author":{"@type":"Organization","name":"こぜログ"},"publisher":{"@type":"Organization","name":"こぜログ"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"スマスロ ローティスの設定6機械割は？","acceptedAnswer":{"@type":"Answer","text":"設定6の機械割は108.1%です。6段階設定（L・1・2・4・5・6）で、設定4（102.7%）から機械割100%を超えます。AT純増は約5.0枚/Gです。"}},
+      {"@type":"Question","name":"スマスロ ローティスの天井は何ゲームですか？","acceptedAnswer":{"@type":"Answer","text":"通常モード時の天井は最大900Gでボーナス当選です。朝一モードは200G、チャンスモードは400G、天国モードは32Gが天井となります。モードによって大きく異なるため、モード判別が重要です。"}},
+      {"@type":"Question","name":"スマスロ ローティスの設定判別で重要な指標は？","acceptedAnswer":{"@type":"Answer","text":"初当たり確率（設定1: 1/287.2 → 設定6: 1/260.3）が基本指標です。スイカ同時当選時は即ボーナス＋モード優遇、中段チェリーはSBB＋極楽モード以上移行が確定します。設定判別の詳細数値は導入後に更新予定です。"}},
+      {"@type":"Question","name":"スマスロ ローティスのやめ時はいつですか？","acceptedAnswer":{"@type":"Answer","text":"ボーナス後のモードを確認し、天国以上（32G天井）を否定してからやめるのが基本です。天国以上のループ率は約75〜92%あるため、32G以内の連チャンが途切れるまでは打ち続けましょう。"}},
+      {"@type":"Question","name":"スマスロ ローティスのSBBとは？","acceptedAnswer":{"@type":"Answer","text":"SBB（スーパービッグボーナス）は約507枚獲得できる最上位ボーナスです。出現確率は全設定共通で1/16384。業界初のSBBストックシステムを搭載しており、通常のBB（約206枚）やRB（約66枚）とは別格の出玉性能です。"}},
+      {"@type":"Question","name":"スマスロ ローティスは北電子のどんな機種ですか？","acceptedAnswer":{"@type":"Answer","text":"北電子のスマスロAT機で、ジャグラーシリーズとは異なるAT機路線の機種です。SBBストックシステムやモード管理型の天井システムを搭載し、AT純増約5.0枚/Gの高純増機となっています。"}}
+    ]}
+  ]}</script>
+  <link rel="stylesheet" href="../../../assets/common.css">
+</head>
+<body>
+<div id="svg-symbols-ph"></div>
+<div id="site-header-ph"></div>
+<button class="fab-toc" id="fab-toc" onclick="toggleNav()" aria-label="目次を開く">
+  <div class="fab-lines"><span></span><span></span><span></span></div>
+  <div class="fab-label">目次</div>
+</button>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav class="nav-drawer" id="nav-drawer">
+  <div class="nav-drawer-header"><span class="logo">こぜログ</span><button class="nav-close-btn" onclick="closeNav()">&times;</button></div>
+  <div class="nav-section-label">スマスロ ローティス 目次</div>
+  <ul class="nav-links">
+    <li><a href="#spec" onclick="closeNav()"><span class="nav-icon">🎰</span>ボーナス確率・機械割</a></li>
+    <li><a href="#setting" onclick="closeNav()"><span class="nav-icon">🔍</span>設定判別ポイント</a></li>
+    <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
+    <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
+    <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
+  </ul>
+  <div class="nav-divider"></div>
+  <ul class="nav-links">
+    <li><a href="/"><span class="nav-icon">🏠</span>トップページ</a></li>
+    <li><a href="../"><span class="nav-icon">🏭</span>北電子一覧</a></li>
+  </ul>
+</nav>
+<div class="ad-top"><div class="ad-slot"></div></div>
+<div class="container">
+<main>
+  <div class="breadcrumb"><a href="/">トップ</a> &rsaquo; <a href="../">北電子（KITADENSHI）</a> &rsaquo; <span>スマスロ ローティス</span></div>
+
+  <section class="section" id="sec-toc" style="margin-bottom:20px;">
+    <h2 class="section-title" style="margin-bottom:14px;"><span class="s-icon">📋</span>目次</h2>
+    <ol class="toc-grid">
+      <li><a href="#spec">ボーナス確率・機械割</a></li>
+      <li><a href="#setting">設定判別ポイント</a></li>
+      <li><a href="#ceiling">天井・リセット</a></li>
+      <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
+      <li><a href="#tool">設定推定ツール</a></li>
+      <li><a href="#related">関連機種</a></li>
+      <li><a href="#faq">よくある質問（FAQ）</a></li>
+    </ol>
+  </section>
+
+  <div class="machine-hero">
+    <div class="machine-img-wrap">
+      <svg viewBox="0 0 180 320" width="180" height="320" style="background:#21262d;border-radius:10px;"><text x="90" y="160" text-anchor="middle" fill="#8b949e" font-size="14">NO IMAGE</text></svg>
+    </div>
+    <div>
+      <h1 class="machine-title">スマスロ ローティス<small>SMART SLOT LOTIS ｜ 北電子</small></h1>
+      <div class="tags">
+        <span class="tag gold">スマスロ</span>
+        <span class="tag">AT機</span>
+        <span class="tag">SBBストック</span>
+        <span class="tag">導入：2026年7月6日</span>
+      </div>
+      <div class="spec-mini">
+        <div class="spec-mini-item"><div class="lbl">設定6 機械割</div><div class="val val-green">108.1%</div></div>
+        <div class="spec-mini-item"><div class="lbl">設定1 機械割</div><div class="val val-dim">98.0%</div></div>
+        <div class="spec-mini-item"><div class="lbl">天井</div><div class="val">最大900G</div></div>
+        <div class="spec-mini-item"><div class="lbl">AT純増</div><div class="val">約5.0枚/G</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SPEC ===== -->
+  <section class="section" id="spec">
+    <h2 class="section-title"><span class="s-icon">🎰</span>スマスロ ローティス ボーナス確率・機械割</h2>
+    <p class="section-lead">6段階設定（設定L・1・2・4・5・6）。業界初SBBストックシステム搭載の北電子スマスロAT機。</p>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>設定</th><th>初当り合算</th><th>BB確率</th><th>機械割</th></tr></thead>
+        <tbody>
+          <tr><td><span class="s-badge s1">設定1</span></td><td>1/287.2</td><td>1/514.1</td><td>98.0%</td></tr>
+          <tr><td><span class="s-badge s2">設定2</span></td><td>1/281.2</td><td>1/501.3</td><td>99.6%</td></tr>
+          <tr><td><span class="s-badge s4">設定4</span></td><td>1/271.8</td><td>1/481.7</td><td>102.7%</td></tr>
+          <tr><td><span class="s-badge s5">設定5</span></td><td>1/264.8</td><td>1/467.3</td><td>105.0%</td></tr>
+          <tr><td><span class="s-badge s6">設定6</span></td><td>1/260.3</td><td>1/457.4</td><td>108.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※ SBB確率は全設定共通 1/16384。設定Lの機械割は非公開。</p>
+
+    <h3 class="sub-title">ボーナス獲得枚数</h3>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>ボーナス</th><th>獲得枚数</th></tr></thead>
+        <tbody>
+          <tr><td>SBB（スーパービッグ）</td><td><strong>約507枚</strong></td></tr>
+          <tr><td>BB（ビッグ）</td><td>約206枚</td></tr>
+          <tr><td>RB（レギュラー）</td><td>約66枚</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-title">期待収支（8000G消化時）</h3>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>設定</th><th>差枚数</th><th>期待収支（等価）</th><th>期待収支（5.6枚交換）</th></tr></thead>
+        <tbody>
+          <tr><td><span class="s-badge s1">設定1</span></td><td class="minus">−480枚</td><td class="minus">−1,920pt</td><td class="minus">−2,688pt</td></tr>
+          <tr><td><span class="s-badge s2">設定2</span></td><td class="minus">−96枚</td><td class="minus">−384pt</td><td class="minus">−538pt</td></tr>
+          <tr><td><span class="s-badge s4">設定4</span></td><td class="plus">+648枚</td><td class="plus">+2,592pt</td><td class="plus">+1,851pt</td></tr>
+          <tr><td><span class="s-badge s5">設定5</span></td><td class="plus">+1,200枚</td><td class="plus">+4,800pt</td><td class="plus">+3,429pt</td></tr>
+          <tr><td><span class="s-badge s6">設定6</span></td><td class="plus">+1,944枚</td><td class="plus">+7,776pt</td><td class="plus">+5,554pt</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※ 差枚数 = (機械割 − 100%) × 8000G × 3枚。等価: 1pt = 4.0枚 / 5.6枚交換: 1pt = 5.6枚</p>
+  </section>
+
+  <div class="ad-mid"><div class="ad-slot"></div></div>
+
+  <!-- ===== SETTING ===== -->
+  <section class="section" id="setting">
+    <h2 class="section-title"><span class="s-icon">🔍</span>スマスロ ローティス 設定判別ポイント</h2>
+    <div class="point-list">
+      <div class="point-card">
+        <div class="point-rank">1</div>
+        <div class="point-body">
+          <div class="point-title">初当り合算確率</div>
+          <p>設定1（1/287.2）→ 設定6（1/260.3）。約1.10倍の差があり、長時間稼働で判別精度が上がります。</p>
+        </div>
+      </div>
+      <div class="point-card">
+        <div class="point-rank">2</div>
+        <div class="point-body">
+          <div class="point-title">スイカ同時当選</div>
+          <p>スイカ同時当選時は即ボーナス＋モード優遇。出現頻度に設定差がある可能性があります。</p>
+        </div>
+      </div>
+      <div class="point-card">
+        <div class="point-rank">3</div>
+        <div class="point-body">
+          <div class="point-title">中段チェリー</div>
+          <p>中段チェリー成立時はSBB確定＋極楽モード以上移行。出現自体がプレミアム級です。</p>
+        </div>
+      </div>
+    </div>
+    <div class="tip-box"><strong>注意：</strong>詳細な設定判別数値は導入後に更新予定です。</div>
+  </section>
+
+  <!-- ===== CEILING ===== -->
+  <section class="section" id="ceiling">
+    <h2 class="section-title"><span class="s-icon">⏱</span>スマスロ ローティス 天井・リセット</h2>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>モード</th><th>天井G数</th></tr></thead>
+        <tbody>
+          <tr><td>朝一</td><td><strong>200G</strong></td></tr>
+          <tr><td>チャンス</td><td><strong>400G</strong></td></tr>
+          <tr><td>通常A / 通常B</td><td><strong>900G</strong></td></tr>
+          <tr><td>天国</td><td><strong>32G</strong></td></tr>
+          <tr><td>極楽</td><td><strong>32G</strong></td></tr>
+          <tr><td>超極楽</td><td><strong>32G</strong></td></tr>
+          <tr><td>引き戻しA</td><td><strong>200G</strong></td></tr>
+          <tr><td>引き戻しB</td><td><strong>100G</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※ 天国以上のループ率は約75〜92%。</p>
+    <div class="tip-box">
+      <strong>やめ時の目安：</strong>ボーナス後32G以内の天国を否定してからやめ。天国ループ中は打ち続けましょう。
+    </div>
+  </section>
+
+  <!-- ===== MORNING ===== -->
+  <section class="section" id="sec-morning">
+    <h2 class="section-title"><span class="s-icon">🌅</span>スマスロ ローティス 設定変更・朝一恩恵</h2>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>項目</th><th>設定変更時</th><th>電源OFF→ON</th></tr></thead>
+        <tbody>
+          <tr><td>モード</td><td><strong>朝一モード</strong>（200G天井）スタート</td><td>前日の状態を引き継ぎ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box"><strong>朝一のポイント：</strong>設定変更後は朝一モード（200G天井）からスタートするため、リセット台は200G以内にボーナスが確定します。</div>
+  </section>
+
+  <div class="ad-mid"><div class="ad-slot"></div></div>
+
+  <!-- ===== TOOL ===== -->
+  <section class="section" id="tool">
+    <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
+    <p class="section-lead">総回転数とボーナス回数を入力すると、ポアソン尤度に基づき各設定の確率を算出します。</p>
+    <div class="tool-card">
+      <div class="tool-inputs">
+        <label class="tool-label">総回転数<input type="number" id="totalGames" class="tool-input" min="0" placeholder="例: 5000"></label>
+        <label class="tool-label">ボーナス回数<input type="number" id="bonusCount" class="tool-input" min="0" placeholder="例: 18"></label>
+      </div>
+      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
+      <div id="toolResult" class="tool-result" style="display:none;"></div>
+    </div>
+  </section>
+  <script>
+  function calcSetting(){
+    var g=parseInt(document.getElementById('totalGames').value)||0;
+    var b=parseInt(document.getElementById('bonusCount').value)||0;
+    if(g<1){alert('総回転数を入力してください');return;}
+    var SETTINGS=['設定1','設定2','設定4','設定5','設定6'];
+    var PROBS=[1/287.2,1/281.2,1/271.8,1/264.8,1/260.3];
+    var COLORS=['#888','#5ba0b5','#7abb50','#f5b030','#f05050'];
+    var likes=PROBS.map(function(p){var lam=g*p;var ll=b*Math.log(lam)-lam;return ll;});
+    var maxL=Math.max.apply(null,likes);
+    var exps=likes.map(function(l){return Math.exp(l-maxL);});
+    var sum=exps.reduce(function(a,b){return a+b;},0);
+    var pcts=exps.map(function(e){return e/sum*100;});
+    var best=pcts.indexOf(Math.max.apply(null,pcts));
+    var html='<div class="tool-result-bars">';
+    for(var i=0;i<SETTINGS.length;i++){
+      html+='<div class="result-row"><span class="result-label" style="color:'+COLORS[i]+'">'+SETTINGS[i]+'</span>'
+        +'<div class="result-bar-bg"><div class="result-bar" style="width:'+pcts[i].toFixed(1)+'%;background:'+COLORS[i]+'"></div></div>'
+        +'<span class="result-pct">'+pcts[i].toFixed(1)+'%</span></div>';
+    }
+    html+='</div><div class="result-best">▶ 最も可能性が高い設定：<strong style="color:'+COLORS[best]+'">'+SETTINGS[best]+'</strong>（'+pcts[best].toFixed(1)+'%）</div>';
+    var el=document.getElementById('toolResult');el.innerHTML=html;el.style.display='block';
+  }
+  </script>
+
+  <!-- ===== RELATED ===== -->
+  <section class="section" id="related">
+    <h2 class="section-title"><span class="s-icon">🔗</span>関連機種</h2>
+    <div class="related-grid">
+      <a href="/machine/kitadenshi/animal-dotchi/" class="related-card">
+        <div class="related-name">スマスロ アニマルかっちゃん</div>
+        <div class="related-meta">北電子 ｜ AT機 ｜ スマスロ</div>
+      </a>
+      <a href="/machine/kitadenshi/funkyjuggler2/" class="related-card">
+        <div class="related-name">ファンキージャグラー2</div>
+        <div class="related-meta">北電子 ｜ ノーマル機 ｜ 6号機</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <h2 class="section-title"><span class="s-icon">❓</span>スマスロ ローティス よくある質問</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>スマスロ ローティスの設定6機械割は？</summary><div class="faq-a">設定6の機械割は108.1%です。6段階設定（L・1・2・4・5・6）で、設定4（102.7%）から機械割100%を超えます。AT純増は約5.0枚/Gです。</div></details>
+      <details class="faq-item"><summary>スマスロ ローティスの天井は何ゲームですか？</summary><div class="faq-a">通常モード時の天井は最大900Gでボーナス当選です。朝一モードは200G、チャンスモードは400G、天国モードは32Gが天井となります。モードによって大きく異なるため、モード判別が重要です。</div></details>
+      <details class="faq-item"><summary>スマスロ ローティスの設定判別で重要な指標は？</summary><div class="faq-a">初当たり確率（設定1: 1/287.2 → 設定6: 1/260.3）が基本指標です。スイカ同時当選時は即ボーナス＋モード優遇、中段チェリーはSBB＋極楽モード以上移行が確定します。設定判別の詳細数値は導入後に更新予定です。</div></details>
+      <details class="faq-item"><summary>スマスロ ローティスのやめ時はいつですか？</summary><div class="faq-a">ボーナス後のモードを確認し、天国以上（32G天井）を否定してからやめるのが基本です。天国以上のループ率は約75〜92%あるため、32G以内の連チャンが途切れるまでは打ち続けましょう。</div></details>
+      <details class="faq-item"><summary>スマスロ ローティスのSBBとは？</summary><div class="faq-a">SBB（スーパービッグボーナス）は約507枚獲得できる最上位ボーナスです。出現確率は全設定共通で1/16384。業界初のSBBストックシステムを搭載しており、通常のBB（約206枚）やRB（約66枚）とは別格の出玉性能です。</div></details>
+      <details class="faq-item"><summary>スマスロ ローティスは北電子のどんな機種ですか？</summary><div class="faq-a">北電子のスマスロAT機で、ジャグラーシリーズとは異なるAT機路線の機種です。SBBストックシステムやモード管理型の天井システムを搭載し、AT純増約5.0枚/Gの高純増機となっています。</div></details>
+    </div>
+  </section>
+
+</main>
+</div>
+<div class="ad-bottom"><div class="ad-slot"></div></div>
+<script src="../../../assets/common.js"></script>
+<script>var ASSETS_BASE='../../../assets/'; loadComponents(ASSETS_BASE);</script>
+<div id="site-footer-ph"></div>
+</body>
+</html>
