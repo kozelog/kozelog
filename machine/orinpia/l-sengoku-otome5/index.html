@@ -978,7 +978,7 @@
     <!-- ====== SECTION 9: 設定判別ツール ====== -->
     <section class="section" id="tool">
       <h2 class="section-title"><span class="s-icon">🧮</span>L戦国乙女5 設定判別ツール</h2>
-      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">AT初当たり回数を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">AT初当たり回数・乙女アタック当選率を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
     <div class="tool-form">
       <div class="fg">
         <label>総ゲーム数 *</label>
@@ -987,6 +987,14 @@
       <div class="fg">
         <label>AT当選回数 *</label>
         <input type="number" id="t-hits" placeholder="例：8" min="0">
+      </div>
+      <div class="fg">
+        <label>巫女ポイント到達回数</label>
+        <input type="number" id="t-miko" placeholder="例：15" min="0">
+      </div>
+      <div class="fg">
+        <label>乙女アタック当選回数</label>
+        <input type="number" id="t-otome" placeholder="例：4" min="0">
       </div>
     </div>
 
@@ -1191,22 +1199,29 @@ var DIFF_RATES = [{s:1,rate:0.979},{s:2,rate:0.989},{s:3,rate:1.010},{s:4,rate:1
 
 /* 設定判別ツール */
 var AT_PROBS = [1/359.5, 1/350.8, 1/332.5, 1/302.8, 1/281.0, 1/262.9];
+var OTOME_PROBS = [0.203, 0.214, 0.232, 0.247, 0.252, 0.257];
 function calcSetting() {
   var games = parseInt(document.getElementById('t-games').value) || 0;
   var hits  = parseInt(document.getElementById('t-hits').value)  || 0;
+  var miko  = parseInt(document.getElementById('t-miko').value)  || 0;
+  var otome = parseInt(document.getElementById('t-otome').value) || 0;
   if (games <= 0) return;
-  var likelihoods = AT_PROBS.map(function(p) {
+  var likelihoods = AT_PROBS.map(function(p, idx) {
     var lp = 0;
     for (var i = 0; i < hits; i++) lp += Math.log(p);
     lp += (games - hits) * Math.log(1 - p);
+    if (miko > 0) {
+      var op = OTOME_PROBS[idx];
+      for (var j = 0; j < otome; j++) lp += Math.log(op);
+      lp += (miko - otome) * Math.log(1 - op);
+    }
     return lp;
   });
   var maxL = Math.max.apply(null, likelihoods);
   var weights = likelihoods.map(function(l) { return Math.exp(l - maxL); });
   var total = weights.reduce(function(a, b) { return a + b; }, 0);
   var probs = weights.map(function(w) { return w / total * 100; });
-  var colors = ['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
-  var labels = ['設定1','設定2','設定3','設定4','設定5','設定6'];  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
   var pcts=probs.map(function(p){return Math.round(p*10)/10;});
   renderSettingBars(pcts,stgs);
 }

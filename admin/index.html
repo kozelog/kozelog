@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>機種管理リスト | こぜログ ADMIN</title>
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root {
+      --bg:    #141418;
+      --bg2:   #1c1c22;
+      --bg3:   #25252d;
+      --text:  #e0e8f0;
+      --text2: #8b949e;
+      --gold:  #00c8e0;
+      --border:#30363d;
+      --radius:8px;
+      --green: #3fb950;
+      --red:   #f05050;
+      --yellow:#f5b030;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 13px; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .admin-banner {
+      background: #2d1800; border-bottom: 2px solid var(--yellow);
+      padding: 7px 16px; font-size: 12px; color: var(--yellow); text-align: center; font-weight: 700;
+    }
+    .container { max-width: 1500px; margin: 0 auto; padding: 20px 16px 60px; }
+
+    .page-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; flex-wrap: wrap; }
+    h1 { font-size: 20px; font-weight: 800; }
+    .updated { font-size: 11px; color: var(--text2); }
+    .subtitle { font-size: 12px; color: var(--text2); margin-bottom: 20px; }
+
+    /* ---- Stats ---- */
+    .stats-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .stat-card {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 10px 16px; min-width: 110px;
+    }
+    .stat-label { font-size: 10px; color: var(--text2); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 2px; }
+    .stat-value { font-size: 22px; font-weight: 800; }
+    .stat-value.green  { color: var(--green); }
+    .stat-value.red    { color: var(--red); }
+    .stat-value.cyan   { color: var(--gold); }
+    .stat-value.yellow { color: var(--yellow); }
+
+    /* ---- Filters ---- */
+    .filter-area { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 14px; }
+    .filter-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .filter-row + .filter-row { margin-top: 8px; }
+    .filter-label { font-size: 11px; color: var(--text2); font-weight: 600; white-space: nowrap; min-width: 60px; }
+    .filter-btn {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 4px 10px; font-size: 11px; color: var(--text2); cursor: pointer; transition: all .15s; white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
+    select.filter-select {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: 4px;
+      padding: 4px 8px; font-size: 11px; color: var(--text); cursor: pointer; outline: none;
+    }
+    select.filter-select:focus { border-color: var(--gold); }
+    .filter-sep { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
+
+    /* ---- Legend ---- */
+    .legend { display: flex; gap: 14px; margin-bottom: 10px; font-size: 11px; color: var(--text2); flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+    .legend-dot.reg    { background: rgba(63,185,80,.35); border: 1px solid rgba(63,185,80,.6); }
+    .legend-dot.unreg  { background: var(--bg2); border: 1px solid var(--border); }
+    .legend-dot.future { background: var(--bg2); border: 1px solid var(--border); opacity: .45; }
+
+    .result-count { font-size: 11px; color: var(--text2); margin-bottom: 8px; }
+
+    /* ---- Table ---- */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    thead th {
+      background: var(--bg3); border-bottom: 2px solid var(--border);
+      padding: 8px 10px; text-align: left; font-size: 10px; font-weight: 700;
+      color: var(--text2); white-space: nowrap; cursor: pointer; user-select: none;
+      position: sticky; top: 0; z-index: 1;
+    }
+    thead th:hover { color: var(--text); }
+    thead th.sort-asc::after  { content: ' ▲'; color: var(--gold); }
+    thead th.sort-desc::after { content: ' ▼'; color: var(--gold); }
+    thead th.no-sort { cursor: default; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+    tbody tr:hover { background: rgba(255,255,255,.03); }
+    tbody tr.row-reg    { background: rgba(63,185,80,.06); }
+    tbody tr.row-reg:hover { background: rgba(63,185,80,.11); }
+    tbody tr.row-future { opacity: .65; }
+    tbody td { padding: 7px 10px; vertical-align: middle; }
+
+    .machine-name { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .maker-name  { color: var(--text2); white-space: nowrap; }
+    .date-val    { color: var(--text2); white-space: nowrap; font-size: 11px; }
+    .rate-val    { font-weight: 700; color: var(--gold); white-space: nowrap; }
+    .rate-empty  { color: #444; font-size: 11px; }
+    .note-val    { color: var(--text2); font-size: 11px; }
+    .url-link    { font-size: 11px; }
+
+    /* badges */
+    .badge {
+      display: inline-block; padding: 2px 6px; border-radius: 3px; font-size: 10px;
+      font-weight: 700; white-space: nowrap; line-height: 1.4;
+    }
+    .badge-smart  { background: rgba(0,200,224,.12);   color: #00c8e0; border: 1px solid rgba(0,200,224,.35); }
+    .badge-medal  { background: rgba(240,192,64,.1);   color: #f0c040; border: 1px solid rgba(240,192,64,.3); }
+    .badge-at     { background: rgba(240,80,80,.1);    color: #f05050; border: 1px solid rgba(240,80,80,.28); }
+    .badge-art    { background: rgba(240,80,130,.1);   color: #f05080; border: 1px solid rgba(240,80,130,.28); }
+    .badge-normal { background: rgba(63,185,80,.1);    color: #3fb950; border: 1px solid rgba(63,185,80,.28); }
+    .badge-st     { background: rgba(245,176,48,.1);   color: #f5b030; border: 1px solid rgba(245,176,48,.28); }
+    .badge-bt     { background: rgba(180,120,255,.1);  color: #b47cff; border: 1px solid rgba(180,120,255,.28); }
+
+    .icon-y { color: var(--green);  font-size: 14px; line-height:1; }
+    .icon-n { color: #383840; font-size: 14px; line-height:1; }
+
+    /* kozelog link cell */
+    .kz-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--green); }
+  </style>
+</head>
+<body>
+
+<div class="admin-banner">ADMIN — 非公開管理ページ（robots: noindex, nofollow）</div>
+
+<div class="container">
+  <div class="page-head">
+    <h1>機種管理リスト — 全年度</h1>
+    <span class="updated">最終更新: 2026-06-22 | index.js連携（2023〜2026）</span>
+  </div>
+  <p class="subtitle">参考: 1geki / chonborista / p-town.dmm / p-gabu / nana-press ｜ グリーン行 = こぜログ登録済み ｜ データソース: assets/machines/index.js + admin overrides</p>
+
+  <div class="stats-bar" id="stats-bar"><!-- JS inject --></div>
+
+  <div class="filter-area">
+    <div class="filter-row">
+      <span class="filter-label">年</span>
+      <button class="filter-btn active" data-filter="year" data-val="all">すべて</button>
+      <button class="filter-btn" data-filter="year" data-val="2026">2026</button>
+      <button class="filter-btn" data-filter="year" data-val="2025">2025</button>
+      <button class="filter-btn" data-filter="year" data-val="2024">2024</button>
+      <button class="filter-btn" data-filter="year" data-val="2023">2023</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">ステータス</span>
+      <button class="filter-btn active" data-filter="status" data-val="all">すべて</button>
+      <button class="filter-btn" data-filter="status" data-val="reg">こぜログ登録済</button>
+      <button class="filter-btn" data-filter="status" data-val="unreg">未登録（導入済）</button>
+      <button class="filter-btn" data-filter="status" data-val="future">未導入（予定）</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">メーカー</span>
+      <select class="filter-select" id="sel-maker"><option value="">すべて</option></select>
+      <div class="filter-sep"></div>
+      <span class="filter-label">タイプ</span>
+      <select class="filter-select" id="sel-type"><option value="">すべて</option></select>
+      <div class="filter-sep"></div>
+      <span class="filter-label">メディア</span>
+      <button class="filter-btn active" data-filter="media" data-val="all">すべて</button>
+      <button class="filter-btn" data-filter="media" data-val="スマスロ">スマスロ</button>
+      <button class="filter-btn" data-filter="media" data-val="メダル">メダル</button>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot reg"></div>こぜログ登録済み</div>
+    <div class="legend-item"><div class="legend-dot unreg"></div>未登録（導入済み）</div>
+    <div class="legend-item"><div class="legend-dot future"></div>未登録（導入予定）</div>
+  </div>
+
+  <div class="result-count" id="result-count"></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="date">導入日</th>
+          <th data-sort="name">機種名</th>
+          <th data-sort="maker">メーカー</th>
+          <th data-sort="type">タイプ</th>
+          <th class="no-sort">メディア</th>
+          <th data-sort="s6rate">設定6 機械割</th>
+          <th class="no-sort">こぜログ</th>
+          <th class="no-sort">筐体画像</th>
+          <th class="no-sort">動画</th>
+          <th class="no-sort">公式URL</th>
+          <th class="no-sort">備考</th>
+          <th class="no-sort">追加コンテンツ</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"><!-- JS inject --></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- index.jsからマスターリストを読み込み -->
+<script src="../assets/machines/index.js"></script>
+
+<script>
+// =====================================================
+//  ADMIN OVERRIDES — こぜログ登録済み機種の追加情報
+//  index.jsにない情報（type, kozelog, hasImg, hasMovie等）をここで管理
+// =====================================================
+const ADMIN_OVERRIDES = {
+  /* ===== こぜログ登録済み（2026年） ===== */
+  'tekken6':            { type:'AT', kozelog:true, officialUrl:'https://www.yamasa.co.jp/', addedContent:['ツールデザイン統一'] },
+  'hokuto-tensei2':     { type:'AT', kozelog:true, addedContent:['ツールデザイン統一'] },
+  'smart-hanahana-v':   { type:'ノーマル', kozelog:true, note:'5設定機', addedContent:['ツールデザイン統一'] },
+  'nk-hanahana-v30':    { type:'ノーマル+BT', kozelog:true, note:'6号機メダル・5設定機 設定V=108%', addedContent:['ツールデザイン統一'] },
+  'enen2':              { type:'AT', kozelog:true, officialUrl:'https://www.sankyo.co.jp/', addedContent:['ツールデザイン統一'] },
+  'umineko2':           { type:'A+ART', kozelog:true, note:'完全攻略110.0%', addedContent:['ツールデザイン統一'] },
+  'hanma-baki':         { type:'AT', kozelog:true, officialUrl:'https://www.heiwa.co.jp/', note:'天井700G+α/設定変更後200G+α', addedContent:['ツールデザイン統一'] },
+  'smart-hanabi':       { type:'ノーマル', kozelog:true, hasMovie:true, officialUrl:'https://www.across-corp.jp/', addedContent:['ツールデザイン統一'] },
+  'koukaku-kidotai':    { type:'AT', kozelog:true, officialUrl:'https://www.sammy.co.jp/', note:'天井CZ550G+α・AT999G', addedContent:['ツールデザイン統一'] },
+  'goblin-slayer-2':    { type:'AT', kozelog:true, note:'天井最大1500G', addedContent:['ツールデザイン統一'] },
+  'kabaneri2':          { type:'ST', kozelog:true, hasMovie:true, officialUrl:'https://www.sammy.co.jp/', addedContent:['ツールデザイン統一','設定示唆演出一覧','穢れシステム','やめ時まとめ','FAQ拡充(7→15件)'] },
+  'smart-thunder-v':    { type:'ノーマル', kozelog:true, hasMovie:true, officialUrl:'https://www.eleco.co.jp/', addedContent:['ツールデザイン統一'] },
+  'isekai-quartet':     { type:'AT+BT', kozelog:true, officialUrl:'https://www.sammy.co.jp/', addedContent:['ツールデザイン統一'] },
+  'triple-crown-seven': { type:'ノーマル+BT', kozelog:true, note:'設定3・4は推定補完値', addedContent:['ツールデザイン統一'] },
+  'yorumungando':       { type:'AT', kozelog:true, note:'設定4〜6のAT確率がほぼ横並び', addedContent:['ツールデザイン統一'] },
+  'kyokosuiri':         { type:'AT', kozelog:true, note:'虚構連モード搭載', addedContent:['ツールデザイン統一'] },
+  'su-yoshimune':       { type:'AT', kozelog:true, officialUrl:'https://www.daitokabu.co.jp/', note:'天井AT間1500G/設定変更後1000G', addedContent:['ツールデザイン統一'] },
+  'akudama-drive':      { type:'AT', kozelog:true, note:'AT純増約7.1枚/G・天井967G', addedContent:['ツールデザイン統一'] },
+  'million-god-kiseki': { type:'AT', kozelog:true, hasImg:true, note:'偶数設定優遇・天井1480G', addedContent:['ツールデザイン統一','Z-ZONE詳細・昇格率','GODボタンLED示唆','天井期待値(通常/リセット)','天井恩恵ループストック振り分け','設定変更・朝一恩恵','小役確率テーブル','設定判別強化(Z-ZONE/青7/ガイア)','FAQ拡充(14→19件)'] },
+  'gundam-uc2':         { type:'AT', kozelog:true, officialUrl:'https://blog-bisty.jp/', note:'2段階天井CZ800G/AT1400G・覚醒DRIVE平均3600枚', addedContent:['ツールデザイン統一'] },
+  'animal-dotchi':      { type:'AT', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', note:'北電子初スマスロAT・ST約82%', addedContent:['ツールデザイン統一'] },
+  'big-dream':          { type:'AT', kozelog:true, hasImg:true, note:'超高純増8.2枚/G・天井1499G', addedContent:['ツールデザイン統一'] },
+  'takt-op-destiny':    { type:'AT', kozelog:true, hasImg:true, note:'上位ATループ率設定差大', addedContent:['ツールデザイン統一'] },
+  'biohazard-re3':      { type:'AT', kozelog:true, hasImg:true, note:'2段階純増AT・CZスルー天井あり', addedContent:['ツールデザイン統一'] },
+  'super-rio-ace2':     { type:'AT', kozelog:true, hasImg:true, note:'ボーナス間750G・スルー天井7回', addedContent:['ツールデザイン統一'] },
+  'galfy':              { type:'ノーマル+BT', kozelog:true, hasImg:true, note:'完全攻略時設定1で100.3%・4段階設定', addedContent:['ツールデザイン統一'] },
+  'nangoku-special':    { type:'AT', kozelog:true, hasImg:true, note:'5段階設定(1,2,4,5,6)・天井799G/リセット500G', addedContent:['ツールデザイン統一'] },
+  'kerot5bt':           { type:'ノーマル+BT', kozelog:true, hasImg:true, note:'6段階設定・SBB約317枚・ケロットシリーズ', addedContent:['ツールデザイン統一'] },
+  'yabachiba':          { type:'AT', kozelog:true, hasImg:true, note:'5段階設定(1,2,4,5,6)・虹7モード777枚・天井999G', addedContent:['ツールデザイン統一'] },
+  'birdie-wing':        { type:'AT(ST)', kozelog:true, hasImg:true, note:'ST継続率約80%・天井999G+α', addedContent:['ツールデザイン統一'] },
+  'dark-haibi':         { type:'AT', kozelog:true, hasImg:true, note:'5段階設定(1,2,4,5,6)・沖スロ系AT・天井3モード', addedContent:['ツールデザイン統一'] },
+  'rotis':              { type:'AT', kozelog:true, hasImg:true, note:'6段階設定・SBBストック搭載・天井900G・朝一200G', addedContent:['ツールデザイン統一'] },
+  'karakuri-circus2':   { type:'AT', kozelog:true, hasImg:true, note:'6段階設定・CZ天井1200pt/AT天井2500G・約20000台', addedContent:['ツールデザイン統一'] },
+  'sengoku-collection6':{ type:'AT', kozelog:true, hasImg:true, note:'6段階設定・天井999G+α/周期6周期・戦コレシリーズ', addedContent:['ツールデザイン統一'] },
+  'ultraman-final':     { type:'AT', kozelog:true, hasImg:true, note:'6段階設定・天井999G/リセット666G・約3000台', addedContent:['ツールデザイン統一'] },
+  'l-sengoku-otome5':   { type:'AT', kozelog:true, hasImg:true, hasMovie:true, officialUrl:'https://www.heiwa.co.jp/', addedContent:['ツールデザイン統一','終了画面・設定示唆演出','アイキャッチ法則','モード・ゾーン詳細','天井期待値テーブル','やめ時・狙い目','乙女アタック詳細','お風呂アタック','乙女十傑','乙女ストラップモード','穢れシステム','FAQ拡充(6→16件)','設定判別ツールに乙女アタック当選率追加'] },
+  'tokyo-ghoul':        { type:'AT', kozelog:true, hasImg:true, note:'CZ天井600G/AT天井1200G・BITES上乗せ搭載', addedContent:['ツールデザイン統一','手紙・招待状(月山招待状)一覧','終了画面・トロフィー・エンドカード一覧','モード詳細(6種類)','アイキャッチ法則(通常/喰種ver.)','穢れ(喰ポイント)システム','フリーズ・確定チェリー・赫眼・裏AT','打ち方・レア役判別','やめ時・狙い目テーブル','FAQ拡充(7→15件)'] },
+  'monkey-turn-v':      { type:'AT', kozelog:true, hasImg:true, note:'5段階設定(1,2,4,5,6)+設定L・天井795G', addedContent:['ツールデザイン統一'] },
+  'valvrave2':          { type:'AT', kozelog:true, hasImg:true, note:'5段階設定(1,2,4,5,6)・純増約9.0枚/G・天井1500G', addedContent:['ツールデザイン統一'] },
+
+  /* ===== こぜログ登録済み（2023年以前のジャグラー等） ===== */
+  'aim-juggler-ex':     { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'funky-juggler-2':    { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'juggler-girls-ss':   { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'my-juggler-5':       { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'gogo-juggler-3':     { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'happy-juggler-v3':   { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'mister-juggler':     { type:'ノーマル', kozelog:true, officialUrl:'https://www.kitadenshi.co.jp/', addedContent:['ツールデザイン統一'] },
+  'konosuba-a':         { type:'AT', kozelog:true, hasImg:true, addedContent:['ツールデザイン統一'] },
+
+  'sao2':                   { type:'AT', kozelog:true, hasImg:true, addedContent:['ツールデザイン統一','モード・ゾーン詳細','アイキャッチ法則','アイテム・GGOモード示唆','引き戻し詳細','終了画面・設定示唆演出','天井期待値','FAQ拡充(8→16件)'] },
+
+  /* ===== 未登録だがタイプ既知の2023〜2025機種 ===== */
+  'hokuto-no-ken-smart':    { type:'AT', kozelog:true, note:'5段階設定(1,2,4,5,6)+設定L・天井1268G・BB継続率66/79/84/89%', addedContent:['ツールデザイン統一'] },
+  'bakemonogatari-smart':   { type:'AT', kozelog:true, note:'6段階設定・天井1000G・倍倍チャンス搭載・解呪ノ儀CZ', addedContent:['ツールデザイン統一'] },
+  'tensura-slot':           { type:'AT' },
+  'bancho4':                { type:'AT' },
+  'code-geass-r2':          { type:'AT' },
+  'eureka7-4':              { type:'AT' },
+  'initial-d-2nd':          { type:'AT' },
+  're-zero-s2':             { type:'AT' },
+  'monster-hunter-rise':    { type:'AT' },
+  'dunbine':                { type:'AT' },
+  'shin-eva-slot':          { type:'AT' },
+  'kaiji-kyoen':            { type:'AT' },
+  'tokyo-revengers':        { type:'AT' },
+  'gundam-seed':            { type:'AT' },
+  'madoka-forte':           { type:'AT' },
+  'okidoki-black':          { type:'AT' },
+  'shin-hokuto-musou':      { type:'AT' },
+  'nogizaka46':             { type:'AT' },
+  'disc-up-ultraremix':     { type:'ノーマル' },
+  'cranky-crest':           { type:'ノーマル' },
+  'star-hanahana-30':       { type:'ノーマル' },
+  'smart-star-hanahana':    { type:'ノーマル' },
+  'king-hanahana-30':       { type:'ノーマル' },
+  'new-pulsar-bt':          { type:'ノーマル+BT' },
+  'neo-aim-juggler-ex':     { type:'ノーマル' },
+};
+
+// =====================================================
+//  ADMIN-ONLY MACHINES — index.jsに未登録の機種（2026年導入予定等）
+// =====================================================
+const ADMIN_EXTRAS = [
+  {date:'2026-08-03', name:'Lとある魔術の禁書目録2', maker:'藤商事', type:'AT', media:'スマスロ', s6rate:'', note:'予定', future:true},
+  {date:'2026-08-03', name:'スマスロ やじきた道中記参る！', maker:'ユニバーサルブロス', type:'AT', media:'スマスロ', s6rate:'', note:'予定', future:true},
+  {date:'2026-08-03', name:'Lストリートファイター6', maker:'エンターライズ', type:'AT', media:'スマスロ', s6rate:'', note:'予定', future:true},
+  {date:'2026-08-03', name:'Lワールドダイスター', maker:'ダイトー', type:'AT', media:'スマスロ', s6rate:'', note:'予定', future:true},
+  {date:'2026-08-17', name:'Lパチスロ 喰霊-零-Re', maker:'オーイズミ', type:'AT', media:'スマスロ', s6rate:'', note:'予定', future:true},
+  {date:'2026-08-31', name:'L邪神ちゃんドロップキック', maker:'三洋', type:'AT', media:'スマスロ', s6rate:'', note:'予定 8月（日付未定）', future:true},
+  {date:'2026-08-31', name:'Lとんでもスキルで異世界放浪メシ', maker:'コナミ', type:'AT', media:'スマスロ', s6rate:'', note:'予定 8月（日付未定）', future:true},
+  {date:'2026-08-31', name:'Lすーぱぁびん娘', maker:'ベルコ', type:'AT', media:'スマスロ', s6rate:'112.5%', note:'予定 8月（日付未定）', future:true},
+  {date:'2026-09-07', name:'スマスロ リコリス・リコイル', maker:'サミー', type:'AT', media:'スマスロ', s6rate:'114.6%', officialUrl:'https://www.sammy.co.jp/', note:'予定', future:true},
+  {date:'2026-09-15', name:'パチスロ見える子ちゃん', maker:'パイオニア', type:'AT', media:'スマスロ', s6rate:'114.9%', note:'予定 9月上旬', future:true},
+];
+
+// =====================================================
+//  MERGE — index.js + admin overrides + admin extras
+// =====================================================
+const TODAY = '2026-06-22';
+
+function buildMachines() {
+  const machines = [];
+
+  // 1. index.jsから読み込み + overridesをマージ
+  if (typeof MACHINES_LIST !== 'undefined') {
+    MACHINES_LIST.forEach(m => {
+      const ov = ADMIN_OVERRIDES[m.id] || {};
+      machines.push({
+        id:          m.id,
+        date:        m.releaseDate,
+        name:        m.name,
+        maker:       m.maker,
+        type:        ov.type || '-',
+        media:       m.smart ? 'スマスロ' : 'メダル',
+        s6rate:      (m.rateS6 && m.rateS6 !== '-') ? m.rateS6 : '',
+        kozelog:     ov.kozelog || false,
+        kozelogUrl:  m.url || '',
+        hasImg:      ov.hasImg || false,
+        hasMovie:    ov.hasMovie || false,
+        officialUrl: ov.officialUrl || '',
+        note:        ov.note || '',
+        addedContent:ov.addedContent || [],
+        future:      ov.future || false,
+      });
+    });
+  }
+
+  // 2. admin-only extras（index.jsに未登録の機種）
+  ADMIN_EXTRAS.forEach(ex => {
+    machines.push({
+      id:          '',
+      date:        ex.date,
+      name:        ex.name,
+      maker:       ex.maker,
+      type:        ex.type || '-',
+      media:       ex.media || 'スマスロ',
+      s6rate:      ex.s6rate || '',
+      kozelog:     false,
+      kozelogUrl:  '',
+      hasImg:      false,
+      hasMovie:    false,
+      officialUrl: ex.officialUrl || '',
+      note:        ex.note || '',
+      addedContent:[],
+      future:      ex.future || false,
+    });
+  });
+
+  return machines;
+}
+
+const MACHINES = buildMachines();
+
+// =====================================================
+//  RENDER
+// =====================================================
+function isFuture(m) {
+  return m.future === true || m.date > TODAY;
+}
+
+function typeBadge(t) {
+  const map = {
+    'AT':          'badge-at',
+    'AT+BT':       'badge-at',
+    'ART':         'badge-art',
+    'A+ART':       'badge-art',
+    'ノーマル':    'badge-normal',
+    'ノーマル+BT': 'badge-normal',
+    'ST':          'badge-st',
+    'A+AT':        'badge-at',
+  };
+  const cls = map[t] || '';
+  return t && t !== '-' ? `<span class="badge ${cls}">${t}</span>` : `<span style="color:#444">—</span>`;
+}
+function mediaBadge(m) {
+  return m === 'スマスロ'
+    ? `<span class="badge badge-smart">スマスロ</span>`
+    : `<span class="badge badge-medal">メダル</span>`;
+}
+function icon(v) {
+  return v ? `<span class="icon-y">✅</span>` : `<span class="icon-n">—</span>`;
+}
+function fmtDate(d) {
+  const parts = d.split('-');
+  const y = parts[0];
+  const m = parseInt(parts[1]);
+  const day = parseInt(parts[2]);
+  if (day === 31 || day === 15) return `${y}/${m}月（未定）`;
+  return `${y}/${m}/${day.toString().padStart(2,'0')}`;
+}
+
+// State
+let sortKey = 'date', sortDir = -1; // newest first
+let filters = { status: 'all', media: 'all', maker: '', type: '', year: 'all' };
+
+function getStatus(m) {
+  if (m.kozelog) return 'reg';
+  if (isFuture(m)) return 'future';
+  return 'unreg';
+}
+
+function applyFilters(list) {
+  return list.filter(m => {
+    const st = getStatus(m);
+    if (filters.status !== 'all' && st !== filters.status) return false;
+    if (filters.media !== 'all' && m.media !== filters.media) return false;
+    if (filters.maker && m.maker !== filters.maker) return false;
+    if (filters.type && m.type !== filters.type) return false;
+    if (filters.year !== 'all' && !m.date.startsWith(filters.year)) return false;
+    return true;
+  });
+}
+
+function sortList(list) {
+  return [...list].sort((a, b) => {
+    let av = a[sortKey] || '', bv = b[sortKey] || '';
+    if (sortKey === 's6rate') {
+      av = parseFloat(av) || 0;
+      bv = parseFloat(bv) || 0;
+    }
+    if (av < bv) return -1 * sortDir;
+    if (av > bv) return  1 * sortDir;
+    return 0;
+  });
+}
+
+function render() {
+  const filtered = sortList(applyFilters(MACHINES));
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  filtered.forEach(m => {
+    const st = getStatus(m);
+    const tr = document.createElement('tr');
+    tr.className = st === 'reg' ? 'row-reg' : st === 'future' ? 'row-future' : '';
+    tr.innerHTML = `
+      <td class="date-val">${fmtDate(m.date)}</td>
+      <td class="machine-name">${m.name}</td>
+      <td class="maker-name">${m.maker}</td>
+      <td>${typeBadge(m.type)}</td>
+      <td>${mediaBadge(m.media)}</td>
+      <td>${m.s6rate ? `<span class="rate-val">${m.s6rate}</span>` : '<span class="rate-empty">—</span>'}</td>
+      <td>${m.kozelog
+        ? `<a class="kz-link" href="https://kozelog.net${m.kozelogUrl}" target="_blank">✅ 登録済</a>`
+        : `<span class="icon-n">—</span>`}</td>
+      <td style="text-align:center">${icon(m.hasImg)}</td>
+      <td style="text-align:center">${icon(m.hasMovie)}</td>
+      <td>${m.officialUrl ? `<a class="url-link" href="${m.officialUrl}" target="_blank">公式</a>` : '<span class="icon-n">—</span>'}</td>
+      <td class="note-val">${m.note || ''}</td>
+      <td class="note-val">${m.addedContent && m.addedContent.length ? m.addedContent.map(c=>`<span style="display:inline-block;background:rgba(0,200,224,.1);border:1px solid rgba(0,200,224,.3);border-radius:3px;padding:1px 5px;font-size:10px;color:#00c8e0;margin:1px;">${c}</span>`).join('') : '<span style="color:#444">—</span>'}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('result-count').textContent =
+    `表示: ${filtered.length} 件 / 全 ${MACHINES.length} 件`;
+}
+
+// Stats
+function renderStats() {
+  const total   = MACHINES.length;
+  const reg     = MACHINES.filter(m => m.kozelog).length;
+  const unreg   = MACHINES.filter(m => !m.kozelog && !isFuture(m)).length;
+  const future  = MACHINES.filter(m => isFuture(m) && !m.kozelog).length;
+  const released = total - future;
+  const rate    = released > 0 ? Math.round(reg / released * 100) : 0;
+  const noImg   = MACHINES.filter(m => m.kozelog && !m.hasImg).length;
+  const noMovie = MACHINES.filter(m => m.kozelog && !m.hasMovie).length;
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat-card"><div class="stat-label">全機種</div><div class="stat-value cyan">${total}</div></div>
+    <div class="stat-card"><div class="stat-label">こぜログ登録済</div><div class="stat-value green">${reg}</div></div>
+    <div class="stat-card"><div class="stat-label">未登録（導入済）</div><div class="stat-value red">${unreg}</div></div>
+    <div class="stat-card"><div class="stat-label">登録率（導入済）</div><div class="stat-value yellow">${rate}%</div></div>
+    <div class="stat-card"><div class="stat-label">導入予定</div><div class="stat-value" style="color:#8b949e">${future}</div></div>
+    <div class="stat-card"><div class="stat-label">筐体画像なし</div><div class="stat-value" style="color:#f05050">${noImg}</div></div>
+    <div class="stat-card"><div class="stat-label">動画未実装</div><div class="stat-value" style="color:#f5b030">${noMovie}</div></div>
+  `;
+}
+
+// Dropdowns
+function buildSelects() {
+  const makers = [...new Set(MACHINES.map(m => m.maker))].sort();
+  const types  = [...new Set(MACHINES.map(m => m.type).filter(t => t && t !== '-'))].sort();
+  const ms = document.getElementById('sel-maker');
+  const ts = document.getElementById('sel-type');
+  makers.forEach(v => { const o = document.createElement('option'); o.value = o.textContent = v; ms.appendChild(o); });
+  types.forEach(v  => { const o = document.createElement('option'); o.value = o.textContent = v; ts.appendChild(o); });
+  ms.addEventListener('change', () => { filters.maker = ms.value; render(); });
+  ts.addEventListener('change', () => { filters.type  = ts.value; render(); });
+}
+
+// Filter buttons
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-filter]');
+  if (!btn) return;
+  const f = btn.dataset.filter, v = btn.dataset.val;
+  filters[f] = v;
+  btn.closest('.filter-row').querySelectorAll(`[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+});
+
+// Sort headers
+document.querySelectorAll('thead th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) { sortDir *= -1; }
+    else { sortKey = key; sortDir = (key === 'date') ? -1 : 1; }
+    document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
+    th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+    render();
+  });
+});
+
+// Init
+buildSelects();
+renderStats();
+render();
+document.querySelector('[data-sort="date"]').classList.add('sort-desc');
+</script>
+</body>
+</html>
