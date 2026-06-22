@@ -7,11 +7,11 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lヤバチバ 解析・スペック【天井・設定判別・虹7モード】| こぜログ</title>
-  <meta name="description" content="Lヤバチバの設定別機械割・天井・設定判別・虹7モード・設定推定ツールを完全網羅。ネット2026年7月導入スマスロAT機（チバリヨシリーズ最新作）の攻略情報。">
+  <meta name="description" content="Lヤバチバの設定別機械割・天井・設定判別・虹7モード・設定判別ツールを完全網羅。ネット2026年7月導入スマスロAT機（チバリヨシリーズ最新作）の攻略情報。">
   <link rel="canonical" href="https://kozelog.net/machine/net/yabachiba/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Lヤバチバ 解析・スペック【天井・設定判別・虹7モード】">
-  <meta property="og:description" content="Lヤバチバの設定別機械割・天井・虹7モード・設定判別方法を徹底解説。設定推定ツール付き。">
+  <meta property="og:description" content="Lヤバチバの設定別機械割・天井・虹7モード・設定判別方法を徹底解説。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/net/yabachiba/">
   <meta property="og:site_name" content="こぜログ">
   <meta name="twitter:card" content="summary">
@@ -52,7 +52,7 @@
     <li><a href="#setting" onclick="closeNav()"><span class="nav-icon">🔍</span>設定判別ポイント</a></li>
     <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -74,7 +74,7 @@
       <li><a href="#setting">設定判別ポイント</a></li>
       <li><a href="#ceiling">天井・リセット</a></li>
       <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-      <li><a href="#tool">設定推定ツール</a></li>
+      <li><a href="#tool">設定判別ツール</a></li>
       <li><a href="#related">関連機種</a></li>
       <li><a href="#faq">よくある質問（FAQ）</a></li>
     </ol>
@@ -221,20 +221,36 @@
 
   <!-- ===== TOOL ===== -->
   <section class="section" id="tool">
-    <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
+    <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
     <p class="section-lead">総回転数とボーナス回数を入力すると、ポアソン尤度に基づき各設定の確率を算出します。</p>
-    <p class="note">※ 設定2〜6の初当り確率は推定値です。正式解析値の公開後に更新予定。</p>
-    <div class="tool-card">
-      <div class="tool-inputs">
-        <label class="tool-label">総回転数<input type="number" id="totalGames" class="tool-input" min="0" placeholder="例: 5000"></label>
-        <label class="tool-label">ボーナス回数<input type="number" id="bonusCount" class="tool-input" min="0" placeholder="例: 12"></label>
+    <p class="note">※ 設定2〜6の初当り確率は推定値です。正式解析値の公開後に更新予定。</p>    <div class="tool-form">
+      <div class="fg">
+        <label>総回転数 *</label>
+        <input type="number" id="totalGames" placeholder="例: 5000" min="0">
       </div>
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-      <div id="toolResult" class="tool-result" style="display:none;"></div>
+      <div class="fg">
+        <label>ボーナス回数 *</label>
+        <input type="number" id="bonusCount" placeholder="例: 12" min="0">
+      </div>
+    </div>
+      <button class="calc-btn" onclick="calcSetting_net_yabachiba()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
     </div>
   </section>
   <script>
-  function calcSetting(){
+  function calcSetting_net_yabachiba(){
     var g=parseInt(document.getElementById('totalGames').value)||0;
     var b=parseInt(document.getElementById('bonusCount').value)||0;
     if(g<1){alert('総回転数を入力してください');return;}
@@ -247,15 +263,9 @@
     var sum=exps.reduce(function(a,b){return a+b;},0);
     var pcts=exps.map(function(e){return e/sum*100;});
     var best=pcts.indexOf(Math.max.apply(null,pcts));
-    var html='<div class="tool-result-bars">';
-    for(var i=0;i<SETTINGS.length;i++){
-      html+='<div class="result-row"><span class="result-label" style="color:'+COLORS[i]+'">'+SETTINGS[i]+'</span>'
-        +'<div class="result-bar-bg"><div class="result-bar" style="width:'+pcts[i].toFixed(1)+'%;background:'+COLORS[i]+'"></div></div>'
-        +'<span class="result-pct">'+pcts[i].toFixed(1)+'%</span></div>';
-    }
-    html+='</div><div class="result-best">▶ 最も可能性が高い設定：<strong style="color:'+COLORS[best]+'">'+SETTINGS[best]+'</strong>（'+pcts[best].toFixed(1)+'%）</div>';
-    html+='<p style="font-size:11px;color:#8b949e;margin-top:8px;">※ 設定2〜6の確率は推定値です</p>';
-    var el=document.getElementById('toolResult');el.innerHTML=html;el.style.display='block';
+  var cols=['#888','#5ba0b5','#7abb50','#f5b030','#f05050'];var labs=['1','2','4','5','6'];var stgs=[];for(var j=0;j<labs.length;j++){stgs.push({s:labs[j],label:'設定'+labs[j],color:cols[j]});}
+  var pcts2=pcts.map(function(p){return Math.round(p*10)/10;});
+  renderSettingBars(pcts2,stgs);
   }
   </script>
 

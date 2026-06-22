@@ -7,11 +7,11 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L戦国コレクション6 解析・スペック【天井・設定判別・AT確率】| こぜログ</title>
-  <meta name="description" content="L戦国コレクション6（戦コレ6）の設定別AT確率・機械割・小役確率・天井・設定判別・設定推定ツールをまとめています。コナミアミューズメント2026年7月導入のスマスロAT機。導入予定約10,000台。">
+  <meta name="description" content="L戦国コレクション6（戦コレ6）の設定別AT確率・機械割・小役確率・天井・設定判別・設定判別ツールをまとめています。コナミアミューズメント2026年7月導入のスマスロAT機。導入予定約10,000台。">
   <link rel="canonical" href="https://kozelog.net/machine/konami/sengoku-collection6/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="L戦国コレクション6 解析・スペック【天井・設定判別・AT確率】">
-  <meta property="og:description" content="L戦国コレクション6の設定別AT確率・機械割・天井・設定判別方法をまとめています。設定推定ツール付き。">
+  <meta property="og:description" content="L戦国コレクション6の設定別AT確率・機械割・天井・設定判別方法をまとめています。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/konami/sengoku-collection6/">
   <meta property="og:site_name" content="こぜログ">
   <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
     <li><a href="#setting" onclick="closeNav()"><span class="nav-icon">🔍</span>設定判別ポイント</a></li>
     <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -76,7 +76,7 @@
       <li><a href="#setting">設定判別ポイント</a></li>
       <li><a href="#ceiling">天井・リセット</a></li>
       <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-      <li><a href="#tool">設定推定ツール</a></li>
+      <li><a href="#tool">設定判別ツール</a></li>
       <li><a href="#related">関連機種</a></li>
       <li><a href="#faq">よくある質問（FAQ）</a></li>
     </ol>
@@ -251,22 +251,33 @@
   </section>
 
   <section class="section" id="tool">
-    <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
-    <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">総ゲーム数とAT回数を入力してください。AT初当り確率から各設定の出現しやすさを推定します。</p>
-    <div class="tool-inputs">
-      <div class="input-group"><label class="input-lbl">総ゲーム数</label><input type="number" id="t-games" class="tool-inp" value="3000" min="1"></div>
-      <div class="input-group"><label class="input-lbl">AT回数</label><input type="number" id="t-at" class="tool-inp" value="10" min="0"></div>
-    </div>
-    <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-    <div class="result-area" id="result-area" style="display:none;">
-      <h3 class="sub-heading">推定結果</h3>
-      <div class="tbl-wrap">
-        <table class="data-tbl">
-          <thead><tr><th>設定</th><th>AT確率</th><th>機械割</th><th>スコア</th><th>判定</th></tr></thead>
-          <tbody id="result-tbody"></tbody>
-        </table>
+    <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">総ゲーム数とAT回数を入力してください。AT初当り確率から各設定の出現しやすさを推定します。</p>
+    <div class="tool-form">
+      <div class="fg">
+        <label>総ゲーム数 *</label>
+        <input type="number" id="t-games" min="1" placeholder="例：3000">
       </div>
-      <p class="result-note" id="result-note"></p>
+      <div class="fg">
+        <label>AT回数 *</label>
+        <input type="number" id="t-at" min="0" placeholder="例：8">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
     </div>
   </section>
 
@@ -306,7 +317,7 @@
         <li><a href="#setting">設定判別ポイント</a></li>
         <li><a href="#ceiling">天井・リセット</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>
@@ -358,7 +369,7 @@ function updatePtTable(){
 updateDiffTable();
 updatePtTable();
 
-/* ===== 設定推定ツール ===== */
+/* ===== 設定判別ツール ===== */
 var AT_PROBS=[1/363.6,1/350.4,1/329.8,1/289.4,1/268.5,1/252.2];
 var AT_RATES=[0.979,0.991,1.009,1.060,1.101,1.149];
 var COLORS=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
@@ -373,17 +384,9 @@ function calcSetting(){
   var ex=sc.map(function(s){return Math.exp(s-mx);});
   var tot=ex.reduce(function(a,b){return a+b;},0);
   var pr=ex.map(function(e){return e/tot;});
-  var tbody=document.getElementById('result-tbody');tbody.innerHTML='';
-  var mx2=Math.max.apply(null,pr);
-  for(var i=0;i<6;i++){
-    var tr=document.createElement('tr');
-    var pct=(pr[i]*100).toFixed(1);
-    tr.innerHTML='<td class="s-num" style="color:'+COLORS[i]+'">'+(i+1)+'</td><td>1/'+(1/AT_PROBS[i]).toFixed(1)+'</td><td>'+(AT_RATES[i]*100).toFixed(1)+'%</td><td><div class="prob-bar-wrap"><div class="prob-bar" style="width:'+pct+'%;background:'+COLORS[i]+'"></div><span class="prob-pct">'+pct+'%</span></div></td><td>'+(pr[i]===mx2?'<strong style="color:'+COLORS[i]+'">◎ 最有力</strong>':'-')+'</td>';
-    tbody.appendChild(tr);
-  }
-  document.getElementById('result-note').textContent='実測値 — AT:1/'+(g/(at||1)).toFixed(0);
-  document.getElementById('result-area').style.display='block';
-  var adTool=document.getElementById('ad-slot-tool');if(adTool){adTool.style.display='flex';}
+  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var pcts=pr.map(function(p){return Math.round(p*1000)/10;});
+  renderSettingBars(pcts,stgs);
 }
 </script>
 <div id="site-footer-ph"></div>

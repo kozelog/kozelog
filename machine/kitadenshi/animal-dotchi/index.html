@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>アニマルスロット ドッチ 解析・スペック【天井・設定判別・BIG確率】| こぜログ</title>
-  <meta name="description" content="アニマルスロット ドッチ（スマスロ）の設定別BIG/REG確率・機械割・天井999G・チェリー/スイカ設定差・設定判別・設定推定ツールを完全網羅。北電子2026年4月導入スマスロAT機の攻略情報。">
+  <meta name="description" content="アニマルスロット ドッチ（スマスロ）の設定別BIG/REG確率・機械割・天井999G・チェリー/スイカ設定差・設定判別・設定判別ツールを完全網羅。北電子2026年4月導入スマスロAT機の攻略情報。">
   <link rel="canonical" href="https://kozelog.net/machine/kitadenshi/animal-dotchi/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="アニマルスロット ドッチ 解析・スペック【天井・設定判別・BIG確率】">
@@ -52,7 +52,7 @@
     <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
     <li><a href="#sec-st" onclick="closeNav()"><span class="nav-icon">⚡</span>アニマルドリーム（ST）</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -76,7 +76,7 @@
       <li><a href="#ceiling">天井・リセット</a></li>
       <li><a href="#sec-st">アニマルドリーム（ST）</a></li>
       <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-      <li><a href="#tool">設定推定ツール</a></li>
+      <li><a href="#tool">設定判別ツール</a></li>
       <li><a href="#related">関連機種</a></li>
       <li><a href="#faq">よくある質問（FAQ）</a></li>
     </ol>
@@ -209,24 +209,41 @@
   </section>
 
   <section class="section" id="tool">
-    <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
-    <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">BIG回数・REG回数・チェリー回数を入力してください。BIG確率を主軸に各設定の出現しやすさを推定します。</p>
-    <div class="tool-inputs">
-      <div class="input-group"><label class="input-lbl">総ゲーム数</label><input type="number" id="inp-games" class="tool-inp" value="3000" min="1"></div>
-      <div class="input-group"><label class="input-lbl">BIG回数</label><input type="number" id="inp-bb" class="tool-inp" value="9" min="0"></div>
-      <div class="input-group"><label class="input-lbl">REG回数</label><input type="number" id="inp-rb" class="tool-inp" value="9" min="0"></div>
-      <div class="input-group"><label class="input-lbl">チェリー回数</label><input type="number" id="inp-cherry" class="tool-inp" value="80" min="0"></div>
-    </div>
-    <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-    <div class="result-area" id="result-area" style="display:none;">
-      <h3 class="sub-heading">推定結果</h3>
-      <div class="tbl-wrap">
-        <table class="data-tbl">
-          <thead><tr><th>設定</th><th>BIG確率</th><th>合算確率</th><th>スコア</th><th>判定</th></tr></thead>
-          <tbody id="result-tbody"></tbody>
-        </table>
+    <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">BIG回数・REG回数・チェリー回数を入力してください。BIG確率を主軸に各設定の出現しやすさを推定します。</p>
+    <div class="tool-form">
+      <div class="fg">
+        <label>総ゲーム数 *</label>
+        <input type="number" id="inp-games" min="1" placeholder="例：3000">
       </div>
-      <p class="result-note" id="result-note"></p>
+      <div class="fg">
+        <label>BIG回数 *</label>
+        <input type="number" id="inp-bb" min="0" placeholder="例：8">
+      </div>
+      <div class="fg">
+        <label>REG回数 *</label>
+        <input type="number" id="inp-rb" min="0" placeholder="例：8">
+      </div>
+      <div class="fg">
+        <label>チェリー回数 *</label>
+        <input type="number" id="inp-cherry" min="0" placeholder="例：8">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
     </div>
   </section>
 
@@ -266,7 +283,7 @@
         <li><a href="#ceiling">天井・リセット</a></li>
         <li><a href="#sec-st">ST詳細</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>
@@ -309,16 +326,9 @@ function calcSetting(){
   var ex=sc.map(function(s){return Math.exp(s-mx);});
   var tot=ex.reduce(function(a,b){return a+b;},0);
   var pr=ex.map(function(e){return e/tot;});
-  var colors=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
-  var tbody=document.getElementById('result-tbody');tbody.innerHTML='';
-  var mx2=Math.max.apply(null,pr);
-  for(var i=0;i<6;i++){
-    var tr=document.createElement('tr');var pct=(pr[i]*100).toFixed(1);
-    tr.innerHTML='<td class="s-num" style="color:'+colors[i]+'">'+(i+1)+'</td><td>1/'+(1/BB_PROBS[i]).toFixed(1)+'</td><td>1/'+(1/(BB_PROBS[i]+RB_PROBS[i])).toFixed(1)+'</td><td><div class="prob-bar-wrap"><div class="prob-bar" style="width:'+pct+'%;background:'+colors[i]+'"></div><span class="prob-pct">'+pct+'%</span></div></td><td>'+(pr[i]===mx2?'<strong style="color:'+colors[i]+'">◎ 最有力</strong>':'-')+'</td>';
-    tbody.appendChild(tr);
-  }
-  document.getElementById('result-note').textContent='実測値 — BIG:1/'+(g/(bb||1)).toFixed(0)+'  REG:1/'+(g/(rb||1)).toFixed(0)+'  合算:1/'+(g/((bb+rb)||1)).toFixed(0);
-  document.getElementById('result-area').style.display='block';
+  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var pcts=pr.map(function(p){return Math.round(p*1000)/10;});
+  renderSettingBars(pcts,stgs);
 }
 </script>
 <div id="site-footer-ph"></div>

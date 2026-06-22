@@ -7,11 +7,11 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スマスロ ソードアート・オンラインⅡ 解析・スペック【天井・設定判別・AT確率】| こぜログ</title>
-  <meta name="description" content="スマスロ ソードアート・オンラインⅡ（SAO2）の設定別AT確率・機械割・小役確率・天井・設定判別・設定推定ツールをまとめています。大都技研2026年6月導入のスマスロAT機。">
+  <meta name="description" content="スマスロ ソードアート・オンラインⅡ（SAO2）の設定別AT確率・機械割・小役確率・天井・設定判別・設定判別ツールをまとめています。大都技研2026年6月導入のスマスロAT機。">
   <link rel="canonical" href="https://kozelog.net/machine/daitogiken/sao2/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="スマスロ ソードアート・オンラインⅡ 解析・スペック【天井・設定判別・AT確率】">
-  <meta property="og:description" content="スマスロ SAO2の設定別AT確率・機械割・天井・設定判別方法をまとめています。設定推定ツール付き。">
+  <meta property="og:description" content="スマスロ SAO2の設定別AT確率・機械割・天井・設定判別方法をまとめています。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/daitogiken/sao2/">
   <meta property="og:site_name" content="こぜログ">
   <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
     <li><a href="#sec-at" onclick="closeNav()"><span class="nav-icon">⚡</span>AT詳細</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
     <li><a href="#sec-yuuri" onclick="closeNav()"><span class="nav-icon">🔄</span>有利区間</a></li>
-    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -102,7 +102,7 @@
       <li><a href="#sec-at">AT詳細</a></li>
       <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
       <li><a href="#sec-yuuri">有利区間</a></li>
-      <li><a href="#tool">設定推定ツール</a></li>
+      <li><a href="#tool">設定判別ツール</a></li>
       <li><a href="#related">関連機種</a></li>
       <li><a href="#faq">よくある質問（FAQ）</a></li>
     </ol>
@@ -191,22 +191,111 @@
 
   <section class="section" id="setting">
     <h2 class="section-title"><span class="s-icon">🔍</span>スマスロ ソードアート・オンラインⅡ 設定判別ポイント</h2>
-    <ul class="point-list">
-      <li><strong>① CZ・AT確率（主要指標）</strong>
-        CZ確率は設定6（1/191.7）が設定1（1/238.4）と約1.24倍の差。AT確率は設定6（1/269.6）vs設定1（1/386.2）で約1.43倍の差があります。</li>
-      <li><strong>② 強チェリーからのCZ当選率</strong>
-        通常時の強チェリー成立時のCZ当選率は設定1:20%〜設定6:33%。約1.65倍の設定差があり、要カウントです。</li>
-      <li><strong>③ 確定CZ（THE END状態）出現率</strong>
-        強チャンス目A/B成立時の確定CZ当選率には約12.8倍の設定差。設定1:1/20177 vs 設定6:1/7077。出現すれば高設定期待度大幅UP。</li>
-      <li><strong>④ CZ失敗時のアイテム獲得率</strong>
-        CZ失敗時のアイテム獲得率は設定1:20.3%〜設定6:30.1%。約1.48倍の差があります。</li>
-      <li><strong>⑤ CZ失敗時の「曠野の決闘」突入率</strong>
-        設定1:1/128.0 vs 設定6:1/64.0と2倍の設定差。CZ失敗回数に対する突入率を追跡してください。</li>
-      <li><strong>⑥ AT終了画面・セリフ</strong>
-        デフォルト以外の終了画面（幼少期・夏祭り等）が頻出すれば高設定期待度UP。赤ランプセリフや紫ランプ「LUKガン上げ」はモードアップ濃厚。</li>
-      <li><strong>⑦ GGOモード移行率</strong>
-        高設定ほどGGOモード移行率が上昇。「死銃モード」移行が多ければ高設定の可能性あり。</li>
-    </ul>
+    <div class="info-box ib-gold" style="margin-bottom:18px;"><strong>設定判別の優先度：</strong>① CZ・AT確率（主要指標） → ② 強チェリーCZ当選率 → ③ 確定CZ出現率 → ④ CZ失敗時アイテム獲得率 → ⑤ AT終了画面・演出示唆。複数指標を組み合わせることで精度が上がります。</div>
+
+    <h3 class="sub-heading">① CZ・AT確率（主要指標）</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">CZ確率は設定1:1/238.4〜設定6:1/191.7（約1.24倍差）、AT確率は設定1:1/386.2〜設定6:1/269.6（約1.43倍差）。最も信頼度の高い指標です。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>CZ確率</th><th>AT確率</th><th>合算</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/238.4</td><td>1/386.2</td><td>1/147.4</td></tr>
+          <tr><td class="s-num s2">2</td><td>1/232.3</td><td>1/364.3</td><td>1/141.9</td></tr>
+          <tr><td class="s-num s3">3</td><td>1/232.7</td><td>1/368.1</td><td>1/142.5</td></tr>
+          <tr><td class="s-num s4">4</td><td>1/218.9</td><td>1/326.8</td><td>1/131.1</td></tr>
+          <tr><td class="s-num s5">5</td><td>1/225.2</td><td>1/340.6</td><td>1/135.6</td></tr>
+          <tr><td class="s-num s6">6</td><td>1/191.7</td><td>1/269.6</td><td style="color:#f05050;font-weight:700;">1/112.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">② 強チェリーからのCZ当選率</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">通常時・高確時それぞれに設定差あり。設定6は通常時33.0%と突出。約1.65倍の設定差があります。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>通常時</th><th>高確時</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>20.0%</td><td>50.0%</td></tr>
+          <tr><td class="s-num s2">2</td><td>21.0%</td><td>51.0%</td></tr>
+          <tr><td class="s-num s3">3</td><td>20.0%</td><td>52.0%</td></tr>
+          <tr><td class="s-num s4">4</td><td>25.0%</td><td>55.0%</td></tr>
+          <tr><td class="s-num s5">5</td><td>20.0%</td><td>58.0%</td></tr>
+          <tr><td class="s-num s6">6</td><td style="color:#f05050;font-weight:700;">33.0%</td><td style="color:#f05050;font-weight:700;">60.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-blue" style="margin-top:10px;"><strong>注目：</strong>設定5は通常時20.0%と低いが高確時58.0%と高い。設定4は通常時25.0%/高確時55.0%で偶数設定の特徴が出ます。設定6は両方とも突出しています。</div>
+
+    <h3 class="sub-heading">③ 確定CZ（THE END）出現率</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">強チャンス目成立時の確定CZ（AT当選確定）当選率。設定1:1/20177〜設定6:1/7077で約2.85倍の差。出現すれば高設定期待度大幅UP。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>確定CZ出現率</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/20177.5</td></tr>
+          <tr><td class="s-num s2">2</td><td>1/17579.1</td></tr>
+          <tr><td class="s-num s3">3</td><td>1/17586.3</td></tr>
+          <tr><td class="s-num s4">4</td><td>1/13784.5</td></tr>
+          <tr><td class="s-num s5">5</td><td>1/11459.0</td></tr>
+          <tr><td class="s-num s6">6</td><td style="color:#f05050;font-weight:700;">1/7077.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">④ CZ失敗時アイテム獲得率</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">CZ失敗時にアイテムを獲得する確率。設定6は30.1%と設定1（20.3%）の約1.48倍。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>アイテム獲得率</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>20.3%</td></tr>
+          <tr><td class="s-num s2">2</td><td>21.1%</td></tr>
+          <tr><td class="s-num s3">3</td><td>21.9%</td></tr>
+          <tr><td class="s-num s4">4</td><td>22.7%</td></tr>
+          <tr><td class="s-num s5">5</td><td>25.0%</td></tr>
+          <tr><td class="s-num s6">6</td><td style="color:#f05050;font-weight:700;">30.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">⑤ シューティングチャージ当選率（低確スイカ）</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">低確中のスイカからのシューティングチャージ当選率。設定6は55.1%と設定1（40.2%）の約1.37倍。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>SC当選率（低確スイカ）</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>40.2%</td></tr>
+          <tr><td class="s-num s2">2</td><td>44.5%</td></tr>
+          <tr><td class="s-num s3">3</td><td>41.0%</td></tr>
+          <tr><td class="s-num s4">4</td><td>48.4%</td></tr>
+          <tr><td class="s-num s5">5</td><td>42.2%</td></tr>
+          <tr><td class="s-num s6">6</td><td style="color:#f05050;font-weight:700;">55.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-blue" style="margin-top:10px;"><strong>偶数優遇：</strong>設定2（44.5%）と設定4（48.4%）が同じ奇数より高く、偶数設定を見抜くヒントになります。</div>
+
+    <h3 class="sub-heading">⑥ CZ失敗時「曠野の決闘」突入率</h3>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>突入率</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/128.0</td></tr>
+          <tr><td class="s-num s2">2</td><td colspan="1" style="color:var(--text2);">調査中</td></tr>
+          <tr><td class="s-num s3">3</td><td colspan="1" style="color:var(--text2);">調査中</td></tr>
+          <tr><td class="s-num s4">4</td><td colspan="1" style="color:var(--text2);">調査中</td></tr>
+          <tr><td class="s-num s5">5</td><td colspan="1" style="color:var(--text2);">調査中</td></tr>
+          <tr><td class="s-num s6">6</td><td style="color:#f05050;font-weight:700;">1/64.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box" style="margin-top:10px;"><p>ℹ️ 設定1と設定6で2倍の差。CZ失敗回数に対する突入率を追跡してください。</p></div>
+
+    <h3 class="sub-heading">⑦ AT終了画面・セリフによる設定示唆</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">デフォルト以外の終了画面（幼少期・夏祭り等）が頻出すれば高設定期待度UP。紫ランプ「LUKガン上げ」はモードアップ濃厚。詳細は<a href="#sec-endscreen" style="color:var(--gold);">終了画面・設定示唆セクション</a>を参照。</p>
+
+    <h3 class="sub-heading">⑧ GGOモード移行率</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">高設定ほどGGOモード移行率が上昇。「死銃モード」移行が多ければ高設定の可能性あり。SCデスガン選択率は設定5が特に優遇されています。</p>
   </section>
 
   <section class="section" id="ceiling">
@@ -463,23 +552,40 @@
   </section>
 
   <section class="section" id="tool">
-    <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
-    <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">CZ回数・AT回数を入力してください。CZ確率・AT確率から各設定の出現しやすさを推定します。</p>
-    <div class="tool-inputs">
-      <div class="input-group"><label class="input-lbl">総ゲーム数</label><input type="number" id="t-games" class="tool-inp" value="3000" min="1"></div>
-      <div class="input-group"><label class="input-lbl">CZ回数</label><input type="number" id="t-cz" class="tool-inp" value="12" min="0"></div>
-      <div class="input-group"><label class="input-lbl">AT回数</label><input type="number" id="t-at" class="tool-inp" value="8" min="0"></div>
-    </div>
-    <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-    <div class="result-area" id="result-area" style="display:none;">
-      <h3 class="sub-heading">推定結果</h3>
-      <div class="tbl-wrap">
-        <table class="data-tbl">
-          <thead><tr><th>設定</th><th>CZ確率</th><th>AT確率</th><th>機械割</th><th>スコア</th><th>判定</th></tr></thead>
-          <tbody id="result-tbody"></tbody>
-        </table>
+    <h2 class="section-title"><span class="s-icon">🧮</span>スマスロ ソードアート・オンラインⅡ 設定判別ツール</h2>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:20px;">実戦データを入力すると、各設定の推定確率をリアルタイムで算出します。サンプルが多いほど精度が向上します（目安：3,000G以上）。</p>
+
+    <div class="tool-form">
+      <div class="fg">
+        <label>消化ゲーム数 *</label>
+        <input type="number" id="t-games" placeholder="例：3000" min="0">
       </div>
-      <p class="result-note" id="result-note"></p>
+      <div class="fg">
+        <label>CZ回数 *</label>
+        <input type="number" id="t-cz" placeholder="例：12" min="0">
+      </div>
+      <div class="fg">
+        <label>AT回数 *</label>
+        <input type="number" id="t-at" placeholder="例：8" min="0">
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcSettingSAO()">設定を判別する</button>
+
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">推定結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。CZ・AT確率に加え、終了画面・演出示唆も組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
     </div>
   </section>
 
@@ -537,7 +643,7 @@
         <li><a href="#sec-at">AT詳細</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
         <li><a href="#sec-yuuri">有利区間</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>
@@ -556,31 +662,44 @@ var DIFF_HOURS=[1,3,5,8];
 var DIFF_RATES=[{s:1,rate:0.976},{s:2,rate:0.988},{s:3,rate:1.002},{s:4,rate:1.053},{s:5,rate:1.104},{s:6,rate:1.149}];
 var CZ_PROBS=[1/238.4,1/232.3,1/232.7,1/218.9,1/225.2,1/191.7];
 var AT_PROBS=[1/386.2,1/364.3,1/368.1,1/326.8,1/340.6,1/269.6];
+var SAO_REF=[
+  {s:1,label:'設定1',color:'#888'},
+  {s:2,label:'設定2',color:'#5ba0b5'},
+  {s:3,label:'設定3',color:'#4fa880'},
+  {s:4,label:'設定4',color:'#7abb50'},
+  {s:5,label:'設定5',color:'#f5b030'},
+  {s:6,label:'設定6',color:'#f05050'}
+];
 updateDiffTable();
 function poissonLL(k,lam){if(lam<=0)return k===0?0:-Infinity;var ll=0;for(var i=1;i<=k;i++)ll+=Math.log(i);return k*Math.log(lam)-lam-ll;}
-function calcSetting(){
+function calcSettingSAO(){
   var g=parseInt(document.getElementById('t-games').value)||0;
   var cz=parseInt(document.getElementById('t-cz').value)||0;
   var at=parseInt(document.getElementById('t-at').value)||0;
-  if(!g){alert('ゲーム数を入力してください');return;}
+  if(g<100||(cz===0&&at===0)){alert('消化ゲーム数とCZ/AT回数を入力してください。');return;}
   var sc=[];
   for(var i=0;i<6;i++){sc.push(poissonLL(cz,CZ_PROBS[i]*g)+poissonLL(at,AT_PROBS[i]*g));}
   var mx=Math.max.apply(null,sc);
   var ex=sc.map(function(s){return Math.exp(s-mx);});
   var tot=ex.reduce(function(a,b){return a+b;},0);
-  var pr=ex.map(function(e){return e/tot;});
-  var colors=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
-  var tbody=document.getElementById('result-tbody');tbody.innerHTML='';
-  var mx2=Math.max.apply(null,pr);
-  for(var i=0;i<6;i++){
-    var tr=document.createElement('tr');
-    var pct=(pr[i]*100).toFixed(1);
-    tr.innerHTML='<td class="s-num" style="color:'+colors[i]+'">'+(i+1)+'</td><td>1/'+(1/CZ_PROBS[i]).toFixed(1)+'</td><td>1/'+(1/AT_PROBS[i]).toFixed(1)+'</td><td>'+((DIFF_RATES[i])*100).toFixed(1)+'%</td><td><div class="prob-bar-wrap"><div class="prob-bar" style="width:'+pct+'%;background:'+colors[i]+'"></div><span class="prob-pct">'+pct+'%</span></div></td><td>'+(pr[i]===mx2?'<strong style="color:'+colors[i]+'">◎ 最有力</strong>':'-')+'</td>';
-    tbody.appendChild(tr);
-  }
-  document.getElementById('result-note').textContent='実測値 — CZ:1/'+(g/(cz||1)).toFixed(0)+' / AT:1/'+(g/(at||1)).toFixed(0);
+  var pcts=ex.map(function(e){return Math.round((e/tot)*1000)/10;});
+
+  var adSlot=document.getElementById('ad-slot-tool');
+  if(adSlot)adSlot.style.display='block';
+
   document.getElementById('result-area').style.display='block';
-  var adTool=document.getElementById('ad-slot-tool');if(adTool){adTool.style.display='flex';}
+  pcts.forEach(function(pct,i){
+    var r=SAO_REF[i];
+    var el=document.getElementById('bar-s'+r.s);
+    if(!el)return;
+    var txt=pct>=7?pct+'%':'';
+    el.innerHTML=
+      '<div class="rb-head"><span style="color:'+r.color+'">'+r.label+'</span><span>'+pct+'%</span></div>'+
+      '<div class="bar-bg"><div class="bar-fill" style="width:'+pct+'%;background:'+r.color+'">'+txt+'</div></div>';
+  });
+
+  var scrollTarget=adSlot&&adSlot.style.display!=='none'?adSlot:document.getElementById('result-area');
+  scrollTarget.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 </script>
 <div id="site-footer-ph"></div>

@@ -8,13 +8,13 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lパチスロ 革命機ヴァルヴレイヴ2 解析・スペック【天井・設定判別・AT詳細】| こぜログ</title>
-  <meta name="description" content="Lパチスロ 革命機ヴァルヴレイヴ2（ヴヴヴ2）の設定別初当たり確率・機械割・天井・ハラキリドライブ・設定判別・革命ラッシュ継続率・設定推定ツールを完全網羅。">
+  <meta name="description" content="Lパチスロ 革命機ヴァルヴレイヴ2（ヴヴヴ2）の設定別初当たり確率・機械割・天井・ハラキリドライブ・設定判別・革命ラッシュ継続率・設定判別ツールを完全網羅。">
   <meta name="keywords" content="ヴァルヴレイヴ2,ヴヴヴ2,スマスロ,設定差,設定判別,天井,ハラキリドライブ,革命ラッシュ,超革命ラッシュ,マギウスマーク">
   <link rel="canonical" href="https://kozelog.net/machine/sankyo/valvrave2/">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Lパチスロ 革命機ヴァルヴレイヴ2 解析・スペック【天井・設定判別・AT詳細】">
-  <meta property="og:description" content="革命機ヴァルヴレイヴ2の設定別初当たり確率・機械割・天井・設定判別方法を徹底解説。設定推定ツール付き。">
+  <meta property="og:description" content="革命機ヴァルヴレイヴ2の設定別初当たり確率・機械割・天井・設定判別方法を徹底解説。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/sankyo/valvrave2/">
   <meta property="og:site_name" content="こぜログ">
   <meta property="og:locale" content="ja_JP">
@@ -121,7 +121,7 @@
     <li><a href="#sec-at"      onclick="closeNav()"><span class="nav-icon">⚡</span>AT詳細</a></li>
     <li><a href="#sec-yuuri"   onclick="closeNav()"><span class="nav-icon">🔋</span>有利区間</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related"     onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq"         onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -152,7 +152,7 @@
         <li><a href="#sec-at">AT詳細</a></li>
         <li><a href="#sec-yuuri">有利区間</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問（FAQ）</a></li>
       </ol>
@@ -403,29 +403,42 @@
 
     <!-- ====== TOOL ====== -->
     <section class="section" id="tool">
-      <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
-      <div class="tool-intro">初当たり回数・ハラキリドライブ発生回数・AT連チャン回数を入力すると、各設定の可能性を推定します。</div>
-      <div class="tool-grid">
-        <div class="tool-input-group">
-          <label>総回転数</label>
-          <input type="number" id="in-games" value="" placeholder="例: 6000" min="0">
-        </div>
-        <div class="tool-input-group">
-          <label>初当たり回数</label>
-          <input type="number" id="in-bonus" value="" placeholder="例: 12" min="0">
-        </div>
-        <div class="tool-input-group">
-          <label>ハラキリドライブ回数</label>
-          <input type="number" id="in-harakiri" value="" placeholder="例: 3" min="0">
-        </div>
-        <div class="tool-input-group">
-          <label>AT総連チャン数</label>
-          <input type="number" id="in-chain" value="" placeholder="例: 30" min="0">
-        </div>
+      <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:20px;">初当たり回数・ハラキリドライブ発生回数・AT連チャン回数を入力すると、各設定の可能性を推定します。</p>
+    <div class="tool-form">
+      <div class="fg">
+        <label>総回転数 *</label>
+        <input type="number" id="in-games" placeholder="例: 6000" min="0">
       </div>
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-      <div id="result-area" class="result-area" style="display:none;"></div>
-    </section>
+      <div class="fg">
+        <label>初当たり回数 *</label>
+        <input type="number" id="in-bonus" placeholder="例: 12" min="0">
+      </div>
+      <div class="fg">
+        <label>ハラキリドライブ回数 *</label>
+        <input type="number" id="in-harakiri" placeholder="例: 3" min="0">
+      </div>
+      <div class="fg">
+        <label>AT総連チャン数 *</label>
+        <input type="number" id="in-chain" placeholder="例: 30" min="0">
+      </div>
+    </div>
+      <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
+    </div>
+  </section>
 
     <!-- ====== RELATED ====== -->
     <section class="section" id="related">
@@ -473,7 +486,7 @@
         <li><a href="#sec-at">AT詳細</a></li>
         <li><a href="#sec-yuuri">有利区間</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ul>
@@ -517,19 +530,9 @@ function calcSetting(){
   var exps=scores.map(function(s){return Math.exp(s-maxS);});
   var sum=exps.reduce(function(a,b){return a+b;},0);
   var probs=exps.map(function(e){return e/sum;});
-  var maxP=Math.max.apply(null,probs);
-
-  var html='<div class="result-title">推定結果</div><div class="result-bars">';
-  SETTINGS.forEach(function(s,i){
-    var pct=(probs[i]*100).toFixed(1);
-    var w=(probs[i]/maxP*100).toFixed(1);
-    var cls='s'+s;
-    html+='<div class="result-row"><span class="result-label s-num '+cls+'">'+s+'</span>'
-      +'<div class="result-bar-bg"><div class="result-bar-fill result-fill-'+cls+'" style="width:'+w+'%"></div></div>'
-      +'<span class="result-pct">'+pct+'%</span></div>';
-  });
-  html+='</div><p class="result-note">※ 本ツールは確率論に基づく参考値です。実際の設定を保証するものではありません。</p>';
-  area.innerHTML=html;
+  var maxP=Math.max.apply(null,probs);  var SCOLOR={1:'#888',2:'#5ba0b5',3:'#4fa880',4:'#7abb50',5:'#f5b030',6:'#f05050'};var stgs=[];SETTINGS.forEach(function(s){stgs.push({s:String(s),label:'設定'+s,color:SCOLOR[s]});});
+  var pcts=probs.map(function(p){return Math.round(p*1000)/10;});
+  renderSettingBars(pcts,stgs);
 }
 
 updateDiffTable();

@@ -7,14 +7,14 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A-SLOT+ 異世界かるてっと BT 解析・スペック【設定差・小役確率・設定判別】| こぜログ</title>
-  <meta name="description" content="A-SLOT+ 異世界かるてっと BTの設定別ボーナス確率・小役確率・設定判別・いせかる目確率・BT詳細・設定推定ツールを完全網羅。ベル・スイカ合算による判別方法も詳しく解説。">
+  <meta name="description" content="A-SLOT+ 異世界かるてっと BTの設定別ボーナス確率・小役確率・設定判別・いせかる目確率・BT詳細・設定判別ツールを完全網羅。ベル・スイカ合算による判別方法も詳しく解説。">
   <meta name="keywords" content="異世界かるてっと,スマスロ,設定差,ボーナス確率,小役確率,設定判別,いせかる目,機械割,スペック,サミー">
   <link rel="canonical" href="https://kozelog.net/machine/sammy/sp-ise-ka/">
 
   <!-- OGP -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="A-SLOT+ 異世界かるてっと BT 解析・スペック【設定差・小役確率・設定判別】">
-  <meta property="og:description" content="A-SLOT+ 異世界かるてっとBTの設定別ボーナス確率・小役確率・設定判別方法を徹底解説。いせかる目・ベル確率による設定差を詳しく解説。設定推定ツール付き。">
+  <meta property="og:description" content="A-SLOT+ 異世界かるてっとBTの設定別ボーナス確率・小役確率・設定判別方法を徹底解説。いせかる目・ベル確率による設定差を詳しく解説。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/sammy/sp-ise-ka/">
   <meta property="og:site_name" content="こぜログ">
   <meta property="og:locale" content="ja_JP">
@@ -31,7 +31,7 @@
         "@id": "https://kozelog.net/machine/sammy/sp-ise-ka/",
         "url": "https://kozelog.net/machine/sammy/sp-ise-ka/",
         "name": "A-SLOT+ 異世界かるてっと BT 解析・スペック【設定差・小役確率・設定判別】",
-        "description": "異世界かるてっとの設定別ボーナス確率・小役確率・設定判別方法を徹底解説。設定推定ツール付き。",
+        "description": "異世界かるてっとの設定別ボーナス確率・小役確率・設定判別方法を徹底解説。設定判別ツール付き。",
         "inLanguage": "ja",
         "datePublished": "2026-05-31",
         "dateModified": "2026-05-31",
@@ -96,7 +96,7 @@
     <li><a href="#sec-bt"           onclick="closeNav()"><span class="nav-icon">⚡</span>BT詳細</a></li>
     <li><a href="#spec-detail" onclick="closeNav()"><span class="nav-icon">🎲</span>ボーナス概要</a></li>
     <li><a href="#sec-morning"      onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool"         onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool"         onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related"      onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq"          onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -131,7 +131,7 @@
         <li><a href="#sec-bt">BT詳細</a></li>
         <li><a href="#spec-detail">ボーナス概要</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問（FAQ）</a></li>
       </ol>
@@ -552,9 +552,9 @@
       </div>
     </section>
 
-    <!-- ====== SECTION 7: 設定推定ツール ====== -->
+    <!-- ====== SECTION 7: 設定判別ツール ====== -->
     <section class="section" id="tool">
-      <h2 class="section-title"><span class="s-icon">🧮</span>異世界かるてっとBT 設定推定ツール</h2>
+      <h2 class="section-title"><span class="s-icon">🧮</span>異世界かるてっとBT 設定判別ツール</h2>
       <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">消化G数・ボーナス回数・小役回数を入力すると、各設定の推定確率をバーグラフで表示します。</p>
 
       <div class="tool-form">
@@ -564,7 +564,7 @@
         <div class="fg"><label>ベル 回数（非BT中）</label><input type="number" id="t-koyaku1" placeholder="例：410" min="0"></div>
         <div class="fg"><label>スイカ合算 回数（任意）</label><input type="number" id="t-koyaku2" placeholder="例：65" min="0"></div>
       </div>
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
+      <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
 
       <div id="result-area" style="display:none;">
         <div class="result-bars">
@@ -641,7 +641,7 @@
         <li><a href="#sec-bt">BT詳細</a></li>
         <li><a href="#spec-detail">ボーナス概要</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>

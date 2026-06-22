@@ -7,14 +7,14 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ニューキングハナハナV 解析・スペック【設定差・小役確率・設定判別】| こぜログ</title>
-  <meta name="description" content="スマート沖スロ ニューキングハナハナVの設定別ボーナス確率・機械割・小役確率・設定判別・打ち方・設定推定ツールを完全網羅。パイオニア2026年1月導入スマスロ5設定機の攻略情報。">
+  <meta name="description" content="スマート沖スロ ニューキングハナハナVの設定別ボーナス確率・機械割・小役確率・設定判別・打ち方・設定判別ツールを完全網羅。パイオニア2026年1月導入スマスロ5設定機の攻略情報。">
   <meta name="keywords" content="ニューキングハナハナV,ハナハナV,スマート沖スロ,ボーナス確率,機械割,小役確率,設定判別,5設定,パイオニア,スマスロ">
   <link rel="canonical" href="https://kozelog.net/machine/pioneer/smart-hanahana-v/">
 
   <!-- OGP -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="ニューキングハナハナV 解析・スペック【設定差・小役確率・設定判別】">
-  <meta property="og:description" content="ニューキングハナハナVの設定別ボーナス確率・機械割・小役確率・設定判別方法を徹底解説。5設定機対応の設定推定ツール付き。">
+  <meta property="og:description" content="ニューキングハナハナVの設定別ボーナス確率・機械割・小役確率・設定判別方法を徹底解説。5設定機対応の設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/pioneer/smart-hanahana-v/">
   <meta property="og:site_name" content="こぜログ">
   <meta property="og:locale" content="ja_JP">
@@ -118,7 +118,7 @@
     <li><a href="#bonus"       onclick="closeNav()"><span class="nav-icon">🎊</span>ボーナス概要</a></li>
     <li><a href="#how-to-play" onclick="closeNav()"><span class="nav-icon">👆</span>打ち方</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related"     onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq"         onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -152,7 +152,7 @@
         <li><a href="#bonus">ボーナス概要</a></li>
         <li><a href="#how-to-play">打ち方</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問（FAQ）</a></li>
       </ol>
@@ -462,36 +462,41 @@
       </div>
     </section>
 
-    <!-- ====== SECTION 7: 設定推定ツール ====== -->
+    <!-- ====== SECTION 7: 設定判別ツール ====== -->
     <section class="section" id="tool">
-      <h2 class="section-title"><span class="s-icon">🧮</span>ニューキングハナハナV 設定推定ツール</h2>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">BB・RB回数を入力すると、設定ごとの出現確率（尤度）を計算します。本機は<strong>5設定機</strong>（設定1〜V）です。</p>
-
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;">
-        <div>
-          <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:4px;">総ゲーム数</label>
-          <input type="number" id="t-games" value="3000" min="0"
-            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--text);font-size:15px;font-weight:700;outline:none;"
-            oninput="calcSetting()">
-        </div>
-        <div>
-          <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:4px;">BB回数</label>
-          <input type="number" id="t-bb" value="10" min="0"
-            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--text);font-size:15px;font-weight:700;outline:none;"
-            oninput="calcSetting()">
-        </div>
-        <div>
-          <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:4px;">RB回数</label>
-          <input type="number" id="t-rb" value="6" min="0"
-            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--text);font-size:15px;font-weight:700;outline:none;"
-            oninput="calcSetting()">
-        </div>
+      <h2 class="section-title"><span class="s-icon">🧮</span>ニューキングハナハナV 設定判別ツール</h2>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">BB・RB回数を入力すると、設定ごとの出現確率（尤度）を計算します。本機は<strong>5設定機</strong>（設定1〜V）です。</p>
+    <div class="tool-form">
+      <div class="fg">
+        <label>総ゲーム数 *</label>
+        <input type="number" id="t-games" placeholder="例：3000" min="0">
       </div>
+      <div class="fg">
+        <label>BB回数 *</label>
+        <input type="number" id="t-bb" placeholder="例：8" min="0">
+      </div>
+      <div class="fg">
+        <label>RB回数 *</label>
+        <input type="number" id="t-rb" placeholder="例：8" min="0">
+      </div>
+    </div>
 
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-
-      <div id="calc-result" style="margin-top:18px;"></div>
-    </section>
+    <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-sV" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
+    </div>
+  </section>
 
     <!-- ====== SECTION 8: 関連機種 ====== -->
     <section class="section" id="related">
@@ -549,7 +554,7 @@
     <!-- ========== 公式YouTube動画 ========== -->
     <section class="section" id="sec-movie">
       <h2 class="section-title"><span class="s-icon">🎬</span>ニューキングハナハナV 公式動画</h2>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:12px;">※ 公式動画は確認次第掲載します。</p>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:12px;">※ 公式動画は確認次第掲載します。</p>
       <p class="movie-credit">※ パイオニア（PIONEER）公式YouTubeチャンネルより</p>
     </section>
 
@@ -570,7 +575,7 @@
         <li><a href="#bonus">ボーナス概要</a></li>
         <li><a href="#how-to-play">打ち方</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>
@@ -613,7 +618,7 @@ function setRpm(v) {
   updateDiffTable();
 }
 
-/* 設定推定ツール（5設定・BB+RB） */
+/* 設定判別ツール（5設定・BB+RB） */
 var BB_PROBS = [1/299.3, 1/285.7, 1/273.1, 1/262.0, 1/252.9];
 var RB_PROBS = [1/496.0, 1/463.1, 1/432.0, 1/408.2, 1/372.5];
 
@@ -637,17 +642,9 @@ function calcSetting() {
   var maxL = Math.max.apply(null, likelihoods);
   var weights = likelihoods.map(function(l) { return Math.exp(l - maxL); });
   var total = weights.reduce(function(a, b) { return a + b; }, 0);
-  var probs = weights.map(function(w) { return w / total * 100; });
-
-  var html = '<table class="data-tbl"><thead><tr><th>設定</th><th>推定確率</th><th>割合</th></tr></thead><tbody>';
-  for (var i = 0; i < 5; i++) {
-    var bar = Math.round(probs[i]);
-    html += '<tr><td class="s-num s' + (i+1) + '" style="font-weight:900;">' + labels[i].replace('設定','') + '</td>'
-          + '<td style="font-weight:700;color:' + colors[i] + '">' + probs[i].toFixed(1) + '%</td>'
-          + '<td><div style="background:' + colors[i] + ';height:10px;border-radius:4px;width:' + Math.max(bar,1) + '%;min-width:4px;"></div></td></tr>';
-  }
-  html += '</tbody></table>';
-  document.getElementById('calc-result').innerHTML = html;
+  var probs = weights.map(function(w) { return w / total * 100; });  var stgs=[];for(var j=0;j<SETTING_LABELS.length;j++){stgs.push({s:SETTING_LABELS[j],label:'設定'+SETTING_LABELS[j],color:SETTING_COLORS[j]});}
+  var pcts=probs.map(function(p){return Math.round(p*10)/10;});
+  renderSettingBars(pcts,stgs);
 }
 
 window.addEventListener('DOMContentLoaded', function() {

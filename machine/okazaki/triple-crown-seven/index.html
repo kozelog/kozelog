@@ -7,14 +7,14 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LBトリプルクラウンセブン 解析・スペック【設定差・小役確率・設定判別】| こぜログ</title>
-  <meta name="description" content="LBトリプルクラウンセブンの設定別BIG/REG確率・機械割・小役確率・設定判別・BT（ビッグボーナストリガー）の仕組み・打ち方・設定推定ツールを完全網羅。岡崎産業2026年4月導入スマスロノーマル+BT機の攻略情報。">
+  <meta name="description" content="LBトリプルクラウンセブンの設定別BIG/REG確率・機械割・小役確率・設定判別・BT（ビッグボーナストリガー）の仕組み・打ち方・設定判別ツールを完全網羅。岡崎産業2026年4月導入スマスロノーマル+BT機の攻略情報。">
   <meta name="keywords" content="LBトリプルクラウンセブン,トリクラセブン,ボーナス確率,機械割,小役確率,設定判別,BT,ビッグボーナストリガー,岡崎産業,スマスロ">
   <link rel="canonical" href="https://kozelog.net/machine/okazaki/triple-crown-seven/">
 
   <!-- OGP -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="LBトリプルクラウンセブン 解析・スペック【設定差・小役確率・設定判別】">
-  <meta property="og:description" content="LBトリプルクラウンセブンの設定別BIG/REG確率・機械割・BT仕組み・設定判別方法を徹底解説。設定推定ツール付き。">
+  <meta property="og:description" content="LBトリプルクラウンセブンの設定別BIG/REG確率・機械割・BT仕組み・設定判別方法を徹底解説。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/okazaki/triple-crown-seven/">
   <meta property="og:site_name" content="こぜログ">
   <meta property="og:locale" content="ja_JP">
@@ -122,7 +122,7 @@
     <li><a href="#sec-bt"      onclick="closeNav()"><span class="nav-icon">⚡</span>BT（ビッグボーナストリガー）</a></li>
     <li><a href="#how-to-play" onclick="closeNav()"><span class="nav-icon">👆</span>打ち方</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related"     onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq"         onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -157,7 +157,7 @@
         <li><a href="#sec-bt">BT（ビッグボーナストリガー）</a></li>
         <li><a href="#how-to-play">打ち方</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問（FAQ）</a></li>
       </ol>
@@ -516,16 +516,33 @@
       </div>
     </section>
 
-    <!-- ====== SECTION 8: 設定推定ツール ====== -->
+    <!-- ====== SECTION 8: 設定判別ツール ====== -->
     <section class="section" id="tool">
-      <h2 class="section-title"><span class="s-icon">🧮</span>設定推定ツール</h2>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">BIG・REG回数と小役カウントを入力してください。BIG確率とREG確率から各設定の出現しやすさを推定します。</p>
+      <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">BIG・REG回数と小役カウントを入力してください。BIG確率とREG確率から各設定の出現しやすさを推定します。</p>
 
-      <div class="tool-inputs">
-        <div class="input-group">
-          <label class="input-lbl">総ゲーム数</label>
-          <input type="number" id="inp-games" class="tool-inp" value="1000" min="1">
-        </div>
+      <div class="tool-form">
+      <div class="fg">
+        <label>総ゲーム数 *</label>
+        <input type="number" id="inp-games" min="1" placeholder="例：3000">
+      </div>
+      <div class="fg">
+        <label>BIG回数 *</label>
+        <input type="number" id="inp-bb" min="0" placeholder="例：8">
+      </div>
+      <div class="fg">
+        <label>REG回数 *</label>
+        <input type="number" id="inp-rb" min="0" placeholder="例：8">
+      </div>
+      <div class="fg">
+        <label>プラム回数 *</label>
+        <input type="number" id="inp-koyaku1" min="0" placeholder="例：8">
+      </div>
+      <div class="fg">
+        <label>チェリー回数 *</label>
+        <input type="number" id="inp-koyaku2" min="0" placeholder="例：8">
+      </div>
+    </div>
         <div class="input-group">
           <label class="input-lbl">BIG回数</label>
           <input type="number" id="inp-bb" class="tool-inp" value="4" min="0">
@@ -544,28 +561,23 @@
         </div>
       </div>
 
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-
-      <div class="result-area" id="result-area" style="display:none;">
-        <h3 class="sub-heading">推定結果</h3>
-        <div class="tbl-wrap">
-          <table class="data-tbl">
-            <thead>
-              <tr>
-                <th>設定</th>
-                <th>BIG確率</th>
-                <th>REG確率</th>
-                <th>合算確率</th>
-                <th>スコア</th>
-                <th>判定</th>
-              </tr>
-            </thead>
-            <tbody id="result-tbody"></tbody>
-          </table>
-        </div>
-        <p class="result-note" id="result-note"></p>
+      <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
       </div>
-    </section>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
+    </div>
+  </section>
 
     <!-- ====== SECTION 9: 関連機種 ====== -->
     <section class="section" id="related">
@@ -681,7 +693,7 @@ function updateDiffTable(){
 }
 updateDiffTable();
 
-/* ===== 設定推定ツール ===== */
+/* ===== 設定判別ツール ===== */
 var BB_PROBS = [1/258.0, 1/253.0, 1/247.0, 1/240.0, 1/230.0, 1/203.5];
 var RB_PROBS = [1/590.4, 1/580.0, 1/565.0, 1/548.0, 1/524.3, 1/464.8];
 
@@ -724,29 +736,9 @@ function calcSetting(){
   var probs = expScores.map(function(e){ return e/total; });
 
   var sColors = ['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
-  var tbody = document.getElementById('result-tbody');
-  tbody.innerHTML = '';
-  var maxProb = Math.max.apply(null,probs);
-  for(var i=0;i<6;i++){
-    var tr = document.createElement('tr');
-    var pct = (probs[i]*100).toFixed(1);
-    var isMax = probs[i]===maxProb;
-    var bigActual = (games/(bb||0.001)).toFixed(1);
-    var rbActual  = (games/(rb||0.001)).toFixed(1);
-    var combined  = (games/((bb+rb)||0.001)).toFixed(1);
-    tr.innerHTML =
-      '<td class="s-num" style="color:'+sColors[i]+'">'+(i+1)+'</td>'+
-      '<td>1/'+BB_PROBS[i].toFixed ? (1/BB_PROBS[i]).toFixed(1) : '-'+'</td>'+
-      '<td>1/'+(1/RB_PROBS[i]).toFixed(1)+'</td>'+
-      '<td>1/'+(1/(BB_PROBS[i]+RB_PROBS[i])).toFixed(1)+'</td>'+
-      '<td><div class="prob-bar-wrap"><div class="prob-bar" style="width:'+pct+'%;background:'+sColors[i]+'"></div><span class="prob-pct">'+pct+'%</span></div></td>'+
-      '<td>'+(isMax?'<strong style="color:'+sColors[i]+'">◎ 最有力</strong>':'-')+'</td>';
-    tbody.appendChild(tr);
-  }
-  /* actual data row */
-  var note = '実測値 — BIG:1/'+(games/(bb||1)).toFixed(0)+'  REG:1/'+(games/(rb||1)).toFixed(0)+'  合算:1/'+(games/((bb+rb)||1)).toFixed(0);
-  document.getElementById('result-note').textContent = note;
-  document.getElementById('result-area').style.display='block';
+  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var pcts=pr.map(function(p){return Math.round(p*1000)/10;});
+  renderSettingBars(pcts,stgs);
 }
 </script>
 <div id="site-footer-ph"></div>

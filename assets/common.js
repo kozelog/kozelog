@@ -416,7 +416,24 @@ function updateLowDenom() {
   });
 }
 
-// ===== 設定推定ツール =====
+// ===== 設定判別ツール 共通バー描画 =====
+function renderSettingBars(pcts, settings) {
+  var adSlot = document.getElementById('ad-slot-tool');
+  if (adSlot) adSlot.style.display = 'block';
+  document.getElementById('result-area').style.display = 'block';
+  for (var i = 0; i < settings.length; i++) {
+    var r = settings[i], pct = pcts[i];
+    var el = document.getElementById('bar-s' + r.s);
+    if (!el) continue;
+    var txt = pct >= 7 ? pct + '%' : '';
+    el.innerHTML = '<div class="rb-head"><span style="color:' + r.color + '">' + r.label + '</span><span>' + pct + '%</span></div>' +
+      '<div class="bar-bg"><div class="bar-fill" style="width:' + pct + '%;background:' + r.color + '">' + txt + '</div></div>';
+  }
+  var scrollTarget = adSlot && adSlot.style.display !== 'none' ? adSlot : document.getElementById('result-area');
+  scrollTarget.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+// ===== 設定判別ツール =====
 function calcSetting() {
   var el = function(id) { var e = document.getElementById(id); return e ? parseFloat(e.value) || 0 : 0; };
   var games   = el('t-games');

@@ -7,14 +7,14 @@
   <link rel="icon" type="image/png" href="../../../assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スマスロ 化物語 解析・スペック【天井・設定判別・倍倍チャンス・終了画面】| こぜログ</title>
-  <meta name="description" content="スマスロ化物語の設定別AT確率・機械割・小役確率・天井1000G・倍倍チャンス・解呪ノ儀・終了画面・設定判別・設定推定ツールを完全網羅。サミー（銀座）2025年12月導入スマスロの攻略情報。">
+  <meta name="description" content="スマスロ化物語の設定別AT確率・機械割・小役確率・天井1000G・倍倍チャンス・解呪ノ儀・終了画面・設定判別・設定判別ツールを完全網羅。サミー（銀座）2025年12月導入スマスロの攻略情報。">
   <meta name="keywords" content="スマスロ化物語,化物語,AT確率,機械割,小役確率,設定判別,天井,倍倍チャンス,解呪ノ儀,終了画面,スマスロ,サミー,銀座">
   <link rel="canonical" href="https://kozelog.net/machine/sammy/bakemonogatari-smart/">
 
   <!-- OGP -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="スマスロ 化物語 解析・スペック【天井・設定判別・倍倍チャンス・終了画面】">
-  <meta property="og:description" content="スマスロ化物語のAT確率・機械割・天井・倍倍チャンス・解呪ノ儀・設定判別方法を徹底解説。設定推定ツール付き。">
+  <meta property="og:description" content="スマスロ化物語のAT確率・機械割・天井・倍倍チャンス・解呪ノ儀・設定判別方法を徹底解説。設定判別ツール付き。">
   <meta property="og:url" content="https://kozelog.net/machine/sammy/bakemonogatari-smart/">
   <meta property="og:site_name" content="こぜログ">
   <meta property="og:locale" content="ja_JP">
@@ -131,7 +131,7 @@
     <li><a href="#sec-yuuri"   onclick="closeNav()"><span class="nav-icon">🔋</span>有利区間</a></li>
     <li><a href="#how-to-play" onclick="closeNav()"><span class="nav-icon">👆</span>打ち方</a></li>
     <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
-    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定推定ツール</a></li>
+    <li><a href="#tool"        onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
     <li><a href="#related"     onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
     <li><a href="#faq"         onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
   </ul>
@@ -168,7 +168,7 @@
         <li><a href="#sec-yuuri">有利区間</a></li>
         <li><a href="#how-to-play">打ち方</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問（FAQ）</a></li>
       </ol>
@@ -595,30 +595,38 @@
       </div>
     </section>
 
-    <!-- ====== SECTION 10: 設定推定ツール ====== -->
+    <!-- ====== SECTION 10: 設定判別ツール ====== -->
     <section class="section" id="tool">
-      <h2 class="section-title"><span class="s-icon">🧮</span>スマスロ 化物語 設定推定ツール</h2>
-      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">AT初当たり回数を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
-        <div>
-          <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:4px;">総ゲーム数</label>
-          <input type="number" id="t-games" value="3000" min="0"
-            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--text);font-size:15px;font-weight:700;outline:none;"
-            oninput="calcSetting()">
-        </div>
-        <div>
-          <label style="font-size:12px;color:var(--text2);display:block;margin-bottom:4px;">AT当選回数</label>
-          <input type="number" id="t-hits" value="12" min="0"
-            style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 10px;color:var(--text);font-size:15px;font-weight:700;outline:none;"
-            oninput="calcSetting()">
-        </div>
+      <h2 class="section-title"><span class="s-icon">🧮</span>スマスロ 化物語 設定判別ツール</h2>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">AT初当たり回数を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
+    <div class="tool-form">
+      <div class="fg">
+        <label>総ゲーム数 *</label>
+        <input type="number" id="t-games" placeholder="例：3000" min="0">
       </div>
+      <div class="fg">
+        <label>AT当選回数 *</label>
+        <input type="number" id="t-hits" placeholder="例：8" min="0">
+      </div>
+    </div>
 
-      <button class="calc-btn" onclick="calcSetting()">設定を推定する</button>
-
-      <div id="calc-result" style="margin-top:18px;"></div>
-    </section>
+    <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。サンプル数が少ない場合や確率の波により、実態と大きく乖離することがあります。複数の指標を組み合わせて総合的に判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
+    </div>
+  </section>
 
     <!-- ====== SECTION 11: 関連機種 ====== -->
     <section class="section" id="related">
@@ -701,7 +709,7 @@
         <li><a href="#sec-yuuri">有利区間</a></li>
         <li><a href="#how-to-play">打ち方</a></li>
         <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
-        <li><a href="#tool">設定推定ツール</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
         <li><a href="#related">関連機種</a></li>
         <li><a href="#faq">よくある質問</a></li>
       </ol>
@@ -755,16 +763,9 @@ function calcSetting() {
   var weights = likelihoods.map(function(l) { return Math.exp(l - maxL); });
   var total = weights.reduce(function(a, b) { return a + b; }, 0);
   var probs = weights.map(function(w) { return w / total * 100; });
-  var colors = ['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
-  var html = '<table class="data-tbl"><thead><tr><th>設定</th><th>推定確率</th><th>割合</th></tr></thead><tbody>';
-  for (var i = 0; i < 6; i++) {
-    var bar = Math.round(probs[i]);
-    html += '<tr><td class="s-num s' + (i+1) + '">' + (i+1) + '</td>'
-          + '<td style="font-weight:700;color:' + colors[i] + '">' + probs[i].toFixed(1) + '%</td>'
-          + '<td><div style="background:' + colors[i] + ';height:10px;border-radius:4px;width:' + Math.max(bar,1) + '%;min-width:4px;"></div></td></tr>';
-  }
-  html += '</tbody></table>';
-  document.getElementById('calc-result').innerHTML = html;
+  var colors = ['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var pcts=probs.map(function(p){return Math.round(p*10)/10;});
+  renderSettingBars(pcts,stgs);
 }
 
 window.addEventListener('DOMContentLoaded', function() {
