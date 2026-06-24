@@ -1218,7 +1218,7 @@
     <!-- ====== SECTION 10: 設定判別ツール ====== -->
     <section class="section" id="tool">
       <h2 class="section-title"><span class="s-icon">🧮</span>スマスロ 化物語 設定判別ツール</h2>
-      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">AT初当たり・スイカ・弱チェリー直撃の回数を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
+      <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">AT初当たり・スイカ・弱チェリー直撃・解呪連・スイカCZの回数を入力すると、設定ごとの出現確率（尤度）を計算します。</p>
     <div class="tool-form">
       <div class="fg">
         <label>総ゲーム数 *</label>
@@ -1239,6 +1239,18 @@
       <div class="fg">
         <label>弱チェリー直撃AT回数</label>
         <input type="number" id="t-chokugeki" placeholder="例：1" min="0">
+      </div>
+      <div class="fg">
+        <label>AT終了回数</label>
+        <input type="number" id="t-at-end" placeholder="例：8" min="0">
+      </div>
+      <div class="fg">
+        <label>解呪連移行回数</label>
+        <input type="number" id="t-kaijuren" placeholder="例：1" min="0">
+      </div>
+      <div class="fg">
+        <label>スイカからCZ当選回数</label>
+        <input type="number" id="t-suika-cz" placeholder="例：1" min="0">
       </div>
     </div>
 
@@ -1422,12 +1434,18 @@ function setRpm(v) {
 var AT_PROBS = [1/265.1, 1/260.7, 1/252.1, 1/238.8, 1/230.8, 1/219.6];
 var SUIKA_PROBS = [1/87.4, 1/85.8, 1/84.9, 1/79.7, 1/74.8, 1/69.9];
 var CHOKUGEKI_PROBS = [0.004, 0.008, 0.013, 0.021, 0.029, 0.038];
+var KAIJUREN_PROBS = [0.100, 0.100, 0.104, 0.125, 0.146, 0.150];
+var SUIKA_CZ_PROBS = [0.025, 0.029, 0.042, 0.046, 0.050, 0.050];
 function calcSetting() {
   var games = parseInt(document.getElementById('t-games').value) || 0;
   var hits  = parseInt(document.getElementById('t-hits').value)  || 0;
   var suika = parseInt(document.getElementById('t-suika').value) || 0;
   var cherry = parseInt(document.getElementById('t-cherry').value) || 0;
   var choku = parseInt(document.getElementById('t-chokugeki').value) || 0;
+  var atEnd = parseInt(document.getElementById('t-at-end').value) || 0;
+  var kaijuren = parseInt(document.getElementById('t-kaijuren').value) || 0;
+  var suikaCzRaw = document.getElementById('t-suika-cz').value;
+  var suikaCz = suikaCzRaw !== '' ? parseInt(suikaCzRaw) || 0 : -1;
   if (games <= 0) return;
   var likelihoods = AT_PROBS.map(function(p, idx) {
     var lp = 0;
@@ -1442,6 +1460,16 @@ function calcSetting() {
       var cp = CHOKUGEKI_PROBS[idx];
       lp += choku * Math.log(cp);
       lp += (cherry - choku) * Math.log(1 - cp);
+    }
+    if (atEnd > 0) {
+      var kp = KAIJUREN_PROBS[idx];
+      lp += kaijuren * Math.log(kp);
+      lp += (atEnd - kaijuren) * Math.log(1 - kp);
+    }
+    if (suika > 0 && suikaCz >= 0) {
+      var szp = SUIKA_CZ_PROBS[idx];
+      lp += suikaCz * Math.log(szp);
+      lp += (suika - suikaCz) * Math.log(1 - szp);
     }
     return lp;
   });
