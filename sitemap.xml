@@ -578,6 +578,40 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ベルコ メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/belco/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 2026年8月 新台 Batch 2 -->
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/world-dai-star/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sun3/jashin-chan/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/belco/super-bin-musume/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/oizumi/garei-zero-re/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- 2026年8月 新台 Batch 1 -->
   <url>
     <loc>https://kozelog.net/machine/konami/tondemo-skill/</loc>
