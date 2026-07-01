@@ -596,6 +596,25 @@ var MACHINES_LIST = [
 
   /* ===== ミズホ ===== */
   {
+    id:           'magia-record',
+    name:         'スマスロ マギアレコード 魔法少女まどか☆マギカ外伝',
+    kana:         'すますろまぎあれこーどまほうしょうじょまどかまぎかがいでん',
+    fullName:     'スマスロ マギアレコード 魔法少女まどか☆マギカ外伝',
+    maker:        'ミズホ',
+    makerSlug:    'mizuho',
+    makerEn:      'MIZUHO',
+    badge:        'スマスロ',
+    smart:        true,
+    releaseDate:  '2025-04-07',
+    releaseLabel: '2025年4月7日',
+    url: '/machine/mizuho/magia-record/',
+    kozelog:      true,
+    rateS6:       '114.9%',
+    rateS1:       '97.6%',
+    rateLabelS6:  '設定6 機械割',
+    rateLabelS1:  '設定1 機械割',
+  },
+  {
     id:           'million-god-kiseki',
     name:         'スマスロ ミリオンゴッド-神々の軌跡-',
     kana:         'すますろみりおんごっどかみがみのきせき',
@@ -985,7 +1004,7 @@ var MACHINES_LIST = [
   { id:'009-re-cyborg', name:'L009 RE:CYBORG', kana:'ぜろぜろないんりさいぼーぐ', fullName:'L009 RE:CYBORG', maker:'ニューギン', makerSlug:'newgin', makerEn:'NEWGIN', badge:'スマスロ', smart:true, releaseDate:'2023-09-04', releaseLabel:'2023年9月4日', url:'/newgin/009-re-cyborg/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'granbelm', name:'グランベルム', kana:'ぐらんべるむ', fullName:'回胴式遊技機グランベルム', maker:'ZXS', makerSlug:'zxs', makerEn:'ZXS', badge:'6号機', smart:false, releaseDate:'2023-09-04', releaseLabel:'2023年9月4日', url:'/zxs/granbelm/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'famista-kaido', name:'ファミスタ回胴版!!', kana:'ふぁみすたかいどうばん', fullName:'ファミスタ回胴版‼', maker:'ユニバーサルブロス', makerSlug:'universal-bros', makerEn:'UNIVERSAL BROS', badge:'6号機', smart:false, releaseDate:'2023-09-04', releaseLabel:'2023年9月4日', url:'/universal-bros/famista-kaido/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'sengoku-otome4', name:'L戦国乙女4', kana:'せんごくおとめふぉー', fullName:'L戦国乙女4 戦乱に閃く炯眼の軍師', maker:'オリンピアエステート', makerSlug:'olympia-estate', makerEn:'OLYMPIA ESTATE', badge:'スマスロ', smart:true, releaseDate:'2023-09-04', releaseLabel:'2023年9月4日', url:'/olympia-estate/sengoku-otome4/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'sengoku-otome4', name:'L戦国乙女4', kana:'せんごくおとめふぉー', fullName:'L戦国乙女4 戦乱に閃く炯眼の軍師', maker:'オリンピア（OLYMPIA）', makerSlug:'orinpia', makerEn:'OLYMPIA', badge:'スマスロ', smart:true, releaseDate:'2023-09-04', releaseLabel:'2023年9月4日', url:'/machine/orinpia/sengoku-otome4/', kozelog:true, rateS6:'113.0%', rateS1:'98.2%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'mahjong-fight-club', name:'麻雀格闘倶楽部 覚醒', kana:'まーじゃんふぁいとくらぶかくせい', fullName:'麻雀格闘倶楽部 覚醒', maker:'コナミアミューズメント', makerSlug:'konami', makerEn:'KONAMI', badge:'スマスロ', smart:true, releaseDate:'2023-09-19', releaseLabel:'2023年9月19日', url:'/konami/mahjong-fight-club/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2023年10月 ----- */
@@ -1057,7 +1076,7 @@ var MACHINES_LIST = [
   { id:'shin-hokuto-musou', name:'スマスロ真・北斗無双', kana:'しんほくとむそう', fullName:'スマスロ真・北斗無双', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sammy/shin-hokuto-musou/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'symphogear-seigi', name:'Lパチスロ シンフォギア 正義の歌', kana:'しんふぉぎあせいぎのうた', fullName:'Lパチスロ戦姫絶唱シンフォギア 正義の歌', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sankyo/symphogear-seigi/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'zombie-land-saga', name:'スロット ゾンビランドサガ', kana:'ぞんびらんどさが', fullName:'スロット ゾンビランドサガ', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url: '/machine/daitogiken/zombie-land-saga/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'god-eater-resurrection', name:'スマスロ ゴッドイーター リザレクション', kana:'ごっどいーたーりざれくしょん', fullName:'スマスロ ゴッドイーター リザレクション', maker:'セブンリーグ', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url:'/seven-league/god-eater-resurrection/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'god-eater-resurrection', name:'スマスロ ゴッドイーター リザレクション', kana:'ごっどいーたーりざれくしょん', fullName:'スマスロ ゴッドイーター リザレクション', maker:'山佐（YAMASA）', makerSlug:'yamasa', makerEn:'YAMASA', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url:'/machine/yamasa/god-eater-resurrection/', kozelog:true, rateS6:'114.9%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年8月 ----- */
   { id:'gegege-kitaro', name:'スマスロ ゲゲゲの鬼太郎 覚醒', kana:'げげげのきたろうかくせい', fullName:'スマスロ ゲゲゲの鬼太郎 覚醒', maker:'JFJ', makerSlug:'jfj', makerEn:'JFJ', badge:'スマスロ', smart:true, releaseDate:'2024-08-05', releaseLabel:'2024年8月5日', url: '/machine/jfj/gegege-kitaro/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
@@ -1065,7 +1084,7 @@ var MACHINES_LIST = [
 
   /* ----- 2024年9月 ----- */
   { id:'senran-kagura2', name:'Lパチスロ閃乱カグラ2', kana:'せんらんかぐらつー', fullName:'Lパチスロ閃乱カグラ2 SHINOVI MASTER', maker:'オーイズミラボ', makerSlug:'oizumi-labo', makerEn:'OIZUMI LABO', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url:'/oizumi-labo/senran-kagura2/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'kaguya-sama', name:'パチスロ かぐや様は告らせたい', kana:'かぐやさまはこくらせたい', fullName:'パチスロ かぐや様は告らせたい', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url: '/machine/sankyo/kaguya-sama/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'kaguya-sama', name:'パチスロ かぐや様は告らせたい', kana:'かぐやさまはこくらせたい', fullName:'パチスロ かぐや様は告らせたい', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url: '/machine/sankyo/kaguya-sama/', kozelog:true, rateS6:'114.9%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年10月 ----- */
   { id:'kyou-kara-ore-wa', name:'今日から俺は!! パチスロ編', kana:'きょうからおれは', fullName:'今日から俺は!! パチスロ編', maker:'コナミアミューズメント', makerSlug:'konami', makerEn:'KONAMI', badge:'スマスロ', smart:true, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/konami/kyou-kara-ore-wa/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
@@ -1110,7 +1129,7 @@ var MACHINES_LIST = [
   { id:'kamen-rider-den-o', name:'L 仮面ライダー電王', kana:'かめんらいだーでんおう', fullName:'L 仮面ライダー電王', maker:'京楽', makerSlug:'kyoraku', makerEn:'KYORAKU', badge:'スマスロ', smart:true, releaseDate:'2025-03-03', releaseLabel:'2025年3月3日', url:'/kyoraku/kamen-rider-den-o/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2025年4月 ----- */
-  { id:'magia-record', name:'スマスロ マギアレコード まどか☆マギカ外伝', kana:'まぎあれこーどまどかまぎかがいでん', fullName:'スマスロ マギアレコード 魔法少女まどか☆マギカ外伝', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2025-04-07', releaseLabel:'2025年4月7日', url: '/machine/mizuho/magia-record/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'magia-record', name:'スマスロ マギアレコード まどか☆マギカ外伝', kana:'まぎあれこーどまどかまぎかがいでん', fullName:'スマスロ マギアレコード 魔法少女まどか☆マギカ外伝', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2025-04-07', releaseLabel:'2025年4月7日', url: '/machine/mizuho/magia-record/', kozelog:true, rateS6:'114.9%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'l-godzilla', name:'Lゴジラ', kana:'ごじら', fullName:'Lゴジラ', maker:'ニューギン', makerSlug:'newgin', makerEn:'NEWGIN', badge:'スマスロ', smart:true, releaseDate:'2025-04-07', releaseLabel:'2025年4月7日', url:'/newgin/l-godzilla/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'amazing-live', name:'スマート沖スロ アメイジングライブ', kana:'あめいじんぐらいぶ', fullName:'スマート沖スロ　アメイジングライブ', maker:'パイオニア（PIONEER）', makerSlug:'pioneer', makerEn:'PIONEER', badge:'スマスロ', smart:true, releaseDate:'2025-04-07', releaseLabel:'2025年4月7日', url: '/machine/pioneer/amazing-live/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'ushio-to-tora', name:'Lうしおととら白面決戦', kana:'うしおととらはくめんけっせん', fullName:'Ｌうしおととら白面決戦', maker:'アイドル', makerSlug:'idol', makerEn:'IDOL', badge:'スマスロ', smart:true, releaseDate:'2025-04-07', releaseLabel:'2025年4月7日', url:'/idol/ushio-to-tora/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },

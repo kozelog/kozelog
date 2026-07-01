@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="../../../assets/site.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564257400721530" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パチスロ かぐや様は告らせたい 解析・スペック【天井・設定判別・ボーナス確率】| こぜログ</title>
+  <meta name="description" content="パチスロ かぐや様は告らせたいの設定別ボーナス確率・機械割・天井・設定判別・設定判別ツールをまとめています。SANKYO製2024年9月導入のスマスロAT機。純増約9.0枚/G。CZスルー天井・奇跡的相性モード搭載。">
+  <link rel="canonical" href="https://kozelog.net/machine/sankyo/kaguya-sama/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="パチスロ かぐや様は告らせたい 解析・スペック【天井・設定判別・ボーナス確率】">
+  <meta property="og:description" content="パチスロ かぐや様は告らせたいの設定別ボーナス確率・機械割・天井・設定判別方法をまとめています。設定判別ツール付き。">
+  <meta property="og:url" content="https://kozelog.net/machine/sankyo/kaguya-sama/">
+  <meta property="og:site_name" content="こぜログ">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://kozelog.net/assets/logo.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebPage","@id":"https://kozelog.net/machine/sankyo/kaguya-sama/","url":"https://kozelog.net/machine/sankyo/kaguya-sama/","name":"パチスロ かぐや様は告らせたい 解析・スペック","inLanguage":"ja","datePublished":"2026-06-30","dateModified":"2026-06-30","publisher":{"@type":"Organization","name":"こぜログ","url":"https://kozelog.net"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"トップ","item":"https://kozelog.net/"},
+      {"@type":"ListItem","position":2,"name":"SANKYO（三共）","item":"https://kozelog.net/machine/sankyo/"},
+      {"@type":"ListItem","position":3,"name":"パチスロ かぐや様は告らせたい","item":"https://kozelog.net/machine/sankyo/kaguya-sama/"}
+    ]},
+    {"@type":"Article","headline":"パチスロ かぐや様は告らせたい 解析・スペック","datePublished":"2026-06-30","dateModified":"2026-06-30","author":{"@type":"Organization","name":"こぜログ"},"publisher":{"@type":"Organization","name":"こぜログ"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいの天井は何ゲームですか？","acceptedAnswer":{"@type":"Answer","text":"通常天井は最大1100G+αでボーナス当選となります。REG後は900G+αに短縮、CZスルー天井は最大7回（7回目でBIG以上確定）、設定変更後は800G+αに短縮されます。"}},
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいの設定6機械割は？","acceptedAnswer":{"@type":"Answer","text":"設定6の機械割は114.9%です。設定1が97.7%、設定4（105.8%）→設定5（110.8%）→設定6（114.9%）と上位設定ほど高い機械割となっています。"}},
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいの設定判別で重要なポイントは？","acceptedAnswer":{"@type":"Answer","text":"終了画面の枠色が最も信頼度の高い設定判別要素です。赤枠は高設定期待度UP、紫枠は設定2以上、銀枠は設定4以上、金枠は設定6濃厚です。ミニ藤原の衣装チェンジやエンディングEPも設定示唆として有効です。"}},
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいのやめ時はいつですか？","acceptedAnswer":{"@type":"Answer","text":"ボーナス終了後の即やめが基本です。ただし有利区間リセット後は「奇跡的相性モード」に突入し32G以内にSBB濃厚＋ループ率80%となるため、有利区間リセット時は続行しましょう。CZスルー回数が5回以上の場合はスルー天井（7回）狙いで続行も有効です。"}},
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいの純増は？","acceptedAnswer":{"@type":"Answer","text":"AT純増は約9.0枚/Gです。1G連ボーナスタイプのAT機で、ボーナスループ率が高いほど大量出玉に期待できます。"}},
+      {"@type":"Question","name":"CZスルー天井とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"CZ（チャンスゾーン）でボーナスに当選せずにスルーした回数をカウントし、最大7回スルーでBIG以上が確定する救済機能です。高設定ほど浅いスルー回数で当選しやすい傾向があります。"}},
+      {"@type":"Question","name":"奇跡的相性モードとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"エンディング等で有利区間がリセットされた際に突入する特殊モードです。32G以内にSBB（スペシャルビッグボーナス）が濃厚となり、さらにボーナスループ率が80%にアップします。1G連＋100G以内引き戻しで大量出玉が期待できます。"}},
+      {"@type":"Question","name":"パチスロ かぐや様は告らせたいのモードは何種類ありますか？","acceptedAnswer":{"@type":"Answer","text":"モードはA・B・C・Dの4種類があります。高モードほどチャンス目の規定回数が少なく選ばれやすく、CZに到達しやすくなります。高設定ほど上位モード（C・D）が選択されやすい傾向があります。"}}
+    ]}
+  ]}</script>
+  <link rel="stylesheet" href="../../../assets/common.css">
+</head>
+<body>
+<div id="svg-symbols-ph"></div>
+<div id="site-header-ph"></div>
+<button class="fab-toc" id="fab-toc" onclick="toggleNav()" aria-label="目次を開く">
+  <div class="fab-lines"><span></span><span></span><span></span></div>
+  <div class="fab-label">目次</div>
+</button>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav class="nav-drawer" id="nav-drawer">
+  <div class="nav-drawer-header"><span class="logo">こぜログ</span><button class="nav-close-btn" onclick="closeNav()">&times;</button></div>
+  <div class="nav-section-label">かぐや様は告らせたい 目次</div>
+  <ul class="nav-links">
+    <li><a href="#spec" onclick="closeNav()"><span class="nav-icon">🎰</span>ボーナス確率・機械割</a></li>
+    <li><a href="#koyaku" onclick="closeNav()"><span class="nav-icon">🎯</span>小役確率</a></li>
+    <li><a href="#setting" onclick="closeNav()"><span class="nav-icon">🔍</span>設定判別ポイント</a></li>
+    <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
+    <li><a href="#sec-at" onclick="closeNav()"><span class="nav-icon">⚡</span>AT詳細</a></li>
+    <li><a href="#sec-yuuri" onclick="closeNav()"><span class="nav-icon">🔄</span>有利区間</a></li>
+    <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
+    <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
+    <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
+  </ul>
+  <div class="nav-divider"></div>
+  <ul class="nav-links">
+    <li><a href="/"><span class="nav-icon">🏠</span>トップページ</a></li>
+    <li><a href="../"><span class="nav-icon">🏭</span>SANKYO（三共）一覧</a></li>
+  </ul>
+</nav>
+<div class="ad-top"><div class="ad-slot"></div></div>
+<div class="container">
+<main>
+  <div class="breadcrumb"><a href="/">トップ</a> &rsaquo; <a href="../">SANKYO（三共）</a> &rsaquo; <span>パチスロ かぐや様は告らせたい</span></div>
+
+  <section class="section" id="sec-toc" style="margin-bottom:20px;">
+    <h2 class="section-title" style="margin-bottom:14px;"><span class="s-icon">📋</span>目次</h2>
+    <ol class="toc-grid">
+      <li><a href="#spec">ボーナス確率・機械割</a></li>
+      <li><a href="#koyaku">小役確率</a></li>
+      <li><a href="#setting">設定判別ポイント</a></li>
+      <li><a href="#ceiling">天井・リセット</a></li>
+      <li><a href="#sec-at">AT詳細</a></li>
+      <li><a href="#sec-yuuri">有利区間</a></li>
+      <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
+      <li><a href="#tool">設定判別ツール</a></li>
+      <li><a href="#related">関連機種</a></li>
+      <li><a href="#faq">よくある質問（FAQ）</a></li>
+    </ol>
+  </section>
+
+  <div class="machine-hero">
+    <div class="machine-img-wrap">
+      <div class="no-img-ph">🎰</div>
+    </div>
+    <div>
+      <h1 class="machine-title">パチスロ かぐや様は告らせたい<small>KAGUYA-SAMA ｜ SANKYO</small></h1>
+      <div class="tags">
+        <span class="tag gold">スマスロ</span>
+        <span class="tag">AT機</span>
+        <span class="tag">1G連ボーナスタイプ</span>
+        <span class="tag">純増約9.0枚</span>
+        <span class="tag">6段階設定</span>
+        <span class="tag">SANKYO</span>
+        <span class="tag">導入：2024年9月2日</span>
+      </div>
+      <div class="spec-mini">
+        <div class="spec-mini-item"><div class="lbl">設定6 機械割</div><div class="val val-green">114.9%</div></div>
+        <div class="spec-mini-item"><div class="lbl">設定1 機械割</div><div class="val val-dim">97.7%</div></div>
+        <div class="spec-mini-item"><div class="lbl">天井</div><div class="val val-gold">1100G+α</div></div>
+        <div class="spec-mini-item"><div class="lbl">純増</div><div class="val val-gold">約9.0枚/G</div></div>
+      </div>
+      <div class="info-box" style="margin-top:12px;">
+        <p>⚠️ 1G連ボーナスタイプのAT機。CZスルー天井（最大7回）搭載。有利区間リセット時は<strong>「奇跡的相性モード」</strong>（32G以内SBB濃厚＋ループ率80%）に突入し、大量出玉が期待できます。</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="spec">
+    <h2 class="section-title"><span class="s-icon">🎰</span>パチスロ かぐや様は告らせたい スペック・機械割</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>ボーナス初当たり</th><th>機械割</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/362</td><td class="td-neg">97.7%</td></tr>
+          <tr><td class="s-num s2">2</td><td>1/360</td><td class="td-neg">98.8%</td></tr>
+          <tr><td class="s-num s3">3</td><td>1/357</td><td class="td-pos">101.2%</td></tr>
+          <tr><td class="s-num s4">4</td><td>1/349</td><td class="td-pos">105.8%</td></tr>
+          <tr><td class="s-num s5">5</td><td>1/343</td><td class="td-pos">110.8%</td></tr>
+          <tr><td class="s-num s6">6</td><td>1/335</td><td class="td-pos" style="color:#f05050;font-weight:800;">114.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-blue" style="margin-top:12px;"><strong>ボーナス初当たりの設定差は小さめ。</strong>設定1（1/362）と設定6（1/335）で約1.08倍の差です。ボーナス確率だけでは設定判別が難しいため、BIG比率・終了画面・ミニ藤原衣装チェンジなどの設定示唆演出を併用して総合判断してください。</div>
+    <h3 class="sub-heading">遊技時間別・理論差枚数の目安</h3>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+      <label style="font-size:13px;color:var(--text2);">遊技スピード</label>
+      <input type="number" id="rpm-input" value="500" min="100" max="1200" style="width:80px;background:var(--bg3);border:2px solid var(--gold);border-radius:6px;padding:6px 8px;color:var(--text);font-size:14px;font-weight:700;outline:none;text-align:center;" oninput="updateDiffTable()">
+      <span style="font-size:13px;color:var(--text2);">G/時間</span>
+      <button onclick="setRpm(500)" style="padding:4px 10px;font-size:12px;background:var(--bg3);border:1px solid var(--border);border-radius:20px;color:var(--text2);cursor:pointer;">AT機 500</button>
+    </div>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>設定</th><th>機械割</th><th>差枚数/1h</th><th>差枚数/3h</th><th>差枚数/5h</th><th>差枚数/8h</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td id="dr-1" class="td-neg"></td><td id="d-1-1"></td><td id="d-1-3"></td><td id="d-1-5"></td><td id="d-1-8"></td></tr>
+          <tr><td class="s-num s2">2</td><td id="dr-2" class="td-neg"></td><td id="d-2-1"></td><td id="d-2-3"></td><td id="d-2-5"></td><td id="d-2-8"></td></tr>
+          <tr><td class="s-num s3">3</td><td id="dr-3" class="td-pos"></td><td id="d-3-1"></td><td id="d-3-3"></td><td id="d-3-5"></td><td id="d-3-8"></td></tr>
+          <tr><td class="s-num s4">4</td><td id="dr-4" class="td-pos"></td><td id="d-4-1"></td><td id="d-4-3"></td><td id="d-4-5"></td><td id="d-4-8"></td></tr>
+          <tr><td class="s-num s5">5</td><td id="dr-5" class="td-pos"></td><td id="d-5-1"></td><td id="d-5-3"></td><td id="d-5-5"></td><td id="d-5-8"></td></tr>
+          <tr><td class="s-num s6">6</td><td id="dr-6" class="td-pos"></td><td id="d-6-1"></td><td id="d-6-3"></td><td id="d-6-5"></td><td id="d-6-8"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="koyaku">
+    <h2 class="section-title"><span class="s-icon">🎯</span>パチスロ かぐや様は告らせたい 小役確率</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>ステージ</th><th>チャンス目確率</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">通常ステージ</td><td>約1/22</td></tr>
+          <tr><td style="font-weight:700;color:#f5b030;">高確（夕）</td><td style="color:#f5b030;font-weight:700;">約1/11</td></tr>
+          <tr><td style="font-weight:700;color:#f05050;">超高確（夜）</td><td style="color:#f05050;font-weight:700;">約1/7</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box" style="margin-top:12px;"><p>ℹ️ チャンス目はCZやボーナスのトリガーとなる重要小役です。高確（夕）・超高確（夜）ステージではチャンス目確率が大幅にアップするため、ステージ滞在中は期待度が上がります。</p></div>
+  </section>
+
+  <section class="section" id="setting">
+    <h2 class="section-title"><span class="s-icon">🔍</span>パチスロ かぐや様は告らせたい 設定判別ポイント</h2>
+    <div class="info-box ib-gold" style="margin-bottom:18px;"><strong>設定判別の優先度：</strong>① 終了画面（枠色）・ミニ藤原衣装チェンジ（確定系） → ② BIG比率（補助指標） → ③ ボーナス初当たり確率（設定差小）。ボーナス確率の設定差は小さいため、示唆演出の確認が重要です。</div>
+
+    <h3 class="sub-heading">① 終了画面の枠色（最重要）</h3>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>枠色</th><th>示唆内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:#f05050;">赤枠</td><td style="color:#f05050;font-weight:600;">高設定期待度UP</td></tr>
+          <tr><td style="font-weight:700;color:#a855f7;">紫枠</td><td style="color:#a855f7;font-weight:600;">設定2以上確定</td></tr>
+          <tr><td style="font-weight:700;color:#c0c0c0;">銀枠</td><td style="color:#c0c0c0;font-weight:600;">設定4以上確定</td></tr>
+          <tr><td style="font-weight:700;color:#f5b030;">金枠</td><td style="color:#f5b030;font-weight:600;">設定6濃厚</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">② ミニ藤原衣装チェンジ</h3>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>パターン</th><th>示唆内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">探偵 → 制服</td><td style="color:#5ba0b5;font-weight:600;">設定2以上確定</td></tr>
+          <tr><td style="font-weight:700;">体操服 → 探偵</td><td style="color:#7abb50;font-weight:600;">設定4以上確定</td></tr>
+          <tr><td style="font-weight:700;">体操服 → 制服</td><td style="color:#f5b030;font-weight:600;">設定6濃厚</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">③ エンディングEP</h3>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>パターン</th><th>示唆内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">かぐやEP</td><td>偶数設定示唆</td></tr>
+          <tr><td style="font-weight:700;">白銀EP</td><td>奇数設定示唆</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">④ その他の設定判別要素</h3>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:10px;">以下の要素も設定判別の補助として活用できます。</p>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>要素</th><th>傾向</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">ボーナスBIG比率</td><td>高設定ほどBIG割合UP</td></tr>
+          <tr><td style="font-weight:700;">特殊ゾーン突入率</td><td>高設定ほど優遇</td></tr>
+          <tr><td style="font-weight:700;">ロングフリーズ確率</td><td>高設定ほど高い</td></tr>
+          <tr><td style="font-weight:700;">CZスルー天井分布</td><td>高設定ほど浅いスルーで当選しやすい</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-blue" style="margin-top:10px;"><strong>判別のコツ：</strong>ボーナス確率の設定差が小さいため、確定系の示唆演出（終了画面・ミニ藤原）が出たら必ずメモしましょう。確定演出が出ない場合はBIG比率とCZスルー天井分布で総合判断してください。</div>
+  </section>
+
+  <section class="section" id="ceiling">
+    <h2 class="section-title"><span class="s-icon">⏱</span>パチスロ かぐや様は告らせたい 天井・リセット</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>天井</th><th>条件</th><th>恩恵</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">通常天井</td><td style="font-weight:700;color:var(--gold);">最大1100G+α消化</td><td style="color:var(--gold);font-weight:600;">ボーナス当選</td></tr>
+          <tr><td style="font-weight:700;">REG後天井</td><td style="font-weight:700;color:#4fa880;">900G+α消化</td><td style="color:#4fa880;font-weight:600;">ボーナス当選</td></tr>
+          <tr><td style="font-weight:700;">CZスルー天井</td><td style="font-weight:700;color:#f05050;">最大7回スルー</td><td style="color:#f05050;font-weight:600;">BIG以上確定</td></tr>
+          <tr><td style="font-weight:700;">設定変更後</td><td style="font-weight:700;color:#a855f7;">800G+αに短縮</td><td style="color:#a855f7;font-weight:600;">ボーナス当選</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-gold" style="margin-top:14px;"><strong>天井狙い目安：</strong>通常時は750G〜が天井狙いの目安。REG後は600G〜、CZスルー5回以上でスルー天井狙いが有効です。設定変更後は天井が800G+αに短縮されるため、朝一は500G〜を目安にしましょう。</div>
+  </section>
+
+  <section class="section" id="sec-at">
+    <h2 class="section-title"><span class="s-icon">⚡</span>パチスロ かぐや様は告らせたい AT詳細</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">AT純増</td><td style="color:var(--gold);font-weight:700;">約9.0枚/G</td></tr>
+          <tr><td style="font-weight:700;">ATタイプ</td><td style="font-weight:700;">1G連ボーナスタイプ</td></tr>
+          <tr><td style="font-weight:700;">ボーナスループ</td><td style="color:#f05050;font-weight:700;">1G連＋100G以内引き戻し</td></tr>
+          <tr><td style="font-weight:700;">モード</td><td style="font-weight:700;">A・B・C・D（4種類）</td></tr>
+          <tr><td style="font-weight:700;">モード特徴</td><td>高モードほど低いチャンス目規定回数が選択されやすい</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-blue" style="margin-top:12px;"><strong>1G連ボーナスの出玉力：</strong>純増約9.0枚/Gの高速消化に加え、ボーナスループ（1G連＋100G以内引き戻し）で出玉を伸ばすタイプです。有利区間リセット時の「奇跡的相性モード」ではループ率80%にアップし、大量出玉のチャンスです。</div>
+  </section>
+
+  <section class="section" id="sec-yuuri">
+    <h2 class="section-title"><span class="s-icon">🔄</span>パチスロ かぐや様は告らせたい 有利区間</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">有利区間リセット条件</td><td>エンディング到達時等</td></tr>
+          <tr><td style="font-weight:700;">リセット後</td><td style="color:#f05050;font-weight:700;">「奇跡的相性モード」突入</td></tr>
+          <tr><td style="font-weight:700;">奇跡的相性モード恩恵①</td><td style="color:var(--gold);font-weight:700;">32G以内にSBB濃厚</td></tr>
+          <tr><td style="font-weight:700;">奇跡的相性モード恩恵②</td><td style="color:var(--gold);font-weight:700;">ボーナスループ率80%にアップ</td></tr>
+          <tr><td style="font-weight:700;">ループ内容</td><td>1G連 ＋ 100G以内引き戻し</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box ib-gold" style="margin-top:12px;"><strong>奇跡的相性モードは絶対に見逃さない！</strong>有利区間リセット後は「奇跡的相性モード」に突入し、32G以内にSBB（スペシャルビッグボーナス）が濃厚。さらにループ率80%で1G連＋100G以内引き戻しが続くため、大量出玉のチャンスです。有利区間リセット時は必ず続行しましょう。</div>
+  </section>
+
+  <section class="section" id="sec-morning">
+    <h2 class="section-title"><span class="s-icon">🌅</span>パチスロ かぐや様は告らせたい 設定変更・朝一恩恵</h2>
+    <div class="tbl-wrap">
+      <table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700;">設定変更時</td><td style="color:var(--gold);font-weight:600;">天井が800G+αに短縮</td></tr>
+          <tr><td style="font-weight:700;">電源OFF→ON（据え置き）</td><td>天井G数引き継ぎ（1100G+α）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box" style="margin-top:12px;"><p>ℹ️ 設定変更後は天井が800G+αに短縮されるため、朝一は天井狙いのチャンスです。800G+α消化してもボーナス非当選の場合は据え置き（天井1100G+α）の可能性が高くなります。</p></div>
+  </section>
+
+  <section class="section" id="tool">
+    <h2 class="section-title"><span class="s-icon">🧮</span>設定判別ツール</h2>
+    <p style="font-size:14px;color:var(--text2);margin-bottom:20px;">実戦データを入力すると、各設定の推定確率をリアルタイムで算出します。ボーナス初当たりの設定差は小さいですが、BIG比率で推測を補助します。サンプルが多いほど精度が向上します（目安：3,000G以上）。</p>
+
+    <div class="tool-form">
+      <div class="fg">
+        <label>消化ゲーム数 *</label>
+        <input type="number" id="inp-games" placeholder="例：3000" min="1">
+      </div>
+      <div class="fg">
+        <label>ボーナス回数 *</label>
+        <input type="number" id="inp-bonus" placeholder="例：8" min="0">
+      </div>
+      <div class="fg">
+        <label>BIG回数</label>
+        <input type="number" id="inp-big" placeholder="例：5" min="0">
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+
+    <div id="result-area" style="display:none;">
+      <div class="result-bars" id="result-bars">
+        <h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">判別結果</h3>
+        <div id="bar-s1" class="rb-item"></div>
+        <div id="bar-s2" class="rb-item"></div>
+        <div id="bar-s3" class="rb-item"></div>
+        <div id="bar-s4" class="rb-item"></div>
+        <div id="bar-s5" class="rb-item"></div>
+        <div id="bar-s6" class="rb-item"></div>
+      </div>
+      <div class="tool-note">
+        <strong>注意事項：</strong>本ツールの結果はあくまで統計的な参考値です。ボーナス確率の設定差が小さいため、サンプル数が少ない段階では精度が低くなります。終了画面やミニ藤原衣装チェンジなどの確定系示唆演出と併用して総合判断してください。<br>
+        ※ 推定結果の正確性を保証するものではありません。遊技の判断はご自身の責任でお願いします。当サイトは一切の責任を負いかねます。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="related">
+    <h2 class="section-title"><span class="s-icon">🔗</span>関連機種</h2>
+    <div class="related-grid">
+      <a href="/machine/sankyo/enen2/" class="related-card"><div class="related-name">Lパチスロ 炎炎ノ消防隊2</div><div class="related-meta">SANKYO ｜ AT機 ｜ スマスロ</div></a>
+      <a href="/machine/sankyo/valvrave2/" class="related-card"><div class="related-name">Lパチスロ 革命機ヴァルヴレイヴ2</div><div class="related-meta">SANKYO ｜ AT機 ｜ スマスロ</div></a>
+      <a href="/machine/sankyo/karakuri-circus2/" class="related-card"><div class="related-name">Lからくりサーカス2</div><div class="related-meta">SANKYO ｜ AT機 ｜ スマスロ</div></a>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <h2 class="section-title"><span class="s-icon">❓</span>パチスロ かぐや様は告らせたい よくある質問</h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいの天井は何ゲームですか？</summary><div class="faq-a"><p>通常天井は最大1100G+αでボーナス当選となります。REG後は900G+αに短縮、CZスルー天井は最大7回（7回目でBIG以上確定）、設定変更後は800G+αに短縮されます。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいの設定6機械割は？</summary><div class="faq-a"><p>設定6の機械割は114.9%です。設定1が97.7%、設定4（105.8%）→設定5（110.8%）→設定6（114.9%）と上位設定ほど高い機械割となっています。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいの設定判別で重要なポイントは？</summary><div class="faq-a"><p>終了画面の枠色が最も信頼度の高い設定判別要素です。赤枠は高設定期待度UP、紫枠は設定2以上、銀枠は設定4以上、金枠は設定6濃厚です。ミニ藤原の衣装チェンジやエンディングEPも設定示唆として有効です。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいのやめ時はいつですか？</summary><div class="faq-a"><p>ボーナス終了後の即やめが基本です。ただし有利区間リセット後は「奇跡的相性モード」に突入し32G以内にSBB濃厚＋ループ率80%となるため、有利区間リセット時は続行しましょう。CZスルー回数が5回以上の場合はスルー天井（7回）狙いで続行も有効です。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいの純増は？</summary><div class="faq-a"><p>AT純増は約9.0枚/Gです。1G連ボーナスタイプのAT機で、ボーナスループ率が高いほど大量出玉に期待できます。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">CZスルー天井とは何ですか？</summary><div class="faq-a"><p>CZ（チャンスゾーン）でボーナスに当選せずにスルーした回数をカウントし、最大7回スルーでBIG以上が確定する救済機能です。高設定ほど浅いスルー回数で当選しやすい傾向があります。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">奇跡的相性モードとは何ですか？</summary><div class="faq-a"><p>エンディング等で有利区間がリセットされた際に突入する特殊モードです。32G以内にSBB（スペシャルビッグボーナス）が濃厚となり、さらにボーナスループ率が80%にアップします。1G連＋100G以内引き戻しで大量出玉が期待できます。</p></div></details>
+      <details class="faq-item"><summary class="faq-q">パチスロ かぐや様は告らせたいのモードは何種類ありますか？</summary><div class="faq-a"><p>モードはA・B・C・Dの4種類があります。高モードほどチャンス目の規定回数が少なく選ばれやすく、CZに到達しやすくなります。高設定ほど上位モード（C・D）が選択されやすい傾向があります。</p></div></details>
+    </div>
+  </section>
+
+  <section id="sec-movie" style="margin:32px 0 24px;">
+    <h2 class="section-title" style="font-size:16px;margin-bottom:10px;"><span class="s-icon">🎬</span>公式PR動画</h2>
+    <p style="font-size:12px;color:var(--text2);">（動画情報は準備中です）</p>
+  </section>
+</main>
+
+  <aside class="sidebar">
+    <div class="toc-box">
+      <h3>目次</h3>
+      <ol>
+        <li><a href="#spec">スペック・機械割</a></li>
+        <li><a href="#koyaku">小役確率</a></li>
+        <li><a href="#setting">設定判別ポイント</a></li>
+        <li><a href="#ceiling">天井・リセット</a></li>
+        <li><a href="#sec-at">AT詳細</a></li>
+        <li><a href="#sec-yuuri">有利区間</a></li>
+        <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
+        <li><a href="#related">関連機種</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ol>
+    </div>
+    <div class="ad-slot ad-sidebar"></div>
+    <div class="ad-slot ad-sidebar-tall"></div>
+  </aside>
+</div>
+<div class="ad-bottom"><div class="ad-slot"></div></div>
+<script src="../../../assets/common.js"></script>
+<script>
+var ASSETS_BASE='../../../assets/';
+var currentMachineId='kaguya-sama';
+loadComponents(ASSETS_BASE);
+var DIFF_RATES=[0.977,0.988,1.012,1.058,1.108,1.149];
+var SETTINGS=[1,2,3,4,5,6];
+var BONUS_PROBS=[1/362,1/360,1/357,1/349,1/343,1/335];
+/* BIG比率の重み（高設定ほどBIG割合が高い傾向を反映） */
+var BIG_WEIGHTS=[0.40,0.42,0.44,0.47,0.50,0.54];
+function updateDiffTable(){
+  var rpm=parseInt(document.getElementById('rpm-input').value)||500;
+  for(var s=1;s<=6;s++){
+    var d1=(DIFF_RATES[s-1]-1)*rpm*3;
+    document.getElementById('dr-'+s).textContent=(d1>=0?'+':'')+Math.round(d1)+'枚';
+    [1,3,5,8].forEach(function(h){var el=document.getElementById('d-'+s+'-'+h);if(el){var v=d1*h;el.textContent=(v>=0?'+':'')+Math.round(v)+'枚';el.className=v>=0?'td-pos':'td-neg';}});
+  }
+}
+updateDiffTable();
+function poissonLL(k,lam){if(lam<=0)return k===0?0:-Infinity;var ll=0;for(var i=1;i<=k;i++)ll+=Math.log(i);return k*Math.log(lam)-lam-ll;}
+function binomialLL(k,n,p){if(n<=0||k<0||k>n)return -Infinity;var ll=0;for(var i=1;i<=k;i++)ll+=Math.log(n-i+1)-Math.log(i);ll+=k*Math.log(p)+(n-k)*Math.log(1-p);return ll;}
+function calcSetting(){
+  var g=parseInt(document.getElementById('inp-games').value)||0;
+  var bonus=parseInt(document.getElementById('inp-bonus').value)||0;
+  var big=parseInt(document.getElementById('inp-big').value)||0;
+  if(!g){alert('ゲーム数を入力してください');return;}
+  var sc=BONUS_PROBS.map(function(p,i){
+    var ll=poissonLL(bonus,p*g);
+    if(big>0&&bonus>0)ll+=binomialLL(big,bonus,BIG_WEIGHTS[i]);
+    return ll;
+  });
+  var mx=Math.max.apply(null,sc);
+  var ex=sc.map(function(s){return Math.exp(s-mx);});
+  var tot=ex.reduce(function(a,b){return a+b;},0);
+  var pr=ex.map(function(e){return e/tot;});
+  var cols=['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];var stgs=[];for(var j=0;j<6;j++){stgs.push({s:String(j+1),label:'設定'+(j+1),color:cols[j]});}
+  var pcts=pr.map(function(p){return Math.round(p*1000)/10;});
+  renderSettingBars(pcts,stgs);
+}
+</script>
+<div id="site-footer-ph"></div>
+</body>
+</html>
