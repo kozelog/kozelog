@@ -594,6 +594,46 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- スマスロ リコリス・リコイル -->
+  <url>
+    <loc>https://kozelog.net/machine/sammy/lycoris-recoil/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- メーシー メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/macy/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- スマスロ 沖ドキ！DUO アンコール -->
+  <url>
+    <loc>https://kozelog.net/machine/macy/okidoki-duo-encore/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ 東京リベンジャーズ -->
+  <url>
+    <loc>https://kozelog.net/machine/sammy/tokyo-revengers/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ネオアイムジャグラーEX -->
+  <url>
+    <loc>https://kozelog.net/machine/kitadenshi/neo-aim-juggler-ex/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- 藤商事 メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/fujishoji/</loc>
