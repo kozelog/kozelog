@@ -164,12 +164,20 @@
 |---|---|---|---|
 | 1 | `[maker-slug]/[machine-slug]/index.html` | 機種ページ本体を作成 | ✅ |
 | 2 | `[maker-slug]/index.html` | メーカー一覧ページに機種カードを追加（新メーカーの場合はページごと新規作成） | ✅ |
-| 3 | `index.html`（TOPページ） | 機種カードを導入日順の正しい位置に追加 | ✅ |
+| 3 | `index.html`（TOPページ） | 機種カードを導入日降順の正しい位置に追加し、**常に最新20件のみ**に維持する（21件目以降のHTMLカードは削除する） | ✅ |
 | 4 | `assets/machines/index.js` | MACHINES_LIST にエントリを追加（id・name・kana・releaseDate・url・rate等） | ✅ |
 | 5 | `sitemap.xml` | 機種ページURL＋新メーカーページURLを追加 | ✅ |
-| 6 | `admin/index.html` | ADMIN_OVERRIDES に kozelog:true・kozelogUrl・hasMovie等を反映 | ✅ |
+| 6 | `admin/index.html` | ADMIN_OVERRIDES に kozelog:true・kozelogUrl・hasMovie等を反映。**ADMIN_MACHINES（将来台リスト）に該当機種がある場合は `future:true` を外し、kozelog関連プロパティを ADMIN_OVERRIDES 側に移す** | ✅ |
 
 > ※ 1つでも漏れると検索ページ・TOPページ・admin管理画面に不整合が発生する
+
+### 7.2 TOPページ 最新20件ルール
+
+- TOPページ（`index.html`）の機種カード一覧は**常に最新20件のみ**をHTMLに記載する
+- カードは**導入日の降順（新しい順）**に並べる。同日の機種間の順序は任意
+- 新機種を追加する際は、**導入日で正しい位置にカードを挿入**し、21件目以降になるカードは**HTMLから削除**する
+- 見出しの `<small>最新20機種</small>` の件数と実際のカード数を必ず一致させる
+- 全機種の一覧は検索ページ（`/search/by-date/`）で参照可能なため、TOPから削除してもユーザーへの影響はない
 
 ### 筐体画像ルール
 
