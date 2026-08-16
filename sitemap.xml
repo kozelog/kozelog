@@ -702,4 +702,44 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- パチスロ見える子ちゃん -->
+  <url>
+    <loc>https://kozelog.net/machine/pioneer/mieruko-chan/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ タコスロ -->
+  <url>
+    <loc>https://kozelog.net/machine/universal/takosuro/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Lパチスロ 彼女、お借りします -->
+  <url>
+    <loc>https://kozelog.net/machine/sankyo/kanokari/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L青春ブタ野郎はバニーガール先輩の夢を見ない -->
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/aobuta/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Lモグモグ風林火山 大海戦の巻 -->
+  <url>
+    <loc>https://kozelog.net/machine/net/mogumogu-furinkazan/</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
