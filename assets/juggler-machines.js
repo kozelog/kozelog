@@ -4,6 +4,21 @@
    フィールド: koyaku1=ブドウ確率, koyaku2=チェリー確率
    ============================================= */
 var MACHINES = {
+  myjug6: {
+    name: 'マイジャグラーⅥ', nameEn: 'MY JUGGLER Ⅵ', shortName: 'マイジャグⅥ',
+    intro: '2026年10月5日', bbCoins: 0, rbCoins: 0,
+    hasRate2: false,
+    koyaku1Label: 'ブドウ確率', koyaku2Label: 'チェリー確率',
+    settings: [
+      {s:1, big:273.1, reg:409.6, rate:0.970},
+      {s:2, big:270.8, reg:385.5, rate:0.980},
+      {s:3, big:266.4, reg:336.1, rate:0.999},
+      {s:4, big:254.0, reg:290.0, rate:1.028},
+      {s:5, big:240.1, reg:268.6, rate:1.053},
+      {s:6, big:229.1, reg:229.1, rate:1.094}
+    ],
+    reelData: null, hasNaiyaku: false
+  },
   myjug5: {
     name: 'マイジャグラーⅤ', nameEn: 'MY JUGGLER Ⅴ', shortName: 'マイジャグV',
     intro: '2021年12月', bbCoins: 240, rbCoins: 96,

@@ -57,6 +57,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kozelog.net/machine/kitadenshi/myjuggler6/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kozelog.net/machine/kitadenshi/myjuggler5/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>

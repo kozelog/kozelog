@@ -1538,4 +1538,25 @@ var MACHINES_LIST = [
     rateLabelS1:  '設定1 機械割',
   },
 
+  /* ===== 北電子（10月新台） ===== */
+  {
+    id:           'my-juggler-6',
+    name:         'マイジャグラーⅥ',
+    kana:         'まいじゃぐらーしっくす',
+    fullName:     'マイジャグラーⅥ',
+    maker:        '北電子（KITADENSHI）',
+    makerSlug:    'kitadenshi',
+    makerEn:      'KITADENSHI',
+    badge:        '6号機',
+    smart:        false,
+    releaseDate:  '2026-10-05',
+    releaseLabel: '2026年10月5日',
+    url: '/machine/kitadenshi/myjuggler6/',
+    kozelog:      true,
+    rateS6:       '109.4%',
+    rateS1:       '97.0%',
+    rateLabelS6:  '設定6 機械割',
+    rateLabelS1:  '設定1 機械割',
+  },
+
 ];
