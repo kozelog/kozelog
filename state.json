@@ -2,13 +2,13 @@
   "_説明": "こぜログ自動更新の状態管理。mainとは別ブランチ（公開されない）。",
   "settings": {
     "notifyTo": "wade3wade3@gmail.com",
-    "dailyRunJST": "06:00",
-    "replyCheckJST": ["12:00", "21:00"],
+    "dailyRunJST": "05:45",
     "dailyCheckDays": 7,
     "everyNDaysAfter": 3,
     "stopCheckingAfterDays": 60,
     "backfillPerDay": 1,
-    "backfillOrder": "releaseDate desc"
+    "backfillOrder": "releaseDate desc",
+    "replyCheck": "2時間おき（毎時30分前後・奇数時台）"
   },
   "pending": [
     {
@@ -22,7 +22,11 @@
     }
   ],
   "machines": {
-    "my-juggler-6": { "releaseDate": "2026-10-05", "lastChecked": "2026-10-28", "url": "/machine/kitadenshi/myjuggler6/" }
+    "my-juggler-6": {
+      "releaseDate": "2026-10-05",
+      "lastChecked": "2026-10-28",
+      "url": "/machine/kitadenshi/myjuggler6/"
+    }
   },
   "knownUnlisted": [
     "2026-10-05 スマスロ 獣王（タイヨーエレック）",
@@ -35,6 +39,7 @@
   "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
-    "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定"
+    "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定",
+    "2026-10-28 返信確認を2時間おきに変更（利用者の指示）。毎朝5:45の更新タスクを作成"
   ]
 }
