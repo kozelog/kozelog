@@ -1,0 +1,40 @@
+{
+  "_説明": "こぜログ自動更新の状態管理。mainとは別ブランチ（公開されない）。",
+  "settings": {
+    "notifyTo": "wade3wade3@gmail.com",
+    "dailyRunJST": "06:00",
+    "replyCheckJST": ["12:00", "21:00"],
+    "dailyCheckDays": 7,
+    "everyNDaysAfter": 3,
+    "stopCheckingAfterDays": 60,
+    "backfillPerDay": 1,
+    "backfillOrder": "releaseDate desc"
+  },
+  "pending": [
+    {
+      "pr": 1,
+      "branch": "auto/add-myjuggler6",
+      "gmailThreadId": "1a17e331ba51553f",
+      "kind": "new",
+      "machineId": "my-juggler-6",
+      "sentAt": "2026-10-28",
+      "note": "1回目の返信で公式動画URLの追加を指示 → 反映済み。再承認待ち"
+    }
+  ],
+  "machines": {
+    "my-juggler-6": { "releaseDate": "2026-10-05", "lastChecked": "2026-10-28", "url": "/machine/kitadenshi/myjuggler6/" }
+  },
+  "knownUnlisted": [
+    "2026-10-05 スマスロ 獣王（タイヨーエレック）",
+    "2026-10-05 スマスロ モンスターハンターライズ：サンブレイク（アデリオン）",
+    "2026-10-05 スマスロパリピ孔明（山佐）",
+    "2026-10-05 L転生王女と天才令嬢の魔法革命（オリンピアエステート）",
+    "2026-10-19 L魔法少女にあこがれて（ニューギン）",
+    "2026-10-19 Lウミンチュ（岡崎産業）"
+  ],
+  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。",
+  "log": [
+    "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
+    "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定"
+  ]
+}
