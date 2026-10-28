@@ -391,6 +391,7 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | サンスリー | `サンスリー` |
 | ミズホ | `ミズホ` |
 | ビスティ | `ビスティ` |
+| ニューギン | `ニューギン（NEWGIN）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 

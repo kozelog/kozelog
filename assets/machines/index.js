@@ -697,6 +697,27 @@ var MACHINES_LIST = [
     rateLabelS1:  '設定1 機械割',
   },
 
+  /* ===== ニューギン ===== */
+  {
+    id:           'mahoako',
+    name:         'L魔法少女にあこがれて',
+    kana:         'まほうしょうじょにあこがれて',
+    fullName:     'L魔法少女にあこがれて',
+    maker:        'ニューギン',
+    makerSlug:    'newgin',
+    makerEn:      'NEWGIN',
+    badge:        'スマスロ',
+    smart:        true,
+    releaseDate:  '2026-10-19',
+    releaseLabel: '2026年10月19日',
+    url: '/machine/newgin/mahoako/',
+    kozelog:      true,
+    rateS6:       '112.0%',
+    rateS1:       '97.6%',
+    rateLabelS6:  '設定6 機械割',
+    rateLabelS1:  '設定1 機械割',
+  },
+
   /* ===== 銀座 ===== */
   {
     id:           'big-dream',
