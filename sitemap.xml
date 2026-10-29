@@ -467,7 +467,7 @@
   <!-- パオン・ディーピー -->
   <url>
     <loc>https://kozelog.net/machine/paon-dp/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -806,6 +806,14 @@
   <url>
     <loc>https://kozelog.net/machine/orinpia/tenten/</loc>
     <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ 秘宝伝 -->
+  <url>
+    <loc>https://kozelog.net/machine/paon-dp/hihou-den-smart/</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
