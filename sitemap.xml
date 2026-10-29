@@ -770,4 +770,44 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- アデリオン メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/adelion/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- スマスロ 獣王 -->
+  <url>
+    <loc>https://kozelog.net/machine/sammy/juuou/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ モンスターハンターライズ：サンブレイク -->
+  <url>
+    <loc>https://kozelog.net/machine/adelion/mhr-sunbreak/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロパリピ孔明 -->
+  <url>
+    <loc>https://kozelog.net/machine/yamasa/paripi-koumei/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L転生王女と天才令嬢の魔法革命 -->
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/tenten/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

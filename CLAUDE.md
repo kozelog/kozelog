@@ -392,6 +392,7 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | ミズホ | `ミズホ` |
 | ビスティ | `ビスティ` |
 | ニューギン | `ニューギン（NEWGIN）` |
+| アデリオン | `アデリオン（Adelion）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
