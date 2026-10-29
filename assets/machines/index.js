@@ -697,6 +697,26 @@ var MACHINES_LIST = [
     rateLabelS1:  '設定1 機械割',
   },
 
+  {
+    id:           'uminchu',
+    name:         'Lウミンチュ',
+    kana:         'うみんちゅ',
+    fullName:     'LウミンチュZA',
+    maker:        '岡崎産業',
+    makerSlug:    'okazaki',
+    makerEn:      'OKAZAKI',
+    badge:        'スマスロ',
+    smart:        true,
+    releaseDate:  '2026-10-19',
+    releaseLabel: '2026年10月19日',
+    url: '/machine/okazaki/uminchu/',
+    kozelog:      true,
+    rateS6:       '112.0%',
+    rateS1:       '97.7%',
+    rateLabelS6:  '設定6 機械割',
+    rateLabelS1:  '設定1 機械割',
+  },
+
   /* ===== 銀座 ===== */
   {
     id:           'big-dream',
