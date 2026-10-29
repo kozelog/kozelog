@@ -32,7 +32,7 @@
   <!-- 北電子 メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/kitadenshi/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -162,7 +162,7 @@
   <!-- オリンピア メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/orinpia/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -265,7 +265,7 @@
   <!-- ミズホ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/mizuho/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -321,7 +321,7 @@
   <!-- 大都技研 メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/daitogiken/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -399,7 +399,7 @@
   <!-- アムテックス -->
   <url>
     <loc>https://kozelog.net/machine/amtex/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -467,7 +467,7 @@
   <!-- パオン・ディーピー -->
   <url>
     <loc>https://kozelog.net/machine/paon-dp/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -517,7 +517,7 @@
   <!-- ユニバーサルブロス -->
   <url>
     <loc>https://kozelog.net/machine/universal/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -561,7 +561,7 @@
   <!-- コナミアミューズメント 一覧 -->
   <url>
     <loc>https://kozelog.net/machine/konami/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -649,7 +649,7 @@
   <!-- 藤商事 メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/fujishoji/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -757,7 +757,7 @@
   <!-- ニューギン メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/newgin/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -806,6 +806,190 @@
   <url>
     <loc>https://kozelog.net/machine/orinpia/tenten/</loc>
     <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ 秘宝伝 -->
+  <url>
+    <loc>https://kozelog.net/machine/paon-dp/hihou-den-smart/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- カルミナ メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/carmina/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- アイドル メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/idol/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- レオスター メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/leostar/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- セブンリーグ メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/seven-league/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- スパイキー メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/spiky/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L不二子BT -->
+  <url>
+    <loc>https://kozelog.net/machine/amtex/l-fujiko-bt/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L 無職転生 -->
+  <url>
+    <loc>https://kozelog.net/machine/newgin/mushoku-tensei/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 銀河英雄伝説 Die Neue These -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/gineiden/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Lプリズムナナ -->
+  <url>
+    <loc>https://kozelog.net/machine/carmina/prism-nana/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- バーニングエクスプレス -->
+  <url>
+    <loc>https://kozelog.net/machine/kitadenshi/burning-express/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロネオプラネット -->
+  <url>
+    <loc>https://kozelog.net/machine/seven-league/neo-planet/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L 絶対衝激Ⅳ -->
+  <url>
+    <loc>https://kozelog.net/machine/idol/zettai-shougeki4/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ とある科学の超電磁砲2 -->
+  <url>
+    <loc>https://kozelog.net/machine/fujishoji/railgun2/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L 荒野のコトブキ飛行隊 -->
+  <url>
+    <loc>https://kozelog.net/machine/spiky/kotobuki-hikoutai/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SHAKE BONUS TRIGGER -->
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/shake-bt/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ 新鬼武者3 -->
+  <url>
+    <loc>https://kozelog.net/machine/leostar/shin-onimusha3/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L主役は銭形5 -->
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/zenigata5/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ バベル -->
+  <url>
+    <loc>https://kozelog.net/machine/universal/babel/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- マジカルハロウィン BT -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/magical-halloween-bt/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SLOTドルアーガの塔 -->
+  <url>
+    <loc>https://kozelog.net/machine/mizuho/druaga-slot/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- クレアの秘宝伝 BT ver. -->
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/crea-hihou-bt/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ ドルアーガの塔 -->
+  <url>
+    <loc>https://kozelog.net/machine/mizuho/druaga-smart/</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
