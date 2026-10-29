@@ -14,7 +14,21 @@
       "stopAfterDays": 180
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "pr": 5,
+      "branch": "auto/add-1005-4machines",
+      "gmailThreadId": "1a188119aaca5f33",
+      "kind": "new",
+      "machineId": [
+        "juuou",
+        "mhr-sunbreak",
+        "paripi-koumei",
+        "tenten"
+      ],
+      "sentAt": "2026-10-29"
+    }
+  ],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -30,14 +44,29 @@
       "releaseDate": "2026-10-19",
       "lastChecked": "2026-10-29",
       "url": "/machine/newgin/mahoako/"
+    },
+    "juuou": {
+      "releaseDate": "2026-10-05",
+      "lastChecked": "2026-10-29",
+      "url": "/machine/sammy/juuou/"
+    },
+    "mhr-sunbreak": {
+      "releaseDate": "2026-10-05",
+      "lastChecked": "2026-10-29",
+      "url": "/machine/adelion/mhr-sunbreak/"
+    },
+    "paripi-koumei": {
+      "releaseDate": "2026-10-05",
+      "lastChecked": "2026-10-29",
+      "url": "/machine/yamasa/paripi-koumei/"
+    },
+    "tenten": {
+      "releaseDate": "2026-10-05",
+      "lastChecked": "2026-10-29",
+      "url": "/machine/orinpia/tenten/"
     }
   },
-  "knownUnlisted": [
-    "2026-10-05 スマスロ 獣王（タイヨーエレック）",
-    "2026-10-05 スマスロ モンスターハンターライズ：サンブレイク（アデリオン）",
-    "2026-10-05 スマスロパリピ孔明（山佐）",
-    "2026-10-05 L転生王女と天才令嬢の魔法革命（オリンピアエステート）"
-  ],
+  "knownUnlisted": [],
   "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
@@ -48,6 +77,7 @@
     "2026-10-29 新台・更新なし → 未掲載のL魔法少女にあこがれて（ニューギン・新規メーカー）を追加、PR #3・承認メール送信",
     "2026-10-29 モニタリング頻度を変更（利用者の指示）：30日まで毎日／60日まで週1／180日まで月1",
     "2026-10-29 モニタリング頻度を再修正：1週目毎日／2〜4週目3日おき／60日まで週1／180日まで月1",
-    "2026-10-29 返信確認：PR#2（Lウミンチュ）・PR#3（L魔法少女にあこがれて）を承認によりマージ（#3は衝突解消・TOP20件維持、8/17カードの並び順も修正）"
+    "2026-10-29 返信確認：PR#2（Lウミンチュ）・PR#3（L魔法少女にあこがれて）を承認によりマージ（#3は衝突解消・TOP20件維持、8/17カードの並び順も修正）",
+    "2026-10-29 利用者の指示（10/5導入の未掲載を全部）で獣王・モンハンライズ サンブレイク・パリピ孔明・転天の4機種をPR #5に1本でまとめて作成、承認メール送信（番号指定で個別承認可）"
   ]
 }
