@@ -754,4 +754,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ニューギン メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/newgin/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L魔法少女にあこがれて -->
+  <url>
+    <loc>https://kozelog.net/machine/newgin/mahoako/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
