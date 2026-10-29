@@ -3,7 +3,7 @@
   "settings": {
     "notifyTo": "wade3wade3@gmail.com",
     "dailyRunJST": "05:45",
-    "backfillPerDay": 1,
+    "backfillPerDay": "3ヶ月分を1セット（約20機種）で一括追加（2026-10-30 利用者の指示）",
     "backfillOrder": "releaseDate desc",
     "replyCheck": "2時間おき（毎時30分前後・奇数時台）",
     "monitoring": {
@@ -16,24 +16,13 @@
   },
   "pending": [
     {
-      "pr": 6,
-      "branch": "auto/add-hihou-den-smart",
+      "pr": 8,
+      "branch": "auto/add-2025sep-dec-batch",
       "gmailThreadId": "1a18974b4cb4798d",
-      "kind": "add",
-      "machineId": "hihou-den-smart",
-      "sentAt": "2026-10-30T06:30:00+09:00",
-      "itemNo": 1,
-      "note": "PR #6とPR #7は assets/machines/index.js の隣接行（hihou-den-smart行とmushoku-tensei行）で衝突する。両方承認の場合、後からマージする方にmainをマージして衝突を解消すること（hihou-den-smartはkozelog:true・機械割を残し、mushoku-tenseiのurlは/machine/newgin/mushoku-tensei/、okidoki-duo-encoreの簡易重複行は削除）"
-    },
-    {
-      "pr": 7,
-      "branch": "auto/fix-machines-list",
-      "gmailThreadId": "1a18974b4cb4798d",
-      "kind": "fix",
-      "machineId": "machines-list",
-      "sentAt": "2026-10-30T07:45:00+09:00",
-      "itemNo": 2,
-      "note": "PR #6とPR #7は assets/machines/index.js の隣接行（hihou-den-smart行とmushoku-tensei行）で衝突する。両方承認の場合、後からマージする方にmainをマージして衝突を解消すること（hihou-den-smartはkozelog:true・機械割を残し、mushoku-tenseiのurlは/machine/newgin/mushoku-tensei/、okidoki-duo-encoreの簡易重複行は削除）"
+      "kind": "add-batch",
+      "machineId": "2025sep-dec-18machines",
+      "sentAt": "2026-10-30T09:00:00+09:00",
+      "note": "PR #6・#7を統合（#6・#7はclose済み）。承認でPR #8をマージ"
     }
   ],
   "machines": {
@@ -76,43 +65,94 @@
       "releaseDate": "2025-12-22",
       "lastChecked": "2026-10-30",
       "url": "/machine/paon-dp/hihou-den-smart/"
-    }
-  },
-  "knownUnlisted": [
-    {
-      "id": "l-fujiko-bt",
-      "name": "L不二子BT",
+    },
+    "gineiden": {
+      "releaseDate": "2025-12-08",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/konami/gineiden/"
+    },
+    "l-fujiko-bt": {
       "releaseDate": "2025-12-22",
-      "maker": "アムテックス",
+      "lastChecked": "2026-10-30",
       "url": "/machine/amtex/l-fujiko-bt/"
     },
-    {
-      "id": "mushoku-tensei",
-      "name": "L 無職転生",
+    "zettai-shougeki4": {
+      "releaseDate": "2025-11-04",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/idol/zettai-shougeki4/"
+    },
+    "druaga-slot": {
+      "releaseDate": "2025-09-08",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/mizuho/druaga-slot/"
+    },
+    "neo-planet": {
+      "releaseDate": "2025-11-17",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/seven-league/neo-planet/"
+    },
+    "crea-hihou-bt": {
+      "releaseDate": "2025-09-08",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/daitogiken/crea-hihou-bt/"
+    },
+    "shin-onimusha3": {
+      "releaseDate": "2025-10-06",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/leostar/shin-onimusha3/"
+    },
+    "zenigata5": {
+      "releaseDate": "2025-10-06",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/orinpia/zenigata5/"
+    },
+    "babel": {
+      "releaseDate": "2025-10-06",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/universal/babel/"
+    },
+    "kotobuki-hikoutai": {
+      "releaseDate": "2025-10-20",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/spiky/kotobuki-hikoutai/"
+    },
+    "magical-halloween-bt": {
+      "releaseDate": "2025-09-22",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/konami/magical-halloween-bt/"
+    },
+    "shake-bt": {
+      "releaseDate": "2025-10-20",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/daitogiken/shake-bt/"
+    },
+    "prism-nana": {
+      "releaseDate": "2025-12-08",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/carmina/prism-nana/"
+    },
+    "druaga-smart": {
+      "releaseDate": "2025-09-08",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/mizuho/druaga-smart/"
+    },
+    "mushoku-tensei": {
       "releaseDate": "2025-12-22",
-      "maker": "ニューギン"
+      "lastChecked": "2026-10-30",
+      "url": "/machine/newgin/mushoku-tensei/"
     },
-    {
-      "id": "gineiden",
-      "name": "銀河英雄伝説 Die Neue These",
-      "releaseDate": "2025-12-08",
-      "maker": "コナミアミューズメント"
+    "railgun2": {
+      "releaseDate": "2025-11-04",
+      "lastChecked": "2026-10-30",
+      "url": "/machine/fujishoji/railgun2/"
     },
-    {
-      "id": "prism-nana",
-      "name": "Lプリズムナナ",
-      "releaseDate": "2025-12-08",
-      "maker": "カルミナ（新規メーカー）",
-      "note": "MACHINES_LISTに登録済（PR #7）。10/30に一撃・ちょんぼりすた・なな徹・DMMで解析取得可を確認（ST系・初当り1/351.8〜1/278.6・機械割97.7〜114.9%）"
-    },
-    {
-      "id": "burning-express",
-      "name": "バーニングエクスプレス",
+    "burning-express": {
       "releaseDate": "2025-12-01",
-      "maker": "北電子",
+      "lastChecked": "2026-10-30",
       "url": "/machine/kitadenshi/burning-express/"
     }
-  ],
+  },
+  "knownUnlisted": [],
   "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
@@ -128,6 +168,7 @@
     "2026-10-29 返信確認：PR #5（獣王・モンハンライズ サンブレイク・パリピ孔明・転天の4機種）を承認によりmainへマージ（衝突なし・TOP20件維持）",
     "2026-10-30 新台・更新なし → 未掲載のスマスロ 秘宝伝（2025/12/22・パオン・ディーピー）を追加、PR #6・承認メール送信。knownUnlistedに12月導入の未掲載5機種を登録",
     "2026-10-30 利用者の指示（不具合は全部修正、SAOⅡは大都技研のまま、化物語のGINZAは対象外）でMACHINES_LISTの重複id4件削除・url68件統一・プリズムナナ登録をPR #7で作成、同じスレッドで承認依頼（1=PR#6、2=PR#7）",
-    "2026-10-30 PR #6とPR #7が index.js の隣接行で衝突することを確認（後マージ側で解消が必要）。pendingに注記"
+    "2026-10-30 PR #6とPR #7が index.js の隣接行で衝突することを確認（後マージ側で解消が必要）。pendingに注記",
+    "2026-10-30 利用者の指示（1台ずつは遅い・3ヶ月分を1セットで）で2025年9〜12月導入の未掲載17機種＋秘宝伝をPR #8に一括作成（#6・#7を統合しclose）、同スレッドで承認依頼"
   ]
 }
