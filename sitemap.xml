@@ -376,6 +376,12 @@
 
   <!-- 岡崎産業 機種ページ -->
   <url>
+    <loc>https://kozelog.net/machine/okazaki/uminchu/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kozelog.net/machine/okazaki/triple-crown-seven/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
