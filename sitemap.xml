@@ -994,4 +994,220 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- サボハニ（SABOHANI） -->
+  <url>
+    <loc>https://kozelog.net/machine/sabohani/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ヤーマ（yama） -->
+  <url>
+    <loc>https://kozelog.net/machine/yama/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 京楽（KYORAKU） -->
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ビスティ -->
+  <url>
+    <loc>https://kozelog.net/machine/bisty/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 三洋物産（SANYO） -->
+  <url>
+    <loc>https://kozelog.net/machine/sanyo/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ネオス（NEOS） -->
+  <url>
+    <loc>https://kozelog.net/machine/neos/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- L アズールレーン THE ANIMATION -->
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/azurlane/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L ダーリン・イン・ザ・フランキス -->
+  <url>
+    <loc>https://kozelog.net/machine/spiky/darlifra/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L咲-Saki- 頂上決戦 -->
+  <url>
+    <loc>https://kozelog.net/machine/sanyo/saki-choujou/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- パチスロ 転生したら剣でした -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/tenken/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- パチスロなめ猫 -->
+  <url>
+    <loc>https://kozelog.net/machine/neos/nameneko/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- マタドールⅢ -->
+  <url>
+    <loc>https://kozelog.net/machine/kitadenshi/matador3/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LBパチスロ ヱヴァンゲリヲン ～約束の扉～ -->
+  <url>
+    <loc>https://kozelog.net/machine/bisty/eva-yakusoku/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- わたしの幸せな結婚 -->
+  <url>
+    <loc>https://kozelog.net/machine/konami/watashi-no-shiawase/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- アレックス ブライト -->
+  <url>
+    <loc>https://kozelog.net/machine/universal/alex-bright/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ハイビリターン-30 -->
+  <url>
+    <loc>https://kozelog.net/machine/pioneer/haibi-return-30/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LBトリプルクラウン -->
+  <url>
+    <loc>https://kozelog.net/machine/okazaki/lb-triple-crown/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L 絶対衝激～PLATONIC HEART～ -->
+  <url>
+    <loc>https://kozelog.net/machine/spiky/zettai-shougeki-platonic/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- いざ！番長 -->
+  <url>
+    <loc>https://kozelog.net/machine/sabohani/iza-bancho/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ デビル メイ クライ5 -->
+  <url>
+    <loc>https://kozelog.net/machine/adelion/dmc5/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロ ギルティクラウン2 -->
+  <url>
+    <loc>https://kozelog.net/machine/across/guilty-crown2/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- スマスロニューパルサーBT -->
+  <url>
+    <loc>https://kozelog.net/machine/yamasa/new-pulsar-bt/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- L ULTRAMAN -->
+  <url>
+    <loc>https://kozelog.net/machine/okke/l-ultraman/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LBジャックポット -->
+  <url>
+    <loc>https://kozelog.net/machine/yama/lb-jackpot/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LBパチスロ1000ちゃんA -->
+  <url>
+    <loc>https://kozelog.net/machine/oizumi/lb-1000chan-a/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 翔べ！ハーレムエース -->
+  <url>
+    <loc>https://kozelog.net/machine/net/harlem-ace/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LBプレミアムうまい棒 -->
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/lb-premium-umaibou/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

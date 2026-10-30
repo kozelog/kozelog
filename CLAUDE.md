@@ -418,6 +418,11 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | 藤商事 | `藤商事（FUJI）` |
 | アムテックス | `アムテックス（AMTEX）` |
 | アデリオン | `アデリオン（Adelion）` |
+| サボハニ | `サボハニ（SABOHANI）` |
+| ヤーマ | `ヤーマ（yama）` |
+| 京楽 | `京楽（KYORAKU）` |
+| 三洋物産 | `三洋物産（SANYO）` |
+| ネオス | `ネオス（NEOS）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
