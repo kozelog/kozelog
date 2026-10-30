@@ -20,11 +20,43 @@
       "rule": "PRを作ったら行を追加（状態=承認待ち）。マージ・クローズしたら状態と結果日を更新"
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "pr": 9,
+      "branch": "auto/add-2025-06-08-backfill",
+      "gmailThreadId": "1a18eada41edccd5",
+      "kind": "add-batch",
+      "machineId": [
+        "iza-bancho",
+        "dmc5",
+        "guilty-crown2",
+        "new-pulsar-bt",
+        "l-ultraman",
+        "lb-jackpot",
+        "lb-1000chan-a",
+        "harlem-ace",
+        "lb-premium-umaibou",
+        "zettai-shougeki-platonic",
+        "eva-yakusoku",
+        "watashi-no-shiawase",
+        "alex-bright",
+        "haibi-return-30",
+        "lb-triple-crown",
+        "azurlane",
+        "darlifra",
+        "saki-choujou",
+        "tenken",
+        "nameneko",
+        "matador3"
+      ],
+      "sentAt": "2026-10-31T06:50+09:00",
+      "note": "2025年6〜8月導入の未掲載21機種。番号1〜21で個別承認可（メール内の番号順）。要確認：アズールレーン設定5 AT初当たり・ULTRAMANスペシウムゾーン期待度の5%超差、新規メーカー6、メーカー表記（KPE→konami・ネオス/ボーダー）、動画候補5件"
+    }
+  ],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
-      "lastChecked": "2026-10-28",
+      "lastChecked": "2026-10-31",
       "url": "/machine/kitadenshi/myjuggler6/"
     },
     "uminchu": {
@@ -149,7 +181,7 @@
     }
   },
   "knownUnlisted": [],
-  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。",
+  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。 2026-10-31: 1geki新台カレンダー・altemaはWebFetch直指定が拒否された。1geki 202506〜202508 は検索結果(202507)ページ内リンク経由で取得できた。chonborista.com/shindai/4197/ と nana-press.com/kaiseki/release/ は検索経由で取得可。p-gabuは今回もほぼ取得不可。承認リストのスプシへの書き込みは自動モードで拒否された（行の追加は未実施）。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
     "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定",
@@ -167,6 +199,7 @@
     "2026-10-30 PR #6とPR #7が index.js の隣接行で衝突することを確認（後マージ側で解消が必要）。pendingに注記",
     "2026-10-30 利用者の指示（1台ずつは遅い・3ヶ月分を1セットで）で2025年9〜12月導入の未掲載17機種＋秘宝伝をPR #8に一括作成（#6・#7を統合しclose）、同スレッドで承認依頼",
     "2026-10-30 返信確認：利用者の「承認」でPR #8（2025年9〜12月導入18機種・MACHINES_LIST修正）をmainへマージ（確認OK・TOP20件維持）。利用者の指示で承認リストのスプシを作成（settings.approvalSheet）。PR #4（CLAUDE.md §7.4）はopenのまま pending 未登録",
-    "2026-10-30 利用者の承認（チャット）でPR #4（CLAUDE.md §7.4 導入直後機種のモニタリング）をmainへマージ"
+    "2026-10-30 利用者の承認（チャット）でPR #4（CLAUDE.md §7.4 導入直後機種のモニタリング）をmainへマージ",
+    "2026-10-31 新台なし（11/2に6機種・11/16に1機種予定）・マイジャグラーⅥ確認（新解析なし）→ 2025年6〜8月導入の未掲載21機種をPR #9に一括作成、承認メール送信。承認リストのスプシは書き込み権限が拒否され未追加"
   ]
 }
