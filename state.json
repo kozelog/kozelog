@@ -20,39 +20,7 @@
       "rule": "PRを作ったら行を追加（状態=承認待ち）。マージ・クローズしたら状態と結果日を更新"
     }
   },
-  "pending": [
-    {
-      "pr": 9,
-      "branch": "auto/add-2025-06-08-backfill",
-      "gmailThreadId": "1a18eada41edccd5",
-      "kind": "add-batch",
-      "machineId": [
-        "iza-bancho",
-        "dmc5",
-        "guilty-crown2",
-        "new-pulsar-bt",
-        "l-ultraman",
-        "lb-jackpot",
-        "lb-1000chan-a",
-        "harlem-ace",
-        "lb-premium-umaibou",
-        "zettai-shougeki-platonic",
-        "eva-yakusoku",
-        "watashi-no-shiawase",
-        "alex-bright",
-        "haibi-return-30",
-        "lb-triple-crown",
-        "azurlane",
-        "darlifra",
-        "saki-choujou",
-        "tenken",
-        "nameneko",
-        "matador3"
-      ],
-      "sentAt": "2026-10-31T06:50+09:00",
-      "note": "2025年6〜8月導入の未掲載21機種。番号1〜21で個別承認可（メール内の番号順）。要確認：アズールレーン設定5 AT初当たり・ULTRAMANスペシウムゾーン期待度の5%超差、新規メーカー6、メーカー表記（KPE→konami・ネオス/ボーダー）、動画候補5件"
-    }
-  ],
+  "pending": [],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -200,6 +168,7 @@
     "2026-10-30 利用者の指示（1台ずつは遅い・3ヶ月分を1セットで）で2025年9〜12月導入の未掲載17機種＋秘宝伝をPR #8に一括作成（#6・#7を統合しclose）、同スレッドで承認依頼",
     "2026-10-30 返信確認：利用者の「承認」でPR #8（2025年9〜12月導入18機種・MACHINES_LIST修正）をmainへマージ（確認OK・TOP20件維持）。利用者の指示で承認リストのスプシを作成（settings.approvalSheet）。PR #4（CLAUDE.md §7.4）はopenのまま pending 未登録",
     "2026-10-30 利用者の承認（チャット）でPR #4（CLAUDE.md §7.4 導入直後機種のモニタリング）をmainへマージ",
-    "2026-10-31 新台なし（11/2に6機種・11/16に1機種予定）・マイジャグラーⅥ確認（新解析なし）→ 2025年6〜8月導入の未掲載21機種をPR #9に一括作成、承認メール送信。承認リストのスプシは書き込み権限が拒否され未追加"
+    "2026-10-31 新台なし（11/2に6機種・11/16に1機種予定）・マイジャグラーⅥ確認（新解析なし）→ 2025年6〜8月導入の未掲載21機種をPR #9に一括作成、承認メール送信。承認リストのスプシは書き込み権限が拒否され未追加",
+    "2026-10-31 利用者の承認（チャット）でPR #9（2025年6〜8月導入21機種）をmainへマージ（squash・衝突なし）。要確認項目（5%超差2件・メーカー表記）は平均値・提案どおりのまま反映"
   ]
 }
