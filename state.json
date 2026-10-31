@@ -20,7 +20,26 @@
       "rule": "PRを作ったら行を追加（状態=承認待ち）。マージ・クローズしたら状態と結果日を更新"
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "pr": 10,
+      "branch": "auto/update-mahoako",
+      "gmailThreadId": "1a193bffd65628c7",
+      "kind": "update",
+      "machineId": "mahoako",
+      "sentAt": "2026-11-01T06:30:00+09:00",
+      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）"
+    },
+    {
+      "pr": 11,
+      "branch": "auto/update-juuou",
+      "gmailThreadId": "1a193bffd65628c7",
+      "kind": "update",
+      "machineId": "juuou",
+      "sentAt": "2026-11-01T06:30:00+09:00",
+      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）"
+    }
+  ],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -29,32 +48,32 @@
     },
     "uminchu": {
       "releaseDate": "2026-10-19",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/okazaki/uminchu/"
     },
     "mahoako": {
       "releaseDate": "2026-10-19",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/newgin/mahoako/"
     },
     "juuou": {
       "releaseDate": "2026-10-05",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/sammy/juuou/"
     },
     "mhr-sunbreak": {
       "releaseDate": "2026-10-05",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/adelion/mhr-sunbreak/"
     },
     "paripi-koumei": {
       "releaseDate": "2026-10-05",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/yamasa/paripi-koumei/"
     },
     "tenten": {
       "releaseDate": "2026-10-05",
-      "lastChecked": "2026-10-29",
+      "lastChecked": "2026-11-01",
       "url": "/machine/orinpia/tenten/"
     },
     "hihou-den-smart": {
@@ -149,7 +168,7 @@
     }
   },
   "knownUnlisted": [],
-  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。 2026-10-31: 1geki新台カレンダー・altemaはWebFetch直指定が拒否された。1geki 202506〜202508 は検索結果(202507)ページ内リンク経由で取得できた。chonborista.com/shindai/4197/ と nana-press.com/kaiseki/release/ は検索経由で取得可。p-gabuは今回もほぼ取得不可。承認リストのスプシへの書き込みは自動モードで拒否された（行の追加は未実施）。",
+  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。 2026-10-31: 1geki新台カレンダー・altemaはWebFetch直指定が拒否された。1geki 202506〜202508 は検索結果(202507)ページ内リンク経由で取得できた。chonborista.com/shindai/4197/ と nana-press.com/kaiseki/release/ は検索経由で取得可。p-gabuは今回もほぼ取得不可。承認リストのスプシへの書き込みは自動モードで拒否された（行の追加は未実施）。 2026-11-01: 1geki新台カレンダー202611はWebFetch直指定が拒否。nana-press.com/kaiseki/release/ は取得可。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
     "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定",
@@ -169,6 +188,7 @@
     "2026-10-30 返信確認：利用者の「承認」でPR #8（2025年9〜12月導入18機種・MACHINES_LIST修正）をmainへマージ（確認OK・TOP20件維持）。利用者の指示で承認リストのスプシを作成（settings.approvalSheet）。PR #4（CLAUDE.md §7.4）はopenのまま pending 未登録",
     "2026-10-30 利用者の承認（チャット）でPR #4（CLAUDE.md §7.4 導入直後機種のモニタリング）をmainへマージ",
     "2026-10-31 新台なし（11/2に6機種・11/16に1機種予定）・マイジャグラーⅥ確認（新解析なし）→ 2025年6〜8月導入の未掲載21機種をPR #9に一括作成、承認メール送信。承認リストのスプシは書き込み権限が拒否され未追加",
-    "2026-10-31 利用者の承認（チャット）でPR #9（2025年6〜8月導入21機種）をmainへマージ（squash・衝突なし）。要確認項目（5%超差2件・メーカー表記）は平均値・提案どおりのまま反映"
+    "2026-10-31 利用者の承認（チャット）でPR #9（2025年6〜8月導入21機種）をmainへマージ（squash・衝突なし）。要確認項目（5%超差2件・メーカー表記）は平均値・提案どおりのまま反映",
+    "2026-11-01 新台なし（11/2に6機種予定）。§7.4確認：海人・まほあこ・獣王・モンハンサンブレイク・パリピ孔明・てんてん。まほあこ(PR #10 CZ種別全設定・REGキャラ紹介・ツール)・獣王(PR #11 ループストック振り分け・潜伏終了時SC高確45%)を作成し承認メール送信。パリピ孔明は士気高揚ゾーン期待度・HEYHO ZONEが未掲載（上限のため次回）"
   ]
 }
