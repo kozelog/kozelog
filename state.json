@@ -28,7 +28,7 @@
       "kind": "update",
       "machineId": "mahoako",
       "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）"
+      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）"
     },
     {
       "pr": 11,
@@ -37,41 +37,7 @@
       "kind": "update",
       "machineId": "juuou",
       "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）"
-    },
-    {
-      "pr": 14,
-      "branch": "auto/add-godzilla-vs-eva2",
-      "gmailThreadId": "1a19e110fb2b8693",
-      "kind": "add",
-      "machineId": "godzilla-vs-eva2",
-      "sentAt": "2026-11-03T06:30:00+09:00",
-      "note": "PR #14と#15はTOP・MACHINES_LIST・sitemap・adminの同位置に追記（後マージ側で衝突解消）"
-    },
-    {
-      "pr": 15,
-      "branch": "auto/add-sao-ggo",
-      "gmailThreadId": "1a19e110fb2b8693",
-      "kind": "add",
-      "machineId": "sao-ggo",
-      "sentAt": "2026-11-03T06:30:00+09:00",
-      "note": "PR #14と#15はTOP・MACHINES_LIST・sitemap・adminの同位置に追記（後マージ側で衝突解消）"
-    },
-    {
-      "pr": 16,
-      "branch": "auto/update-vivy",
-      "gmailThreadId": "1a19e110fb2b8693",
-      "kind": "update",
-      "machineId": "vivy",
-      "sentAt": "2026-11-03T06:30:00+09:00"
-    },
-    {
-      "pr": 17,
-      "branch": "auto/update-seiya-ougon",
-      "gmailThreadId": "1a19e110fb2b8693",
-      "kind": "update",
-      "machineId": "seiya-ougon",
-      "sentAt": "2026-11-03T06:30:00+09:00"
+      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）"
     }
   ],
   "machines": {
@@ -257,6 +223,7 @@
     "2026-11-01 新台なし（11/2に6機種予定）。§7.4確認：海人・まほあこ・獣王・モンハンサンブレイク・パリピ孔明・てんてん。まほあこ(PR #10 CZ種別全設定・REGキャラ紹介・ツール)・獣王(PR #11 ループストック振り分け・潜伏終了時SC高確45%)を作成し承認メール送信。パリピ孔明は士気高揚ゾーン期待度・HEYHO ZONEが未掲載（上限のため次回）",
     "2026-11-02 新台6機種（11/2導入）のうちVivy(PR #12)・聖闘士星矢 黄金十二宮(PR #13)を作成し承認メール送信。残り4機種はknownUnlistedへ（新台未掲載として翌日以降に追加）。§7.4確認対象なし（全機種が確認間隔内）",
     "2026-11-02 返信確認：11/2スレッドで「承認」→ PR #12(Vivy)・#13(聖闘士星矢 黄金十二宮)をマージ。#13はTOPカード衝突を解消（両機種先頭・禁書目録2を外して20件維持）。11/1スレッド(PR #10・#11)は返信なしで保留",
-    "2026-11-03 新台なし（11/16ハイハイシオサイRe予定）。knownUnlistedからゴジエヴァ2(PR #14)・ガンゲイル(PR #15)を作成。§7.4確認：Vivy(PR #16 変換高確弱チェリー・EX昇格表・ミニキャラ表)・聖闘士星矢(PR #17 ENランプ・天井短縮・有利区間)。承認メール送信（pending 6件）"
+    "2026-11-03 新台なし（11/16ハイハイシオサイRe予定）。knownUnlistedからゴジエヴァ2(PR #14)・ガンゲイル(PR #15)を作成。§7.4確認：Vivy(PR #16 変換高確弱チェリー・EX昇格表・ミニキャラ表)・聖闘士星矢(PR #17 ENランプ・天井短縮・有利区間)。承認メール送信（pending 6件）",
+    "2026-11-03 返信確認：11/3スレッドで「承認」→ PR #14(ゴジエヴァ2)・#15(ガンゲイル)・#16(Vivy)・#17(聖闘士星矢)をマージ。#15はTOP・MACHINES_LIST・sitemap・adminの衝突を解消（新台2件を先頭・すーぱぁびん娘を外して20件維持）、#16はadmin衝突を解消。11/1スレッド(PR #10・#11)は返信なしで保留"
   ]
 }
