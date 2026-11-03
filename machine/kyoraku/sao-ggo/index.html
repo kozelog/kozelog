@@ -31,7 +31,7 @@
       "description": "京楽のスマスロ「L ソードアート・オンライン オルタナティブ ガンゲイル・オンライン」の設定別初当たり・SJ確率と機械割、小役確率、天井（975G+α・6スルー）、設定変更時の短縮、天国示唆、SJ・上位STの継続率、打ち方・やめどき、設定判別ツールを掲載。",
       "inLanguage": "ja",
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-04",
       "publisher": {
         "@type": "Organization",
         "name": "こぜログ",
@@ -65,7 +65,7 @@
       "@type": "Article",
       "headline": "L ソードアート・オンライン オルタナティブ ガンゲイル・オンライン（スマスロ GGO） 解析・スペック【天井・設定判別・SJ継続率】",
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-04",
       "author": {
         "@type": "Organization",
         "name": "こぜログ"
@@ -105,6 +105,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "通常時975G＋αでボーナスに当選します。ボーナス6回スルー（7回目のボーナス）でSJ以上に当選します。設定変更時とSJ駆け抜け後はゲーム数天井300G＋α・スルー天井2回に短縮されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "スマスロ ガンゲイル・オンラインの天井狙いは何Gからですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "設定1の暫定期待値（なな徹）では、期待値1,000pt超の目安は通常時が等価700G〜・5.6枚交換800G〜、設定変更時が等価150G〜・5.6枚交換200G〜です。スルー天井は通常時5スルー〜、SJ駆け抜け後は1スルー〜が狙い目です。"
           }
         },
         {
@@ -297,10 +305,60 @@
           <tr><td>SJ間スルー天井</td><td>ボーナス6回スルー（7回目のボーナスでSJ以上）</td></tr>
           <tr><td>設定変更時・SJ駆け抜け後</td><td>ゲーム数天井300G＋α、スルー天井2回（3回目のボーナスでSJ以上）</td></tr>
           <tr><td>設定変更時にリセットされるもの</td><td>内部状態・有利区間</td></tr>
+          <tr><td>設定変更時のグレネードカウンター</td><td>初期値0〜5個で振り分け（表示は小Vベル成立分の1個が加算された状態）。電断時は弾丸に蓋がされ、小Vベル成立で蓋が開いて現在の弾数が表示されます（なな徹）</td></tr>
           <tr><td>電源OFF→ON時</td><td>すべて引き継ぎ</td></tr>
         </tbody>
       </table></div>
-      <p class="info-note">ゲーム数天井・スルー天井はちょんぼりすた・DMMぱちタウンで一致しています。リセット項目と電源OFF時の挙動の出典はちょんぼりすたです。天井期待値は解析待ちです。</p>
+      <p class="info-note">ゲーム数天井・スルー天井はちょんぼりすた・DMMぱちタウンで一致しています。リセット項目と電源OFF時の挙動の出典はちょんぼりすた、グレネードカウンターの初期値はなな徹です。</p>
+      <h3 class="sub-heading">天井期待値（設定1・暫定）通常時</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>打ち始めG数</th><th>等価</th><th>5.6枚交換</th></tr></thead>
+        <tbody>
+          <tr><td>0G〜</td><td class="td-neg">-311pt</td><td class="td-neg">-937pt</td></tr>
+          <tr><td>50G〜</td><td class="td-neg">-299pt</td><td class="td-neg">-925pt</td></tr>
+          <tr><td>100G〜</td><td class="td-neg">-284pt</td><td class="td-neg">-911pt</td></tr>
+          <tr><td>150G〜</td><td class="td-neg">-265pt</td><td class="td-neg">-892pt</td></tr>
+          <tr><td>200G〜</td><td class="td-neg">-240pt</td><td class="td-neg">-867pt</td></tr>
+          <tr><td>250G〜</td><td class="td-neg">-208pt</td><td class="td-neg">-834pt</td></tr>
+          <tr><td>300G〜</td><td class="td-neg">-166pt</td><td class="td-neg">-792pt</td></tr>
+          <tr><td>350G〜</td><td class="td-neg">-112pt</td><td class="td-neg">-738pt</td></tr>
+          <tr><td>400G〜</td><td class="td-neg">-41pt</td><td class="td-neg">-667pt</td></tr>
+          <tr><td>450G〜</td><td class="td-pos">+51pt</td><td class="td-neg">-576pt</td></tr>
+          <tr><td>500G〜</td><td class="td-pos">+170pt</td><td class="td-neg">-456pt</td></tr>
+          <tr><td>550G〜</td><td class="td-pos">+324pt</td><td class="td-neg">-302pt</td></tr>
+          <tr><td>600G〜</td><td class="td-pos">+525pt</td><td class="td-neg">-101pt</td></tr>
+          <tr><td>650G〜</td><td class="td-pos">+786pt</td><td class="td-pos">+160pt</td></tr>
+          <tr><td>700G〜</td><td class="td-pos">+1,125pt</td><td class="td-pos">+498pt</td></tr>
+          <tr><td>750G〜</td><td class="td-pos">+1,564pt</td><td class="td-pos">+938pt</td></tr>
+          <tr><td>800G〜</td><td class="td-pos">+2,135pt</td><td class="td-pos">+1,509pt</td></tr>
+          <tr><td>850G〜</td><td class="td-pos">+2,876pt</td><td class="td-pos">+2,250pt</td></tr>
+          <tr><td>900G〜</td><td class="td-pos">+3,838pt</td><td class="td-pos">+3,212pt</td></tr>
+          <tr><td>950G〜</td><td class="td-pos">+5,087pt</td><td class="td-pos">+4,461pt</td></tr>
+        </tbody>
+      </table></div>
+      <h3 class="sub-heading">天井期待値（設定1・暫定）設定変更時</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>打ち始めG数</th><th>等価</th><th>5.6枚交換</th></tr></thead>
+        <tbody>
+          <tr><td>0G〜</td><td class="td-neg">-247pt</td><td class="td-neg">-746pt</td></tr>
+          <tr><td>50G〜</td><td class="td-pos">+138pt</td><td class="td-neg">-360pt</td></tr>
+          <tr><td>100G〜</td><td class="td-pos">+639pt</td><td class="td-pos">+141pt</td></tr>
+          <tr><td>150G〜</td><td class="td-pos">+1,290pt</td><td class="td-pos">+791pt</td></tr>
+          <tr><td>200G〜</td><td class="td-pos">+2,134pt</td><td class="td-pos">+1,635pt</td></tr>
+          <tr><td>250G〜</td><td class="td-pos">+3,230pt</td><td class="td-pos">+2,732pt</td></tr>
+        </tbody>
+      </table></div>
+      <h3 class="sub-heading">狙い目の目安</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>条件</th><th>等価</th><th>5.6枚交換</th></tr></thead>
+        <tbody>
+          <tr><td>ゲーム数天井（通常時）</td><td>700G〜</td><td>800G〜</td></tr>
+          <tr><td>ゲーム数天井（設定変更時）</td><td>150G〜</td><td>200G〜</td></tr>
+          <tr><td>スルー天井（通常時）</td><td colspan="2">5スルー〜</td></tr>
+          <tr><td>スルー天井（SJ駆け抜け後）</td><td colspan="2">1スルー〜</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：なな徹（他サイトは解析待ち）。なな徹の独自シミュレーターによる暫定値で、設定1・ボーナス終了後即やめ・コイン持ち50枚あたり31G・非前兆中・閉店による取りこぼしなし・スルー天井は考慮しない条件で算出されています。ゲーム数天井の目安は期待値1,000pt超となる打ち始めG数です。等価の期待値がプラスになるのは通常時450G〜・設定変更時50G〜、5.6枚交換では通常時650G〜・設定変更時100G〜です。</p>
     </section>
 
     <section class="section" id="sec-freeze">
@@ -317,6 +375,44 @@
       <h3 class="sub-heading">イモータルモード</h3>
       <p>強レア役の35%で突入する高確率ゾーンで、10G＋α継続し、レア役確率は約1/5.3です。</p>
       <p class="info-note">出典：ちょんぼりすた。モード別の移行率・期待値は解析待ちです。</p>
+      <h3 class="sub-heading">モード別 無限ボーナス超高確の開始G数</h3>
+      <p>50Gごとの高確移行抽選に当選すると、その50G間はボーナス高確以上に滞在します。さらにモードごとに決まったG数に到達すると「無限ボーナス超高確」に入り、以降はボーナス当選まで転落しません。</p>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>無限ボーナス超高確</th></tr></thead>
+        <tbody>
+          <tr><td>天国</td><td>101G〜</td></tr>
+          <tr><td>チャンスB</td><td>501G〜</td></tr>
+          <tr><td>チャンスA</td><td>701G〜</td></tr>
+          <tr><td>通常B</td><td>801G〜</td></tr>
+          <tr><td>通常A・チャンスC</td><td>951G〜</td></tr>
+        </tbody>
+      </table></div>
+      <p>501〜550Gはどのモードでも高確以上になる区間です。一方、451〜500Gは天国以外のモードで高確に移行しません。超高確に移行したら、ボーナス当選か50Gの区切りまでは続行するのがおすすめです。</p>
+      <h3 class="sub-heading">ステージ示唆</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>ステージ</th><th>示唆</th></tr></thead>
+        <tbody>
+          <tr><td>サルーン酒場・SBCブロッケン・草原・日常ステージ</td><td>デフォルト</td></tr>
+          <tr><td>雪原ステージ</td><td>ボーナス高確を示唆</td></tr>
+          <tr><td>流星ステージ</td><td>ボーナス超高確濃厚</td></tr>
+        </tbody>
+      </table></div>
+      <h3 class="sub-heading">通常時の抽選</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>ボーナス超高確中</td><td>ボーナス当選率 約1/40（トータル期待度70%超）</td></tr>
+          <tr><td>スイカ</td><td>ボーナス抽選＋約25%でボーナス高確が1段階アップ。スイカで上がった高確はハズレ目の約1/8で転落抽選</td></tr>
+          <tr><td>チェリー・バレット</td><td>ボーナス抽選</td></tr>
+          <tr><td>バレットチェリー・バレットスイカ</td><td>ボーナス抽選＋報酬レベルアップ抽選</td></tr>
+          <tr><td>グレネード</td><td>押し順小Vベル成立で1個装填され、6個貯まるとグレネードジャッジへ。報酬はバレット高確（10G・20G・30G）、ボーナス、CZ「イエスマム」のいずれか</td></tr>
+          <tr><td>CZ「イエスマム」</td><td>ST期待度 約50%</td></tr>
+          <tr><td>150G以内のボーナス当選率</td><td>全モード合算で約50%</td></tr>
+        </tbody>
+      </table></div>
+      <h3 class="sub-heading">終了画面</h3>
+      <p>ボーナスで報酬アイコンを獲得できなかった場合と、ST終了時の終了画面で次回のモードを示唆します。「目を瞑るレン」は上記のとおり天国濃厚です。ほかの5種類（レン①・レン②・腕組み・レン＆フカ次郎・シルエット）の示唆内容は調査中です。</p>
+      <p class="info-note">無限ボーナス超高確の開始G数・高確移行の仕組み・通常時の抽選・終了画面の出典はなな徹（他サイトは解析待ち）。ステージ示唆のうち雪原・流星はなな徹・DMMぱちタウンで一致しており、デフォルトステージの名称はなな徹によるものです。</p>
     </section>
     <div class="ad-mid"><div class="ad-slot"></div></div>
 
@@ -410,6 +506,7 @@
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインの導入日はいつですか？</summary><div class="faq-a"><p>京楽のスマスロ「L ソードアート・オンライン オルタナティブ ガンゲイル・オンライン」は、2026年11月2日に導入されました。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインの機械割（出玉率）は？</summary><div class="faq-a"><p>設定1が97.9%、設定2が98.8%、設定3が100.9%、設定4が104.2%、設定5が109.7%、設定6が114.5%です。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインの天井は？</summary><div class="faq-a"><p>通常時975G＋αでボーナスに当選します。ボーナス6回スルー（7回目のボーナス）でSJ以上に当選します。設定変更時とSJ駆け抜け後はゲーム数天井300G＋α・スルー天井2回に短縮されます。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインの天井狙いは何Gからですか？</summary><div class="faq-a"><p>設定1の暫定期待値（なな徹）では、期待値1,000pt超の目安は通常時が等価700G〜・5.6枚交換800G〜、設定変更時が等価150G〜・5.6枚交換200G〜です。スルー天井は通常時5スルー〜、SJ駆け抜け後は1スルー〜が狙い目です。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインの設定判別で重要な要素は？</summary><div class="faq-a"><p>ボーナス初当たり確率（設定1：1/192.0〜設定6：1/153.9）とSJ確率（設定1：1/521.7〜設定6：1/392.6）に設定差があります。ボーナス終了画面などの示唆内容は解析待ちです。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインのSJの継続率は？</summary><div class="faq-a"><p>スクワッドジャム1は25Gで約70%、スクワッドジャム2は30Gで約77%、上位ST「イカれたレン」は8Gで約85%です。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ ガンゲイル・オンラインのやめどきは？</summary><div class="faq-a"><p>SJ・上位ST終了後やSJ非当選のボーナス後は、即やめまたは100G＋αまで天国を確認してからやめます。天国濃厚の示唆が出た場合は次回ボーナスまで続行します。</p></div></details>
