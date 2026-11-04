@@ -28,7 +28,7 @@
       "kind": "update",
       "machineId": "mahoako",
       "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）"
+      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）。11/4に#18〜#21マージ後のmainでadmin/index.html衝突の可能性あり"
     },
     {
       "pr": 11,
@@ -37,43 +37,7 @@
       "kind": "update",
       "machineId": "juuou",
       "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）"
-    },
-    {
-      "pr": 18,
-      "branch": "auto/add-ragnador",
-      "gmailThreadId": "1a1a3424a71dc3f6",
-      "kind": "add",
-      "machineId": "ragnador",
-      "sentAt": "2026-11-04T06:30:00+09:00",
-      "note": "PR #19とTOP・index.js・sitemap・adminで衝突見込み（両方承認時は11/2の2機種を入れ古い2件を外して20件維持）"
-    },
-    {
-      "pr": 19,
-      "branch": "auto/add-garo-yami",
-      "gmailThreadId": "1a1a3424a71dc3f6",
-      "kind": "add",
-      "machineId": "garo-yami",
-      "sentAt": "2026-11-04T06:30:00+09:00",
-      "note": "新メーカー sansei-lab（表記SANSEI LAB／サンセイR&Dは要確認）。PR #18と衝突見込み"
-    },
-    {
-      "pr": 20,
-      "branch": "auto/update-uminchu",
-      "gmailThreadId": "1a1a3424a71dc3f6",
-      "kind": "update",
-      "machineId": "uminchu",
-      "sentAt": "2026-11-04T06:30:00+09:00",
-      "note": "admin/index.html で他PRと衝突の可能性"
-    },
-    {
-      "pr": 21,
-      "branch": "auto/update-sao-ggo",
-      "gmailThreadId": "1a1a3424a71dc3f6",
-      "kind": "update",
-      "machineId": "sao-ggo",
-      "sentAt": "2026-11-04T06:30:00+09:00",
-      "note": "admin/index.html で他PRと衝突の可能性"
+      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）。11/4に#18〜#21マージ後のmainでadmin/index.html衝突の可能性あり"
     }
   ],
   "machines": {
@@ -260,6 +224,7 @@
     "2026-11-02 返信確認：11/2スレッドで「承認」→ PR #12(Vivy)・#13(聖闘士星矢 黄金十二宮)をマージ。#13はTOPカード衝突を解消（両機種先頭・禁書目録2を外して20件維持）。11/1スレッド(PR #10・#11)は返信なしで保留",
     "2026-11-03 新台なし（11/16ハイハイシオサイRe予定）。knownUnlistedからゴジエヴァ2(PR #14)・ガンゲイル(PR #15)を作成。§7.4確認：Vivy(PR #16 変換高確弱チェリー・EX昇格表・ミニキャラ表)・聖闘士星矢(PR #17 ENランプ・天井短縮・有利区間)。承認メール送信（pending 6件）",
     "2026-11-03 返信確認：11/3スレッドで「承認」→ PR #14(ゴジエヴァ2)・#15(ガンゲイル)・#16(Vivy)・#17(聖闘士星矢)をマージ。#15はTOP・MACHINES_LIST・sitemap・adminの衝突を解消（新台2件を先頭・すーぱぁびん娘を外して20件維持）、#16はadmin衝突を解消。11/1スレッド(PR #10・#11)は返信なしで保留",
-    "2026-11-04 新台: knownUnlistedのラグナドール(PR #18)・L牙狼 闇を照らす者(PR #19・新メーカーsansei-lab)を作成。§7.4確認：Vivy・星矢・ゴジエヴァ2・ガンゲイル・ウミンチュ → ウミンチュ(PR #20)・ガンゲイル(PR #21)を更新。Vivy・星矢は未掲載情報あり（次回）。承認メール送信（pending 6件）"
+    "2026-11-04 新台: knownUnlistedのラグナドール(PR #18)・L牙狼 闇を照らす者(PR #19・新メーカーsansei-lab)を作成。§7.4確認：Vivy・星矢・ゴジエヴァ2・ガンゲイル・ウミンチュ → ウミンチュ(PR #20)・ガンゲイル(PR #21)を更新。Vivy・星矢は未掲載情報あり（次回）。承認メール送信（pending 6件）",
+    "2026-11-04 返信確認：11/4スレッドで「承認」→ PR #18(ラグナドール)・#19(牙狼)・#20(ウミンチュ)・#21(ガンゲイル)をマージ。#19はTOP・sitemapの衝突を解消（ワールドダイスターを外して20件維持）、#21はadmin衝突を解消。11/1スレッド(PR #10・#11)は返信なしで保留"
   ]
 }
