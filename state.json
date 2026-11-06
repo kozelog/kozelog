@@ -20,7 +20,24 @@
       "rule": "PRを作ったら行を追加（状態=承認待ち）。マージ・クローズしたら状態と結果日を更新"
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "pr": 26,
+      "branch": "auto/update-godzilla-vs-eva2-20261107",
+      "gmailThreadId": "1a1b2a6cf45d9d00",
+      "kind": "update",
+      "machineId": "godzilla-vs-eva2",
+      "sentAt": "2026-11-07T05:55:00+09:00"
+    },
+    {
+      "pr": 27,
+      "branch": "auto/update-ragnador-20261107",
+      "gmailThreadId": "1a1b2a6cf45d9d00",
+      "kind": "update",
+      "machineId": "ragnador",
+      "sentAt": "2026-11-07T05:55:00+09:00"
+    }
+  ],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -159,27 +176,27 @@
     },
     "godzilla-vs-eva2": {
       "releaseDate": "2026-11-02",
-      "lastChecked": "2026-11-05",
+      "lastChecked": "2026-11-07",
       "url": "/machine/bisty/godzilla-vs-eva2/"
     },
     "sao-ggo": {
       "releaseDate": "2026-11-02",
-      "lastChecked": "2026-11-05",
+      "lastChecked": "2026-11-07",
       "url": "/machine/kyoraku/sao-ggo/"
     },
     "ragnador": {
       "releaseDate": "2026-11-02",
-      "lastChecked": "2026-11-05",
+      "lastChecked": "2026-11-07",
       "url": "/machine/mizuho/ragnador/"
     },
     "garo-yami": {
       "releaseDate": "2026-11-02",
-      "lastChecked": "2026-11-05",
+      "lastChecked": "2026-11-07",
       "url": "/machine/sansei-lab/garo-yami/"
     }
   },
   "knownUnlisted": [],
-  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。 2026-10-31: 1geki新台カレンダー・altemaはWebFetch直指定が拒否された。1geki 202506〜202508 は検索結果(202507)ページ内リンク経由で取得できた。chonborista.com/shindai/4197/ と nana-press.com/kaiseki/release/ は検索経由で取得可。p-gabuは今回もほぼ取得不可。承認リストのスプシへの書き込みは自動モードで拒否された（行の追加は未実施）。 2026-11-01: 1geki新台カレンダー202611はWebFetch直指定が拒否。nana-press.com/kaiseki/release/ は取得可。 2026-11-02: nana-press機種ページ・リリース一覧はWebFetch直指定で拒否、検索結果URL経由なら取得可。chonborista.com/shindai/4197/ は検索経由で取得可。公式YouTubeは検索で見つからず。 2026-11-03: nana-press.com/kaiseki/release/ は取得可、nana機種トップ(/machine/1244/)は直指定で拒否、記事URL(/machine/1247/39894/等)は検索経由で取得可。p-town機種ページ・1geki機種ページ・chonborista ?p= 形式は検索経由で取得可。公式YouTubeは検索で見つからず。 2026-11-04: nana機種トップ(/kaiseki/machine/1250/,1251/)・p-town機種ページ・chonborista機種ページ・1geki /l_ragnador/3/ は検索経由で取得可。nana一部記事(1193/40117, 1247)は取得拒否。p-gabuは今回も未取得。git ls-remote/fetch がタイムアウトする場面あり（push・GitHub MCPは可）。 2026-11-05: nana Vivy記事(/1259/40035,40036,39731)は直指定で取得可。chonborista ?p=260304・1geki /l_seiya_ougon/63/ は検索経由で取得可。auto/update-機種slug は過去のマージ済みブランチが残っているため、同名で再利用するとpushが拒否される（日付付き名にする）。",
+  "sourceNotes": "参考サイトへの直接アクセス・shellからのアクセスは不可。WebSearchで見つけた結果URLならWebFetchで取得可（1geki・p-town・nana-press・chonborista で確認済み。p-gabuは未取得）。新台一覧は 1geki.jp/newmachinecalender/YYYYMM/ と chonborista.com/shindai/4197/ が検索結果経由で取得可。 2026-10-29: p-gabuは機種ページが検索に出ず未取得。YouTubeはoEmbed・watchページともWebFetch不可（チャンネル確認できず）。11/2に6機種・11/16に1機種のスロット新台予定。 2026-10-30: MACHINES_LISTには未掲載機種（kozelogフラグなし）も含まれるため、未掲載判定は kozelog:true の有無で行う。1geki新台カレンダーは202601〜202610をWebFetch直指定で取得できた。ちょんぼりすたの秘宝伝ページのコメント欄に指示文のような書き込みあり（無視）。 2026-10-31: 1geki新台カレンダー・altemaはWebFetch直指定が拒否された。1geki 202506〜202508 は検索結果(202507)ページ内リンク経由で取得できた。chonborista.com/shindai/4197/ と nana-press.com/kaiseki/release/ は検索経由で取得可。p-gabuは今回もほぼ取得不可。承認リストのスプシへの書き込みは自動モードで拒否された（行の追加は未実施）。 2026-11-01: 1geki新台カレンダー202611はWebFetch直指定が拒否。nana-press.com/kaiseki/release/ は取得可。 2026-11-02: nana-press機種ページ・リリース一覧はWebFetch直指定で拒否、検索結果URL経由なら取得可。chonborista.com/shindai/4197/ は検索経由で取得可。公式YouTubeは検索で見つからず。 2026-11-03: nana-press.com/kaiseki/release/ は取得可、nana機種トップ(/machine/1244/)は直指定で拒否、記事URL(/machine/1247/39894/等)は検索経由で取得可。p-town機種ページ・1geki機種ページ・chonborista ?p= 形式は検索経由で取得可。公式YouTubeは検索で見つからず。 2026-11-04: nana機種トップ(/kaiseki/machine/1250/,1251/)・p-town機種ページ・chonborista機種ページ・1geki /l_ragnador/3/ は検索経由で取得可。nana一部記事(1193/40117, 1247)は取得拒否。p-gabuは今回も未取得。git ls-remote/fetch がタイムアウトする場面あり（push・GitHub MCPは可）。 2026-11-05: nana Vivy記事(/1259/40035,40036,39731)は直指定で取得可。chonborista ?p=260304・1geki /l_seiya_ougon/63/ は検索経由で取得可。auto/update-機種slug は過去のマージ済みブランチが残っているため、同名で再利用するとpushが拒否される（日付付き名にする）。 2026-11-07: nana機種トップ(/kaiseki/machine/1250/)は直指定で拒否、記事(/1250/39824/)から更新履歴が読める。nana 1251(牙狼)トップ・1244/40121・1247/39902・40135、p-town /machines/5119、chonborista /slot/bisty-slot/267113/・?p=266983、1geki /l_goji_eva2/81/ は検索経由で取得可。",
   "log": [
     "2026-10-28 試運転: マイジャグラーⅥ PR #1 作成・承認メール送信",
     "2026-10-28 返信: 公式動画URL追加の指示・設定案OK → 動画反映、定期実行を設定",
@@ -209,6 +226,7 @@
     "2026-11-04 返信確認：11/4スレッドで「承認」→ PR #18(ラグナドール)・#19(牙狼)・#20(ウミンチュ)・#21(ガンゲイル)をマージ。#19はTOP・sitemapの衝突を解消（ワールドダイスターを外して20件維持）、#21はadmin衝突を解消。11/1スレッド(PR #10・#11)は返信なしで保留",
     "2026-11-05 新台なし。§7.4確認：Vivy・星矢・ゴジエヴァ2・ガンゲイル・ラグナドール・牙狼 → Vivy(PR #24 内部状態・変換レベル・ステージ/プレート/カード示唆)・星矢(PR #25 加護AT中・CZ間G数抽選・強小宇宙目・VGC)を作成。旧同名ブランチ誤用のPR #22・#23はclose。ゴジエヴァ2はなな徹新記事40133を次回確認。承認メール送信（pending 4件）",
     "2026-11-06 返事待ち4件（PR #10・#11・#24・#25）のため新しい変更案は作らず、催促メールを送信（thread 1a1ad76afba16af4）",
-    "2026-11-06 返信確認：催促メール(thread 1a1ad76afba16af4)に「全部承認」→ PR #10(まほあこ)・#11(獣王)をmain取り込み＋admin/index.html衝突解消のうえマージ、#24(Vivy)・#25(星矢黄金)をマージ。pending 0件。結果を同スレッドに返信"
+    "2026-11-06 返信確認：催促メール(thread 1a1ad76afba16af4)に「全部承認」→ PR #10(まほあこ)・#11(獣王)をmain取り込み＋admin/index.html衝突解消のうえマージ、#24(Vivy)・#25(星矢黄金)をマージ。pending 0件。結果を同スレッドに返信",
+    "2026-11-07 新台なし（次は11/16ハイハイシオサイRe）。§7.4確認：ゴジエヴァ2・ラグナドール・牙狼・ガンゲイル → ゴジエヴァ2(PR #26 終了画面追加分・エンディングボイス・内部状態・ゾーン・集結バトル・AT中抽選・引き戻し率)・ラグナドール(PR #27 勝利確定CZ・対戦相手振り分け・ダメージ・オトモ)を作成。Vivy・星矢・マイジャグ6・ウミンチュ・まほあこは上限のため未確認（次回）。承認メール送信（thread 1a1b2a6cf45d9d00・pending 2件）"
   ]
 }
