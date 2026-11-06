@@ -377,7 +377,7 @@
   <!-- 岡崎産業 機種ページ -->
   <url>
     <loc>https://kozelog.net/machine/okazaki/uminchu/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -670,9 +670,51 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kozelog.net/machine/sansei-lab/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sansei-lab/garo-yami/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/mizuho/ragnador/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/sao-ggo/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/bisty/godzilla-vs-eva2/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/vivy/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kozelog.net/machine/sun3/jashin-chan/</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sun3/seiya-ougon/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
