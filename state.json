@@ -20,42 +20,7 @@
       "rule": "PRを作ったら行を追加（状態=承認待ち）。マージ・クローズしたら状態と結果日を更新"
     }
   },
-  "pending": [
-    {
-      "pr": 10,
-      "branch": "auto/update-mahoako",
-      "gmailThreadId": "1a193bffd65628c7",
-      "kind": "update",
-      "machineId": "mahoako",
-      "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #11とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）。11/4に#18〜#21マージ後のmainでadmin/index.html衝突の可能性あり"
-    },
-    {
-      "pr": 11,
-      "branch": "auto/update-juuou",
-      "gmailThreadId": "1a193bffd65628c7",
-      "kind": "update",
-      "machineId": "juuou",
-      "sentAt": "2026-11-01T06:30:00+09:00",
-      "note": "PR #10とadmin/index.htmlの隣接行で衝突（後マージ側で解消）。#14〜#17マージ後のmainでadmin/index.html衝突の可能性あり（マージ時に解消）。11/4に#18〜#21マージ後のmainでadmin/index.html衝突の可能性あり"
-    },
-    {
-      "pr": 24,
-      "branch": "auto/update-vivy-1105",
-      "gmailThreadId": "1a1a853fff3d0ce6",
-      "kind": "update",
-      "machineId": "vivy",
-      "sentAt": "2026-11-05T06:20:00+09:00"
-    },
-    {
-      "pr": 25,
-      "branch": "auto/update-seiya-ougon-1105",
-      "gmailThreadId": "1a1a853fff3d0ce6",
-      "kind": "update",
-      "machineId": "seiya-ougon",
-      "sentAt": "2026-11-05T06:20:00+09:00"
-    }
-  ],
+  "pending": [],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -243,6 +208,7 @@
     "2026-11-04 新台: knownUnlistedのラグナドール(PR #18)・L牙狼 闇を照らす者(PR #19・新メーカーsansei-lab)を作成。§7.4確認：Vivy・星矢・ゴジエヴァ2・ガンゲイル・ウミンチュ → ウミンチュ(PR #20)・ガンゲイル(PR #21)を更新。Vivy・星矢は未掲載情報あり（次回）。承認メール送信（pending 6件）",
     "2026-11-04 返信確認：11/4スレッドで「承認」→ PR #18(ラグナドール)・#19(牙狼)・#20(ウミンチュ)・#21(ガンゲイル)をマージ。#19はTOP・sitemapの衝突を解消（ワールドダイスターを外して20件維持）、#21はadmin衝突を解消。11/1スレッド(PR #10・#11)は返信なしで保留",
     "2026-11-05 新台なし。§7.4確認：Vivy・星矢・ゴジエヴァ2・ガンゲイル・ラグナドール・牙狼 → Vivy(PR #24 内部状態・変換レベル・ステージ/プレート/カード示唆)・星矢(PR #25 加護AT中・CZ間G数抽選・強小宇宙目・VGC)を作成。旧同名ブランチ誤用のPR #22・#23はclose。ゴジエヴァ2はなな徹新記事40133を次回確認。承認メール送信（pending 4件）",
-    "2026-11-06 返事待ち4件（PR #10・#11・#24・#25）のため新しい変更案は作らず、催促メールを送信（thread 1a1ad76afba16af4）"
+    "2026-11-06 返事待ち4件（PR #10・#11・#24・#25）のため新しい変更案は作らず、催促メールを送信（thread 1a1ad76afba16af4）",
+    "2026-11-06 返信確認：催促メール(thread 1a1ad76afba16af4)に「全部承認」→ PR #10(まほあこ)・#11(獣王)をmain取り込み＋admin/index.html衝突解消のうえマージ、#24(Vivy)・#25(星矢黄金)をマージ。pending 0件。結果を同スレッドに返信"
   ]
 }
