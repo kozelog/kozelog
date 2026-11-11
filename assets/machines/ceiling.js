@@ -18,7 +18,7 @@ var CEILING_DATA = [
   {"id": "kyokosuiri", "ceiling": "AT間1000G", "benefit": "AT確定", "unit": "G"},
   {"id": "sao2", "ceiling": "CZ間499G+α（液晶最大800G+α）／AT間1200G", "benefit": "AT確定（CZ間天井はCZ当選）", "resetCeiling": "CZ間256G+α", "nerai": "AT間 等価700G〜／5.6枚750G〜（現金800G〜）、CZ間 等価350G〜／5.6枚350G〜（現金400G〜）", "neraiReset": "朝一256G+αまで（設定変更判別時）", "neraiG": 700, "unit": "G", "ev": [{"label": "AT間天井（設定1）", "cols": ["等価", "5.6枚"], "rows": [[650, 1386, 193], [700, 1831, 638], [750, 2334, 1142], [800, 2903, 1710], [900, 4273, 3081], [1000, 6026, 4833], [1100, 8265, 7073]]}], "evNote": "AT間天井（1200G）到達時の期待値。設定1"},
   {"id": "su-yoshimune", "ceiling": "AT間1500G／CZ間1000G／周期6周期（通常A）", "benefit": "AT確定（CZ間・周期天井はCZ確定）", "resetCeiling": "AT間1000G+α", "nerai": "約1,100G〜", "neraiReset": "0G〜（等価）", "neraiG": 1100, "unit": "G"},
-  {"id": "vivy", "ceiling": "800G+α／最大6周期", "benefit": "AT「PROJECT SINGULARITY」当選", "resetCeiling": "500G+α", "unit": "G"},
+  {"id": "vivy", "ceiling": "800G+α／最大6周期", "benefit": "AT「PROJECT SINGULARITY」当選", "resetCeiling": "500G+α", "nerai": "等価・5.6枚持ちメダル500G〜／5.6枚現金550G〜（周期天井は4周期目+200pt〜）", "neraiReset": "200G〜", "neraiG": 500, "unit": "G", "evNote": "狙い目はDMMぱちタウンの目安（1サイトのみ・期待値の算出根拠は非公開）。天井期待値表は解析待ち"},
   {"id": "world-dai-star", "ceiling": "999G+α", "benefit": "AT当選", "resetCeiling": "600G+α", "nerai": "700G〜", "neraiReset": "0G〜（据え置き判別不可なら400G〜）", "neraiG": 700, "unit": "G"},
   {"id": "biohazard-re3", "ceiling": "AT間1000G+α／CZ6スルー", "benefit": "パンデミックチャンス経由AT確定（6スルー後は7回目CZ成功確定）", "resetCeiling": "650G+α", "nerai": "約650G〜（等価）", "neraiG": 650, "unit": "G"},
   {"id": "street-fighter-6", "ceiling": "1000G", "benefit": "ファイターズバトル（ST）当選", "nerai": "約650G〜（等価）", "neraiG": 650, "unit": "G"},
