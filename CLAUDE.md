@@ -426,6 +426,7 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | 京楽 | `京楽（KYORAKU）` |
 | 三洋物産 | `三洋物産（SANYO）` |
 | ネオス | `ネオス（NEOS）` |
+| DAXEL | `DAXEL（ダクセル）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
