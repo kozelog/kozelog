@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="../../assets/site.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564257400721530" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天井期待値一覧・計算ツール｜パチスロ・スマスロ天井狙い目まとめ | こぜログ</title>
+  <meta name="description" content="パチスロ・スマスロの天井G数・天井恩恵・リセット時の天井・狙い目を機種横断で一覧にしました。天井期待値の計算ツールで、現在のゲーム数から期待収支（pt）の目安を確認できます。">
+  <link rel="canonical" href="https://kozelog.net/search/ceiling/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="天井期待値一覧・計算ツール｜パチスロ・スマスロ天井狙い目まとめ | こぜログ">
+  <meta property="og:description" content="パチスロ・スマスロの天井G数・恩恵・狙い目の一覧と、天井期待値の計算ツール。">
+  <meta property="og:url" content="https://kozelog.net/search/ceiling/">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://kozelog.net/assets/logo.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"トップ","item":"https://kozelog.net/"},
+    {"@type":"ListItem","position":2,"name":"天井期待値一覧","item":"https://kozelog.net/search/ceiling/"}
+  ]}</script>
+  <link rel="stylesheet" href="../../assets/common.css">
+  <link rel="stylesheet" href="../search.css">
+  <style>
+    .ev-tool { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; margin-bottom: 32px; }
+    .ev-tool h2, .ceil-list-head h2 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .ev-tool .lead { font-size: 12px; color: var(--text2); margin-bottom: 14px; line-height: 1.7; }
+    .ev-form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 12px; }
+    .ev-form label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--text2); font-weight: 600; }
+    .ev-form .full { grid-column: 1 / -1; }
+    .ev-form select, .ev-form input, .ceil-filter select, .ceil-filter input {
+      background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px;
+      padding: 9px 10px; font-size: 14px; width: 100%; min-width: 0; font-family: inherit; }
+    .ev-form select:focus, .ev-form input:focus, .ceil-filter select:focus, .ceil-filter input:focus { outline: 2px solid var(--gold); outline-offset: -1px; }
+    .ev-result { margin-top: 16px; padding: 14px; border-radius: 8px; background: var(--bg); border: 1px solid var(--border); text-align: center; }
+    .ev-result .ev-label { font-size: 12px; color: var(--text2); }
+    .ev-result .ev-val { font-size: 30px; font-weight: 800; letter-spacing: .02em; margin: 4px 0; }
+    .ev-result .ev-val.pos { color: var(--green); }
+    .ev-result .ev-val.neg { color: var(--red); }
+    .ev-result .ev-sub { font-size: 12px; color: var(--text2); line-height: 1.7; }
+    .ev-result a { color: var(--gold); }
+    .ev-tbl-wrap { margin-top: 14px; }
+    .ev-tbl-wrap .data-tbl { min-width: 0; font-size: 13px; }
+    .ev-tbl-wrap .data-tbl td, .ev-tbl-wrap .data-tbl th { padding: 7px 10px; }
+    .ev-tbl-wrap tr.hit td { background: rgba(0,200,224,.12); font-weight: 700; }
+    .ev-note { font-size: 11px; color: var(--text2); margin-top: 8px; line-height: 1.6; }
+
+    .ceil-filter { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 8px; margin: 12px 0 8px; }
+    .ceil-check { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); margin-bottom: 12px; cursor: pointer; }
+    .ceil-check input { width: auto; accent-color: var(--gold); }
+    .c-card { display: block; padding: 12px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; text-decoration: none; color: var(--text); background: var(--bg2); transition: border-color .15s; }
+    .c-card:hover { border-color: var(--gold); text-decoration: none; }
+    .c-head { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .c-name { font-size: 15px; font-weight: 700; }
+    .c-maker { font-size: 11px; color: var(--text2); }
+    .c-ev { margin-left: auto; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; background: rgba(64,200,128,.15); color: var(--green); }
+    .c-grid { display: grid; grid-template-columns: 88px 1fr; gap: 4px 10px; font-size: 13px; line-height: 1.6; }
+    .c-grid dt { color: var(--text2); font-size: 12px; }
+    .c-grid dd { margin: 0; word-break: break-word; }
+    .c-nerai { color: var(--gold); font-weight: 700; }
+    .c-derived { font-size: 11px; color: var(--text2); font-weight: 400; }
+    .ceil-empty { text-align: center; color: var(--text2); font-size: 13px; padding: 24px 0; }
+    .ceil-caution { font-size: 12px; color: var(--text2); line-height: 1.8; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) {
+      .ev-form { grid-template-columns: 1fr; }
+      .ceil-filter { grid-template-columns: 1fr 1fr; }
+      .ceil-filter .q { grid-column: 1 / -1; }
+      .c-grid { grid-template-columns: 76px 1fr; }
+      .ev-result .ev-val { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+<div id="site-header-ph"></div>
+
+<div class="search-container">
+  <h1 class="search-title">天井期待値一覧・計算ツール</h1>
+  <p class="search-sub">こぜログ掲載機種の天井G数・天井恩恵・リセット時の天井・狙い目をまとめています。天井期待値の表がある機種は、計算ツールで現在のゲーム数から期待収支（pt）の目安を確認できます。</p>
+
+  <nav class="search-nav">
+    <a href="/search/by-date/">導入順</a>
+    <a href="/search/by-maker/">メーカー名</a>
+    <a href="/search/by-kana/">50音順</a>
+    <a href="/search/ceiling/" class="current">天井期待値</a>
+  </nav>
+
+  <!-- ===== 計算ツール ===== -->
+  <section class="ev-tool" id="tool">
+    <h2>天井期待値 計算ツール</h2>
+    <p class="lead">機種・状況・交換レートを選び、現在のゲーム数を入れてください。各機種ページの天井期待値の表をもとに、表と表のあいだは直線でならした目安を表示します。</p>
+    <div class="ev-form">
+      <label class="full">機種
+        <select id="ev-machine"></select>
+      </label>
+      <label>状況
+        <select id="ev-table"></select>
+      </label>
+      <label>交換レート・条件
+        <select id="ev-col"></select>
+      </label>
+      <label class="full">現在のゲーム数（G）
+        <input id="ev-g" type="number" inputmode="numeric" min="0" step="10" value="300">
+      </label>
+    </div>
+    <div class="ev-result" id="ev-result" aria-live="polite"></div>
+    <div class="ev-tbl-wrap tbl-wrap" id="ev-tbl"></div>
+    <p class="ev-note" id="ev-note"></p>
+  </section>
+
+  <!-- ===== 一覧 ===== -->
+  <section id="list-sec">
+    <div class="ceil-list-head"><h2>機種別 天井・狙い目一覧</h2></div>
+    <div class="ceil-filter">
+      <input class="q" id="f-q" type="search" placeholder="機種名・メーカーで絞り込み" aria-label="機種名・メーカーで絞り込み">
+      <select id="f-media" aria-label="メディア">
+        <option value="">すべて</option>
+        <option value="smart">スマスロ</option>
+        <option value="medal">メダル機</option>
+      </select>
+      <select id="f-sort" aria-label="並び順">
+        <option value="date">導入日が新しい順</option>
+        <option value="nerai">狙い目が浅い順</option>
+        <option value="kana">50音順</option>
+      </select>
+    </div>
+    <label class="ceil-check"><input type="checkbox" id="f-ev"> 天井期待値の表がある機種だけ表示</label>
+    <div class="m-count" id="count"></div>
+    <div id="list"></div>
+  </section>
+
+  <p class="ceil-caution">
+    ※ 掲載値は各機種ページの解析値をまとめたものです。期待値は主に設定1・各ページ記載の前提での目安で、機種ごとに前提（交換レート・ヤメ時など）が異なります。<br>
+    ※ 「狙い目」の交換レート表記がない機種は、各機種ページの記載どおりです。「期待値表より」は、天井期待値の表で等価の期待値が初めてプラスになるG数です。<br>
+    ※ 詳しい条件は、各機種ページの「天井・リセット」をご確認ください。
+  </p>
+</div>
+
+<div id="site-footer-ph"></div>
+<script src="../../assets/machines/index.js"></script>
+<script src="../../assets/machines/ceiling.js"></script>
+<script src="../../assets/common.js"></script>
+<script>
+var ASSETS_BASE='../../assets/';loadComponents(ASSETS_BASE);
+
+(function() {
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function fmt(v) { var r = Math.round(v); return (r > 0 ? '+' : '') + r.toLocaleString('ja-JP') + 'pt'; }
+
+  var master = {};
+  MACHINES_LIST.forEach(function(m) { master[m.id] = m; });
+
+  var items = CEILING_DATA.filter(function(c) { return master[c.id] && master[c.id].kozelog; }).map(function(c) {
+    var m = master[c.id];
+    var derivedG = null;
+    if (c.ev && c.ev.length) {
+      var t = c.ev[0], idx = -1;
+      t.cols.forEach(function(col, i) { if (idx < 0 && col.indexOf('等価') >= 0) idx = i; });
+      if (idx < 0 && t.label.indexOf('等価') >= 0) idx = 0;
+      if (idx >= 0) {
+        for (var i = 0; i < t.rows.length; i++) {
+          var v = t.rows[i][idx + 1];
+          if (v != null && v >= 0) { derivedG = t.rows[i][0]; break; }
+        }
+      }
+    }
+    return { c: c, m: m, derivedG: derivedG, sortG: c.neraiG != null ? c.neraiG : derivedG };
+  });
+
+  /* ===== 計算ツール ===== */
+  var evItems = items.filter(function(x) { return x.c.ev && x.c.ev.length; })
+    .sort(function(a, b) { return a.m.kana.localeCompare(b.m.kana, 'ja'); });
+  var selM = document.getElementById('ev-machine'), selT = document.getElementById('ev-table'),
+      selC = document.getElementById('ev-col'), inG = document.getElementById('ev-g');
+
+  selM.innerHTML = evItems.map(function(x, i) { return '<option value="' + i + '">' + esc(x.m.name) + '</option>'; }).join('');
+
+  function curItem() { return evItems[+selM.value] || evItems[0]; }
+  function fillTables() {
+    var x = curItem();
+    selT.innerHTML = x.c.ev.map(function(t, i) { return '<option value="' + i + '">' + esc(t.label) + '</option>'; }).join('');
+    fillCols();
+  }
+  function fillCols() {
+    var t = curItem().c.ev[+selT.value || 0];
+    selC.innerHTML = t.cols.map(function(c, i) { return '<option value="' + i + '">' + esc(c) + '</option>'; }).join('');
+    calc();
+  }
+  function calc() {
+    var x = curItem(), t = x.c.ev[+selT.value || 0], ci = +selC.value || 0;
+    var g = parseFloat(inG.value);
+    var unit = x.c.unit && x.c.unit !== 'G' ? x.c.unit : 'G';
+    var rows = t.rows.filter(function(r) { return r[ci + 1] != null; });
+    var res = document.getElementById('ev-result');
+    var hit = -1, val = null, sub = '';
+    if (!rows.length) {
+      res.innerHTML = '<div class="ev-sub">この条件の期待値は掲載されていません。</div>';
+    } else if (isNaN(g) || g < 0) {
+      res.innerHTML = '<div class="ev-sub">現在のゲーム数を入力してください。</div>';
+    } else {
+      if (g <= rows[0][0]) { val = rows[0][ci + 1]; hit = 0; if (g < rows[0][0]) sub = '表の最小値（' + rows[0][0] + unit + '）の値です。'; }
+      else if (g >= rows[rows.length - 1][0]) { hit = rows.length - 1; val = rows[hit][ci + 1]; if (g > rows[hit][0]) sub = '表の最大値（' + rows[hit][0] + unit + '）の値です。それ以上のゲーム数では、さらに高くなる傾向です。'; }
+      else {
+        for (var i = 0; i < rows.length - 1; i++) {
+          var a = rows[i], b = rows[i + 1];
+          if (g >= a[0] && g <= b[0]) {
+            hit = g - a[0] < b[0] - g ? i : i + 1;
+            val = a[ci + 1] + (b[ci + 1] - a[ci + 1]) * (g - a[0]) / (b[0] - a[0]);
+            if (g !== a[0] && g !== b[0]) sub = a[0] + unit + '（' + fmt(a[ci + 1]) + '）と ' + b[0] + unit + '（' + fmt(b[ci + 1]) + '）のあいだの目安です。';
+            break;
+          }
+        }
+      }
+      res.innerHTML = '<div class="ev-label">' + esc(x.m.name) + '｜' + esc(t.label) + '｜' + esc(t.cols[ci]) + '｜' + g + unit + '〜</div>'
+        + '<div class="ev-val ' + (val >= 0 ? 'pos' : 'neg') + '">' + fmt(val) + '</div>'
+        + '<div class="ev-sub">' + esc(sub) + (sub ? '<br>' : '') + '<a href="' + esc(x.m.url) + '#ceiling">' + esc(x.m.name) + 'の天井・リセット詳細 →</a></div>';
+    }
+    var unitHead = unit === 'G' ? '開始G数' : '開始' + unit;
+    var html = '<table class="data-tbl"><thead><tr><th>' + unitHead + '</th>' + t.cols.map(function(c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>';
+    t.rows.forEach(function(r) {
+      var isHit = hit >= 0 && rows[hit] === r;
+      html += '<tr' + (isHit ? ' class="hit"' : '') + '><td>' + r[0] + unit + '</td>' + r.slice(1).map(function(v) {
+        return v == null ? '<td>—</td>' : '<td class="' + (v >= 0 ? 'td-pos' : 'td-neg') + '">' + fmt(v) + '</td>';
+      }).join('') + '</tr>';
+    });
+    document.getElementById('ev-tbl').innerHTML = html + '</tbody></table>';
+    document.getElementById('ev-note').textContent = x.c.evNote ? '※ ' + x.c.evNote : '';
+  }
+  selM.addEventListener('change', fillTables);
+  selT.addEventListener('change', fillCols);
+  selC.addEventListener('change', calc);
+  inG.addEventListener('input', calc);
+  if (evItems.length) fillTables(); else document.getElementById('tool').style.display = 'none';
+
+  /* ===== 一覧 ===== */
+  var fq = document.getElementById('f-q'), fm = document.getElementById('f-media'),
+      fs = document.getElementById('f-sort'), fe = document.getElementById('f-ev');
+  function row(label, v, cls) { return v ? '<dt>' + label + '</dt><dd' + (cls ? ' class="' + cls + '"' : '') + '>' + v + '</dd>' : ''; }
+  function render() {
+    var q = fq.value.trim().toLowerCase();
+    var list = items.filter(function(x) {
+      if (fm.value === 'smart' && !x.m.smart) return false;
+      if (fm.value === 'medal' && x.m.smart) return false;
+      if (fe.checked && !(x.c.ev && x.c.ev.length)) return false;
+      if (q && (x.m.name + x.m.kana + x.m.maker + (x.m.fullName || '')).toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    });
+    list.sort(function(a, b) {
+      if (fs.value === 'nerai') {
+        if (a.sortG == null && b.sortG == null) return a.m.kana.localeCompare(b.m.kana, 'ja');
+        if (a.sortG == null) return 1; if (b.sortG == null) return -1;
+        return a.sortG - b.sortG;
+      }
+      if (fs.value === 'kana') return a.m.kana.localeCompare(b.m.kana, 'ja');
+      return b.m.releaseDate.localeCompare(a.m.releaseDate);
+    });
+    document.getElementById('count').textContent = list.length + ' 機種';
+    document.getElementById('list').innerHTML = list.length ? list.map(function(x) {
+      var c = x.c, m = x.m;
+      var nerai = c.nerai ? esc(c.nerai) : (x.derivedG != null ? '等価' + x.derivedG + 'G〜 <span class="c-derived">（期待値表より）</span>' : '');
+      var badge = m.smart ? '<span class="m-badge m-badge-smart">スマスロ</span>' : '<span class="m-badge m-badge-medal">メダル</span>';
+      return '<a class="c-card" href="' + esc(m.url) + '#ceiling">'
+        + '<div class="c-head">' + badge + '<span class="c-name">' + esc(m.name) + '</span><span class="c-maker">' + esc(m.maker) + '</span>'
+        + (c.ev && c.ev.length ? '<span class="c-ev">期待値表あり</span>' : '') + '</div>'
+        + '<dl class="c-grid">'
+        + row('天井', esc(c.ceiling)) + row('恩恵', esc(c.benefit)) + row('リセット時', esc(c.resetCeiling))
+        + row('狙い目', nerai, 'c-nerai') + row('リセット狙い', esc(c.neraiReset), 'c-nerai')
+        + '</dl></a>';
+    }).join('') : '<div class="ceil-empty">条件に合う機種がありません。</div>';
+  }
+  [fq, fm, fs, fe].forEach(function(el) { el.addEventListener(el.tagName === 'INPUT' && el.type !== 'checkbox' ? 'input' : 'change', render); });
+  render();
+})();
+</script>
+</body>
+</html>
