@@ -168,6 +168,7 @@
 | 4 | `assets/machines/index.js` | MACHINES_LIST にエントリを追加（id・name・kana・releaseDate・url・rate等） | ✅ |
 | 5 | `sitemap.xml` | 機種ページURL＋新メーカーページURLを追加 | ✅ |
 | 6 | `admin/index.html` | ADMIN_OVERRIDES に kozelog:true・kozelogUrl・hasMovie等を反映。**ADMIN_MACHINES（将来台リスト）に該当機種がある場合は `future:true` を外し、kozelog関連プロパティを ADMIN_OVERRIDES 側に移す** | ✅ |
+| 7 | `assets/machines/ceiling.js` | 天井のある機種（AT/ART・ST機など）は CEILING_DATA にエントリを追加（天井・恩恵・リセット時天井・狙い目・天井期待値表）。値は機種ページの掲載値と一致させる（§12） | 該当時 |
 
 > ※ 1つでも漏れると検索ページ・TOPページ・admin管理画面に不整合が発生する
 
@@ -192,6 +193,7 @@
 | 5 | `admin/index.html` | ADMIN_OVERRIDES の該当機種に `addedContent` を追記する（§11）。筐体画像追加時は `hasImg: true`、動画追加時は `hasMovie: true` も反映 | ✅ |
 | 6 | 設定判別ツール | 設定差のあるデータを追加した場合、ツールの入力欄・確率配列・尤度計算ロジックに反映する | 該当時 |
 | 7 | `sitemap.xml` | `<lastmod>` を更新日に変更 | 推奨 |
+| 8 | `assets/machines/ceiling.js` | 天井・リセット・狙い目・天井期待値表を追加・修正した場合、CEILING_DATA の該当機種も同じ値に更新する（§12） | 該当時 |
 
 > ※ 特に `admin/index.html` の更新は漏れやすいため、**作業完了前に必ず確認する**こと
 
@@ -295,6 +297,7 @@ Claude/
 │   ├── top-hero.js                  ← TOPページヒーローアニメーション
 │   ├── machines/
 │   │   ├── index.js                 ← 全機種マスターリスト
+│   │   ├── ceiling.js               ← 天井データ（天井期待値ページ用）
 │   │   └── [machine-id].js          ← 機種別データ
 │   └── templates/
 │       ├── normal.html              ← ノーマル機テンプレート
@@ -423,6 +426,7 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | 京楽 | `京楽（KYORAKU）` |
 | 三洋物産 | `三洋物産（SANYO）` |
 | ネオス | `ネオス（NEOS）` |
+| DAXEL | `DAXEL（ダクセル）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
@@ -518,3 +522,14 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 - 初期作成時のコンテンツは `addedContent` に記載しない
 - 既存ページにセクション・FAQなどを後から追加した場合は、**作業完了後に必ず** `addedContent` を更新する
 - admin/index.html の「追加コンテンツ」列にチップ形式で表示される
+
+---
+
+## 12. 天井期待値ページ
+
+- URL：`/search/ceiling/`（一覧＋計算ツール）。検索ページのタブ・ヘッダー・フッター・TOPの検索リンクから導線あり
+- データ：`assets/machines/ceiling.js` の `CEILING_DATA`（機種IDは `assets/machines/index.js` の `id` と一致させる）
+  - `ceiling`（通常時の天井）・`benefit`（恩恵）・`resetCeiling`（リセット時天井）・`nerai`／`neraiReset`（狙い目の表記）・`neraiG`（等価の狙い目G数、並べ替え用）・`unit`・`ev`（天井期待値表）・`evNote`（前提の注記）
+  - `ev.rows` は `[開始G数, 列1の期待値(pt), 列2の期待値(pt), ...]`。掲載なしは `null`
+- **値は必ず機種ページの掲載値と一致させる**（このファイル独自の数値は持たない）。機種ページを更新したら同時に更新する
+- 計算ツールは、天井期待値表のある機種のみ選択肢に出る。表のあいだの値は直線補間の目安として表示する

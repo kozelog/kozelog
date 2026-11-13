@@ -31,7 +31,7 @@
       "description": "大都技研のスマスロ「スロット Vivy -Fluorite Eye’s Song-」の設定別AT初当たり・機械割、弱チェリーの設定差、天井（800G+α・6周期）、設定変更時の天井短縮、周期モード、獲得枚数表示やエンディングの設定示唆、打ち方・やめどき、設定判別ツールを掲載。",
       "inLanguage": "ja",
       "datePublished": "2026-11-02",
-      "dateModified": "2026-11-05",
+      "dateModified": "2026-11-12",
       "publisher": {
         "@type": "Organization",
         "name": "こぜログ",
@@ -65,7 +65,7 @@
       "@type": "Article",
       "headline": "スロット Vivy -Fluorite Eye’s Song-（スマスロ ヴィヴィ） 解析・スペック【天井・設定判別・設定示唆】",
       "datePublished": "2026-11-02",
-      "dateModified": "2026-11-05",
+      "dateModified": "2026-11-12",
       "author": {
         "@type": "Organization",
         "name": "こぜログ"
@@ -105,6 +105,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "通常時800G＋αの消化、または最大6周期への到達でAT「PROJECT SINGULARITY」に当選します。設定変更時はゲーム数天井が500G＋αに短縮されます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "スマスロ Vivyの天井狙いの狙い目は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ゲーム数天井（800G＋α）狙いは等価・5.6枚持ちメダルで500G〜、5.6枚現金投資で550G〜、周期天井狙いは4周期目＋200pt〜、リセット濃厚台は200G〜が目安です（DMMぱちタウンの目安）。天井期待値表は解析待ちです。"
           }
         },
         {
@@ -262,13 +270,43 @@
           <tr><td>チャンス目</td><td>1/399.6</td></tr>
           <tr><td>確定役</td><td>1/16384.0</td></tr>
           <tr><td>バグ目</td><td>1/2520.6</td></tr>
+          <tr><td>BAR揃いリプレイ</td><td>1/120.0</td></tr>
+          <tr><td>フェイクBARリプレイ</td><td>1/60.0</td></tr>
           <tr><td>共通マツモト揃い</td><td>1/199.8</td></tr>
-          <tr><td>押し順マツモト揃い</td><td>1/296.8</td></tr>
+          <tr><td>押し順マツモトリプレイ（成立）</td><td>1/28.0</td></tr>
+          <tr><td>押し順マツモト揃い（AT中の出現率）</td><td>1/296.8</td></tr>
+          <tr><td>マツモト揃い合算（AT中）</td><td>1/119.4</td></tr>
           <tr><td>レア役合算（再生除く）</td><td>設定1：1/24.5〜設定6：1/23.2</td></tr>
           <tr><td>レア役合算（再生込み）</td><td>1/19.0</td></tr>
         </tbody>
       </table></div>
-      <p class="info-note">なな徹・ちょんぼりすた・DMMぱちタウンで一致した数値です。設定差が判明しているのは弱チェリーとレア役合算（再生除く）のみで、設定2〜5の値は解析待ちです。</p>
+      <p class="info-note">なな徹・ちょんぼりすた・DMMぱちタウンで一致した数値です。BAR揃いリプレイ・フェイクBARリプレイ・マツモト揃い合算は一撃・なな徹・ちょんぼりすた・DMMぱちタウン、押し順マツモトリプレイ（成立）は一撃・なな徹・DMMぱちタウンで一致しています。BAR揃いリプレイ・フェイクBARリプレイの成立時は「BARを狙え」の演出が発生します。押し順マツモト揃い・マツモト揃い合算はAT中の全状態の合算値です。設定差が判明しているのは弱チェリーとレア役合算（再生除く）のみで、設定2〜5の値は解析待ちです。コイン持ちは50枚あたり約31Gです（一撃）。</p>
+      <h3 class="sub-heading">変換リプレイの内訳</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>変換リプレイ</th><th>確率</th></tr></thead>
+        <tbody>
+          <tr><td>スイカ変換リプレイ</td><td>1/256.0</td></tr>
+          <tr><td>強スイカ変換リプレイ</td><td>1/512.0</td></tr>
+          <tr><td>チェリー変換リプレイ</td><td>1/252.1</td></tr>
+          <tr><td>強チェリー変換リプレイ</td><td>1/399.6</td></tr>
+          <tr><td>チャンス目変換リプレイ</td><td>1/399.6</td></tr>
+          <tr><td>合算</td><td>1/67.4</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">全設定共通。一撃・なな徹・ちょんぼりすた・DMMぱちタウンで一致した数値です。変換リプレイはレア役変換高確（レベル1以上）中にそれぞれのレア役に変換されます。</p>
+      <h3 class="sub-heading">レア役変換高確中の小役確率</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>小役</th><th>変換高確Lv2</th><th>変換高確Lv3</th></tr></thead>
+        <tbody>
+          <tr><td>弱チェリー</td><td>設定1：1/23.6〜設定6：1/22.4</td><td>設定1：1/13.9〜設定6：1/13.5</td></tr>
+          <tr><td>弱スイカ</td><td>1/22.8</td><td>1/13.6</td></tr>
+          <tr><td>強チェリー</td><td>1/122.0</td><td>1/90.1</td></tr>
+          <tr><td>強スイカ</td><td>1/194.7</td><td>1/128.5</td></tr>
+          <tr><td>チャンス目</td><td>1/134.6</td><td>1/96.7</td></tr>
+          <tr><td>合算</td><td>約1/9.3</td><td>約1/5.7</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">弱チェリー以外は全設定共通。一撃・なな徹・ちょんぼりすた・DMMぱちタウンで一致した数値です（合算はDMMぱちタウンを除く3サイトの記載）。</p>
     </section>
 
     <section class="section" id="setting">
@@ -308,12 +346,13 @@
         <thead><tr><th>表示</th><th>示唆内容</th></tr></thead>
         <tbody>
           <tr><td>411枚</td><td>設定4以上濃厚</td></tr>
-          <tr><td>2161枚</td><td>設定4以上濃厚（ちょんぼりすた・DMMぱちタウン）</td></tr>
+          <tr><td>2161枚</td><td>設定4以上濃厚（なな徹・ちょんぼりすた・DMMぱちタウン）</td></tr>
           <tr><td>2161枚×2</td><td>設定5以上濃厚</td></tr>
           <tr><td>619枚</td><td>設定6濃厚</td></tr>
           <tr><td>2161枚×3</td><td>設定6濃厚</td></tr>
         </tbody>
       </table></div>
+      <p class="info-note">2161枚×2・2161枚×3はAT中1回限りの表示で、4322枚・6483枚獲得時に出る可能性があります（なな徹）。</p>
       <h3 class="sub-heading">エンディング中のミニキャラ</h3>
       <div class="tbl-wrap"><table class="data-tbl">
         <thead><tr><th>出現</th><th>示唆内容</th></tr></thead>
@@ -361,6 +400,16 @@
         </tbody>
       </table></div>
       <p class="info-note">天井・設定変更時の短縮は一撃・なな徹・ちょんぼりすた・DMMぱちタウンで一致しています。リセット項目と電源OFF時の挙動の出典はちょんぼりすたです。天井期待値は解析待ちです。</p>
+      <h3 class="sub-heading">天井狙いの狙い目（目安）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>状況</th><th>狙い目</th></tr></thead>
+        <tbody>
+          <tr><td>ゲーム数天井（800G＋α）</td><td>等価・5.6枚持ちメダル：500G〜／5.6枚現金投資：550G〜</td></tr>
+          <tr><td>周期天井（最大6周期）</td><td>4周期目＋200pt〜（交換率を問わず）</td></tr>
+          <tr><td>リセット濃厚時（500G＋α）</td><td>200G〜</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：DMMぱちタウンの天井狙い特集（1サイトのみの目安で、期待値の算出根拠・前提条件は公開されていません）。リセット時は周期短縮やモード移行優遇で先にATに当選することがあるため、遭遇機会は少なめとされています。同条件の台が複数ある場合は、周期数・ポイントが多い台を優先します。天井期待値表は解析待ちです。</p>
     </section>
 
     <section class="section" id="sec-mode">
@@ -389,6 +438,16 @@
           <tr><td>バグモード</td><td>ショート・ロング・無限の3種類</td></tr>
         </tbody>
       </table></div>
+      <h3 class="sub-heading">レア役でのアクセスチャンス・CZ当選率</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>成立役</th><th>当選率</th></tr></thead>
+        <tbody>
+          <tr><td>弱チェリー</td><td>約40%</td></tr>
+          <tr><td>チャンス目</td><td>約60%</td></tr>
+          <tr><td>強チェリー・強スイカ</td><td>当選濃厚</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">ポイント特化ゾーン「アクセスチャンス」またはCZ「アクセスチャンスEX」の当選率です。なな徹・ちょんぼりすたで一致しています。</p>
       <h3 class="sub-heading">内部状態の移行率</h3>
       <p>内部状態は通常・高確・超高確の3段階で、高確以上に移行すると15Gは滞在が保障されます。</p>
       <div class="tbl-wrap"><table class="data-tbl">
@@ -467,6 +526,56 @@
         </tbody>
       </table></div>
       <p class="info-note">AT中は規定リプレイ回数やレア役でシンギュラリティバトルを抽選します（DMMぱちタウン・ちょんぼりすた）。</p>
+      <h3 class="sub-heading">シンギュラリティバトル（ATCZ）の概要</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>突入契機</td><td>レア役成立時の一部、リプレイカウンター（5ptごと）での抽選、BAR揃いなど</td></tr>
+          <tr><td>平均突入率</td><td>約1/33</td></tr>
+          <tr><td>継続</td><td>3G</td></tr>
+          <tr><td>成功期待度（平均）</td><td>約45%</td></tr>
+          <tr><td>勝利時</td><td>差枚数上乗せ以上（オーバードライブなどの特化ゾーンの可能性あり）</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">一撃・なな徹・ちょんぼりすた・DMMぱちタウンで一致した内容です（突入契機は一撃・なな徹の記載）。リプレイカウンターは合計20pt到達でATCZ以上が濃厚です（なな徹）。</p>
+      <h3 class="sub-heading">レア役でのシンギュラリティバトル突入率</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>成立役</th><th>通常</th><th>高確</th><th>超高確</th></tr></thead>
+        <tbody>
+          <tr><td>弱チェリー</td><td>20.3%</td><td>40.2%</td><td>濃厚</td></tr>
+          <tr><td>弱スイカ</td><td>−</td><td>10.2%</td><td>濃厚</td></tr>
+          <tr><td>強チェリー・強スイカ</td><td>濃厚</td><td>濃厚</td><td>濃厚</td></tr>
+          <tr><td>チャンス目</td><td>50.0%</td><td>濃厚</td><td>濃厚</td></tr>
+          <tr><td>確定役</td><td>濃厚</td><td>濃厚</td><td>濃厚</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">バトルのストックが無いときの値です。出典：なな徹（弱チェリーと、通常時の強チェリー・強スイカの値はDMMぱちタウンとも一致）。ストックがあるときは弱チェリーが通常10.2%・高確20.3%、強チェリー・強スイカ・チャンス目が通常・高確で50.0%に下がります（なな徹）。AT中の内部状態はスイカ成立時に移行を抽選し、通常からは50.0%で高確、高確からは高確・超高確へ各25.0%、超高確中は25.0%で超高確への移行を抽選します（移行後15G滞在。なな徹）。</p>
+      <h3 class="sub-heading">対戦相手別の勝利期待度</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>対戦相手</th><th>対応役</th><th>リプレイ成立時</th><th>トータル</th></tr></thead>
+        <tbody>
+          <tr><td>垣谷</td><td>チャンス目</td><td>約35%</td><td>約40%</td></tr>
+          <tr><td>エリザベス</td><td rowspan="2">チェリー／スイカ（下記注記）</td><td>約35%</td><td>約40%</td></tr>
+          <tr><td>K5</td><td>約35%</td><td>約40%</td></tr>
+          <tr><td>オフィーリア</td><td>全レア役</td><td>約75%</td><td>約72%</td></tr>
+          <tr><td>マツモト トランスフォーム</td><td>マツモト揃い</td><td>約35%</td><td>約50%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">一撃・なな徹・ちょんぼりすたで一致した数値です（トータル期待度はDMMぱちタウンとも一致）。エリザベスとK5の対応役は、サイトによって「エリザベス＝チェリー・K5＝スイカ」と「エリザベス＝スイカ・K5＝チェリー」の両方の記載があるため、確定次第掲載します。BAR揃いリプレイ・変換リプレイ・マツモト揃いの成立時は相手を問わず勝利濃厚で、その他のリプレイでは35.0%（オフィーリアは75.0%）で勝利します。変換リプレイは次ゲームで必ずレア役に変換されるため勝利濃厚になります。</p>
+      <h3 class="sub-heading">勝利時の報酬振り分け</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>勝利契機</th><th>上乗せ</th><th>オーバードライブ（青）</th><th>オーバードライブ（赤）以上</th></tr></thead>
+        <tbody>
+          <tr><td>対応役以外</td><td>87.5%</td><td>12.5%</td><td>−</td></tr>
+          <tr><td>対応役以外の強レア役</td><td>50.0%</td><td>50.0%</td><td>−</td></tr>
+          <tr><td>対応役の弱レア役</td><td>−</td><td>100%</td><td>−</td></tr>
+          <tr><td>対応役の強レア役</td><td>−</td><td>87.5%</td><td>12.5%</td></tr>
+          <tr><td>重ねレア役（SINGULARITY FLASH）</td><td>−</td><td>−</td><td>100%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">一撃・なな徹・ちょんぼりすたで一致した数値です。確定役での勝利時はマツモトチャンスまたはオーバードライブプレミアムが濃厚です（一撃・なな徹）。マツモト トランスフォームにマツモト揃いで勝利した場合はオーバードライブプレミアム以上が濃厚です（なな徹）。</p>
+      <h3 class="sub-heading">シンギュラリティバトル待機</h3>
+      <p>レア役契機でバトルに当選した場合のみ、バトル前に5Gの「待機」が発生します。待機中はマツモト揃いの確率が大幅にアップし、1/28で2択チャレンジまたはフルナビが発生、マツモト揃いが成立すればバトル勝利が濃厚です。待機中は会話やキャラの通過パターンで対戦相手を示唆し、同じキャラが何度も登場するほどそのキャラが対戦相手になりやすくなります（一撃・なな徹で一致）。</p>
     </section>
 
     <section class="section" id="sec-yuuri">
@@ -481,6 +590,19 @@
       <p>スイカテンパイ時は中リールに青7または白Vを狙います。強スイカを見抜く場合は右リールに白Vを狙い、「スイカ・スイカ・白V」と停止すれば強スイカです。</p>
       <h3 class="sub-heading">AT中</h3>
       <p>押し順ナビに従い、ナビが無いときは左第1停止の適当打ちで問題ありません。「BARを狙え」のカットインが出たときはBARを狙います。</p>
+      <p>AT中に限り、中押しや逆押しで小役を早く見抜く打ち方もできます。たとえば逆押しフリー打ちで右リール下段にBARが止まれば強チェリーか確定役、下段に白Vが止まればチャンス目以上が濃厚です（このときは中・左リールに白Vを目安にスイカを狙います）。ATCZ中は中押しでBARを狙うと、中段BAR停止でBAR揃いリプレイ、上・下段マツモト停止でマツモト揃いが見抜けます。出典：なな徹（通常時の中押し・逆押しはペナルティになるため不可）。</p>
+      <h3 class="sub-heading">隠しPUSH（裏ボタン）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>タイミング</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>シンギュラリティバトル1〜3G目の第3停止前</td><td>ランプ色で成立役を2択に絞れる（白：ハズレ／青：リプレイ／黄：ベル／緑：スイカ／赤：チェリー／紫：チャンス目／ピンク：マツモト揃い）。青・緑・赤・紫は変換リプレイの可能性あり</td></tr>
+          <tr><td>バトル3G目の第3停止後（「使命を遂行せよ！」表示中）</td><td>白点灯で勝利濃厚、赤点灯でオーバードライブ濃厚</td></tr>
+          <tr><td>アクセスチャンス開始時〜第2停止</td><td>ランプ色でアクセスチャンスEX昇格までの残り回数を示唆（白：通常／青：残り3回以内／黄：残り2回以内／緑：次回昇格）</td></tr>
+          <tr><td>アクセスチャンス（EX）終了時</td><td>カードで示唆（内容は周期モード欄の「CZ終了画面（カード）の示唆」と同じ）</td></tr>
+          <tr><td>通常時・AT中</td><td>過去15G以内のレア役保留（レア役保留データベース）を確認できる</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">バトル中の隠しPUSHは一撃・なな徹で一致した内容です。アクセスチャンス中・終了時とレア役保留データベースの出典はなな徹です（アクセスチャンス中のランプはDMMぱちタウンの昇格ランプとも一致）。</p>
       <h3 class="sub-heading">やめどき</h3>
       <p>AT終了後はリブートゾーン終了後に即やめ、または1周期目まで消化してアーカイブモードでAT非当選を確認してからやめます。プレートやカードで当該周期のAT濃厚が示唆された場合は、周期到達まで続行します。</p>
       <p class="info-note">やめどきの出典はちょんぼりすたです（他サイトは解析待ち）。</p>
@@ -536,6 +658,7 @@
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyの導入日はいつですか？</summary><div class="faq-a"><p>大都技研のスマスロ「スロット Vivy -Fluorite Eye’s Song-」は、2026年11月2日に導入されました。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyの機械割（出玉率）は？</summary><div class="faq-a"><p>設定1が97.7%、設定2が98.7%、設定3が100.2%、設定4が104.7%、設定5が108.3%、設定6が112.8%です。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyの天井は何ゲームですか？</summary><div class="faq-a"><p>通常時800G＋αの消化、または最大6周期への到達でAT「PROJECT SINGULARITY」に当選します。設定変更時はゲーム数天井が500G＋αに短縮されます。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">スマスロ Vivyの天井狙いの狙い目は？</summary><div class="faq-a"><p>ゲーム数天井（800G＋α）狙いは等価・5.6枚持ちメダルで500G〜、5.6枚現金投資で550G〜、周期天井狙いは4周期目＋200pt〜、リセット濃厚台は200G〜が目安です（DMMぱちタウンの目安）。天井期待値表は解析待ちです。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyの設定判別で重要な要素は？</summary><div class="faq-a"><p>AT初当たり確率（設定1：1/276.5〜設定6：1/210.3）と弱チェリー確率（設定1：1/72.8〜設定6：1/62.4）に設定差があります。AT初当たりは設定5より設定4のほうが軽い点に注意してください。AT中の獲得枚数表示（411枚・619枚など）やエンディング中のミニキャラでも設定が示唆されます。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyの純増は？</summary><div class="faq-a"><p>AT「PROJECT SINGULARITY」は差枚数管理型で、純増は約3.2枚/Gです。</p></div></details>
         <details class="faq-item"><summary class="faq-q">スマスロ Vivyのやめどきは？</summary><div class="faq-a"><p>AT終了後はリブートゾーン終了後に即やめ、または1周期目まで消化してアーカイブモードでAT非当選を確認してからやめます。プレートやカードで当該周期のAT濃厚が示唆された場合は、周期到達まで続行します。</p></div></details>
