@@ -1,6 +1,6 @@
 /* =============================================
    こぜログ ジャグラーシリーズ 機種データ
-   最終更新: 2026-05-17
+   最終更新: 2026-11-14
    フィールド: koyaku1=ブドウ確率, koyaku2=チェリー確率
    ============================================= */
 var MACHINES = {
@@ -16,6 +16,21 @@ var MACHINES = {
       {s:4, big:254.0, reg:290.0, rate:1.028},
       {s:5, big:240.1, reg:268.6, rate:1.053},
       {s:6, big:229.1, reg:229.1, rate:1.094}
+    ],
+    reelData: null, hasNaiyaku: false
+  },
+  ulmira: {
+    name: 'ウルトラミラクルジャグラー', nameEn: 'ULTRA MIRACLE JUGGLER', shortName: 'ウルミラ',
+    intro: '2024年12月2日', bbCoins: 240, rbCoins: 96,
+    hasRate2: false,
+    koyaku1Label: 'ブドウ確率', koyaku2Label: 'チェリー確率',
+    settings: [
+      {s:1, big:267.5, reg:425.6, rate:0.970},
+      {s:2, big:261.1, reg:402.1, rate:0.981},
+      {s:3, big:256.0, reg:350.5, rate:0.998},
+      {s:4, big:242.73, reg:322.84, rate:1.021}, // 合算1/138.6を再現するため小数2桁（表示は1/242.7・1/322.8）
+      {s:5, big:233.2, reg:297.9, rate:1.045},
+      {s:6, big:216.3, reg:277.7, rate:1.081}
     ],
     reelData: null, hasNaiyaku: false
   },
