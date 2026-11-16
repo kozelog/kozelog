@@ -9,11 +9,12 @@
 /* 2026-11-13: 2024年12月〜2025年2月導入の機種を追加 */
 /* 2026-11-14: 2024年12月〜2025年1月導入の8機種を追加 */
 /* 2026-11-14: godzilla-vs-eva2 に天井期待値表・狙い目を追加 */
+/* 2026-11-17: mhr-sunbreak に交換率別・設定変更後・リプレイメーターの狙い目を追加 */
 
 var CEILING_DATA = [
   {"id": "guilty-crown2", "ceiling": "BIG・AT間1000G（チャンス目で短縮抽選・平均約800G）", "benefit": "AT濃厚のCZ「ヴォイドチャンス」当選（VCモードD時はVストック追加）", "unit": "G"},
   {"id": "dmc5", "ceiling": "通常A1000G+α／通常B900G+α／通常C800G+α／天国100G+α／CZ10周期", "benefit": "エピソードボーナス当選（ST突入濃厚）", "resetCeiling": "800G+α", "unit": "G"},
-  {"id": "mhr-sunbreak", "ceiling": "CZ間333G+α／AT間999G+α／CZ6スルー", "benefit": "AT当選（CZ間はCZ当選、6スルー後は7回目CZ成功濃厚）", "nerai": "等価 AT間470G〜（ちょんぼりすた）／600G〜（DMM）／650G〜（なな徹予想）、CZ間200〜210G〜", "unit": "G"},
+  {"id": "mhr-sunbreak", "ceiling": "CZ間333G+α／AT間999G+α／CZ6スルー", "benefit": "AT当選（CZ間はCZ当選、6スルー後は7回目CZ成功濃厚）", "nerai": "等価 AT間470G〜（ちょんぼりすた）／600G〜（DMM）／650G〜（なな徹予想）、CZ間200〜210G〜。5.6枚 AT間 持ちメダル490G〜／現金580G〜（ちょんぼりすた）。潜水艇5周期目リプレイ0個〜・4周期目10個〜", "neraiReset": "設定変更後 等価380G〜／5.6枚持ちメダル390G〜／5.6枚現金480G〜（ちょんぼりすた）", "unit": "G"},
   {"id": "nangoku-special", "ceiling": "799G+α", "benefit": "ボーナス当選", "resetCeiling": "500G+α", "unit": "G"},
   {"id": "takt-op-destiny", "ceiling": "CZ間500G+α／AT間999G+α", "benefit": "AT確定（CZ天井はCZ当選）", "resetCeiling": "CZ間300G+α", "nerai": "AT天井 約650G〜（等価）", "neraiG": 650, "unit": "G"},
   {"id": "super-bin-musume", "ceiling": "1200G", "benefit": "AT当選", "resetCeiling": "900G", "nerai": "900G〜", "neraiReset": "650G〜", "neraiG": 900, "unit": "G"},
