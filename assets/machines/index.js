@@ -1,6 +1,6 @@
 /* =============================================
    こぜログ 全機種マスターリスト
-   最終更新: 2026-11-16
+   最終更新: 2026-11-17
    新機種追加時はこのファイルに追記すること
    ============================================= */
 /* 2026-06-04: hanma-baki, koukaku-kidotai, goblin-slayer-2, triple-crown-seven 追加 */
@@ -1808,6 +1808,27 @@ var MACHINES_LIST = [
     kozelog:      true,
     rateS6:       '109.4%',
     rateS1:       '97.0%',
+    rateLabelS6:  '設定6 機械割',
+    rateLabelS1:  '設定1 機械割',
+  },
+
+  /* ===== パイオニア（11月新台） ===== */
+  {
+    id:           'hihi-shiosai-re',
+    name:         'スマート沖スロ ハイハイシオサイRe',
+    kana:         'はいはいしおさいりー',
+    fullName:     'スマート沖スロ ハイハイシオサイRe',
+    maker:        'パイオニア（PIONEER）',
+    makerSlug:    'pioneer',
+    makerEn:      'PIONEER',
+    badge:        'スマスロ',
+    smart:        true,
+    releaseDate:  '2026-11-16',
+    releaseLabel: '2026年11月16日',
+    url: '/machine/pioneer/hihi-shiosai-re/',
+    kozelog:      true,
+    rateS6:       '111.4%',
+    rateS1:       '97.4%',
     rateLabelS6:  '設定6 機械割',
     rateLabelS1:  '設定1 機械割',
   },
