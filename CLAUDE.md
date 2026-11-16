@@ -427,6 +427,10 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | 三洋物産 | `三洋物産（SANYO）` |
 | ネオス | `ネオス（NEOS）` |
 | DAXEL | `DAXEL（ダクセル）` |
+| オレンジ | `オレンジ（ORANGE）` |
+| ベルコ | `ベルコ（BELCO）` |
+| エフ | `エフ（F）` |
+| EXCITE | `EXCITE（エキサイト）` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
