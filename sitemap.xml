@@ -146,7 +146,7 @@
   <!-- パイオニア メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/pioneer/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -168,7 +168,7 @@
   <!-- オリンピア メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/orinpia/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -212,7 +212,7 @@
   <!-- オーイズミ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/oizumi/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -236,7 +236,7 @@
   <!-- サミー メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/sammy/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -473,7 +473,7 @@
   <!-- パオン・ディーピー -->
   <url>
     <loc>https://kozelog.net/machine/paon-dp/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -567,7 +567,7 @@
   <!-- コナミアミューズメント 一覧 -->
   <url>
     <loc>https://kozelog.net/machine/konami/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -821,7 +821,7 @@
   <!-- アデリオン メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/adelion/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1547,5 +1547,53 @@
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/pioneer/cho-kasai/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/adelion/monster-hunter-rise/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/bandori/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/paon-dp/re-zero-s2/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sammy/initial-d-2nd/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/adelion/onimusha3/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/konami/kyou-kara-ore-wa/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/oizumi/senran-kagura2/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
