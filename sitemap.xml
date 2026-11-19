@@ -174,7 +174,7 @@
   <!-- オリンピア メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/orinpia/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -218,7 +218,7 @@
   <!-- オーイズミ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/oizumi/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -899,7 +899,7 @@
   <!-- セブンリーグ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/seven-league/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1067,7 +1067,7 @@
   <!-- 京楽（KYORAKU） -->
   <url>
     <loc>https://kozelog.net/machine/kyoraku/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1599,6 +1599,56 @@
   <url>
     <loc>https://kozelog.net/machine/oizumi/senran-kagura2/</loc>
     <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Daiichi（大一商会） メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/daiichi/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 清龍ゲームジャパン メーカー一覧 -->
+  <url>
+    <loc>https://kozelog.net/machine/seiryu/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/koumon-chama-ten/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/seven-league/hyper-rush/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/daiichi/shin-ikkitousen/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/seiryu/triple-crown-for-you/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/shiokinin-crash/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/oizumi/double-attack2/</loc>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
