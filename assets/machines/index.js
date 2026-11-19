@@ -1,6 +1,6 @@
 /* =============================================
    こぜログ 全機種マスターリスト
-   最終更新: 2026-11-17
+   最終更新: 2026-11-20
    新機種追加時はこのファイルに追記すること
    ============================================= */
 /* 2026-06-04: hanma-baki, koukaku-kidotai, goblin-slayer-2, triple-crown-seven 追加 */
@@ -1207,17 +1207,23 @@ var MACHINES_LIST = [
   /* ----- 2024年9月 ----- */
   { id:'senran-kagura2', name:'Lパチスロ閃乱カグラ2', kana:'せんらんかぐらつー', fullName:'Lパチスロ閃乱カグラ2 SHINOVI MASTER', maker:'オーイズミ（OIZUMI）', makerSlug:'oizumi', makerEn:'OIZUMI', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url:'/machine/oizumi/senran-kagura2/', kozelog:true, rateS6:'110.3%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'kaguya-sama', name:'パチスロ かぐや様は告らせたい', kana:'かぐやさまはこくらせたい', fullName:'パチスロ かぐや様は告らせたい', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url: '/machine/sankyo/kaguya-sama/', kozelog:true, rateS6:'114.9%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'koumon-chama-ten', name:'パチスロL黄門ちゃま天', kana:'こうもんちゃまてん', fullName:'パチスロL黄門ちゃま天', maker:'オリンピア（OLYMPIA）', makerSlug:'orinpia', makerEn:'OLYMPIA', badge:'スマスロ', smart:true, releaseDate:'2024-09-02', releaseLabel:'2024年9月2日', url:'/machine/orinpia/koumon-chama-ten/', kozelog:true, rateS6:'112.3%', rateS1:'97.5%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'hyper-rush', name:'パチスロハイパーラッシュ', kana:'はいぱーらっしゅ', fullName:'パチスロハイパーラッシュ', maker:'セブンリーグ（SEVEN LEAGUE）', makerSlug:'seven-league', makerEn:'SEVEN LEAGUE', badge:'6号機', smart:false, releaseDate:'2024-09-17', releaseLabel:'2024年9月17日', url:'/machine/seven-league/hyper-rush/', kozelog:true, rateS6:'108.1%', rateS1:'98.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年10月 ----- */
   { id:'kyou-kara-ore-wa', name:'今日から俺は!! パチスロ編', kana:'きょうからおれは', fullName:'今日から俺は!! パチスロ編', maker:'コナミアミューズメント（KONAMI）', makerSlug:'konami', makerEn:'KONAMI', badge:'スマスロ', smart:true, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/machine/konami/kyou-kara-ore-wa/', kozelog:true, rateS6:'113.0%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'onimusha3', name:'スマスロ 鬼武者3', kana:'おにむしゃすりー', fullName:'スマスロ 鬼武者3', maker:'アデリオン（Adelion）', makerSlug:'adelion', makerEn:'ADELION', badge:'スマスロ', smart:true, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/machine/adelion/onimusha3/', kozelog:true, rateS6:'110.3%', rateS1:'97.3%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'initial-d-2nd', name:'スマスロ頭文字D 2nd', kana:'いにしゃるでぃーせかんど', fullName:'スマスロ頭文字D 2nd', maker:'Sammy（サミー）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/machine/sammy/initial-d-2nd/', kozelog:true, rateS6:'114.3%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'shin-ikkitousen', name:'L 真・一騎当千', kana:'しんいっきとうせん', fullName:'L 真・一騎当千', maker:'Daiichi（大一商会）', makerSlug:'daiichi', makerEn:'DAIICHI', badge:'スマスロ', smart:true, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/machine/daiichi/shin-ikkitousen/', kozelog:true, rateS6:'112.0%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'triple-crown-for-you', name:'トリプルクラウンフォーユー', kana:'とりぷるくらうんふぉーゆー', fullName:'トリプルクラウンフォーユー', maker:'清龍ゲームジャパン', makerSlug:'seiryu', makerEn:'SEIRYU', badge:'6号機', smart:false, releaseDate:'2024-10-07', releaseLabel:'2024年10月7日', url:'/machine/seiryu/triple-crown-for-you/', kozelog:true, rateS6:'108.0%', rateS1:'96.8%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'re-zero-s2', name:'スロット Re:ゼロ season2', kana:'りぜろしーずんつー', fullName:'スロット Re:ゼロから始める異世界生活 season2', maker:'パオン・ディーピー（PAON DP）', makerSlug:'paon-dp', makerEn:'PAON DP', badge:'スマスロ', smart:true, releaseDate:'2024-10-21', releaseLabel:'2024年10月21日', url:'/machine/paon-dp/re-zero-s2/', kozelog:true, rateS6:'114.9%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年11月 ----- */
   { id:'bandori', name:'Lバンドリ！', kana:'ばんどり', fullName:'Lバンドリ！', maker:'オリンピア（OLYMPIA）', makerSlug:'orinpia', makerEn:'OLYMPIA', badge:'スマスロ', smart:true, releaseDate:'2024-11-05', releaseLabel:'2024年11月5日', url:'/machine/orinpia/bandori/', kozelog:true, rateS6:'112.5%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定2 機械割' },
+  { id:'shiokinin-crash', name:'L新・必殺仕置人 回胴 CRASH SPEC', kana:'しんひっさつしおきにんくらっしゅすぺっく', fullName:'L新・必殺仕置人 回胴 CRASH SPEC', maker:'京楽（KYORAKU）', makerSlug:'kyoraku', makerEn:'KYORAKU', badge:'スマスロ', smart:true, releaseDate:'2024-11-05', releaseLabel:'2024年11月5日', url:'/machine/kyoraku/shiokinin-crash/', kozelog:true, rateS6:'112.9%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'monster-hunter-rise', name:'スマスロ モンスターハンターライズ', kana:'もんすたーはんたーらいず', fullName:'スマスロ モンスターハンターライズ', maker:'アデリオン（Adelion）', makerSlug:'adelion', makerEn:'ADELION', badge:'スマスロ', smart:true, releaseDate:'2024-11-18', releaseLabel:'2024年11月18日', url:'/machine/adelion/monster-hunter-rise/', kozelog:true, rateS6:'114.3%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'cho-kasai', name:'スマート沖スロ 超華祭', kana:'ちょうかさい', fullName:'スマート沖スロ 超華祭', maker:'パイオニア（PIONEER）', makerSlug:'pioneer', makerEn:'PIONEER', badge:'スマスロ', smart:true, releaseDate:'2024-11-18', releaseLabel:'2024年11月18日', url:'/machine/pioneer/cho-kasai/', kozelog:true, rateS6:'110.0%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'double-attack2', name:'Lダブルアタック2', kana:'だぶるあたっくつー', fullName:'Lダブルアタック2 withOZS-1000＆RAPHAEL', maker:'オーイズミ（OIZUMI）', makerSlug:'oizumi', makerEn:'OIZUMI', badge:'スマスロ', smart:true, releaseDate:'2024-11-18', releaseLabel:'2024年11月18日', url:'/machine/oizumi/double-attack2/', kozelog:true, rateS6:'111.5%', rateS1:'97.8%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年12月 ----- */
   { id:'dunbine', name:'スマスロ 聖戦士ダンバイン', kana:'せいせんしだんばいん', fullName:'スマスロ 聖戦士ダンバイン', maker:'Sammy（サミー）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-12-02', releaseLabel:'2024年12月2日', url: '/machine/sammy/dunbine/', kozelog:true, rateS6:'114.4%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
