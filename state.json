@@ -21,40 +21,7 @@
     },
     "noNewMachineDays": "新台が導入されるまでは、未掲載機種の追加と同時に天井期待値コンテンツ（ceiling.js・機種ページの天井期待値表）を拡充する（2026-11-10 利用者の指示） 2026-11-11 利用者から「既存機種の追加は進んでますか？」と催促あり → 更新案（§7.4）がある日でも未掲載機種の追加（3ヶ月分1セット）を見送らず毎回並行して進めること。"
   },
-  "pending": [
-    {
-      "pr": 44,
-      "branch": "auto/add-hihi-shiosai-re",
-      "gmailThreadId": "1a1e631f738467e6",
-      "kind": "add",
-      "machineId": "hihi-shiosai-re",
-      "sentAt": "2026-11-17T06:30+09:00"
-    },
-    {
-      "pr": 45,
-      "branch": "auto/update-mhr-sunbreak-20261117",
-      "gmailThreadId": "1a1e631f738467e6",
-      "kind": "update",
-      "machineId": "mhr-sunbreak",
-      "sentAt": "2026-11-17T06:30+09:00"
-    },
-    {
-      "pr": 46,
-      "branch": "auto/update-vivy-20261117",
-      "gmailThreadId": "1a1e631f738467e6",
-      "kind": "update",
-      "machineId": "vivy",
-      "sentAt": "2026-11-17T06:30+09:00"
-    },
-    {
-      "pr": 47,
-      "branch": "auto/add-backfill-2024-09-11",
-      "gmailThreadId": "1a1e631f738467e6",
-      "kind": "backfill",
-      "machineId": "cho-kasai,monster-hunter-rise,bandori,re-zero-s2,initial-d-2nd,onimusha3,kyou-kara-ore-wa,senran-kagura2",
-      "sentAt": "2026-11-17T06:30+09:00"
-    }
-  ],
+  "pending": [],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -500,7 +467,8 @@
     "2026-11-16 返信確認：11/15催促スレッド(1a1dbd026522c85c)に11/15 7:39の「OK」（全件承認）を発見（前2回の確認で見落とし）→ PR #39・#40・#41・#42・#43をsquashマージ。#41はメーカー一覧/admin/index.js/ceiling.js/sitemap/CLAUDE.mdで#39と衝突、#42はceiling.jsヘッダで衝突→両方残す形で解消。5件まとめた試験マージで変更45ページのJSエラーなし・表表示・FAQ/JSON-LD一致・TOP20件を確認し、mainの最終ツリーが確認済みツリーと一致。結果を同スレッドに返信。追加22機種をmachinesに記録。pendingは0件",
     "2026-11-17 新台：ハイハイシオサイRe(PR #44・AT機・設定3なし)。§7.4確認12機種：サンブレイク(PR #45 レア役BZ当選率・規定周期CZ種別の設定差をツール反映)・Vivy(PR #46 天井期待値表2系統・狙い目)を更新案化、他6機種の未着手情報はupdateBacklogへ。未掲載追加：2024年9〜11月8機種をPR #47。MACHINES_LIST未登録6機種をknownUnlistedに記録。承認メール送信（thread 1a1e631f738467e6・pending 4件）",
     "2026-11-18 承認待ち4件（#44〜#47、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1eb430b810123e）。新台チェック・§7.4確認・未掲載追加は見送り",
-    "2026-11-19 承認待ち4件（#44〜#47、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1f069b15a386df）。新台チェック・§7.4確認・未掲載追加は見送り"
+    "2026-11-19 承認待ち4件（#44〜#47、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1f069b15a386df）。新台チェック・§7.4確認・未掲載追加は見送り",
+    "2026-11-19 返信確認：催促メール（thread 1a1f069b15a386df）に「承認」の返信 → PR #44・#45・#46・#47 をmainへsquashマージ。#47はadmin/index.html・ceiling.jsの衝突（#44と同位置への追記）を両方残して解消。TOPカード20件・各ページのJSエラーなし・FAQ⇔JSON-LD一致を確認。pendingは空に"
   ],
   "updateBacklog": "2026-11-17 §7.4で見つかった未着手情報（lastCheckedは今日にしたが次回優先で更新案化）：獣王（なな天井期待値表11/16暫定・5.6枚狙い目・トロフィー出現率）、パリピ孔明（なな天井期待値表・イイネ下3桁示唆はちょんぼ123/DMM444で食い違い）、星矢黄金（加護振り分け・規定周期AT直撃の設定差、設定5/6欠け）、牙狼闇（スルー別狙い目ちょんぼのみ・DMM/ちょんぼ示唆一致で掲載可）、まほあこ（期待値表なな/ちょんぼ大差・狙い目450G/570G）、うみんちゅ（DMM狙い目BIG後650G/REG後430G・フルーツ連示唆）。詳細は11/17 monitor調査。"
 }
