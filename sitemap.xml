@@ -174,7 +174,7 @@
   <!-- オリンピア メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/orinpia/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -202,7 +202,7 @@
   <!-- SANKYO メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/sankyo/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -242,7 +242,7 @@
   <!-- サミー メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/sammy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -277,7 +277,7 @@
   <!-- ミズホ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/mizuho/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -333,7 +333,7 @@
   <!-- 大都技研 メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/daitogiken/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -349,7 +349,7 @@
   <!-- サンスリー メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/sun3/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -365,7 +365,7 @@
   <!-- JFJ メーカー一覧 -->
   <url>
     <loc>https://kozelog.net/machine/jfj/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -411,7 +411,7 @@
   <!-- アムテックス -->
   <url>
     <loc>https://kozelog.net/machine/amtex/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -425,7 +425,7 @@
   <!-- エンターライズ -->
   <url>
     <loc>https://kozelog.net/machine/enterrise/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -501,7 +501,7 @@
   <!-- ネット -->
   <url>
     <loc>https://kozelog.net/machine/net/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1067,7 +1067,7 @@
   <!-- 京楽（KYORAKU） -->
   <url>
     <loc>https://kozelog.net/machine/kyoraku/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1544,7 +1544,7 @@
   </url>
   <url>
     <loc>https://kozelog.net/machine/excite/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1649,6 +1649,120 @@
   <url>
     <loc>https://kozelog.net/machine/oizumi/double-attack2/</loc>
     <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/jfj/gegege-kitaro/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sammy/shin-hokuto-musou/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sun3/seiya-kaiou/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sammy/bofuri/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/d4dj/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/goya-champuru-30/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/kyoraku/goya-champuru-25/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/enterrise/sf5-slot/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/mizuho/okidoki-black/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/mizuho/tropicana/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/excite/one-punch-man/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/amtex/bahama30/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/zombie-land-saga/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/net/shoukinkubi-angel/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/daitogiken/aoharu-misao/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/sankyo/symphogear-seigi/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/snt/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/snt/akame-ga-kiru2/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kozelog.net/machine/orinpia/tolove-darkness/</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
