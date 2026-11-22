@@ -21,44 +21,7 @@
     },
     "noNewMachineDays": "新台が導入されるまでは、未掲載機種の追加と同時に天井期待値コンテンツ（ceiling.js・機種ページの天井期待値表）を拡充する（2026-11-10 利用者の指示） 2026-11-11 利用者から「既存機種の追加は進んでますか？」と催促あり → 更新案（§7.4）がある日でも未掲載機種の追加（3ヶ月分1セット）を見送らず毎回並行して進めること。"
   },
-  "pending": [
-    {
-      "pr": 48,
-      "branch": "auto/update-seiya-ougon-20261120",
-      "gmailThreadId": "1a1f5a1b1f7ff768",
-      "kind": "update",
-      "machineId": "seiya-ougon",
-      "sentAt": "2026-11-20T06:30+09:00",
-      "no": 1
-    },
-    {
-      "pr": 49,
-      "branch": "auto/update-garo-yami-20261120",
-      "gmailThreadId": "1a1f5a1b1f7ff768",
-      "kind": "update",
-      "machineId": "garo-yami",
-      "sentAt": "2026-11-20T06:30+09:00",
-      "no": 2,
-      "note": "#50とceiling.js・admin・sitemapで衝突見込み"
-    },
-    {
-      "pr": 50,
-      "branch": "auto/add-2024-09-11-batch2",
-      "gmailThreadId": "1a1f5a1b1f7ff768",
-      "kind": "add",
-      "machineId": [
-        "koumon-chama-ten",
-        "hyper-rush",
-        "shin-ikkitousen",
-        "triple-crown-for-you",
-        "shiokinin-crash",
-        "double-attack2"
-      ],
-      "sentAt": "2026-11-20T06:30+09:00",
-      "no": 3,
-      "note": "コミットのClaude-Session行が旧URL→squash時に修正"
-    }
-  ],
+  "pending": [],
   "machines": {
     "my-juggler-6": {
       "releaseDate": "2026-10-05",
@@ -414,6 +377,36 @@
       "releaseDate": "2026-11-16",
       "lastChecked": "2026-11-20",
       "url": "/machine/pioneer/hihi-shiosai-re/"
+    },
+    "koumon-chama-ten": {
+      "releaseDate": "2024-09-02",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/orinpia/koumon-chama-ten/"
+    },
+    "hyper-rush": {
+      "releaseDate": "2024-09-17",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/seven-league/hyper-rush/"
+    },
+    "shin-ikkitousen": {
+      "releaseDate": "2024-10-07",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/daiichi/shin-ikkitousen/"
+    },
+    "triple-crown-for-you": {
+      "releaseDate": "2024-10-07",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/seiryu/triple-crown-for-you/"
+    },
+    "shiokinin-crash": {
+      "releaseDate": "2024-11-05",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/kyoraku/shiokinin-crash/"
+    },
+    "double-attack2": {
+      "releaseDate": "2024-11-18",
+      "lastChecked": "2026-11-22",
+      "url": "/machine/oizumi/double-attack2/"
     }
   },
   "knownUnlisted": [],
@@ -471,7 +464,8 @@
     "2026-11-19 返信確認：催促メール（thread 1a1f069b15a386df）に「承認」の返信 → PR #44・#45・#46・#47 をmainへsquashマージ。#47はadmin/index.html・ceiling.jsの衝突（#44と同位置への追記）を両方残して解消。TOPカード20件・各ページのJSエラーなし・FAQ⇔JSON-LD一致を確認。pendingは空に",
     "2026-11-20 新台なし（11月7機種すべて掲載済み・次は12/7）。§7.4確認8機種：星矢黄金(PR #48 AT直撃設定差→ツール・加護振り分け等)・牙狼闇(PR #49 スルー別狙い目/天井期待値表(ちょんぼ実戦値)・アイテム転送示唆等)を更新案化、転天は新情報なし、残り5機種の未着手情報はupdateBacklogへ。未掲載追加：knownUnlisted 6機種をPR #50（新メーカー daiichi・seiryu）。承認メール送信（thread 1a1f5a1b1f7ff768・pending 3件）",
     "2026-11-21 承認待ち3件（#48〜#50、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1fab6139f32bc4）。新台チェック・§7.4確認・未掲載追加は見送り",
-    "2026-11-22 承認待ち3件（#48〜#50、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1ffdc7499ed3d7）。新台チェック・§7.4確認・未掲載追加は見送り"
+    "2026-11-22 承認待ち3件（#48〜#50、すべてopen・返信なし）のため新しい変更案は作らず、催促メールを1通送信（thread 1a1ffdc7499ed3d7）。新台チェック・§7.4確認・未掲載追加は見送り",
+    "2026-11-22 返信確認：催促メール（thread 1a1ffdc7499ed3d7）に「承認」→ PR #48（星矢黄金）・#49（牙狼闇）・#50（未掲載6機種）をmainへsquashマージ。#50はceiling.jsの更新履歴コメントで衝突→両方残して解消。#50のClaude-Session行を現URLに修正。Playwright確認OK（TOP20件・FAQ/JSON-LD一致・JSエラーなし）。pending 0件"
   ],
   "updateBacklog": "2026-11-20 §7.4で見つかった未着手情報（次回優先で更新案化）：ハイハイシオサイRe（なな徹1248/40221 天井期待値表 通常/短縮×等価/5.6枚・狙い目・続行ライン・リセット判別、DMM/specials/5586 設定6実戦値）、SAOガンゲイル（グレネードジャッジ報酬振り分け設定差 ちょんぼ/DMM一致・設定1〜6合算19.9/20.7/21.5/27.7/32.8/34.8%→ツール候補、終了画面モード示唆、裏ボタン、報酬レベル示唆、ちょんぼ狙い目11/18更新 9,549台日）、ゴジエヴァ2（なな徹39895 エンディング映像の設定示唆 11/20更新・ちょんぼは未判明扱い、ちょんぼ狙い目・期待値、ちょんぼ11/13〜19追加項目）、Vivy（ちょんぼのみ：継続率ありAT60%・バグモード継続率 ショート50/ロング75/無限100%）、ラグナドール（DMM/specials/5558狙い目、なな徹40443アイキャッチ示唆・天井到達率表）。＋前回分の残り：獣王（なな天井期待値表・5.6枚狙い目・トロフィー）、パリピ孔明（なな天井期待値表・イイネ下3桁示唆食い違い）、まほあこ（期待値表大差・狙い目）、うみんちゅ（DMM狙い目・フルーツ連示唆）。"
 }
