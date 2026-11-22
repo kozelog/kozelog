@@ -431,6 +431,8 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | ベルコ | `ベルコ（BELCO）` |
 | エフ | `エフ（F）` |
 | EXCITE | `EXCITE（エキサイト）` |
+| Daiichi（大一商会） | `Daiichi（大一商会）` |
+| 清龍ゲームジャパン | `清龍ゲームジャパン` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
