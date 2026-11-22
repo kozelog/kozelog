@@ -1,6 +1,6 @@
 /* =============================================
    こぜログ 全機種マスターリスト
-   最終更新: 2026-11-20
+   最終更新: 2026-11-23
    新機種追加時はこのファイルに追記すること
    ============================================= */
 /* 2026-06-04: hanma-baki, koukaku-kidotai, goblin-slayer-2, triple-crown-seven 追加 */
@@ -1192,11 +1192,13 @@ var MACHINES_LIST = [
   { id:'sf5-slot', name:'スマスロ ストリートファイターV', kana:'すとりーとふぁいたーふぁいぶ', fullName:'スマスロ ストリートファイターＶ 挑戦者の道', maker:'エンターライズ', makerSlug:'enterrise', makerEn:'ENTERRISE', badge:'スマスロ', smart:true, releaseDate:'2024-06-03', releaseLabel:'2024年6月3日', url: '/machine/enterrise/sf5-slot/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'seiya-kaiou', name:'L聖闘士星矢 海皇覚醒 CUSTOM EDITION', kana:'せいんとせいやかいおうかくせい', fullName:'L聖闘士星矢 海皇覚醒 CUSTOM EDITION', maker:'サンスリー', makerSlug:'sun3', makerEn:'SUN3', badge:'スマスロ', smart:true, releaseDate:'2024-06-03', releaseLabel:'2024年6月3日', url: '/machine/sun3/seiya-kaiou/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'bofuri', name:'スマスロ 防振り', kana:'ぼうふり', fullName:'スマスロ痛いのは嫌なので防御力に極振りしたいと思います。', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-06-03', releaseLabel:'2024年6月3日', url: '/machine/sammy/bofuri/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'tolove-darkness', name:'L ToLOVEるダークネス', kana:'とらぶるだーくねす', fullName:'L ToLOVEるダークネス', maker:'オリンピア（OLYMPIA）', makerSlug:'orinpia', makerEn:'OLYMPIA', badge:'スマスロ', smart:true, releaseDate:'2024-06-03', releaseLabel:'2024年6月3日', url:'/machine/orinpia/tolove-darkness/', kozelog:true, rateS6:'110.1%', rateS1:'98.0%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定2 機械割' },
 
   /* ----- 2024年7月 ----- */
   { id:'okidoki-black', name:'沖ドキ！BLACK', kana:'おきどきぶらっく', fullName:'沖ドキ！BLACK', maker:'ミズホ', makerSlug:'mizuho', makerEn:'MIZUHO', badge:'スマスロ', smart:true, releaseDate:'2024-07-01', releaseLabel:'2024年7月1日', url: '/machine/mizuho/okidoki-black/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'shin-hokuto-musou', name:'スマスロ真・北斗無双', kana:'しんほくとむそう', fullName:'スマスロ真・北斗無双', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sammy/shin-hokuto-musou/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'symphogear-seigi', name:'Lパチスロ シンフォギア 正義の歌', kana:'しんふぉぎあせいぎのうた', fullName:'Lパチスロ戦姫絶唱シンフォギア 正義の歌', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sankyo/symphogear-seigi/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'symphogear-seigi', name:'Lパチスロ シンフォギア 正義の歌', kana:'しんふぉぎあせいぎのうた', fullName:'Lパチスロ戦姫絶唱シンフォギア 正義の歌', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url: '/machine/sankyo/symphogear-seigi/', kozelog:true, rateS6:'114.9%', rateS1:'98.2%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'akame-ga-kiru2', name:'L アカメが斬る！2', kana:'あかめがきるつー', fullName:'L アカメが斬る！2', maker:'SNT', makerSlug:'snt', makerEn:'SNT', badge:'スマスロ', smart:true, releaseDate:'2024-07-08', releaseLabel:'2024年7月8日', url:'/machine/snt/akame-ga-kiru2/', kozelog:true, rateS6:'114.9%', rateS1:'97.6%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'zombie-land-saga', name:'スロット ゾンビランドサガ', kana:'ぞんびらんどさが', fullName:'スロット ゾンビランドサガ', maker:'大都技研', makerSlug:'daitogiken', makerEn:'DAITO GIKEN', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url: '/machine/daitogiken/zombie-land-saga/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
   { id:'god-eater-resurrection', name:'スマスロ ゴッドイーター リザレクション', kana:'ごっどいーたーりざれくしょん', fullName:'スマスロ ゴッドイーター リザレクション', maker:'山佐（YAMASA）', makerSlug:'yamasa', makerEn:'YAMASA', badge:'スマスロ', smart:true, releaseDate:'2024-07-22', releaseLabel:'2024年7月22日', url:'/machine/yamasa/god-eater-resurrection/', kozelog:true, rateS6:'114.9%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 

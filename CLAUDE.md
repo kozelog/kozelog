@@ -433,6 +433,7 @@ HTMLの `<details class="faq-item">` とJSON-LDの `FAQPage mainEntity` は**常
 | EXCITE | `EXCITE（エキサイト）` |
 | Daiichi（大一商会） | `Daiichi（大一商会）` |
 | 清龍ゲームジャパン | `清龍ゲームジャパン` |
+| SNT（新日テクノロジー） | `SNT` |
 
 > ※ 新メーカー追加時はこの表に随時追記する
 
