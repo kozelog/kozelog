@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="../../../assets/site.js"></script>
+<script src="../../../assets/common.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1564257400721530" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チバリヨ2（スマスロ）解析・スペック【天井・設定判別・モード】| こぜログ</title>
+  <meta name="description" content="スマスロ チバリヨ2（ネット）の設定別ボーナス確率・初当たり・機械割、コイン持ちや弱チェリー直撃の設定差、天井999G／チェリー45回・設定変更時の短縮・天井期待値、通常モード・天国／パトモード、やめどき・設定判別ツールを掲載。">
+  <meta name="keywords" content="チバリヨ2,Lチバリヨ2,スマスロ,ネット,沖スロ,設定判別,天井,チェリー天井,モード,やめどき">
+  <link rel="canonical" href="https://kozelog.net/machine/net/chibariyo2/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="チバリヨ2（スマスロ）解析・スペック【天井・設定判別・モード】">
+  <meta property="og:description" content="スマスロ チバリヨ2（ネット）の設定別ボーナス確率・初当たり・機械割、コイン持ちや弱チェリー直撃の設定差、天井999G／チェリー45回・設定変更時の短縮・天井期待値、通常モード・天国／パトモード、やめどき・設定判別ツールを掲載。">
+  <meta property="og:url" content="https://kozelog.net/machine/net/chibariyo2/">
+  <meta property="og:site_name" content="こぜログ">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://kozelog.net/assets/logo.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://kozelog.net/machine/net/chibariyo2/",
+      "url": "https://kozelog.net/machine/net/chibariyo2/",
+      "name": "チバリヨ2（スマスロ）解析・スペック【天井・設定判別・モード】",
+      "description": "スマスロ チバリヨ2（ネット）の設定別ボーナス確率・初当たり・機械割、コイン持ちや弱チェリー直撃の設定差、天井999G／チェリー45回・設定変更時の短縮・天井期待値、通常モード・天国／パトモード、やめどき・設定判別ツールを掲載。",
+      "inLanguage": "ja",
+      "datePublished": "2026-11-26",
+      "dateModified": "2026-11-26",
+      "publisher": {
+        "@type": "Organization",
+        "name": "こぜログ",
+        "url": "https://kozelog.net"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "トップ",
+          "item": "https://kozelog.net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ネット（NET）",
+          "item": "https://kozelog.net/machine/net/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "チバリヨ2",
+          "item": "https://kozelog.net/machine/net/chibariyo2/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "チバリヨ2（スマスロ）解析・スペック【天井・設定判別・モード】",
+      "datePublished": "2026-11-26",
+      "dateModified": "2026-11-26",
+      "author": {
+        "@type": "Organization",
+        "name": "こぜログ"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "こぜログ"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "チバリヨ2"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "url": "https://kozelog.net/machine/net/chibariyo2/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の導入日はいつですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ネットのスマスロ「チバリヨ2」は2024年3月4日に導入されました。天国・パトランプモードでの連チャンを目指す完全告知タイプのAT機です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の機械割は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "設定1が97.3%、設定6が114.9%です。設定は1・2・4・5・6の5段階で、設定3はありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の天井は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ボーナス間999G＋α、またはチェリー最大45回でボーナスに当選します。内部では319〜350Gの短い天井が選ばれることもあり、天国準備モードでは必ず350Gになります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の天井狙いは何ゲームから？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "等価交換で500G〜、5.6枚交換で600G〜が目安です（なな徹）。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の設定変更・朝一の恩恵は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "設定変更時はゲーム数天井が350Gか600Gに短縮され、約50%で通常B以上に移行します。電源OFF→ONでは天井やモードを引き継ぎます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2のやめどきは？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ボーナス終了後32G以内に当選がなければやめます。ゲーム数天井やチェリー回数天井が近いときは続行します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "チバリヨ2の設定判別で重要な要素は？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ボーナス合算（設定1：1/111.8〜設定6：1/76.2）と初当たり確率が中心で、コイン持ち（50枚あたり27.9G〜29.8G）にも設定差があります。弱チェリーからの直撃やボイス示唆は補助的に使います。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="../../../assets/common.css">
+</head>
+<body>
+<div id="svg-symbols-ph"></div>
+<div id="site-header-ph"></div>
+<button class="fab-toc" id="fab-toc" onclick="toggleNav()" aria-label="目次を開く">
+  <div class="fab-lines"><span></span><span></span><span></span></div>
+  <div class="fab-label">目次</div>
+</button>
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<nav class="nav-drawer" id="nav-drawer" aria-label="サイトメニュー">
+  <div class="nav-drawer-header"><span class="logo">こぜログ</span><button class="nav-close-btn" onclick="closeNav()" aria-label="閉じる">&times;</button></div>
+  <div class="nav-section-label">チバリヨ2 目次</div>
+  <ul class="nav-links">
+    <li><a href="#spec" onclick="closeNav()"><span class="nav-icon">🎰</span>スペック・機械割</a></li>
+    <li><a href="#koyaku" onclick="closeNav()"><span class="nav-icon">🎯</span>小役確率</a></li>
+    <li><a href="#setting" onclick="closeNav()"><span class="nav-icon">🔍</span>設定判別ポイント</a></li>
+    <li><a href="#ceiling" onclick="closeNav()"><span class="nav-icon">⏱</span>天井・リセット</a></li>
+    <li><a href="#sec-mode" onclick="closeNav()"><span class="nav-icon">🗂</span>モード詳細</a></li>
+    <li><a href="#sec-at" onclick="closeNav()"><span class="nav-icon">⚡</span>ボーナス・連チャン詳細</a></li>
+    <li><a href="#sec-yuuri" onclick="closeNav()"><span class="nav-icon">🔄</span>有利区間</a></li>
+    <li><a href="#sec-morning" onclick="closeNav()"><span class="nav-icon">🌅</span>設定変更・朝一恩恵</a></li>
+    <li><a href="#how-to-play" onclick="closeNav()"><span class="nav-icon">🕹</span>打ち方・やめどき</a></li>
+    <li><a href="#tool" onclick="closeNav()"><span class="nav-icon">🧮</span>設定判別ツール</a></li>
+    <li><a href="#faq" onclick="closeNav()"><span class="nav-icon">❓</span>よくある質問</a></li>
+    <li><a href="#related" onclick="closeNav()"><span class="nav-icon">🔗</span>関連機種</a></li>
+  </ul>
+  <div class="nav-divider"></div>
+  <div class="nav-section-label">サイトメニュー</div>
+  <ul class="nav-links">
+    <li><a href="/"><span class="nav-icon">🏠</span>トップページ</a></li>
+    <li><a href="../"><span class="nav-icon">🏭</span>ネット（NET）一覧</a></li>
+  </ul>
+</nav>
+<div class="ad-top"><div class="ad-slot"></div></div>
+<div class="container">
+  <main>
+    <div class="breadcrumb"><a href="/">トップ</a> &rsaquo; <a href="../">ネット（NET）</a> &rsaquo; <span>チバリヨ2</span></div>
+
+    <section class="section" id="sec-toc" style="margin-bottom:20px;">
+      <h2 class="section-title" style="margin-bottom:14px;"><span class="s-icon">📋</span>目次</h2>
+      <ol class="toc-grid">
+        <li><a href="#spec">スペック・機械割</a></li>
+        <li><a href="#koyaku">小役確率</a></li>
+        <li><a href="#setting">設定判別ポイント</a></li>
+        <li><a href="#ceiling">天井・リセット</a></li>
+        <li><a href="#sec-mode">モード詳細</a></li>
+        <li><a href="#sec-at">ボーナス・連チャン詳細</a></li>
+        <li><a href="#sec-yuuri">有利区間</a></li>
+        <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
+        <li><a href="#how-to-play">打ち方・やめどき</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#related">関連機種</a></li>
+      </ol>
+    </section>
+
+    <div class="machine-hero">
+      <div class="machine-img-wrap"><div class="no-img-ph" style="font-size:48px;text-align:center;">🎰</div></div>
+      <div>
+        <h1 class="machine-title">チバリヨ2<small>CHIBARIYO 2 ｜ ネット（NET）</small></h1>
+        <div class="tags">
+          <span class="tag gold">スマスロ</span><span class="tag">AT機（擬似ボーナス）</span><span class="tag">5段階設定（1・2・4・5・6）</span><span class="tag">天井あり</span><span class="tag">チバリヨシリーズ</span><span class="tag">導入：2024年3月4日</span>
+        </div>
+        <div class="spec-mini">
+          <div class="spec-mini-item"><div class="lbl">設定6 機械割</div><div class="val val-green">114.9%</div></div>
+          <div class="spec-mini-item"><div class="lbl">設定1 機械割</div><div class="val val-dim">97.3%</div></div>
+          <div class="spec-mini-item"><div class="lbl">天井</div><div class="val val-gold">999G</div></div>
+          <div class="spec-mini-item"><div class="lbl">チェリー天井</div><div class="val val-gold">45回</div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="spec">
+      <h2 class="section-title"><span class="s-icon">🎰</span>チバリヨ2 スペック・機械割</h2>
+      <h3 class="sub-heading">設定別 ボーナス確率（ループ込み）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>設定</th><th>REG</th><th>BIG</th><th>SBIG</th><th>合算</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/321.5</td><td>1/226.1</td><td>1/707.9</td><td>1/111.8</td></tr>
+          <tr><td class="s-num s2">2</td><td>1/308.3</td><td>1/217.2</td><td>1/673.4</td><td>1/107.1</td></tr>
+          <tr><td class="s-num s4">4</td><td>1/275.9</td><td>1/193.6</td><td>1/590.1</td><td>1/95.4</td></tr>
+          <tr><td class="s-num s5">5</td><td>1/258.1</td><td>1/181.0</td><td>1/545.0</td><td>1/89.0</td></tr>
+          <tr><td class="s-num s6">6</td><td>1/221.8</td><td>1/156.1</td><td>1/453.5</td><td>1/76.2</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">DMMぱちタウン・ちょんぼりすた・なな徹で一致。天国・パトランプモード中の連チャンを含む確率です。設定は1・2・4・5・6の5段階で、設定3はありません。</p>
+      <h3 class="sub-heading">設定別 初当たり・機械割・コイン持ち</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>設定</th><th>初当たり</th><th>機械割</th><th>50枚あたり</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>1/328.0</td><td class="td-neg">97.3%</td><td>27.9G</td></tr>
+          <tr><td class="s-num s2">2</td><td>1/314.4</td><td class="td-neg">99.3%</td><td>28.2G</td></tr>
+          <tr><td class="s-num s4">4</td><td>1/281.1</td><td class="td-pos">104.7%</td><td>28.7G</td></tr>
+          <tr><td class="s-num s5">5</td><td>1/263.3</td><td class="td-pos">109.6%</td><td>29.1G</td></tr>
+          <tr><td class="s-num s6">6</td><td>1/224.8</td><td class="td-pos">114.9%</td><td>29.8G</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">ちょんぼりすた・なな徹で一致（機械割はDMMぱちタウンの「97.3%〜114.9%」とも一致）。コイン持ちにも設定差があります。</p>
+      <h3 class="sub-heading">基本スペック</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>タイプ</td><td>AT機（擬似ボーナス）・完全告知・天国ループ型</td></tr>
+          <tr><td>ボーナス</td><td>SBIG 70G・約315枚（純増約4.5枚/G）／BIG 70G・約210枚／REG 30G・約90枚（純増約3.0枚/G）</td></tr>
+          <tr><td>天井</td><td>ボーナス間999G＋α／チェリー最大45回 → ボーナス当選</td></tr>
+          <tr><td>コンプリート機能</td><td>1日の差枚数が19,000枚に到達すると遊技終了（設定変更まで継続）</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">ボーナスの獲得枚数はちょんぼりすた、純増はDMMぱちタウン・ちょんぼりすた・なな徹で一致。コンプリート機能はなな徹の記載です。</p>
+      <h3 class="sub-heading">期待収支（1日8,000G消化時の目安）</h3>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">
+        <label for="pt-rate" style="font-size:13px;color:var(--text2);">交換レート</label>
+        <select id="pt-rate" onchange="updatePt()" style="background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:6px 10px;color:var(--text);">
+          <option value="20">等価（50枚＝1,000pt）</option>
+          <option value="17.86">5.6枚交換（56枚＝1,000pt）</option>
+          <option value="16.67">6.0枚交換（60枚＝1,000pt）</option>
+        </select>
+      </div>
+      <div class="tbl-wrap"><table class="data-tbl" id="pt-table">
+        <thead><tr><th>設定</th><th>機械割</th><th>差枚数</th><th>期待収支</th></tr></thead>
+        <tbody>
+          <tr data-rate="97.3"><td class="s-num s1">1</td><td>97.3%</td><td></td><td></td></tr>
+          <tr data-rate="99.3"><td class="s-num s2">2</td><td>99.3%</td><td></td><td></td></tr>
+          <tr data-rate="104.7"><td class="s-num s4">4</td><td>104.7%</td><td></td><td></td></tr>
+          <tr data-rate="109.6"><td class="s-num s5">5</td><td>109.6%</td><td></td><td></td></tr>
+          <tr data-rate="114.9"><td class="s-num s6">6</td><td>114.9%</td><td></td><td></td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">※ 8,000G×3枚×（機械割−100%）で計算した理論上の目安です。交換レートは貯玉・持ち玉遊技を前提にした単純換算で、実際の差枚数は確率の波で大きく上下します。</p>
+    </section>
+    <script>
+    function updatePt(){
+      var sel=document.getElementById('pt-rate');
+      var rate=sel?parseFloat(sel.value):20;
+      var rows=document.querySelectorAll('#pt-table tbody tr');
+      rows.forEach(function(tr){
+        var r=parseFloat(tr.getAttribute('data-rate'));
+        var diff=Math.round(8000*3*(r-100)/100);
+        var pt=Math.round(diff*rate);
+        var cls=diff>=0?'td-pos':'td-neg';
+        var sign=diff>=0?'+':'';
+        tr.cells[2].className=cls; tr.cells[3].className=cls;
+        tr.cells[2].textContent=sign+diff.toLocaleString()+'枚';
+        tr.cells[3].textContent=sign+pt.toLocaleString()+'pt';
+      });
+    }
+    document.addEventListener('DOMContentLoaded',updatePt);
+    </script>
+    <div class="ad-mid"><div class="ad-slot"></div></div>
+    <section class="section" id="koyaku">
+      <h2 class="section-title"><span class="s-icon">🎯</span>チバリヨ2 小役確率</h2>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>小役</th><th>確率</th><th>設定差</th></tr></thead>
+        <tbody>
+          <tr><td>押し順ベル（8枚）</td><td>1/1.64</td><td>なし</td></tr>
+          <tr><td>押し順ベル（12枚）</td><td>1/7.80（設定1）</td><td>あり（設定2以上は解析待ち）</td></tr>
+          <tr><td>リプレイ</td><td>1/7.30</td><td>なし</td></tr>
+          <tr><td>3枚役</td><td>1/12.01</td><td>なし</td></tr>
+          <tr><td>共通ベル</td><td>1/32.19（設定1）</td><td>あり（設定2以上は解析待ち）</td></tr>
+          <tr><td>スイカ</td><td>1/79.73</td><td>なし</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">DMMぱちタウン・なな徹で一致（ちょんぼりすたは小数第1位までの表記で一致）。押し順12枚ベル・共通ベルは設定差があるとされていますが、設定1以外の値は解析待ちです。</p>
+      <h3 class="sub-heading">チェリー出現率（擬似遊技）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>状態</th><th>弱チェリー</th><th>強チェリー</th><th>合算</th></tr></thead>
+        <tbody>
+          <tr><td>通常時</td><td>1/22.2</td><td>1/1033.6</td><td>1/21.7</td></tr>
+          <tr><td>前兆中</td><td>1/5.8</td><td>1/54.3</td><td>1/5.2〜1/5.4</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">通常時はDMMぱちタウン・ちょんぼりすた・なな徹で一致。前兆中の合算はDMMぱちタウン1/5.2、ちょんぼりすた1/5.4と表記が異なります。チェリーは共通ベル成立後に出現しやすくなります（DMMぱちタウン）。</p>
+    </section>
+    <section class="section" id="setting">
+      <h2 class="section-title"><span class="s-icon">🔍</span>チバリヨ2 設定判別ポイント</h2>
+      <div class="point-list">
+        <div class="point-card"><div class="point-num">①</div><div class="point-body"><h3>ボーナス確率・初当たり</h3><p>ボーナス合算は設定1の1/111.8に対し設定6は1/76.2、初当たりは1/328.0に対し1/224.8です。設定6が頭ひとつ抜けています。</p></div></div>
+        <div class="point-card"><div class="point-num">②</div><div class="point-body"><h3>コイン持ち（50枚あたりG数）</h3><p>設定1の27.9Gに対し設定6は29.8Gで、高設定ほど通常時のコイン持ちが良くなります。</p></div></div>
+        <div class="point-card"><div class="point-num">③</div><div class="point-body"><h3>弱チェリーからのボーナス直撃</h3><p>設定1の2.57%に対し設定6は3.04%とわずかな差なので、補助的な要素です。強チェリーの直撃は全設定50%です。</p></div></div>
+        <div class="point-card"><div class="point-num">④</div><div class="point-body"><h3>ボイス示唆</h3><p>BIG以上・天国以上で発生するアンちゃん・具志堅のボイスは、高設定や高ループ率を示唆します。</p></div></div>
+      </div>
+      <h3 class="sub-heading">チェリー成立時のボーナス当選率</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>設定</th><th>弱チェリー直撃</th><th>弱チェリー期待度（天井込み）</th><th>強チェリー期待度（天井込み）</th></tr></thead>
+        <tbody>
+          <tr><td class="s-num s1">1</td><td>2.57%</td><td>5.83%</td><td>56.05%</td></tr>
+          <tr><td class="s-num s2">2</td><td>2.80%</td><td>6.13%</td><td>56.26%</td></tr>
+          <tr><td class="s-num s4">4</td><td>3.03%</td><td>6.76%</td><td>57.26%</td></tr>
+          <tr><td class="s-num s5">5</td><td>3.03%</td><td>6.92%</td><td>57.96%</td></tr>
+          <tr><td class="s-num s6">6</td><td>3.04%</td><td>6.72%</td><td>58.86%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">弱チェリー直撃はDMMぱちタウン・ちょんぼりすたで一致。天井込みの期待度はDMMぱちタウンの値（ちょんぼりすたは小数第1位までの表記で一致）です。強チェリーの直撃率は全設定50%です。</p>
+      <h3 class="sub-heading">ボイス示唆</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>ボイス</th><th>示唆</th></tr></thead>
+        <tbody>
+          <tr><td>花笠点灯時のアンちゃん・具志堅ボイス</td><td>高設定・高ループ率（75%以上・80%以上）を示唆</td></tr>
+          <tr><td>1日1回ボイス</td><td>高設定示唆（BIG以上・天国以上でのみ発生）</td></tr>
+          <tr><td>ボーナス確定時の「ラッキー」</td><td>高設定示唆</td></tr>
+          <tr><td>具志堅「ちょっちゅね」の強弱</td><td>強いほどループ率に期待</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">DMMぱちタウン・ちょんぼりすたの記載をまとめたものです。各ボイスの出現率は解析待ちです。</p>
+    </section>
+    <div class="ad-mid"><div class="ad-slot"></div></div>
+    <section class="section" id="ceiling">
+      <h2 class="section-title"><span class="s-icon">⏱</span>チバリヨ2 天井・リセット</h2>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>ゲーム数天井</td><td>ボーナス間999G＋α（内部で319〜350Gまたは968〜999Gを選択。擬似遊技もカウント）</td></tr>
+          <tr><td>チェリー回数天井</td><td>最大45回</td></tr>
+          <tr><td>天井恩恵</td><td>ボーナス当選</td></tr>
+          <tr><td>設定変更時</td><td>天井は350Gか600Gに短縮。約50%で通常B以上へ移行</td></tr>
+          <tr><td>電源OFF→ON</td><td>天井・チェリー回数・内部モードを引き継ぐ</td></tr>
+          <tr><td>狙い目</td><td>等価500G〜／5.6枚交換600G〜（なな徹）、350G天井付近（ちょんぼりすた）</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">ゲーム数天井・恩恵はDMMぱちタウン・ちょんぼりすた・なな徹で一致。設定変更時の挙動はなな徹（ちょんぼりすたも同内容を推測として記載）です。</p>
+      <h3 class="sub-heading">ゲーム数天井の振り分け（設定1）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>968〜999G</th><th>319〜350G</th></tr></thead>
+        <tbody>
+          <tr><td>通常A</td><td>75.00%</td><td>25.00%</td></tr>
+          <tr><td>通常B・チャンスA・チャンスB</td><td>86.72%</td><td>13.28%</td></tr>
+          <tr><td>天国準備</td><td>－</td><td>100%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">DMMぱちタウン・なな徹で一致（ちょんぼりすたの通常A 25.0%・通常B 13.3%とも一致）。高設定ほど319〜350Gが選ばれやすいとされていますが、設定2以上の値は解析待ちです。</p>
+      <h3 class="sub-heading">モード別のチェリー回数天井</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>チェリー回数</th></tr></thead>
+        <tbody>
+          <tr><td>通常A・通常B</td><td>40回</td></tr>
+          <tr><td>チャンスA</td><td>45回</td></tr>
+          <tr><td>チャンスB</td><td>25回</td></tr>
+          <tr><td>天国準備</td><td>10回</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：なな徹のみ。全モード共通で10回目のチェリーはボーナス期待度が最も高くなります（なな徹・ちょんぼりすた）。</p>
+      <h3 class="sub-heading">ゲーム数天井の期待値（設定1）</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>打ち始め</th><th>天井到達率</th><th>等価</th><th>5.6枚交換</th></tr></thead>
+        <tbody>
+          <tr><td>0G〜</td><td>5.62%</td><td class="td-neg">-820pt</td><td class="td-neg">-1,992pt</td></tr>
+          <tr><td>50G〜</td><td>6.49%</td><td class="td-neg">-717pt</td><td class="td-neg">-1,888pt</td></tr>
+          <tr><td>100G〜</td><td>7.50%</td><td class="td-neg">-598pt</td><td class="td-neg">-1,768pt</td></tr>
+          <tr><td>150G〜</td><td>8.66%</td><td class="td-neg">-460pt</td><td class="td-neg">-1,630pt</td></tr>
+          <tr><td>200G〜</td><td>10.00%</td><td class="td-neg">-301pt</td><td class="td-neg">-1,470pt</td></tr>
+          <tr><td>250G〜</td><td>11.55%</td><td class="td-neg">-118pt</td><td class="td-neg">-1,286pt</td></tr>
+          <tr><td>300G〜</td><td>13.34%</td><td class="td-pos">+94pt</td><td class="td-neg">-1,072pt</td></tr>
+          <tr><td>350G〜</td><td>15.41%</td><td class="td-pos">+339pt</td><td class="td-neg">-826pt</td></tr>
+          <tr><td>400G〜</td><td>17.80%</td><td class="td-pos">+622pt</td><td class="td-neg">-542pt</td></tr>
+          <tr><td>450G〜</td><td>20.56%</td><td class="td-pos">+948pt</td><td class="td-neg">-214pt</td></tr>
+          <tr><td>500G〜</td><td>23.74%</td><td class="td-pos">+1,326pt</td><td class="td-pos">+166pt</td></tr>
+          <tr><td>550G〜</td><td>27.42%</td><td class="td-pos">+1,761pt</td><td class="td-pos">+604pt</td></tr>
+          <tr><td>600G〜</td><td>31.67%</td><td class="td-pos">+2,264pt</td><td class="td-pos">+1,110pt</td></tr>
+          <tr><td>650G〜</td><td>36.58%</td><td class="td-pos">+2,846pt</td><td class="td-pos">+1,694pt</td></tr>
+          <tr><td>700G〜</td><td>42.25%</td><td class="td-pos">+3,517pt</td><td class="td-pos">+2,369pt</td></tr>
+          <tr><td>750G〜</td><td>48.80%</td><td class="td-pos">+4,292pt</td><td class="td-pos">+3,149pt</td></tr>
+          <tr><td>800G〜</td><td>56.36%</td><td class="td-pos">+5,187pt</td><td class="td-pos">+4,049pt</td></tr>
+          <tr><td>850G〜</td><td>65.09%</td><td class="td-pos">+6,221pt</td><td class="td-pos">+5,089pt</td></tr>
+          <tr><td>900G〜</td><td>75.18%</td><td class="td-pos">+7,416pt</td><td class="td-pos">+6,290pt</td></tr>
+          <tr><td>950G〜</td><td>86.83%</td><td class="td-pos">+8,795pt</td><td class="td-pos">+7,677pt</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：なな徹のみ（独自シミュレーター）。設定1・ボーナス後32Gで当選がなければやめ・50枚あたり27.9G・状態ごとの平均純増・チェリー回数は平均値で固定・非前兆中から打ち始め・閉店による欠損なし。1枚＝20pt換算です。</p>
+    </section>
+    <section class="section" id="sec-mode">
+      <h2 class="section-title"><span class="s-icon">🗂</span>チバリヨ2 モード詳細</h2>
+      <h3 class="sub-heading">通常モード</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>移行先</th><th>単チェリーの割合</th></tr></thead>
+        <tbody>
+          <tr><td>通常A</td><td>約40%で通常Bへ</td><td>0%</td></tr>
+          <tr><td>通常B</td><td>約50%でチャンスA以上へ</td><td>6.3%</td></tr>
+          <tr><td>チャンスA</td><td>約50%で天国へ</td><td>7.8%</td></tr>
+          <tr><td>チャンスB</td><td>約60%で天国へ</td><td>9.4%</td></tr>
+          <tr><td>天国準備</td><td>ループ率75%以上の天国へ</td><td>12.5%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：ちょんぼりすた（モードの種類はDMMぱちタウン・なな徹とも一致）。天国に移行するまでモードの転落はありません。</p>
+      <h3 class="sub-heading">通常モード別のボーナス振り分け</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>REG</th><th>BIG</th><th>SBIG</th></tr></thead>
+        <tbody>
+          <tr><td>通常A</td><td>60.2%</td><td>39.8%</td><td>－</td></tr>
+          <tr><td>通常B</td><td>49.2%</td><td>50.0%</td><td>0.8%</td></tr>
+          <tr><td>チャンスA</td><td>48.4%</td><td>解析待ち</td><td>1.6%</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：ちょんぼりすたのみ。</p>
+      <h3 class="sub-heading">天国・パトランプモード</h3>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>モード</th><th>ループ率</th></tr></thead>
+        <tbody>
+          <tr><td>天国</td><td>66%・75%・80%</td></tr>
+          <tr><td>赤パト</td><td>88%</td></tr>
+          <tr><td>虹パト</td><td>92%</td></tr>
+          <tr><td>リミットレス</td><td>88%（ボーナスごとに約15%で虹パトへ）</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">DMMぱちタウン・ちょんぼりすた・なな徹で一致。6連目で昇格チャンス、10連目で赤パト以上、15連目で虹パトが確定します。リミットレスモードは虹パト終了後または有利区間完走時に突入します。</p>
+    </section>
+    <section class="section" id="sec-at">
+      <h2 class="section-title"><span class="s-icon">⚡</span>チバリヨ2 ボーナス・連チャン詳細</h2>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>ボーナス</th><th>G数</th><th>純増</th><th>平均獲得</th></tr></thead>
+        <tbody>
+          <tr><td>SBIG</td><td>70G</td><td>約4.5枚/G</td><td>約315枚</td></tr>
+          <tr><td>BIG</td><td>70G</td><td>約3.0枚/G</td><td>約210枚</td></tr>
+          <tr><td>REG</td><td>30G</td><td>約3.0枚/G</td><td>約90枚</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：ちょんぼりすた（純増はDMMぱちタウン・なな徹とも一致）。</p>
+      <p>天国移行時は2個のストックが基本的に保証されます（チャンスB経由を除く）。スイカ成立時は3.1%で1G連に当選し、1G連のSBB割合は天国3.1%・赤パト12.5%・虹パト50.0%です（ちょんぼりすた）。天国以上へ移行したときに10連以上する割合は約1/5です（DMMぱちタウン）。</p>
+    </section>
+    <section class="section" id="sec-yuuri">
+      <h2 class="section-title"><span class="s-icon">🔄</span>チバリヨ2 有利区間</h2>
+      <p>有利区間のリセットが判明しているのは設定変更時のみです（なな徹）。リミットレスモード中はボーナス終了ごとに有利区間がリセットされます。有利区間を完走するとリミットレスモードへ移行します（ちょんぼりすた）。</p>
+    </section>
+    <section class="section" id="sec-morning">
+      <h2 class="section-title"><span class="s-icon">🌅</span>チバリヨ2 設定変更・朝一恩恵</h2>
+      <div class="tbl-wrap"><table class="data-tbl">
+        <thead><tr><th>項目</th><th>設定変更（リセット）</th><th>据え置き</th></tr></thead>
+        <tbody>
+          <tr><td>有利区間</td><td>リセット</td><td>引き継ぎ</td></tr>
+          <tr><td>ゲーム数天井</td><td>リセット（350Gか600Gに短縮）</td><td>引き継ぎ</td></tr>
+          <tr><td>チェリー回数天井</td><td>リセット</td><td>引き継ぎ</td></tr>
+          <tr><td>内部モード</td><td>リセット（約50%で通常B以上）</td><td>引き継ぎ</td></tr>
+        </tbody>
+      </table></div>
+      <p class="info-note">出典：なな徹（ちょんぼりすたも同様の内容を記載）。リセット判別の方法は解析待ちです。</p>
+    </section>
+    <div class="ad-mid"><div class="ad-slot"></div></div>
+    <section class="section" id="how-to-play">
+      <h2 class="section-title"><span class="s-icon">🕹</span>チバリヨ2 打ち方・やめどき</h2>
+      <h3 class="sub-heading">通常時</h3>
+      <p>左リール上段付近にBARを狙います。スイカが停止したら中リールだけ目押しします。中段チェリーも擬似遊技として成立します（DMMぱちタウン）。</p>
+      <h3 class="sub-heading">やめどき</h3>
+      <p>ボーナス終了後32G以内に当選がなければやめます。ただしゲーム数天井やチェリー回数天井が近い場合、通常B以上が濃厚な場合は続行します。10回目のチェリーは期待度が高いので、状況によってはそこまで回します（なな徹・ちょんぼりすた）。</p>
+    </section>
+    <section class="section" id="tool">
+      <h2 class="section-title"><span class="s-icon">🧮</span>チバリヨ2 設定判別ツール</h2>
+      <p class="tool-desc">総回転数（天国中を含む）とREG・BIG・SBIG回数を入力して設定を推測できます。弱チェリー成立回数とそこからのボーナス直撃回数は任意入力です。設定は1・2・4・5・6の5段階です。</p>
+      <div class="tool-form">
+        <div class="fg"><label>総回転数 *</label><input type="number" id="inp-games" min="0" placeholder="例：5000"></div>
+        <div class="fg"><label>REG回数</label><input type="number" id="inp-reg" min="0" placeholder="例：17"></div>
+        <div class="fg"><label>BIG回数</label><input type="number" id="inp-big" min="0" placeholder="例：25"></div>
+        <div class="fg"><label>SBIG回数</label><input type="number" id="inp-sbig" min="0" placeholder="例：8"></div>
+        <div class="fg"><label>弱チェリー成立回数（任意）</label><input type="number" id="inp-cherry" min="0" placeholder="例：150"></div>
+        <div class="fg"><label>うちボーナス直撃回数（任意）</label><input type="number" id="inp-cherry-hit" min="0" placeholder="例：4"></div>
+      </div>
+      <button class="calc-btn" onclick="calcSetting()">設定を判別する</button>
+      <div id="result-area" style="display:none;">
+        <div class="result-bars" id="result-bars"></div>
+        <div class="tool-note">※ 統計的な参考値です。サンプルが少ないと実際の設定と大きくずれることがあります。遊技の判断はご自身の責任でお願いします。</div>
+      </div>
+    </section>
+    <script>
+    function logFact(n){var s=0;for(var i=2;i<=n;i++)s+=Math.log(i);return s;}
+    function kzPois(k,lam){return k*Math.log(lam)-lam-logFact(k);}
+    function kzBinom(k,n,p){if(k>n)return -1e9;return k*Math.log(p)+(n-k)*Math.log(1-p);}
+    function kzShow(logL,minSet,labels,colors){
+      labels=labels||['設定1','設定2','設定3','設定4','設定5','設定6'];
+      colors=colors||['#888','#5ba0b5','#4fa880','#7abb50','#f5b030','#f05050'];
+      var n=labels.length;
+      for(var i=0;i<n;i++){if(i+1<minSet)logL[i]=-Infinity;}
+      var maxL=Math.max.apply(null,logL);
+      var exps=logL.map(function(v){return Math.exp(v-maxL);});
+      var sum=exps.reduce(function(a,b){return a+b;},0);
+      var html='<h3 style="font-size:15px;margin-bottom:16px;color:var(--text2);">推定結果</h3>';
+      for(var i=0;i<n;i++){
+        var pct=Math.round(exps[i]/sum*1000)/10;
+        html+='<div class="rb-item"><div class="rb-head"><span style="color:'+colors[i]+'">'+labels[i]+'</span><span>'+pct+'%</span></div><div class="bar-bg"><div class="bar-fill" style="width:'+pct+'%;background:'+colors[i]+'">'+(pct>=7?pct+'%':'')+'</div></div></div>';
+      }
+      document.getElementById('result-bars').innerHTML=html;
+      document.getElementById('result-area').style.display='block';
+    }
+    function kzV(id){var e=document.getElementById(id);if(!e)return null;var s=e.value;return s===''?null:(parseInt(s,10)||0);}
+
+    function calcSetting(){
+      var g=kzV('inp-games')||0, v_rb=kzV('inp-reg'), v_bb=kzV('inp-big'), v_sb=kzV('inp-sbig'), v_ck=kzV('inp-cherry'), v_ch=kzV('inp-cherry-hit');
+      if(g<1){alert('総回転数を入力してください');return;}
+      if(v_rb===null&&v_bb===null&&v_sb===null){alert('REG・BIG・SBIGのいずれかの回数を入力してください');return;}
+      if(v_ck!==null&&v_ch!==null&&v_ch>v_ck){alert('直撃回数は弱チェリー回数以下で入力してください');return;}
+      var P_rb=[1/321.5,1/308.3,1/275.9,1/258.1,1/221.8];
+      var P_bb=[1/226.1,1/217.2,1/193.6,1/181.0,1/156.1];
+      var P_sb=[1/707.9,1/673.4,1/590.1,1/545.0,1/453.5];
+      var P_ck=[0.0257,0.0280,0.0303,0.0303,0.0304];
+      var logL=[];
+      for(var i=0;i<5;i++){
+        var ll=0;
+        if(v_rb!==null)ll+=kzPois(v_rb,P_rb[i]*g);
+        if(v_bb!==null)ll+=kzPois(v_bb,P_bb[i]*g);
+        if(v_sb!==null)ll+=kzPois(v_sb,P_sb[i]*g);
+        if(v_ck!==null&&v_ch!==null)ll+=kzBinom(v_ch,v_ck,P_ck[i]);
+        logL.push(ll);
+      }
+      kzShow(logL,1,['設定1','設定2','設定4','設定5','設定6'],['#888','#5ba0b5','#7abb50','#f5b030','#f05050']);
+    }
+    </script>
+    <div class="ad-mid"><div class="ad-slot"></div></div>
+
+    <section class="section" id="faq">
+      <h2 class="section-title"><span class="s-icon">❓</span>チバリヨ2 よくある質問</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の導入日はいつですか？</summary><div class="faq-a"><p>ネットのスマスロ「チバリヨ2」は2024年3月4日に導入されました。天国・パトランプモードでの連チャンを目指す完全告知タイプのAT機です。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の機械割は？</summary><div class="faq-a"><p>設定1が97.3%、設定6が114.9%です。設定は1・2・4・5・6の5段階で、設定3はありません。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の天井は？</summary><div class="faq-a"><p>ボーナス間999G＋α、またはチェリー最大45回でボーナスに当選します。内部では319〜350Gの短い天井が選ばれることもあり、天国準備モードでは必ず350Gになります。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の天井狙いは何ゲームから？</summary><div class="faq-a"><p>等価交換で500G〜、5.6枚交換で600G〜が目安です（なな徹）。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の設定変更・朝一の恩恵は？</summary><div class="faq-a"><p>設定変更時はゲーム数天井が350Gか600Gに短縮され、約50%で通常B以上に移行します。電源OFF→ONでは天井やモードを引き継ぎます。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2のやめどきは？</summary><div class="faq-a"><p>ボーナス終了後32G以内に当選がなければやめます。ゲーム数天井やチェリー回数天井が近いときは続行します。</p></div></details>
+        <details class="faq-item"><summary class="faq-q">チバリヨ2の設定判別で重要な要素は？</summary><div class="faq-a"><p>ボーナス合算（設定1：1/111.8〜設定6：1/76.2）と初当たり確率が中心で、コイン持ち（50枚あたり27.9G〜29.8G）にも設定差があります。弱チェリーからの直撃やボイス示唆は補助的に使います。</p></div></details>
+      </div>
+    </section>
+    <section class="section" id="related">
+      <h2 class="section-title"><span class="s-icon">🔗</span>関連機種</h2>
+      <div class="related-grid">
+        <a href="../chibariyo2-plus/" class="related-card"><div class="related-name">チバリヨ2プラス</div><div class="related-meta">ネット ｜ AT機 ｜ スマスロ</div></a>
+        <a href="../hanagasa/" class="related-card"><div class="related-name">花笠</div><div class="related-meta">ネット ｜ AT ｜ スマスロ</div></a>
+        <a href="../yabachiba/" class="related-card"><div class="related-name">Lヤバチバ</div><div class="related-meta">ネット ｜ スマスロ</div></a>
+        <a href="../shoukinkubi-angel/" class="related-card"><div class="related-name">賞金首Angel</div><div class="related-meta">ネット ｜ AT機 ｜ スマスロ</div></a>
+      </div>
+    </section>
+
+    <div class="ad-bottom"><div class="ad-slot"></div></div>
+  </main>
+  <aside class="sidebar">
+    <div class="toc-box">
+      <h3>目次</h3>
+      <ol>
+        <li><a href="#spec">スペック・機械割</a></li>
+        <li><a href="#koyaku">小役確率</a></li>
+        <li><a href="#setting">設定判別ポイント</a></li>
+        <li><a href="#ceiling">天井・リセット</a></li>
+        <li><a href="#sec-mode">モード詳細</a></li>
+        <li><a href="#sec-at">ボーナス・連チャン詳細</a></li>
+        <li><a href="#sec-yuuri">有利区間</a></li>
+        <li><a href="#sec-morning">設定変更・朝一恩恵</a></li>
+        <li><a href="#how-to-play">打ち方・やめどき</a></li>
+        <li><a href="#tool">設定判別ツール</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#related">関連機種</a></li>
+      </ol>
+    </div>
+    <div class="ad-slot ad-sidebar"></div>
+  </aside>
+</div>
+<div id="site-footer-ph"></div>
+<script>loadComponents('../../../assets/');</script>
+</body>
+</html>
