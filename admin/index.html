@@ -277,9 +277,9 @@ const ADMIN_OVERRIDES = {
   'hokuto-no-ken-smart':    { type:'AT', kozelog:true, note:'5段階設定(1,2,4,5,6)+設定L・天井1268G・BB継続率66/79/84/89%', addedContent:['ツールデザイン統一'] },
   'bakemonogatari-smart':   { type:'AT', kozelog:true, note:'6段階設定・天井1000G・倍倍チャンス搭載・解呪ノ儀CZ', addedContent:['ツールデザイン統一','天井期待値テーブル','やめどき・狙い目','ゾーン詳細(全設定CZ当選率)','終了画面・設定示唆演出(キャラ振り分け・トロフィー出現率)','解呪連モード詳細','怪逅ノ儀(上位CZ)詳細','フリーズ確率・恩恵','エンディング条件・種類','有利区間拡充','設定判別強化(ボーナス確率・解呪連移行率・スイカCZ当選率)','設定変更・朝一拡充','ツール拡張(スイカ・弱チェリー直撃・解呪連移行率・スイカCZ当選率追加)','FAQ拡充(8→16件)'] },
   'tensura-slot':           { type:'AT' },
-  'bancho4':                { type:'AT' },
+  'bancho4':                { type:'AT', kozelog:true, note:'スマスロ・機械割97.8%〜113.1%・AT機（番長ボーナス＋頂RISE）・天井ボーナス間699G+α／ATスルー10回目（設定変更後7回目）・純増約2.7枚/G・天井期待値表（なな徹）掲載・大都技研' },
   'code-geass-r2':          { type:'AT' },
-  'eureka7-4':              { type:'AT' },
+  'eureka7-4':              { type:'AT', kozelog:true, note:'スマスロ・機械割97.9%〜113.1%・AT機（ゲーム数上乗せ型）・天井999G+α／WAVE数天井1550WAVE（設定変更後950WAVE）・純増約2.1枚/G・Sammy（サミー）' },
   'initial-d-2nd':          { type:'AT', kozelog:true, note:'スマスロ・機械割97.9%〜114.3%・AT機・天井599G+α（短縮時299G+α）／AT間7回目のLB・純増約2.4枚/G・Sammy（サミー）' },
   're-zero-s2':             { type:'AT', kozelog:true, note:'スマスロ・機械割97.6%〜114.9%・AT機・規定1400pt天井／AT間1300G・パオン・ディーピー（PAON DP）' },
   'monster-hunter-rise':    { type:'AT', kozelog:true, note:'スマスロ・機械割97.9%〜114.3%・AT機・天井999G+α／AT間クエスト6スルー・アデリオン（Adelion）' },
@@ -415,6 +415,16 @@ const ADMIN_OVERRIDES = {
   'symphogear-seigi':        { type:'AT', kozelog:true, note:'スマスロ・5段階設定（1・2・4・5・6）・機械割98.2%〜114.9%・AT機（ゲーム数上乗せ型）・天井777G+α（設定変更後498G+α／天国100G以内）・純増約2.8枚/G（上位AT約5.0枚/G）・SANKYO（三共）' },
   'akame-ga-kiru2':          { type:'A+AT', kozelog:true, note:'スマスロ・機械割97.6%〜114.9%（設定2〜5はちょんぼりすたのみ）・A+AT（リアルボーナス＋AT）・天井970G+α（仮天井300/400/500G→モードE）・恩恵 斬pt5個AT・AT純増約2.6枚/G・新メーカー SNT（新日テクノロジー）' },
   'tolove-darkness':         { type:'ST', kozelog:true, note:'スマスロ・5段階設定(2〜6)・機械割98.0%〜110.1%・ボーナス→ST「楽園計画」→上位ST「ハーレムモード」・天井999G+α（設定変更後650G+α）・ボーナス純増約6.6枚/G・オリンピア（OLYMPIA）※後継tolove-tranceとは別機種' },
+  'enen-no-shouboutai':     { type:'AT', kozelog:true, note:'スマスロ・5段階設定（1・2・4・5・6）・機械割97.7%〜114.9%・AT機（疑似ボーナス＋CZ「炎炎激闘」ループ）・天井850G+α（設定変更後650G+α／天国88G+α）・炎炎激闘間2500G・純増約5.7枚/G・SANKYO（三共）' },
+  'golden-kamuy':           { type:'AT', kozelog:true, note:'スマスロ・機械割97.9%〜113.3%・AT機（疑似ボーナス＋AT）・天井1800ピュウ☆（平均約720G、設定変更後1600ピュウ☆）・純増約2.7枚/G（上位AT約4.5枚/G）・Sammy（サミー）' },
+  'urusei-yatsura':         { type:'AT', kozelog:true, note:'スマスロ・5段階設定（1・2・4・5・6）・機械割97.6%〜110.1%・AT機（ボーナス＋AT）・天井555G+α（モードD 333G／天国111G）・逃走中5スルー天井・純増約2.6枚/G・EXCITE（エキサイト）' },
+  'king-creator-30':        { type:'ノーマル', kozelog:true, note:'6号機メダル機・機械割97.2%〜109.0%・ノーマル機（BIG約252枚／REG約100枚・BIG偏向型）・天井なし・小役確率は解析待ち・北電子' },
+  'shinobi-soul3':          { type:'AT', kozelog:true, note:'スマスロ・忍魂参 〜奥義皆伝ノ章〜（旧表記しのびソウル3を修正）・機械割97.8%〜112.0%・AT機（周期抽選）・天井AT間979G+α（設定変更後579G）／周期4スルー後5周期目・純増約2.0/4.5枚/G・大都技研' },
+  'danmachi2':              { type:'A+ART', kozelog:true, note:'6号機メダル機・機械割98.3%〜108.9%（完全攻略100.6%〜111.5%）・A+ART（ART純増約0.4枚/G）・天井ファミリアボーナス/CZ間555G+α・北電子（ゼクロスクリエイティブ開発）' },
+  'strike-the-blood':        { type:'A+AT', kozelog:true, note:'スマスロ・機械割98.2%〜110.1%・A+AT（ボーナス全設定共通1/199.8・AT純増約1.4枚/G）・天井ボーナス/AT間599G（設定変更後399G）・エンターライズ（ENTERRISE）' },
+  'ninja-jajamaru':          { type:'AT', kozelog:true, note:'6.5号機メダル機・機械割97.7%〜108.0%（設定1・2・3・5・6）・AT機（擬似ボーナス・天国ループ）・天井1000G（早駆け200G／設定変更時37.5%で400G）・純増約3.0枚/G・エレコ（ELECO）' },
+  'chibariyo2':              { type:'AT', kozelog:true, note:'スマスロ・機械割97.3%〜114.9%（設定1・2・4・5・6）・AT機・天井999G/チェリー45回（設定変更後350G or 600G）・ネット（NET）' },
+  'smart-king-pulsar':       { type:'AT', kozelog:true, note:'スマスロ・機械割97.7%〜114.9%（設定1・2・4・5・6＋L）・AT機（擬似ボーナス＋ストック）・天井960G+α（設定変更後512G+α）・純増約5.0枚/G・セブンリーグ（SEVEN LEAGUE）' },
 };
 
 // =====================================================
