@@ -1186,7 +1186,7 @@ var MACHINES_LIST = [
 
   /* ----- 2024年5月 ----- */
   { id:'enen-no-shouboutai', name:'Lパチスロ 炎炎ノ消防隊', kana:'えんえんのしょうぼうたい', fullName:'Lパチスロ 炎炎ノ消防隊', maker:'SANKYO（三共）', makerSlug:'sankyo', makerEn:'SANKYO', badge:'スマスロ', smart:true, releaseDate:'2024-05-07', releaseLabel:'2024年5月7日', url: '/machine/sankyo/enen-no-shouboutai/', kozelog:true, rateS6:'114.9%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
-  { id:'eureka7-4', name:'スマスロ エウレカセブン4 HI-EVOLUTION', kana:'えうれかせぶんふぉー', fullName:'スマスロ交響詩篇エウレカセブン4 HI-EVOLUTION', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-05-07', releaseLabel:'2024年5月7日', url: '/machine/sammy/eureka7-4/', rateS6:'-', rateS1:'-', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
+  { id:'eureka7-4', name:'スマスロ エウレカセブン4 HI-EVOLUTION', kana:'えうれかせぶんふぉー', fullName:'スマスロ交響詩篇エウレカセブン4 HI-EVOLUTION', maker:'サミー（SAMMY）', makerSlug:'sammy', makerEn:'SAMMY', badge:'スマスロ', smart:true, releaseDate:'2024-05-07', releaseLabel:'2024年5月7日', url: '/machine/sammy/eureka7-4/', kozelog:true, rateS6:'113.1%', rateS1:'97.9%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
 
   /* ----- 2024年6月 ----- */
   { id:'sf5-slot', name:'スマスロ ストリートファイターV', kana:'すとりーとふぁいたーふぁいぶ', fullName:'スマスロ ストリートファイターＶ 挑戦者の道', maker:'エンターライズ', makerSlug:'enterrise', makerEn:'ENTERRISE', badge:'スマスロ', smart:true, releaseDate:'2024-06-03', releaseLabel:'2024年6月3日', url: '/machine/enterrise/sf5-slot/', kozelog:true, rateS6:'106.3%', rateS1:'97.7%', rateLabelS6:'設定6 機械割', rateLabelS1:'設定1 機械割' },
